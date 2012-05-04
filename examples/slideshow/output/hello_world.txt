@@ -1,0 +1,12 @@
+== Hello World example ==
+{{
+from pyjamas import Window
+from pyjamas.ui.RootPanel import RootPanel
+from pyjamas.ui.Button import Button
+
+def greet(sender):
+    Window.alert("Hello, AJAX!")
+
+b = Button("Click me", greet)
+RootPanel().add(b)
+}}

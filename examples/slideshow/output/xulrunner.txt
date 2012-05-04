@@ -1,0 +1,11 @@
+== XULRunner ==
+python-xpcom and python-hulahop
+ * Works well
+ * two main bugs
+   ** SVG Canvas drawImage
+   ** XMLHttpRequest no user/password parameters
+BUT:
+ * Mozilla Documentation pretty much useless
+ * python-xpcom being excluded from Mozilla codebase
+ * Mozilla Foundation Losing Plot (speed, speed, speed)
+ * Inexplicable and Total lack of interest in XPCOM

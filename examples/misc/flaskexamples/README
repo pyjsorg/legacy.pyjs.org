@@ -1,0 +1,4 @@
+Please start with the documentation in the doc directory.
+If you have sphinx installed (if not, you can always run 'pip install sphinx'),
+you can view an html version of the documentation using by running build.sh.
+Otherwise, reST is not that different from a "plain" text file.

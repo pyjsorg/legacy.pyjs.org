@@ -1,0 +1,24 @@
+ * DOM Modelling is the key to a successful easy widget set
+   ** Browser technology tolerant of poor layout, for two decades
+   ** Rules regarding "repaint" well established
+ * Fully-featured widget set already exists
+   ** Text, markup, fonts, SVG (2D), plugins, buttons, blah blah
+   ** you just gotta access it!
+ * Option A: Webkit
+   ** Didn't have a free-software DOM manipulator
+   ** (it does now)
+ * Option B: Python-KDE3
+   ** Grand-daddy of Webkit!
+   ** PyKHTML
+ * Option C: XulRunner
+   ** python-xpcom and python-hulahop
+   ** XulRunner 1.9.1 works 99.95%
+   ** XulRunner 1.9.2 works 98% (but missing 2% is critical)
+   ** Mozilla Foundation Losing The Plot
+ * Option D: MSHTML
+   ** python-comtypes: well cool.  small dependency (350k)
+   ** works perfectly.
+ * Option E: GrailBrowser!
+   ** Independent of other c-based projects
+   ** Insanely slow and insanely old
+   ** Who cares!  It's ambitious!

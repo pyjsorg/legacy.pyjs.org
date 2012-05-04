@@ -1,0 +1,17 @@
+.gwt-HorizontalSplitPanel {
+}
+.gwt-HorizontalSplitPanel .hsplitter {
+    cursor: move;
+    width: 10px;
+    background-image: url('images/hsplitter.png');
+    background-repeat: repeat-y;
+}
+
+.gwt-VerticalSplitPanel {
+}
+.gwt-VerticalSplitPanel .vsplitter {
+    cursor: move;
+    height: 10px;
+    background-image: url('images/vsplitter.png');
+    background-repeat: repeat-x;
+}

@@ -1,0 +1,17 @@
+This is a demo of an asynchronous, non-Flash upload widget with progress reporting. Tested with FF >=4 and Chromium so far. Makes no sense with pyjd.
+
+To build, first read the top-level README (run boostrap and buildout)
+
+Then, run ./build.sh or:
+
+    ../../bin/pyjsbuild Upload.py
+
+If using Apache or similar, make a symlink so output/Upload.html is hosted by a 
+webserver and then open with a web browser.
+
+For this to work properly, you will need a receiving service; an example wsgi 
+script is provided in public/services but it is absolutely minimal and requires 
+mod_wsgi or equivalent. If you use mod_wsgi, you can configure the service with
+a one-liner in wsgi.conf, ala:
+
+        WSGIScriptAlias /pyjamas_upload_demo /usr/share/pyjamas/examples/uploader/public/services/upload.wsgi

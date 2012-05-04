@@ -1,0 +1,6 @@
+Some Flask examples, by Jeff Van Voorst, that are based on snippets from 
+Ask Solem (re: Celery and Flask-Celery) and the jsonrpc and timerdemo
+examples in the main Pyjamas examples directory.
+
+Ask Solem's Flask-Celery example may be found at:
+https://github.com/ask/flask-celery/tree/master/example.

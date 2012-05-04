@@ -1,0 +1,16 @@
+
+This example of the EmployeeAdmin is based on the wxPython version 
+by Toby de Havilland <toby.de.havilland@puremvc.org>
+
+For larger applications, it would be advisable to make directories 
+with model/controller/view and components.
+
+In order to run this example, You'll need to download PureMVC for Python. 
+At the moment of this writing available at:
+http://puremvc.org/pages/downloads/Python/PureMVC_Python.zip
+
+To compile the application, the library path must include the puremvc 
+files. E.g.:
+ ../../bin/pyjsbuild --library_dir "`pwd`/PureMVC_Python_1_2/src" EmployeeAdmin
+
+

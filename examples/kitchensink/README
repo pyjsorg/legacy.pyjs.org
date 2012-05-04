@@ -1,0 +1,11 @@
+== Issues ==
+
+Nov 2010:
+Affects IE/MSHTML
+ - Text: 
+   You cannot enter text if you browse through the images of Popup-Dialog 
+   item first.
+   If you go to the Frames item, Text works OK again.
+
+April 2012:
+Work around for the above issue - see the code for Popups.MyDialog

@@ -1,0 +1,27 @@
+This example is set up so that the JSONRPC python services may be run as a CGI
+Script and a Flask application.  There is an example python CGI script server 
+which is set up to allow access to the JSONService.py CGI script, 
+for this example.  Start it as:
+
+    $ cd examples/jsonrpc/output
+    $ python PythonCGIServer.py
+
+For the Flask application, please look in the doc directory.  The reason
+is we will be using the flask development server to serve as a cross origin
+server in these examples (and the details are a bit too much to document
+in two or more places).  Even though you may have the same webserver serve
+both the Flask and pyjs component, this example illustrates that when using
+the jsonrpc provided with pyjs (via XMLHttpRequest), the cross origin 
+functionality needs to be implemented in the server code and not pyjs code.
+
+If you would like to try this example with Apache2, simply point
+the Apache2 server at the examples/ subdirectory and then ensure
+that Python scripts are allowed to be executed (see Apache2 manuals
+to enable).
+
+If you would like the JSONService.py to be executed under mod_python,
+move public/services/htaccess.mod_python to public/services/.htaccess
+and rebuild (or copy it to output/) and then restart Apache2.
+
+Thanks to Daniel Carvalho for working out how to run this example
+with mod_python.

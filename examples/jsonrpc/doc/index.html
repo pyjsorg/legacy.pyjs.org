@@ -1,0 +1,791 @@
+<html>
+<meta name="description" content="PHP-O-Lait: a PHP-to-Javascript bridge to provide seamless client-side Javascript calls to server-side PHP code.">
+<meta name="keywords" content="craig mason-jones, programming, Ajax, JSON, JSON RPC, JavaScript, jscript, PHP, remote procedure calls, LAMP, jsolait, json-php, php-json, sajax">
+<meta name="author" content="Craig Mason-Jones, Lateral Alternative">
+<meta name="version" "0.5.1, 22 February 2006">
+<head>
+<title>PHP-O-Lait: 2 lines from client-side to server-side</title>
+<style type="text/css">
+
+.byline {
+  color: gray;
+  font-family: Arial;
+	font-size: 8pt;
+	text-align: center;
+}
+
+.comment {
+  color: green;
+}
+
+.copyright {
+  color: gray;
+  font-family: Arial;
+  font-size: 8pt;
+	text-align: center;
+}
+
+.copyright a {
+  color: gray;
+}
+
+dt {
+  font-size: 14pt;
+	margin-top: 20pt;
+}
+
+.example {
+  background-color: #ffffcc;
+  border: 1px dashed gainsboro;
+  margin: 5px;
+  padding: 5px;
+}
+
+.example .file {
+  border: 1px dashedgray;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+.filename {
+  background-color: #cccc99;
+  font-weight: bold;
+	padding: 5px;
+}
+
+h2 {
+  font-family: Arial;
+	font-size: 14pt;
+}
+
+h3 {
+  font-family: Arial;
+	font-size: 12pt;
+}
+
+h4 {
+  font-family: Arial;
+	font-size: 10pt;
+}
+
+.navigation {
+  font-size: 8pt;
+	text-align: center;
+}
+.navigation a {
+  margin-right: 7px;
+}
+
+pre {
+  font-size: 9pt;
+}
+
+.RequirementsTable {
+  border-collapse: collapse;
+}
+.RequirementsTable td {
+  border: 1px solid gainsboro;
+  padding: 2px;
+}
+
+.title {
+  font-family: arial;
+	font-size: 20pt;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.versionTable {
+	border-collapse: collapse;
+}
+
+.versionTable tr th {
+  background-color: gainsboro;
+	font-size:11pt;
+	margin: 0px;
+	padding: 2px;
+  text-align: left;
+}
+.versionTable tr td {
+  border: 1px solid gainsboro;
+	border-collapse: collapse;
+	font-size:11pt;
+	padding: 2px;
+	vertical-align: top;
+}
+.versionTable tr .vNum { font-weight: bold; }
+.versionTable tr .vNotes {}
+.versionTable tr .vDate {}
+
+.workArea {
+  border: 1px solid gray;
+  font-size: 11pt;
+	margin-left: 30px;
+	padding: 5px;
+}
+
+</style>
+</head>
+<body>
+<table><tr><td width="800">
+<div class="workArea">
+<div class="title">PHP-O-Lait
+<div class="byline">Two Lines Client-Side JavaScript to Server-Side PHP</div>
+</div>
+
+<div class="navigation">
+<a href="#News">News</a>
+<a href="#What">What is PHP-O-Lait</a>
+<a href="#Licence">Licence</a>
+<a href="#Download">Download</a>
+<a href="#Version">Versions</a>
+<a href="#Installation">Installation</a>
+<a href="#Usage">Usage</a>
+<a href="#Examples">Examples</a>
+<a href="#Reference">Reference</a>
+<a href="#Roadmap">Roadmap</a>
+<a href="#Thanks">Thanks</a>
+</div>
+
+<!-- *********************************************** NEWS ***************************************** -->
+<h2><a name="News"></a>News</h2>
+PHP-O-Lait version 0.5.1 is released, with a bug fix that caused the <code>jsolait.js</code> JavaScript library
+not to be included
+correctly in certain circumstances. Many thanks to Olaf Bottek for locating the bug and assisting in
+correcting it. A few documentation changes have also been made, including an example of using
+PHP-O-Lait for asynchronous communication: thanks to Keith Powell for the idea.
+<p />
+If you enjoy PHP-O-Lait, please drop me a line at <a href="mailto:craig@lateral.co.za">craig@lateral.co.za</a><p/>
+
+<!-- *********************************************** WHAT IS PHP-O-Lait ***************************************** -->
+<h2><a name="What"></a>What is PHP-O-Lait?</h2>
+PHP-O-Lait, in two boiler-plate lines of code (three if you include the 'require_once') provides a transparent bridge between server-side PHP methods and client-side JavaScript code.<p />
+
+Here's an example of PHP-O-Lait in action:
+
+<div class="example"><code>
+<!-- #include ('examples/simple.php') -->
+<div class="filename">examples/simple.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br />
+<br /></font><font color="#007700">require_once(</font><font color="#DD0000">"phpolait/phpolait.php"</font><font color="#007700">);&nbsp;&nbsp;</font><font color="#FF8000">/*&nbsp;First&nbsp;line&nbsp;*/
+<br />
+<br /></font><font color="#007700">class&nbsp;</font><font color="#0000BB">MyClass&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">hi</font><font color="#007700">()&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#DD0000">"Hello,&nbsp;World!"</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />}
+<br /></font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(new&nbsp;</font><font color="#0000BB">MyClass</font><font color="#007700">());&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF8000">/*&nbsp;Second&nbsp;Line&nbsp;*/
+<br />
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;
+<br /><font color="#0000BB">&lt;?php&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">"test"</font><font color="#007700">);&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF8000">/*&nbsp;Third&nbsp;Line&nbsp;*/&nbsp;&nbsp;</font><font color="#0000BB">?&gt;</font>&nbsp;&nbsp;&nbsp;&nbsp;
+<br />&lt;/head&gt;
+<br />&lt;body&nbsp;onLoad="alert(test.hi());"&gt;
+<br />That's&nbsp;it!
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;
+<br />
+<br /></font>
+</code><!-- #endinclude --></code></div><br />
+Under the hood, PHP-O-Lait uses <a href="http://en.wikipedia.org/wiki/AJAX">Ajax</a> to send the request and receive the response, and <a href="http://www.json.org">JSON</a> for the data encoding / decoding. You don't need to know what either of these are to use PHP-O-Lait, but Ajax is a bag-of-tricks using client-side JavaScript to communicate with a server without loading a new page in the browser, and JSON is a light-weight data transfer protocol that is much more bandwidth-friendly than XML, and, I think, better suited to loosely-typed languages such as PHP and JavaScript.
+
+<!-- *********************************************** Licence ***************************************** -->
+<h2><a name="Licence"></a>Licence</h2>
+PHP-O-Lait is licenced under the <a href="LICENCE.txt">LGPL</a>, as is <a href="http://jsolait.net">jsolait</a> (which is included in the PHP-O-Lait distribution). <a href="http://mike.teczno.com/json.html">JSON-PHP</a> is also included in the PHP-O-Lait distribution, and it is licenced under a <a href="http://www.opensource.org/licenses/bsd-license.php">BSD licence</a>.
+
+<!-- *********************************************** DOWNLOAD ***************************************** -->
+<h2><a name="Download"></a>Download</h2>
+All files are on the <a href="http://www.sourceforge.net/project/showfiles.php?group_id=157070">SourceForge Download Page</a>.<p />
+
+<!-- *********************************************** VERSION ***************************************** -->
+<h2><a name="Version"></a>Version History</h2>
+<table cols="3" cellspacing="0" class="versionTable">
+<tr><th style="width: 100px;">Version</th><th style="width: 150px;">Date</th><th style="width: 600px;">Notes</th></tr>
+<tr><td class="vNum">0.5.1</td><td class="vDate">22 February 2006</td>
+  <td class="vNotes">Bug fix for javascript library inclusion in certain circumstances. Some documentation changes.
+  </td>
+</tr>
+<tr><td class="vNum">0.5.00</td><td class="vDate">12 January 2006</td>
+  <td class="vNotes">First public release.</td></tr>
+</table>
+
+<!-- ***************************** INSTALLATION ********************************* -->
+<h2><a name="Installation"></a>Installation</h2>
+Installation should be straightforward: unzip the zip file into your webserver directory. I presume, for this documentation, that it's in the root of your webserver, but it should work correctly anywhere. You will have three directories: <code>/doc</code>, which contains this documentation, <code>/phpolait</code>, which contains everything you need to write PHP-O-Lait enabled applications, and <code>/examples</code>, which contains the some examples.<p />
+
+<!--
+This part is - wait for it - a little tricky. No, just kidding, but you need three packages. I'm not wrapping them here into one because you have some choices, and each is available under its own licence. Here's what you will need:<p/>
+
+<table cols="2" class="RequirementsTable">
+<tr>
+  <td style="width: 100px; text-align: center;"><a href="http://jsolait.net/wiki/download">jsolait 1.1</a></td>
+  <td>jsolait is an free Javascript library that provides all sorts of nifty functionality. PHP-O-Lait uses its JSON-RPC modules, and jsolait very kindly lent us the -O-Lait in our name.</td>
+</tr>
+<tr>
+  <td style="text-align:center;"><a href="http://mike.teczno.com/json.html">JSON-PHP</a><br />
+    <i>OR</i><br />
+    <a href="http://www.aurore.net/projects/php-json/">PHP-JSON</a>
+  </td>
+  <td>Either of these libraries provides JSON encoding / decoding in PHP. <a href="http://mike.teczno.com/json.html">JSON-PHP</a> is a pure-PHP class, whereas <a href="http://www.aurore.net/projects/php-json/">PHP-JSON</a> is a C extension for PHP. The latter is <i>much</i> faster, but if you can't install PHP extensions on your server, use the former.</td>
+</tr>
+<tr>
+  <td style="text-align:center;">PHP-O-Lait</td>
+  <td>That's this library, and it just ties the above two together neatly, so that you, the programmer, don't need to know anything about JSON or Ajax.</td>
+</tr>
+</table>
+
+<h3>Installing JSON-PHP or PHP-JSON</h3>
+If you're using the C extension for JSON (<a href="http://www.aurore.net/projects/php-json/">PHP-JSON</a>), then you must install it and configure PHP appropriately.<p />
+If you're using the PHP library for JSON encoding (<a href="http://mike.teczno.com/json.html">JSON-PHP</a>), you just need to save it as an accessible php file. PHP-O-Lait assumes that it's called <code>JSON.php</code> and is located in the same directory as <code>phpolait.php</code>. If that's the case, you won't need to condfigure anything, otherwise see <a href="#configuring">Configuring PHP-O-Lait</a> below.<p/>
+
+<h3>Installing jsolait</h3>
+Download jsolait 1.1 and unzip it into your <code>phpolait</code> directory. You might want to <a href="#configuring">configure PHP-O-Lait</a>, but it shouldn't be necessary to start.<p />
+
+<h3>Installing PHP-O-Lait</h3>
+Just unzip the <code>phpolait.zip</code> file you downloaded, and copy the <code>phpolait</code> directory to a directory accessible off your webserver (I assume it's <code>phpolait</code>). You can also copy the <code>examples</code> directory, if you want to play with the examples.
+-->
+<!-- **************************** CONFIGURING PHP-O-Lait *****************************-->
+<h4><a name="configuring"></a>Configuring PHP-O-Lait</h4>
+PHP-O-Lait should require no configuration at all (thanks to the kindness of Jan-Klaas Kollhof, author of <a href="http://jsolait.net">jsolait</a>, and Michal Migurski, author of <a href="http://mike.teczno.com/json.html">JSON-PHP</a>), since all required packages are bundled in the <code>phpolait</code> directory.<p/>
+
+<!--If you're using the PHP library for JSON encoding (<a href="http://mike.teczno.com/json.html">JSON-PHP</a>),
+PHP-O-Lait assumes that it has been installed as <code>JSON.php</code> in the <code>phpolait</code> directory. If this is not the case, you can hard-code the location of the library in <code>phpolait.php</code> at the definition of <code>JSON_PHP_FILE</code>, or you can configure the location when you construct the <code>JSONRpcServer</code> object in your code. See <a href="#JSONRpcServer">JSONRpcServer</a> below.<p/>
+
+PHP-O-Lait comes bundled with <a href="http://jsolait.net">jsolait 1.1</a> installed in the <code>phpolait</code> directory. If you want to upgrade your version of jsolait, or have it stored elsewhere on your system, you can configure the path to the jsolait directory in <code>jsonrpc.php</code> where <code>JSOLAIT_ROOT</code> is defined, or you can set it when you construct the <code>JSONRpcServer</code> object in your code. See <a href="#JSONRpcServer">JSONRpcServer</a> below.<p />
+
+<b>Note:</b> Because the path to the jsolait library must be relative to the requested page, and not to the included <code>phpolait.php</code> page, there is a function that resolves this difference to produce a requested-page-relative path to the jsolait libraries. Since I've not tested this function thoroughly, if things don't work, this is a place to look...<p/>
+-->
+
+<h4>Optional Libraries</h4>
+
+If you want to use JSON-RPC calls to other JSON-RPC servers, PHP-O-Lait has built-in support for native PHP http requests and for the Curl library. If you have the Curl extension installed, PHP-O-Lait will use is automatically. You can also use your own Http classes, if you have particular http request requirements on your server. This process is described in <a href="#JSONRpcProxy">JSONRpcProxy</a>.<p/>
+
+You can also install the <a href="http://www.aurore.net/projects/php-json/">PHP-JSON</a> C extension for PHP. This is <b>much faster</b> than the bundled JSON-PHP library, but you need to be able to install extensions on your PHP server. Once installed, PHP-O-Lait will automatically detect and use this library in preference to the bundled library.<p/>
+
+<!-- ********************************************** USAGE **************************************** -->
+<h2><a name="Usage"></a>Usage</h2>
+<h3>Transparent Browser-Server Proxies</h3>
+Using PHP-O-Lait is straightforward. Both the server-side PHP code and the client-side JavaScript code are placed in the same page. The page is divided into three sections:
+<ol>
+<li>Code a class that provides all the server-side functionality your page will need.</li>
+<li>Three boilerplate steps:
+  <ol><li>Instantiation of <code>JSONRpcServer</code> to JSON-RPC enable the PHP class: <code>$server=new JSONRpcServer(new MyClass());</code></li>
+	<li>Start of HTML page: <code>&lt;html&gt;&lt;head&gt;</code></li>
+	<li>Include PHP-O-Lait generated JavaScript proxy to access your server-side class: <code>&lt;?php $server->javascript('proxy'); ?&gt;</code></li>
+	</ol>
+</li>
+<li>Write the rest of your HTML page, in JavaScript and HTML.</li>
+</ol>
+The first step, defining the PHP class that provides the server-side functionality (call it <code>MyClass</code>), is the developers, as is the third step, defining the client-side HTML and JavaScript. The middle second step is boilerplate, except for some configuration or access-restrictions you might like to add:<p/>
+<code><pre>
+$server = new JSONRpcServer(new MyClass());
+?&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?php $server-&gt;javascript("myproxy");?&gt;
+</pre></code>
+After this code, you can access your server-side code by calling the methods on the global client-side JavaScript object <code>myproxy</code>.<p />
+<h4>PHP 4.x: Case-Sensitivity</h4>
+PHP 4.x function and method names, unlike JavaScript, are <b>case-insensitive</b>. Because of this, in PHP 4.x, all the proxy methods generated for JavaScript are lower-case, irrespective of their case in PHP. If you really don't like this, you can use the <code>$methodMap</code> parameter to <a href="#eg_renaming_methods">rename your methods</a>.<p />
+
+If you're reading this for the first time, I suggest you try some <a href="#Examples">Examples</a> now to see how simple PHP-O-Lait can be. The next two sections are more advanced functionality of the PHP-O-Lait library.<p />
+
+<h4>Asynchronous method calling</h4>
+Once you have the client side Javascript object, any method can be called asynchronously on your client side by passing a callback function of the form <code>function callback(result, error) {..}</code> as the last parameter to the method. Consider this example:
+<code><pre>
+$server = new JSONRpcServer(new MyServer());
+?&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;?php $server-&gt;javascript('server');?&gt;
+&lt;script language="javascript"&gt;
+
+function callback(res, error) {
+  alert('res');
+}
+
+function sync() {
+  alert('1');
+  alert(server.myecho(2));
+  alert('3');
+}
+
+function async() {
+  alert('1');
+  server.myecho(2,callback);
+  alert('3');
+}
+&lt;/script&gt;
+</pre></code>
+In this example, the <code>sync()</code> function will show three alerts in the order 1, 2, 3. The <code>async()</code> function, on the other hand, will show the three alerts in the order 1, 3, 2, and, since the call is asynchronous, control will revert to the browser between the 3 and the 2.<p />
+
+<h3>Using PHP-O-Lait to JSON-Rpc Enable any class</h3>
+
+<a href="http://json-rpc.org/">JSON-RPC</a> is a protocol enabling any client to make a remote call to a method on a server. The transfer protocol that PHP-O-Lait supports is, obviously, http, and the encoding of the request and the response is done in JSON (JavaScript Object Notation). The JSONRpcServer class, besides the javascript-generating sugar, can JSON-RPC enable any PHP class. Simply pass an instantiation of the class to a new instance of the JSONRpcServer class.<p/>
+
+
+<b>Example 1</b>
+<div class="example"><pre>new JSONRpcServer( new MyServerClass() );</pre></div>
+That's it. Any method on <code>MyServerClass</code> can now be accessed over JSON-RPC by making a JSON-RPC request to the url of your page.<p/>
+Note that, if the JSONRpcServer class finds a JSON-RPC request that requires processing, it processes that request and terminates the script. The script will only continue if no such request was found.<p />
+
+You can only have one JSONRpcServer per page, both because <code>JSONRpcServer</code> terminates the script after it has processed a request, and because multiple classes on a page would not make sense from a caller's perspective.<p />
+
+See <a href="#JSONRpcServer">JSONRpcServer</a> for details of additional parameters.<p/>
+
+<h3>Calling remote JSON-RPC Servers from PHP</h3>
+PHP-O-Lait also supports the ability to make a remote JSON-RPC call from PHP code. This is done using the <code>JSONRpcProxy</code> class.<p/>
+To call a remote JSON-RPC server, simply create an instance of <code>JSONRpcProxy</code> with the Url of the server.
+<code><pre>
+$proxy = new JSONRpcProxy("http://jsolait.net/testj.py");
+list ($result, $error) = $proxy-&gt;echo("Testing JSONRPC on Jan-Klaas Kollhof's server!");
+?&gt;
+</pre></code><p />
+Any method called through <code>JSONRpcProxy</code> returns 3 results in an array, a result that is the value the call returned, an error, that will be null if no error occurred, and extended error information that is the actual response from the remote server. This is useful for debugging, since, if there is an error in a JSON-RPC server code, no JSON result might be returned, but an error code could be generated. In this case, result would be null, error would indicate that the call failed, and the extended error information would contain the actual response received from the server.<p />
+Note that a <code>null</code> result does not mean that an error occurred: a method can quite legitimately return <code>null</code>. An error occurred only if the error value returned is non-<code>null</code>.<p />
+
+<!-- *************************************** EXAMPLES ********************************-->
+<h2><a name="Examples"></a>Examples</h2>
+The code for these examples is in the <code>/examples</code> directory.
+<h3>Hello, World-O-Lait!</h3>
+Very simple example of using JSON-RPC to retrieve a value from the server. [<a href="../examples/helloworld.php">Demo</a>]<p/>
+<div class="example"><code><!-- #include('examples/helloworld.php') -->
+<div class="filename">examples/helloworld.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php&nbsp;
+<br />
+<br /></font><font color="#007700">require_once(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br />class&nbsp;</font><font color="#0000BB">MyClass&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">hi</font><font color="#007700">()&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#DD0000">"Hello,&nbsp;World-O-Lait!"</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />}
+<br /></font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(new&nbsp;</font><font color="#0000BB">MyClass</font><font color="#007700">());
+<br />
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;
+<br /><font color="#0000BB">&lt;?php&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">"test"</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;
+<br /></font>&lt;/head&gt;
+<br />&lt;body&nbsp;onLoad="alert(test.hi());"&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;</font>
+</code><!-- #endinclude --></code></div><h3>Calculator</h3>
+Demonstrates integration of Server-Side PHP execution and Client-Side JavaScript again, this time with a slightly more interesting example. [<a href="../examples/calculator.php">Demo</a>]<p />
+<div class="example"><!-- #include('examples/calculator.php') -->
+<div class="filename">examples/calculator.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br />
+<br /></font><font color="#007700">require_once&nbsp;(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br />class&nbsp;</font><font color="#0000BB">MyServer&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">add&nbsp;</font><font color="#007700">(</font><font color="#0000BB">$a</font><font color="#007700">,&nbsp;</font><font color="#0000BB">$b</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#0000BB">$a</font><font color="#007700">+</font><font color="#0000BB">$b</font><font color="#007700">;
+<br />&nbsp;&nbsp;}
+<br />}
+<br /></font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(new&nbsp;</font><font color="#0000BB">MyServer</font><font color="#007700">());
+<br />
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;
+<br /><font color="#0000BB">&lt;?&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">"proxy"</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;
+<br /></font>&lt;script&nbsp;language="javascript"&gt;
+<br />function&nbsp;doCalculation()&nbsp;{
+<br />&nbsp;&nbsp;var&nbsp;firstValue&nbsp;=&nbsp;document.getElementById('firstValue').value;
+<br />&nbsp;&nbsp;var&nbsp;secondValue&nbsp;=&nbsp;document.getElementById('secondValue').value;
+<br />&nbsp;&nbsp;document.getElementById('result').value&nbsp;=&nbsp;proxy.add(&nbsp;firstValue,&nbsp;secondValue&nbsp;);
+<br />}
+<br />&lt;/script&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;
+<br />&lt;form&gt;
+<br />Server-Side&nbsp;Calculator:&lt;br&nbsp;/&gt;
+<br />&lt;input&nbsp;type="text"&nbsp;id="firstValue"&nbsp;size="5"&gt;&nbsp;+&nbsp;
+<br />&lt;input&nbsp;type="text"&nbsp;id="secondValue"&nbsp;size="5"&gt;&nbsp;
+<br />&lt;input&nbsp;type="button"&nbsp;onClick="doCalculation();"&nbsp;value="="&gt;
+<br />&lt;input&nbsp;type="text"&nbsp;id="result"&nbsp;size="5"&gt;&nbsp;
+<br />&lt;/form&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;</font>
+</code><!-- #endinclude --></div><h3><a name="eg_renaming_methods"></a>Renaming Methods</h3>
+This demonstrates renaming and restricting method-access. Notice that renaming is being used to introduce capitalisation in JavaScript (the <code>Echo</code> method), and also that renaming permits a method to have a name that PHP would not permit (<code>Echo</code> is a reserved word in PHP).<p/>
+The <code>version</code> method is available because it appears as a key in the <code>$methodMap</code> array. Renaming only occurs if the value is a <code>string</code>. If the value is any other type, the method will be accessible by its PHP name (which will be lowercased if you're using PHP 4.x).
+[<a href="../examples/rename.php">Demo</a>]<p />
+<div class="example"><!-- #include ('examples/rename.php') -->
+<div class="filename">examples/rename.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br />
+<br />&nbsp;&nbsp;</font><font color="#007700">require_once&nbsp;(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br />&nbsp;&nbsp;</font><font color="#FF8000">/**
+<br />&nbsp;&nbsp;&nbsp;*&nbsp;Simple&nbsp;test&nbsp;class&nbsp;for&nbsp;the&nbsp;JSON&nbsp;RPC&nbsp;server
+<br />&nbsp;&nbsp;&nbsp;*/
+<br />&nbsp;&nbsp;</font><font color="#007700">class&nbsp;</font><font color="#0000BB">RestrictedServer&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">myecho</font><font color="#007700">(</font><font color="#0000BB">$msg</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#0000BB">$msg</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />
+<br />&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">hidden</font><font color="#007700">()&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#DD0000">"Inaccessible&nbsp;method"</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />
+<br />&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">version</font><font color="#007700">()&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#DD0000">"PHP-O-Lait&nbsp;Version&nbsp;0.5"</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;}
+<br />
+<br />&nbsp;&nbsp;</font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(&nbsp;new&nbsp;</font><font color="#0000BB">RestrictedServer</font><font color="#007700">(),&nbsp;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</font><font color="#DD0000">"version"</font><font color="#007700">=&gt;</font><font color="#0000BB">true</font><font color="#007700">,&nbsp;</font><font color="#DD0000">"Echo"</font><font color="#007700">=&gt;</font><font color="#DD0000">"myecho"</font><font color="#007700">)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;);
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;
+<br /><font color="#0000BB">&lt;?php&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">'proxy'</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;
+<br /></font>&lt;/head&gt;
+<br />&lt;html&gt;
+<br />&lt;body&gt;
+<br />&lt;a&nbsp;href="javascript:alert(proxy.Echo('Echo&nbsp;from&nbsp;server'));"&gt;
+<br />Echo('Echo&nbsp;from&nbsp;server')&lt;/a&gt;&lt;br&nbsp;/&gt;
+<br />&lt;a&nbsp;href="javascript:alert(proxy.version());"&gt;
+<br />version()&lt;/a&gt;&lt;br&nbsp;/&gt;
+<br />&lt;a&nbsp;href="javascript:alert(proxy.hidden());"&gt;
+<br />hidden()&lt;/a&gt;&nbsp;
+<br />(Won't&nbsp;produce&nbsp;an&nbsp;error&nbsp;since&nbsp;the&nbsp;JavaScript&nbsp;method&nbsp;does&nbsp;not&nbsp;exist.)&lt;br&nbsp;/&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;
+<br />
+<br /></font>
+</code><!-- #endinclude --></div><h3>Asynchronous Method Calls</h3>
+Passing a final parameter that is a callback function to a method call will cause the method to be called asynchronously. When the result is available, the callback function is called.
+ [<a href="../examples/async.php">Demo</a>]<p />
+<div class="example"><!-- #include ('examples/async.php') -->
+<div class="filename">examples/async.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php&nbsp;
+<br />
+<br /></font><font color="#007700">require_once(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br />class&nbsp;</font><font color="#0000BB">MyClass&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">myecho</font><font color="#007700">(</font><font color="#0000BB">$msg</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#0000BB">$msg</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />}
+<br /></font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(new&nbsp;</font><font color="#0000BB">MyClass</font><font color="#007700">());
+<br />
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;
+<br /><font color="#0000BB">&lt;?php&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">"test"</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;
+<br /></font>&lt;script&nbsp;language="javascript"&gt;
+<br />function&nbsp;syncCall()&nbsp;{
+<br />&nbsp;&nbsp;alert('syncCall()');
+<br />&nbsp;&nbsp;&nbsp;&nbsp;alert(&nbsp;test.myecho('Hello&nbsp;from&nbsp;synchronous&nbsp;call')&nbsp;);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;alert('leaving&nbsp;syncCall()');
+<br />}
+<br />
+<br />function&nbsp;asyncCall()&nbsp;{
+<br />&nbsp;&nbsp;alert('asyncCall()');
+<br />&nbsp;&nbsp;&nbsp;&nbsp;test.myecho('Hello&nbsp;from&nbsp;synchronous&nbsp;call',&nbsp;asyncCallback);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;alert('leaving&nbsp;asyncCall()');
+<br />}
+<br />
+<br />function&nbsp;asyncCallback(res,&nbsp;err)&nbsp;{
+<br />&nbsp;&nbsp;alert(res);
+<br />}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;
+<br />&lt;/script&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;
+<br />&lt;a&nbsp;href="javascript:syncCall();"&gt;Synchronous&nbsp;call&lt;/a&gt;&lt;br&nbsp;/&gt;
+<br />&lt;a&nbsp;href="javascript:asyncCall();"&gt;Asynchronous&nbsp;call&lt;/a&gt;&lt;br&nbsp;/&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;</font>
+</code><!-- #endinclude --></div><h3>Remote-Server Access</h3>
+Because a browser restricts our connections to our originating server, we can't fetch arbitrary websites. This examples uses JSON-RPC and an http proxy of sorts on the server to fetch an arbitrary website. [<a href="../examples/webfetch.php">Demo</a>]<p />
+<div class="example"><!-- #include ('examples/webfetch.php') -->
+<div class="filename">examples/webfetch.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br />
+<br />&nbsp;&nbsp;</font><font color="#007700">require_once&nbsp;(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br />&nbsp;&nbsp;</font><font color="#FF8000">/**
+<br />&nbsp;&nbsp;&nbsp;*&nbsp;Proxy&nbsp;reads&nbsp;a&nbsp;URL&nbsp;and&nbsp;returns&nbsp;data&nbsp;to&nbsp;the&nbsp;client.&nbsp;Client-side&nbsp;security&nbsp;restrictions
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;prevent&nbsp;this&nbsp;being&nbsp;done&nbsp;client-side.
+<br />&nbsp;&nbsp;&nbsp;*/
+<br />&nbsp;&nbsp;</font><font color="#007700">class&nbsp;</font><font color="#0000BB">WebFetch&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">get</font><font color="#007700">(</font><font color="#0000BB">$url</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</font><font color="#0000BB">substr</font><font color="#007700">(</font><font color="#0000BB">$url</font><font color="#007700">,</font><font color="#0000BB">0</font><font color="#007700">,</font><font color="#0000BB">7</font><font color="#007700">)!=</font><font color="#DD0000">"http://"</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF8000">//&nbsp;Otherwise,&nbsp;could&nbsp;read&nbsp;system&nbsp;files!
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#007700">return&nbsp;</font><font color="#DD0000">"Access&nbsp;denied"</font><font color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#0000BB">file_get_contents</font><font color="#007700">(</font><font color="#0000BB">$url</font><font color="#007700">);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;}
+<br />
+<br />&nbsp;&nbsp;</font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(&nbsp;new&nbsp;</font><font color="#0000BB">WebFetch</font><font color="#007700">());
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;
+<br /><font color="#0000BB">&lt;?php&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">"webfetch"</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;
+<br /></font>&lt;script&nbsp;language="javascript"&gt;
+<br />function&nbsp;fetchWebSource()&nbsp;{
+<br />&nbsp;&nbsp;var&nbsp;url&nbsp;=&nbsp;document.getElementById('url').value;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;webfetch.showErrors=true;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('html').value&nbsp;=&nbsp;webfetch.get(url);
+<br />}
+<br />&lt;/script&gt;
+<br />&lt;/head&gt;
+<br />&lt;body&gt;
+<br />&lt;form&gt;
+<br />URL:&nbsp;&lt;input&nbsp;type="text"&nbsp;id="url"&nbsp;size="60"&nbsp;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value="http://www.sourceforge.net/projects/phpolait/"&gt;
+<br />&lt;input&nbsp;type="button"&nbsp;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onClick="javascript:fetchWebSource();"&nbsp;value="Fetch"&gt;
+<br />&lt;br&nbsp;/&gt;
+<br />&lt;textarea&nbsp;rows="25"&nbsp;cols="60"&nbsp;wrap="true"&nbsp;id="html"&gt;&lt;/textarea&gt;&lt;br&nbsp;/&gt;
+<br />&lt;/form&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;
+<br /></font>
+</code><!-- #endinclude --></div><h3>JSON Rpc Services</h3>
+This demonstrates accessing remote JSON Rpc Services from PHP using <code>JSONRpcProxy</code>. [<a href="../examples/jsonrpc.php">Demo</a>]<p />
+<div class="example"><code>
+<!-- #include('examples/echo.php') -->
+<div class="filename">examples/echo.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br /><br />&nbsp;&nbsp;</font><font color="#007700">require_once(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;class&nbsp;</font><font color="#0000BB">EchoServer&nbsp;</font><font color="#007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">myecho</font><font color="#007700">(</font><font color="#0000BB">$msg</font><font color="#007700">)&nbsp;{&nbsp;return&nbsp;</font><font color="#0000BB">$msg</font><font color="#007700">;&nbsp;}<br />&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;</font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(new&nbsp;</font><font color="#0000BB">EchoServer</font><font color="#007700">(),&nbsp;array(</font><font color="#DD0000">"echo"</font><font color="#007700">=&gt;</font><font color="#DD0000">"myecho"</font><font color="#007700">));<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;<font color="#0000BB">&lt;?php&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">"proxy"</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;
+<br /></font>&lt;script&nbsp;language="javascript"&gt;
+<br />function&nbsp;doEcho()&nbsp;{
+<br />&nbsp;&nbsp;msg&nbsp;=&nbsp;document.getElementById('msg').value;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('returned').value&nbsp;=&nbsp;proxy.echo(msg);
+<br />}
+<br />&lt;/script&gt;
+<br />&lt;body&gt;
+<br />&lt;form&gt;
+<br />&lt;input&nbsp;type="text"&nbsp;id="msg"&nbsp;value="This&nbsp;echoes"&gt;&nbsp;
+<br />&lt;input&nbsp;type="button"&nbsp;value="send"&nbsp;onClick="doEcho()"&nbsp;&gt;
+<br />&lt;input&nbsp;type="text"&nbsp;id="returned"&nbsp;value=""&gt;
+<br />&lt;/form&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;<br /></font>
+</code><!-- #endinclude --><br /><br /><!-- #include ('examples/jsonrpc.php') -->
+<div class="filename">examples/jsonrpc.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br />
+<br /></font><font color="#007700">require&nbsp;(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br /></font><font color="#0000BB">$proxy&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcProxy</font><font color="#007700">(
+<br />&nbsp;&nbsp;&nbsp;</font><font color="#DD0000">"echo.php"
+<br /></font><font color="#007700">);
+<br />list&nbsp;(</font><font color="#0000BB">$result</font><font color="#007700">,&nbsp;</font><font color="#0000BB">$err</font><font color="#007700">,&nbsp;</font><font color="#0000BB">$ext</font><font color="#007700">)&nbsp;=&nbsp;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$proxy</font><font color="#007700">-&gt;</font><font color="#0000BB">echo</font><font color="#007700">(</font><font color="#DD0000">"Testing&nbsp;JSONRPC&nbsp;echo&nbsp;on&nbsp;PHP-O-Lait's&nbsp;server!"</font><font color="#007700">);
+<br />if&nbsp;(</font><font color="#0000BB">$err</font><font color="#007700">!=</font><font color="#0000BB">null</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;echo&nbsp;</font><font color="#DD0000">"ERROR&nbsp;$err:&nbsp;$ext"</font><font color="#007700">;
+<br />}&nbsp;else&nbsp;{
+<br />&nbsp;&nbsp;echo&nbsp;</font><font color="#0000BB">$result</font><font color="#007700">;
+<br />}
+<br />
+<br /></font><font color="#0000BB">?&gt;</font>
+</font>
+</code><!-- #endinclude --></code></div><h3>Proxy to Another Page</h3>
+Suppose that I have used PHP-O-Lait to access some class on one web-page and I want to use the same functionality on another page. Obviously, I don't want to duplicate the code. Since the first page uses a class, I could simply re-use the class on another page, or use the class as a base class and add new functionality for the current page, or create proxy methods on the current page's class that calls methods on the first page's class, or JSON-RPC Proxy my way to the third page.<p/>
+This example demonstrates the latter method (which it not the recommended method), since the other methods are standard OO approaches.
+[<a href="../examples/manageuser.php">Demo</a>]
+<p />
+<div class="example"><code>
+<!-- #include ('examples/adduser.php') -->
+<div class="filename">examples/adduser.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br />
+<br /></font><font color="#007700">require(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br />class&nbsp;</font><font color="#0000BB">AddUserServer&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">AddUser</font><font color="#007700">(</font><font color="#0000BB">$name</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#DD0000">"Added&nbsp;user&nbsp;[$name]"</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />};
+<br />
+<br /></font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(new&nbsp;</font><font color="#0000BB">AddUserServer</font><font color="#007700">());
+<br />
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;body&gt;
+<br />Regular&nbsp;PHP-O-Lait&nbsp;functionality&nbsp;to&nbsp;add&nbsp;a&nbsp;user.
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;</font>
+</code><!-- #endinclude --><br /><br /><!-- #include ('examples/manageuser.php') -->
+<div class="filename">examples/manageuser.php</div><code><font color="#000000">
+<font color="#0000BB">&lt;?php
+<br />
+<br /></font><font color="#007700">require(</font><font color="#DD0000">"../phpolait/phpolait.php"</font><font color="#007700">);
+<br />
+<br />class&nbsp;</font><font color="#0000BB">UserManagementServer&nbsp;</font><font color="#007700">{
+<br />&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">AddUser</font><font color="#007700">(</font><font color="#0000BB">$name</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$proxy&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcProxy</font><font color="#007700">(</font><font color="#DD0000">"adduser.php"</font><font color="#007700">);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;(</font><font color="#0000BB">$result</font><font color="#007700">,&nbsp;</font><font color="#0000BB">$error</font><font color="#007700">)&nbsp;=&nbsp;</font><font color="#0000BB">$proxy</font><font color="#007700">-&gt;</font><font color="#0000BB">AddUser</font><font color="#007700">(</font><font color="#0000BB">$name</font><font color="#007700">);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#0000BB">$result</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;</font><font color="#0000BB">DeleteUser</font><font color="#007700">(</font><font color="#0000BB">$name</font><font color="#007700">)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</font><font color="#DD0000">"Deleted&nbsp;user&nbsp;[$name]"</font><font color="#007700">;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />};
+<br />
+<br /></font><font color="#0000BB">$server&nbsp;</font><font color="#007700">=&nbsp;new&nbsp;</font><font color="#0000BB">JSONRpcServer</font><font color="#007700">(new&nbsp;</font><font color="#0000BB">UserManagementServer</font><font color="#007700">(),
+<br />&nbsp;&nbsp;&nbsp;&nbsp;array(</font><font color="#DD0000">"adduser"</font><font color="#007700">=&gt;</font><font color="#DD0000">"AddUser"</font><font color="#007700">,</font><font color="#DD0000">"deleteuser"</font><font color="#007700">=&gt;</font><font color="#DD0000">"DeleteUser"</font><font color="#007700">)
+<br />);
+<br />
+<br /></font><font color="#0000BB">?&gt;
+<br /></font>&lt;html&gt;
+<br />&lt;head&gt;
+<br /><font color="#0000BB">&lt;?php&nbsp;$server</font><font color="#007700">-&gt;</font><font color="#0000BB">javascript</font><font color="#007700">(</font><font color="#DD0000">'server'</font><font color="#007700">);&nbsp;</font><font color="#0000BB">?&gt;
+<br /></font>&lt;script&nbsp;language="javascript"&gt;
+<br />function&nbsp;doClick(act)&nbsp;{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;name&nbsp;=&nbsp;document.getElementById('name').value;
+<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(act&nbsp;==&nbsp;'add')&nbsp;alert(server.adduser(name));
+<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(act&nbsp;==&nbsp;'del')&nbsp;alert(server.deleteuser(name));
+<br />}
+<br />&lt;/script&gt;
+<br />&lt;body&gt;
+<br />&lt;form&gt;
+<br />&lt;input&nbsp;type="text"&nbsp;id="name"&gt;
+<br />&lt;input&nbsp;type="button"&nbsp;onClick="doClick('add');"&nbsp;value="Add"&nbsp;&gt;
+<br />&lt;input&nbsp;type="button"&nbsp;onClick="doClick('del');"&nbsp;value="Delete"&nbsp;&gt;
+<br />&lt;/body&gt;
+<br />&lt;/html&gt;
+<br /></font>
+</code><!-- #endinclude --></code></div>
+<!-- *********************************************** REFERENCE ***************************************** -->
+<h2><a name="Reference"></a>Reference</h2>
+
+<dl>
+<!-- ************************************ REFERENCE: JSONRpcProxy ************************************ -->
+    <dt><a name="JSONRpcProxy"></a><code>new <b>JSONRpcProxy</b> ($server_url [, $HttpWrapper=null [ , $jsonlib=null]] )</code></dt>
+		<dd>A <code>JSONRpcProxy</code> provides a proxy object to make calls on a remote (or local to the current server) JSON RPC server. The <code>$server_url</code> is the url of the server to be accessed. It can be an absolute or a relative path.<p/>
+		<b>Example 1</b>
+		<div class="example"><pre><div class="file"><div class="filename">MyServer.php</div>
+class MyServer {
+	function add($a,$b) { return $a+$b; }
+};
+new JSONRpcServer(new MyServer());
+</div>
+
+<div class="file"><div class="filename">MyClient.php</div>
+$proxy = new JSONRpcProxy("MyServer.php");
+echo "1 + 2 = " . $proxy->add(1,2);
+</div></pre></div>
+    The optional <code>$httpWrapper</code> parameter can specify a class to provide Http functionality. The HttpWrapper classes <code>HttpWrapper_CURL</code> and <code>HttpWrapper_PHP</code> classes are defined in <code>httpwrap.php</code>, and use the CURL and native PHP sockets respectively. Any HttpWrapper class is expected to provide a single function:<p />
+		<code><pre>class HttpWrapper_X {
+  function post($url, $data, $referrer=null) {
+	  // Perform the HTTP Post and return ONLY the body of the HTTP result
+	};
+}</pre></code><p />
+		You can use any class of your own making to provide this functionality, and simply pass an instance of your own class as the second parameter to the constructor of the <code>JSONRpcProxy</code> class.<p/>
+		If no HttpWrapper is provided in the constructor, <code>JSONRpcProxy</code> uses the <code>HttpWrapper::GetWrapper()</code> method defined in <code>httpwrap.php</code> to select a suitable wrapper (CURL if you have the Curl extension installed, native PHP otherwise). If you want to customize PHP-O-Lait for your site, it can be easily achieved by changing this method to return the particular HttpWrapper type class you would like to use.<p />
+
+		The optional third parameter, <code>$jsonlib</code>, points to the location of the <code>JSON.php</code> JSON-PHP library file. You should never need to use this parameter unless you are restructuring the location of your files for some reason.<p/>
+		</dd>
+		</dt>
+<!-- ************************************ REFERENCE: JSONRpcServer ************************************ -->
+<dt><a name="JSONRpcServer"></a><code>new <b>JSONRpcServer</b> ( $object [, $methodMaps=null [, $config=null ]])</code></dt>
+	  <dd>Constructs a new <code>JSONRpcServer</code> to provide access to the methods of <code>$object</code>.<p/>
+	    <b>Example 1: Basic Usage</b>
+	    <div class="example">
+	    <pre>
+require_once ("jsonrpc.php");
+
+class MyServer {
+  function add($a, $b) {
+    return $a+$b;
+  }
+};
+
+$server = new JSONRpcServer(new MyServer());
+</pre>
+</div>
+
+By default, every method of the object passed to JSONRpcServer will be available as a JSON-RPC Method. Since this might not be ideal, for security or other reasons, the <code>$methodMap</code> parameter can be used to:
+<ol>
+<li>Restrict access to particular methods, or</li>
+<li>Rename methods.</li>
+</ol>
+The <code>$methodMap</code> parameter consists of an associative array that maps JSON-RPC method names to the actual methods that will be called on the object. If a method name exists as a key in <code>$methodMap</code>, a method by that name will be accessible to the client code. If a name does not exist as a key, the method will not be accessible. This is useful for security. If a method name in <code>$methodMap</code> is mapped to a string, then the method will be given the key-name on the client side, but the value-name will be the actual method called. This might seem like a strange idea (why offer method renaming?), but it is in fact useful: it offers the ability to have methods that are PHP-reserved words. The method in <b>Example 2</b> is called <code>echo</code>, but you can't write a function called <code>echo</code>.<p />
+
+<b>Example 2: Renaming Methods and Restricting Access</b>
+<div class="example"><pre>
+class ProtectedServer {
+
+	function myecho($msg) {
+		return $msg;
+	}
+
+	function privateFunction($code) {
+		eval($code);
+	}
+
+	function version() {
+		return "Version 1.0 alpha";
+	}
+}
+
+$server =  JSONRpcServer( new ProtectedServer(), array ("version"=>true, "echo"=>"myecho"));
+</pre></div>
+
+The final, optional parameter, can be used to specify the locations of the JSON-PHP library (the PHP library) or the jsolait library files. <!--These can be defined in the <code>jsonrpc.php</code> file (see <a href="#configuring">Configuring PHP-O-Lait</a>), or passed when the JSONRpcServer is instantiated.--><p/>
+The full file location of the JSON-PHP library can be specified by passing a <code>jsonlib</code> key-value in the <code>$config</code> parameter, and the root directory where the <code>jsolait</code> directory is located can be specified in a <code>jsolait</code> key-value. If either is absent, the default is used.<p />
+It is extremely unlikely you will ever need to use this parameter.<p />
+
+<b>Example 3: Configuring locations of JSON-PHP and jsolait libraries</b>
+<div class="example"><pre>
+$server =  JSONRpcServer( new MyServer()
+			, null <span class="comment">/* Full access, no renaming */</span>
+			, array ("jsonlib"=>"/libs/jsonlib.php", "jsolait"=>"/libs")
+);
+</pre></div>
+
+	  </dd>
+<!-- ************************************ REFERENCE: JSONRpcServer::javascript ************************************ -->
+	  <dt><a name="JSONRpcServer::javascript"></a><code><b>JSONRpcServer::javascript</b> ( $varName )</code></dt>
+	  <dd>Once the <code>JSONRpcServer</code> has been constructed, the <code>javascript</code> method inserts the appropriate JavaScript code into the webpage. It takes a single parameter, the name of the global
+	  variable to hold the proxy object.<p/>
+
+	  It is recommended to call the <code>javascript</code> method in the <code>&lt;head&gt;</code> tag of your web page, but <b>do not</b> put the call between <code>&lt;script&gt;</code> tags: the method will insert these itself.<p />
+
+		<b>Note: </b> If you're using PHP 4.x, unless you rename methods using the <code>$methodMap</code> parameter in the constructor of the <code>JSONRpcServer</code>, all methods will be lowercase in JavaScript. This is because methods in PHP 4.x are case-insensitive.<p />
+
+	    <b>Example 1</b>
+	    <div class="example"><pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;?php echo $server-&gt;javascript("proxy"); ?&gt;
+&lt;/head&gt;
+&lt;html&gt;
+...</pre>
+	    </div>
+	  After this code has been inserted, you can code your own Javascript functions, calling you PHP methods on the JavaScript proxy object. PHP-O-Lait will route these calls to the server, execute the method on your PHP object, and return the results as JavaScript values (strings, bools, ints, Arrays or Objects).
+	  </dd>
+</dl>
+
+<!-- *********************************************** ROADMAP ***************************************** -->
+<h2><a name="Roadmap"></a>Roadmap</h2>
+For the 0.6 release of PHP-O-Lait I am planning improved error handling and debugging tools, an area where JavaScript is not particularly strong. I am also considering adding the ability to provide JavaScript side connections to other web pages (ie. not just back to one's own page), so that one can access server objects elsewhere on ones site. As discussed above, this might not actually be necessary, since one can achieve this easily using OO techniques.<p />
+
+<!-- *********************************************** THANKS ***************************************** -->
+<h2><a name="Thanks"></a>Thanks</h2>
+<ul>
+<li>Special thanks to Jan Kollhof for <a href="http://jsolait.net">jsolait</a> and for graciously allowing me to use the PHP-O-Lait name for this project, and to bundle jsolait with this distribution.</li>
+<li>Special thanks to Michal Migurski for developing <a href="http://mike.teczno.com/json.html">JSON-PHP</a> and allowing me to bundle JSON-PHP with this distribution.</li>
+<li>Thanks to the folks developing <a href="http://www.aurore.net/projects/php-json/">PHP-JSON</a>, which can also be used to provide server-side JSON encoding.</li>
+<li>Thanks to the folks at <a href="http://www.modernmethod.com/sajax/">Sajax</a>, where I shamelessly stole the idea of wrapping all functionality into a single page, and having the JSONRpcServer object generate all the appropriate Javascript proxies.</li>
+
+</div>
+<div class="copyright">&copy; 2006 Craig Mason-Jones, <a href="http://www.lateral.co.za">Lateral Alternative</a></div>
+</table>
+</body>
+</html>

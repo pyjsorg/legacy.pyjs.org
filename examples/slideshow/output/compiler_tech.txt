@@ -1,0 +1,14 @@
+== pyjs.py ==
+ * Well on the way to supporting all of Python 2.N
+   ** in 4000 lines of code
+ * javascript "undefined" complete pain
+   ** not caught at run-time
+   ** causes strings n stuff to disappear
+   ** Use Pyjamas-Desktop to catch errors
+ * sprintf e.g. "test %d" - only accepts 1 argument (bug)
+   ** "%s %d" % (arg1, arg2) barfs
+ * Don't rely on javascript auto-num-conversion!
+   ** "hello" + 5 => "hello5" in Javascript
+   ** Stuffs up Pyjamas-Desktop possibilities
+ * Javascript quietly happy with too many params!
+   ** Stuffs up Pyjamas-Desktop

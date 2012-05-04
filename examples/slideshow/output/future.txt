@@ -1,0 +1,15 @@
+ * Webkit
+   ** Prod Apple's buttocks (get #16401 done)
+   ** Add SVG Canvas glib bindings
+   ** Other Widget set webkit "ports"
+ * Semi-automated conversion of GWT Libraries
+   ** java2python will help
+   ** Need more developers!
+ * Semi-automated wrapping of Javascript APIs
+   ** ply (lex) compiler needed
+ * Update to GWT 1.5.2
+   ** and more
+ * Equivalent of Glade (PyJSGlade)
+   ** http://code.google.com/p/pyjsglade
+   ** UI layout specified in (sadly) an XML document
+   ** Loaded using AJAX or inline XML

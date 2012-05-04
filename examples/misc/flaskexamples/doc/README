@@ -1,0 +1,9 @@
+Documentation is not necessarily fun to write, but it is very useful to have.
+I have selected to use reStructuredText (sphinx) for my projects as it can be 
+converted to many different formats and sphinx can read comments from python
+source files.  I have tried (unsuccessfully) to deduce the syntax for the
+pyjamas wiki.  What I have done is write a python program to write a sed script
+that will substitute links.
+
+Anyhow, the best way to view this is to just install sphinx and run build.sh.
+Another method is to just read the index.rst file itself.

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pyjsglade>
+<properties>
+	<property name="puremvc" value="False" />
+	<property name="xmlfile" value="builder.xml" />
+	<property name="version" value="0.1" />
+	<property name="name" value="builder" />
+	<property name="codefile" value="builder.py" />
+</properties>
+<components>
+	<component id="AppLogin" name="DialogBox" type="Panel" index="None" left="336" top="491" visible="True">
+		<properties name="widget">
+			<property name="caption" value="Login" />
+		</properties>
+		<properties name="layout">
+			<property name="width" value="" />
+			<property name="height" value="" />
+		</properties>
+		<properties name="elements">
+		</properties>
+		<properties name="common">
+			<property name="name" value="AppLogin" />
+		</properties>
+		<properties name="events">
+			<property name="onPopupClosed" value="" />
+		</properties>
+		<components>
+			<component id="Grid1" name="Grid" type="Panel" index="0">
+				<properties name="elements">
+				</properties>
+				<properties name="layout">
+					<property name="height" value="" />
+					<property name="width" value="" />
+				</properties>
+				<properties name="common">
+					<property name="name" value="Grid1" />
+				</properties>
+				<properties name="events">
+					<property name="onCellClicked" value="" />
+					<property name="onCellDoubleClicked" value="" />
+				</properties>
+				<components>
+					<component id="lblLabel1" name="Label" type="Widget" index="(0, 0)">
+						<properties name="widget">
+							<property name="tooltip" value="" />
+							<property name="label" value="Username:" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="lblLabel1" />
+						</properties>
+						<properties name="events">
+							<property name="onClick" value="" />
+							<property name="onDoubleClick" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onMouseMove" value="" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+						</properties>
+					</component>
+					<component id="username" name="TextBox" type="Widget" index="(0, 1)">
+						<properties name="widget">
+							<property name="text" value="" />
+							<property name="maxLength" value="" />
+							<property name="visibleLength" value="" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="username" />
+							<property name="tabIndex" value="" />
+						</properties>
+						<properties name="events">
+							<property name="onInput" value="" />
+							<property name="onClick" value="" />
+							<property name="onKeyPress" value="" />
+							<property name="onDoubleClick" value="" />
+							<property name="onKeyDown" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onKeyUp" value="" />
+							<property name="onMouseMove" value="" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+							<property name="onLostFocus" value="" />
+							<property name="onFocus" value="" />
+							<property name="onChange" value="" />
+						</properties>
+					</component>
+					<component id="lblLabel2" name="Label" type="Widget" index="(1, 0)">
+						<properties name="widget">
+							<property name="tooltip" value="" />
+							<property name="label" value="Password:" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="lblLabel2" />
+						</properties>
+						<properties name="events">
+							<property name="onClick" value="" />
+							<property name="onDoubleClick" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onMouseMove" value="" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+						</properties>
+					</component>
+					<component id="password" name="PasswordTextBox" type="Widget" index="(1, 1)">
+						<properties name="widget">
+							<property name="text" value="" />
+							<property name="maxLength" value="" />
+							<property name="visibleLength" value="" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="password" />
+							<property name="tabIndex" value="" />
+						</properties>
+						<properties name="events">
+							<property name="onInput" value="" />
+							<property name="onClick" value="" />
+							<property name="onKeyPress" value="" />
+							<property name="onDoubleClick" value="" />
+							<property name="onKeyDown" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onKeyUp" value="" />
+							<property name="onMouseMove" value="" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+							<property name="onLostFocus" value="" />
+							<property name="onFocus" value="" />
+							<property name="onChange" value="" />
+						</properties>
+					</component>
+					<component id="None" index="(3, 0)">
+					</component>
+					<component id="HorizontalPanel1" name="HorizontalPanel" type="Panel" index="(3, 1)">
+						<properties name="elements">
+							<properties name="1">
+								<property name="visible" value="False" />
+								<property name="wordwrap" value="False" />
+								<property name="halign" value="right" />
+							</properties>
+						</properties>
+						<properties name="layout">
+							<property name="spacing" value="0" />
+							<property name="height" value="" />
+							<property name="padding" value="0" />
+							<property name="width" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="HorizontalPanel1" />
+						</properties>
+						<components>
+							<component id="btnButton1" name="Button" type="Widget" index="0">
+								<properties name="widget">
+									<property name="label" value="Cancel" />
+								</properties>
+								<properties name="layout">
+									<property name="width" value="" />
+									<property name="height" value="" />
+								</properties>
+								<properties name="common">
+									<property name="name" value="btnButton1" />
+									<property name="tabIndex" value="" />
+								</properties>
+								<properties name="events">
+									<property name="onClick" value="" />
+									<property name="onKeyPress" value="" />
+									<property name="onDoubleClick" value="" />
+									<property name="onKeyDown" value="" />
+									<property name="onMouseEnter" value="" />
+									<property name="onMouseDown" value="" />
+									<property name="onKeyUp" value="" />
+									<property name="onMouseMove" value="" />
+									<property name="onMouseUp" value="" />
+									<property name="onMouseLeave" value="" />
+									<property name="onLostFocus" value="" />
+									<property name="onFocus" value="" />
+								</properties>
+							</component>
+							<component id="submit" name="Button" type="Widget" index="1">
+								<properties name="widget">
+									<property name="label" value="Login" />
+								</properties>
+								<properties name="layout">
+									<property name="width" value="" />
+									<property name="height" value="" />
+								</properties>
+								<properties name="common">
+									<property name="name" value="submit" />
+									<property name="tabIndex" value="" />
+								</properties>
+								<properties name="events">
+									<property name="onClick" value="" />
+									<property name="onKeyPress" value="" />
+									<property name="onDoubleClick" value="" />
+									<property name="onKeyDown" value="" />
+									<property name="onMouseEnter" value="" />
+									<property name="onMouseDown" value="" />
+									<property name="onKeyUp" value="" />
+									<property name="onMouseMove" value="" />
+									<property name="onMouseUp" value="" />
+									<property name="onMouseLeave" value="" />
+									<property name="onLostFocus" value="" />
+									<property name="onFocus" value="" />
+								</properties>
+							</component>
+						</components>
+					</component>
+				</components>
+			</component>
+		</components>
+	</component>
+	<component id="CaptionPanel1" name="CaptionPanel" type="Panel" index="None" left="190" top="323" visible="True">
+		<properties name="widget">
+			<property name="caption" value="CaptionPanel1" />
+		</properties>
+		<properties name="elements">
+		</properties>
+		<properties name="layout">
+			<property name="width" value="" />
+			<property name="height" value="" />
+		</properties>
+		<properties name="common">
+			<property name="name" value="CaptionPanel1" />
+		</properties>
+		<components>
+			<component id="VerticalPanel1" name="VerticalPanel" type="Panel" index="0">
+				<properties name="elements">
+				</properties>
+				<properties name="layout">
+					<property name="spacing" value="0" />
+					<property name="height" value="" />
+					<property name="padding" value="0" />
+					<property name="width" value="" />
+				</properties>
+				<properties name="common">
+					<property name="name" value="VerticalPanel1" />
+				</properties>
+				<components>
+					<component id="MenuBar1" name="MenuBar" type="Widget" index="0">
+						<properties name="widget">
+							<property name="0" value="(0, 'MenuItem1', 'Menu1', '')" />
+							<property name="1" value="(1, 'MenuItem2', 'Menu2', 'onMenuItem2')" />
+							<property name="2" value="(1, 'MenuItem3', 'Menu3', 'onMenuItem3')" />
+							<property name="3" value="(0, 'MenuItem4', 'Menu4', '')" />
+							<property name="4" value="(1, 'MenuItem5', 'Menu5', 'onMenuItem5')" />
+							<property name="vertical" value="False" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="MenuBar1" />
+						</properties>
+					</component>
+					<component id="txbHTML" name="Label" type="Widget" index="1">
+						<properties name="widget">
+							<property name="tooltip" value="txbHTML in CaptionPanel1" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="txbHTML" />
+						</properties>
+						<properties name="events">
+							<property name="onClick" value="onHTMLClicked" />
+							<property name="onDoubleClick" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onMouseMove" value="onHTMLMouseMoved" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+						</properties>
+					</component>
+					<component id="txbTextBoxSurname" name="TextBox" type="Widget" index="2">
+						<properties name="widget">
+							<property name="text" value="" />
+							<property name="maxLength" value="" />
+							<property name="visibleLength" value="" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="txbTextBoxSurname" />
+							<property name="tabIndex" value="" />
+						</properties>
+						<properties name="events">
+							<property name="onInput" value="" />
+							<property name="onClick" value="" />
+							<property name="onKeyPress" value="" />
+							<property name="onDoubleClick" value="" />
+							<property name="onKeyDown" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onKeyUp" value="" />
+							<property name="onMouseMove" value="" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+							<property name="onLostFocus" value="" />
+							<property name="onFocus" value="onInputBoxFocus" />
+							<property name="onChange" value="" />
+						</properties>
+					</component>
+					<component id="None" index="3">
+					</component>
+				</components>
+			</component>
+		</components>
+	</component>
+	<component id="CaptionPanel2" name="CaptionPanel" type="Panel" index="None" left="507" top="374" visible="False">
+		<properties name="widget">
+			<property name="caption" value="CaptionPanel2" />
+		</properties>
+		<properties name="elements">
+		</properties>
+		<properties name="layout">
+			<property name="width" value="" />
+			<property name="height" value="" />
+		</properties>
+		<properties name="common">
+			<property name="name" value="CaptionPanel2" />
+		</properties>
+		<components>
+			<component id="VerticalPanel1" name="VerticalPanel" type="Panel" index="0">
+				<properties name="elements">
+				</properties>
+				<properties name="layout">
+					<property name="spacing" value="0" />
+					<property name="height" value="" />
+					<property name="padding" value="0" />
+					<property name="width" value="" />
+				</properties>
+				<properties name="common">
+					<property name="name" value="VerticalPanel1" />
+				</properties>
+				<components>
+					<component id="txbHTML" name="Label" type="Widget" index="0">
+						<properties name="widget">
+							<property name="tooltip" value="" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="txbHTML" />
+						</properties>
+						<properties name="events">
+							<property name="onClick" value="onHTMLClicked" />
+							<property name="onDoubleClick" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onMouseMove" value="onHTMLMouseMoved" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+						</properties>
+					</component>
+					<component id="txbTextBoxSurname" name="TextBox" type="Widget" index="1">
+						<properties name="widget">
+							<property name="text" value="" />
+							<property name="maxLength" value="" />
+							<property name="visibleLength" value="" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="txbTextBoxSurname" />
+							<property name="tabIndex" value="" />
+						</properties>
+						<properties name="events">
+							<property name="onInput" value="" />
+							<property name="onClick" value="" />
+							<property name="onKeyPress" value="" />
+							<property name="onDoubleClick" value="" />
+							<property name="onKeyDown" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onKeyUp" value="" />
+							<property name="onMouseMove" value="" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+							<property name="onLostFocus" value="" />
+							<property name="onFocus" value="onInputBoxFocus" />
+							<property name="onChange" value="" />
+						</properties>
+					</component>
+				</components>
+			</component>
+		</components>
+	</component>
+	<component id="builderpanel" name="ScrollPanel" type="Panel" index="None" left="248" top="220" visible="False">
+		<properties name="layout">
+			<property name="width" value="" />
+			<property name="height" value="" />
+		</properties>
+		<properties name="elements">
+		</properties>
+		<properties name="common">
+			<property name="name" value="builderpanel" />
+		</properties>
+		<properties name="events">
+			<property name="onScroll" value="" />
+		</properties>
+		<components>
+			<component id="DockPanel1" name="DockPanel" type="Panel" index="0">
+				<properties name="elements">
+				</properties>
+				<properties name="layout">
+					<property name="spacing" value="0" />
+					<property name="height" value="" />
+					<property name="padding" value="0" />
+					<property name="width" value="" />
+				</properties>
+				<properties name="common">
+					<property name="name" value="DockPanel1" />
+				</properties>
+				<components>
+					<component id="None" index="(0, 'north')">
+					</component>
+					<component id="addbutton" name="Button" type="Widget" index="(1, 'south')">
+						<properties name="widget">
+							<property name="label" value="add" />
+						</properties>
+						<properties name="layout">
+							<property name="width" value="" />
+							<property name="height" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="addbutton" />
+							<property name="tabIndex" value="" />
+						</properties>
+						<properties name="events">
+							<property name="onClick" value="onAddClicked" />
+							<property name="onKeyPress" value="" />
+							<property name="onDoubleClick" value="" />
+							<property name="onKeyDown" value="" />
+							<property name="onMouseEnter" value="" />
+							<property name="onMouseDown" value="" />
+							<property name="onKeyUp" value="" />
+							<property name="onMouseMove" value="" />
+							<property name="onMouseUp" value="" />
+							<property name="onMouseLeave" value="" />
+							<property name="onLostFocus" value="" />
+							<property name="onFocus" value="" />
+						</properties>
+					</component>
+					<component id="None" index="(2, 'west')">
+					</component>
+					<component id="None" index="(3, 'east')">
+					</component>
+					<component id="Grid1" name="Grid" type="Panel" index="(4, 'center')">
+						<properties name="layout">
+							<property name="height" value="" />
+							<property name="width" value="" />
+						</properties>
+						<properties name="common">
+							<property name="name" value="Grid1" />
+						</properties>
+						<properties name="events">
+							<property name="onCellClicked" value="" />
+							<property name="onCellDoubleClicked" value="" />
+						</properties>
+					</component>
+				</components>
+			</component>
+		</components>
+	</component>
+	<component id="builderrow" name="HorizontalPanel" type="Panel" index="None" left="195" top="324" visible="False">
+		<properties name="elements">
+		</properties>
+		<properties name="layout">
+			<property name="spacing" value="0" />
+			<property name="height" value="" />
+			<property name="padding" value="0" />
+			<property name="width" value="" />
+		</properties>
+		<properties name="common">
+			<property name="name" value="builderrow" />
+		</properties>
+		<components>
+			<component id="btnremove" name="Button" type="Widget" index="0">
+				<properties name="widget">
+					<property name="label" value="remove" />
+				</properties>
+				<properties name="layout">
+					<property name="width" value="" />
+					<property name="height" value="" />
+				</properties>
+				<properties name="common">
+					<property name="name" value="btnremove" />
+					<property name="tabIndex" value="" />
+				</properties>
+				<properties name="events">
+					<property name="onClick" value="onRemoveClicked" />
+					<property name="onKeyPress" value="" />
+					<property name="onDoubleClick" value="" />
+					<property name="onKeyDown" value="" />
+					<property name="onMouseEnter" value="" />
+					<property name="onMouseDown" value="" />
+					<property name="onKeyUp" value="" />
+					<property name="onMouseMove" value="" />
+					<property name="onMouseUp" value="" />
+					<property name="onMouseLeave" value="" />
+					<property name="onLostFocus" value="" />
+					<property name="onFocus" value="" />
+				</properties>
+			</component>
+			<component id="txbTextBox1" name="TextBox" type="Widget" index="1">
+				<properties name="widget">
+					<property name="text" value="" />
+					<property name="maxLength" value="" />
+					<property name="visibleLength" value="" />
+				</properties>
+				<properties name="layout">
+					<property name="width" value="" />
+					<property name="height" value="" />
+				</properties>
+				<properties name="common">
+					<property name="name" value="txbTextBox1" />
+					<property name="tabIndex" value="" />
+				</properties>
+				<properties name="events">
+					<property name="onInput" value="" />
+					<property name="onClick" value="" />
+					<property name="onKeyPress" value="" />
+					<property name="onDoubleClick" value="" />
+					<property name="onKeyDown" value="" />
+					<property name="onMouseEnter" value="" />
+					<property name="onMouseDown" value="" />
+					<property name="onKeyUp" value="" />
+					<property name="onMouseMove" value="" />
+					<property name="onMouseUp" value="" />
+					<property name="onMouseLeave" value="" />
+					<property name="onLostFocus" value="" />
+					<property name="onFocus" value="" />
+					<property name="onChange" value="" />
+				</properties>
+			</component>
+		</components>
+	</component>
+</components>
+</pyjsglade>

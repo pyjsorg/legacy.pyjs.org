@@ -1,0 +1,33 @@
+A very brief walk through of how to get this running:
+
+Install pimentech if required:
+
+    * svn checkout http://svn.pimentech.org/pimentech/libcommonDjango
+    * cd libcommonDjango
+    * make install
+
+Create the db (not required when using sqlite3):
+
+    * mysql -u root
+    * > CREATE DATABASE todo;
+    * > grant all privilages to todo.* to 'todo'@'localhost'; (or possibly > grant all on todo.* to 'todo'@'localhost';)
+    * > exit;
+
+Create the tables:
+
+    * cd djangotasks
+    * python manage.py syncdb
+
+Build the javascript:
+
+    * vim media/build.sh
+    * (edit this so that it points to the build.py of pyjamas)
+    * media/build.sh
+
+Run the server:
+
+    * python manage.py runserver
+
+Test it out:
+
+    * In your browser, goto: http://127.0.0.1:8000/site_media/output/TodoApp.html
