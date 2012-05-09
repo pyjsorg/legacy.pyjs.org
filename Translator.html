@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Pyjs</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+</head>
+
+<body>
+<div id="menu">
+    <div id="logo"><img src="img/pyjamas.128x128.png" alt="pyjs" /></div>
+    
+<ul class="simple">
+<li><a class="reference external" href="About.html">About</a></li>
+<li><a class="reference external" href="Overview.html">Overview</a></li>
+<li><a class="reference external" href="Features.html">Features</a></li>
+<li><a class="reference external" href="Translator.html">Translator</a></li>
+<li class="section">Documentation</li>
+<li><a class="reference external" href="FAQ.html">FAQ</a></li>
+<li><a class="reference external" href="GettingHelp.html">Getting Help</a></li>
+<li><a class="reference external" href="Developing.html">Developing</a></li>
+<li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
+</ul>
+
+</div>
+<div id="body">
+<h1 class="title">Pyjs Python-to-JavaScript Translator</h1>
+<p>The Pyjs Python-to-JavaScript compiler is actually a <a class="reference external" href="http://en.wikipedia.org/wiki/Translator_(computing)">language translator</a>. It has two main modes: -O and --strict.  The --strict mode aims for <em>full</em> python interoperability, even at the expense of performance, whilst the -O mode is, like gcc's -O option, &quot;optimised&quot; for speed, even at the expense of missing out certain python language features and relying on JavaScript instead. The <a class="reference external" href="MigrationGuide.html">Migration Guide</a> best describes the differences.</p>
+<div class="section" id="supported-syntax">
+<h1>Supported syntax</h1>
+<p>The majority of Python 2.5, and parts of Python 2.6 syntax are supported, including yield <em>despite</em> only one web browser engine having support for ECMAScript &quot;yield&quot; (which is <strong>not</strong> used).  The yield support is
+implemented as a state machine, rewriting the code so that it is re-entrant, and can resume on each yield.  The features <em>not</em> supported are pretty small and obscure, and include for example, at the time of writing,
+assignment to variables of list items in for-loop syntax is not (<tt class="docutils literal">for [a, b] in enumerate(l)</tt>), whereas
+assignment to tuples is (<tt class="docutils literal">for (a, b) in enumerate(l)</tt>). Overall it is best to read the <a class="reference external" href="MigrationGuide.html">Migration Guide</a> and go from there.</p>
+<p>Multiple inheritance is also supported, as is the creation of metaclasses using three arguments to the builtin &quot;type&quot; function (but a call to &quot;type&quot; with only one argument is not supported, and you should be using isinstance for that, anyway).  Object introspection is supported, as are decorators, static methods,
+exceptions and so on.  __new__ however, at the time of writing, is a little iffy.  unicode is <em>not</em> supported, as it would be horrendous to implement in javascript, but the long type <em>is</em> supported, emulated correctly as javascript.</p>
+<p>One particular feature worth noting: the pyjs python-to-javascript compiler uses the internal features of python (its compile module) to turn python into an Abstract Syntax Tree.   This has - had - the disadvantage that the compiler is - was - tied to one specific version of python (2.5).  As of Pyjamas 0.6, it has become possible to use anything from python 2.4 and upwards to compile code with python 2.5 syntax, using the
+&quot;--internal-ast&quot; option.  A port of lib2to3 was used as the basis for an AST which is identical to that created by the c-code in the <a class="reference external" href="http://python.org">http://python.org</a> compiler.  The plan is to use this at some point to implement &quot;exec&quot; and &quot;eval&quot; builtins, but it has the nice side-effect of allowing people who can only use specific versions of python to reliably compile pyjamas python into javascript.</p>
+<p>Overall, the general rule is that whoever wants or needs something, they either work around the limitations of javascript and the pyjs implementation, or they provide a patch to improve the compiler/translator.</p>
+</div>
+<div class="section" id="supported-modules">
+<h1>Supported modules</h1>
+<p>Additionally, the python-to-javascript compiler has available to it some
+implementations of standard python modules, either in pure python or in
+hybrid javascript and using web browser built-ins.  Here is a list of the
+current python modules that are partially supported.  They have all been
+contributed by pyjamas developers, and anyone wishing to have particular
+features that are not yet included should simply write them and submit them
+as a patch:</p>
+<pre class="literal-block">
+base64.py
+binascii.py
+csv.py
+datetime.py
+math.py
+md5.py
+os.py
+_random.py
+random.py
+re.py
+sets.py
+struct.py
+sys.py
+time.py
+urllib.py
+</pre>
+</div>
+<div class="section" id="supported-built-ins">
+<h1>Supported built-ins</h1>
+<p>Here, also, is a list of supported built-in functions, classes and types.
+Again: these have been contributed by various pyjamas developers, and again,
+if there is a particular function or feature missing, it can be submitted
+as a patch.</p>
+<p>Functions:</p>
+<pre class="literal-block">
+__import__
+abs
+all
+any
+bool
+callable
+chr
+cmp
+delattr
+dir
+divmod
+enumerate
+filter
+float
+getattr
+hasattr
+hash
+hex
+isinstance
+issubclass
+iter
+len
+map
+max
+min
+oct
+open
+ord
+pow
+property
+range
+reduce
+repr
+reversed
+round
+setattr
+sorted
+staticmethod
+str
+sum
+super
+type
+xrange
+zip
+</pre>
+<p>Classes:</p>
+<pre class="literal-block">
+ArithmeticError
+AttributeError
+BaseException
+Exception
+GeneratorExit
+ImportError
+IndexError
+KeyError
+LookupError
+NameError
+NotImplemented
+NotImplementedError
+NotImplementedType
+RuntimeError
+StandardError
+StopIteration
+TypeError
+ValueError
+ZeroDivisionError
+</pre>
+<p>Types:</p>
+<pre class="literal-block">
+dict
+frozenset
+int
+list
+long
+object
+set
+tuple
+</pre>
+</div>
+</div>
+</body>
+</html>
