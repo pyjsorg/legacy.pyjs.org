@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.chart.AnnotationLocation</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.chart-module.html">Package&nbsp;chart</a> ::
+        Module&nbsp;AnnotationLocation
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.chart.AnnotationLocation-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.chart.AnnotationLocation-module.html">Module pyjamas.chart.AnnotationLocation</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2007,2008,2009 John C. Gunther</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright (C) 2009 Luke Kenneth Casson Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">* "License"); you may not use this file except in compliance</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">* with the License. You may obtain a copy of the License at:</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">*  http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">* software distributed under the License is distributed on an</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">* either express or implied. See the License for the specific</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">* language governing permissions and limitations under the</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">* License.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">math</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package pyjamas.ui=pyjamas.ui-module.html"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-1', 'ui', 'link-1');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Class pyjamas.ui.HasHorizontalAlignment=pyjamas.ui.HasHorizontalAlignment-class.html"><a title="pyjamas.ui.HasHorizontalAlignment" class="py-name" href="#" onclick="return doclink('link-2', 'HasHorizontalAlignment', 'link-2');">HasHorizontalAlignment</a></tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-3', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-4', 'ui', 'link-1');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name" targets="Class pyjamas.ui.HasVerticalAlignment=pyjamas.ui.HasVerticalAlignment-class.html"><a title="pyjamas.ui.HasVerticalAlignment" class="py-name" href="#" onclick="return doclink('link-5', 'HasVerticalAlignment', 'link-5');">HasVerticalAlignment</a></tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"># Validates multipliers used to simplify computing the</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment"># upper left corner location of symbols and labels to</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment"># properly reflect their alignment relative to the</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment"># plotted point or labeled symbol.</tt> </tt>
+<a name="validateMultipliers"></a><div id="validateMultipliers-def"><a name="L29"></a><tt class="py-lineno"> 29</tt> <a class="py-toggle" href="#" id="validateMultipliers-toggle" onclick="return toggle('validateMultipliers');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation-module.html#validateMultipliers">validateMultipliers</a><tt class="py-op">(</tt><tt class="py-param">widthMultiplier</tt><tt class="py-op">,</tt> <tt class="py-param">heightMultiplier</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="validateMultipliers-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="validateMultipliers-expanded"><a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-keyword">not</tt> <tt class="py-op">(</tt><tt class="py-name">widthMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt>  <tt class="py-keyword">or</tt>  <tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">widthMultiplier</tt><tt class="py-op">)</tt><tt class="py-op">==</tt><tt class="py-number">1</tt><tt class="py-op">)</tt>  <tt class="py-keyword">and</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-keyword">not</tt> <tt class="py-op">(</tt><tt class="py-name">heightMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt>  <tt class="py-keyword">or</tt> <tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">heightMultiplier</tt><tt class="py-op">)</tt><tt class="py-op">==</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">IllegalArgumentException</tt><tt class="py-op">(</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-string">"widthMultiplier, heightMultiplier args must both be "</tt> <tt class="py-op">+</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-string">"either 0, 1, or -1"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-comment"># retrieves a location given its multipliers</tt> </tt>
+<a name="getAnnotationLocation"></a><div id="getAnnotationLocation-def"><a name="L37"></a><tt class="py-lineno"> 37</tt> <a class="py-toggle" href="#" id="getAnnotationLocation-toggle" onclick="return toggle('getAnnotationLocation');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation-module.html#getAnnotationLocation">getAnnotationLocation</a><tt class="py-op">(</tt><tt class="py-param">widthMultiplier</tt><tt class="py-op">,</tt> <tt class="py-param">heightMultiplier</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getAnnotationLocation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getAnnotationLocation-expanded"><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">    <tt class="py-name">locationMap</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-op">[</tt><tt id="link-6" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.NORTHWEST=pyjamas.chart.AnnotationLocation-module.html#NORTHWEST"><a title="pyjamas.chart.AnnotationLocation.NORTHWEST" class="py-name" href="#" onclick="return doclink('link-6', 'NORTHWEST', 'link-6');">NORTHWEST</a></tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.NORTH=pyjamas.chart.AnnotationLocation-module.html#NORTH,Variable pyjamas.ui.DockPanel.DockPanel.NORTH=pyjamas.ui.DockPanel.DockPanel-class.html#NORTH"><a title="pyjamas.chart.AnnotationLocation.NORTH
+pyjamas.ui.DockPanel.DockPanel.NORTH" class="py-name" href="#" onclick="return doclink('link-7', 'NORTH', 'link-7');">NORTH</a></tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.NORTHEAST=pyjamas.chart.AnnotationLocation-module.html#NORTHEAST"><a title="pyjamas.chart.AnnotationLocation.NORTHEAST" class="py-name" href="#" onclick="return doclink('link-8', 'NORTHEAST', 'link-8');">NORTHEAST</a></tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-op">[</tt><tt id="link-9" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.WEST=pyjamas.chart.AnnotationLocation-module.html#WEST,Variable pyjamas.ui.DockPanel.DockPanel.WEST=pyjamas.ui.DockPanel.DockPanel-class.html#WEST"><a title="pyjamas.chart.AnnotationLocation.WEST
+pyjamas.ui.DockPanel.DockPanel.WEST" class="py-name" href="#" onclick="return doclink('link-9', 'WEST', 'link-9');">WEST</a></tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.CENTER=pyjamas.chart.AnnotationLocation-module.html#CENTER,Variable pyjamas.ui.DockPanel.DockPanel.CENTER=pyjamas.ui.DockPanel.DockPanel-class.html#CENTER,Variable pyjamas.ui.RichTextAreaConsts.CENTER=pyjamas.ui.RichTextAreaConsts-module.html#CENTER"><a title="pyjamas.chart.AnnotationLocation.CENTER
+pyjamas.ui.DockPanel.DockPanel.CENTER
+pyjamas.ui.RichTextAreaConsts.CENTER" class="py-name" href="#" onclick="return doclink('link-10', 'CENTER', 'link-10');">CENTER</a></tt><tt class="py-op">,</tt> <tt id="link-11" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.EAST=pyjamas.chart.AnnotationLocation-module.html#EAST,Variable pyjamas.ui.DockPanel.DockPanel.EAST=pyjamas.ui.DockPanel.DockPanel-class.html#EAST"><a title="pyjamas.chart.AnnotationLocation.EAST
+pyjamas.ui.DockPanel.DockPanel.EAST" class="py-name" href="#" onclick="return doclink('link-11', 'EAST', 'link-11');">EAST</a></tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-op">[</tt><tt id="link-12" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.SOUTHWEST=pyjamas.chart.AnnotationLocation-module.html#SOUTHWEST"><a title="pyjamas.chart.AnnotationLocation.SOUTHWEST" class="py-name" href="#" onclick="return doclink('link-12', 'SOUTHWEST', 'link-12');">SOUTHWEST</a></tt><tt class="py-op">,</tt> <tt id="link-13" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.SOUTH=pyjamas.chart.AnnotationLocation-module.html#SOUTH,Variable pyjamas.ui.DockPanel.DockPanel.SOUTH=pyjamas.ui.DockPanel.DockPanel-class.html#SOUTH"><a title="pyjamas.chart.AnnotationLocation.SOUTH
+pyjamas.ui.DockPanel.DockPanel.SOUTH" class="py-name" href="#" onclick="return doclink('link-13', 'SOUTH', 'link-13');">SOUTH</a></tt><tt class="py-op">,</tt> <tt id="link-14" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.SOUTHEAST=pyjamas.chart.AnnotationLocation-module.html#SOUTHEAST"><a title="pyjamas.chart.AnnotationLocation.SOUTHEAST" class="py-name" href="#" onclick="return doclink('link-14', 'SOUTHEAST', 'link-14');">SOUTHEAST</a></tt><tt class="py-op">]</tt><tt class="py-op">]</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-comment"># assumes both multiplier are -1, 0, or 1</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">locationMap</tt><tt class="py-op">[</tt><tt class="py-name">heightMultiplier</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-name">widthMultiplier</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">     </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">     </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-comment"># Negative width or height "turn the symbol inside-out",</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-comment"># requiring a corresponding "reflection" of annotation</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-comment"># location (only needed for baseline-based bar symbols)</tt> </tt>
+<a name="transform"></a><div id="transform-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="transform-toggle" onclick="return toggle('transform');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation-module.html#transform">transform</a><tt class="py-op">(</tt><tt class="py-param">a</tt><tt class="py-op">,</tt> <tt class="py-param">signWidth</tt><tt class="py-op">,</tt> <tt class="py-param">signHeight</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="transform-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="transform-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">a</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">signWidth</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">0</tt>  <tt class="py-keyword">or</tt>  <tt class="py-name">signHeight</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name" targets="Function pyjamas.chart.AnnotationLocation.getAnnotationLocation()=pyjamas.chart.AnnotationLocation-module.html#getAnnotationLocation,Method pyjamas.chart.Point.Point.getAnnotationLocation()=pyjamas.chart.Point.Point-class.html#getAnnotationLocation"><a title="pyjamas.chart.AnnotationLocation.getAnnotationLocation
+pyjamas.chart.Point.Point.getAnnotationLocation" class="py-name" href="#" onclick="return doclink('link-15', 'getAnnotationLocation', 'link-15');">getAnnotationLocation</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                    <tt class="py-name">signWidth</tt><tt class="py-op">*</tt><tt class="py-name">a</tt><tt class="py-op">.</tt><tt class="py-name">widthMultiplier</tt><tt class="py-op">,</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                    <tt class="py-name">signHeight</tt><tt class="py-op">*</tt><tt class="py-name">a</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">     </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-string">** Defines the location of a data point's annotation or hover</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-string">** annotation (which can be defined by either plain text, HTML,</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-string">** or a widget) relative to the location of that point's</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-string">** symbol.  The "Field Summary"</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-string">** section below lists all available annotation locations.</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-string">** The default annotation location is {@link</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-string">** AnnotationLocation#SOUTH SOUTH} for annotations and</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-string">** is symbol-type-dependent for hover annotations. See the</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;setHoverLocation&lt;/tt&gt; method for list of these defaults.</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-string">** You can further adjust the position of a point's</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-string">** annotation (or hover annotation) by specifying non-zero</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-string">** positional shifts via the &lt;tt&gt;setAnnotationXShift&lt;/tt&gt;</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-string">** and &lt;tt&gt;setAnnotationYShift&lt;/tt&gt; (or via the</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;setHoverXShift&lt;/tt&gt;, &lt;tt&gt;setHoverYShift&lt;/tt&gt;),</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-string">** and &lt;tt&gt;setHoverAnnotationSymbolType&lt;/tt&gt; methods for</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-string">** hover annotations).</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation Point.setAnnotationLocation</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationXShift Point.setAnnotationXShift</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationYShift Point.setAnnotationYShift</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-string">** @see Symbol#setHoverLocation Symbol.setHoverLocation</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-string">** @see Symbol#setHoverAnnotationSymbolType</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-string">** Symbol.setHoverAnnotationSymbolType</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-string">** @see Symbol#setHoverXShift Symbol.setHoverXShift</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-string">** @see Symbol#setHoverYShift Symbol.setHoverYShift</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-string">** @see #DEFAULT_HOVER_LOCATION DEFAULT_HOVER_LOCATION</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="AnnotationLocation"></a><div id="AnnotationLocation-def"><a name="L95"></a><tt class="py-lineno"> 95</tt> <a class="py-toggle" href="#" id="AnnotationLocation-toggle" onclick="return toggle('AnnotationLocation');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html">AnnotationLocation</a><tt class="py-op">:</tt> </tt>
+</div><div id="AnnotationLocation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="AnnotationLocation-expanded"><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">     </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-comment"># these multiply the width and height of the annotation and</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">    <tt class="py-comment"># the symbol it is attached to in order to define the</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">    <tt class="py-comment"># center of the annotation (see equations in later code),</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-comment"># and thus the upper left corner anchoring point.</tt> </tt>
+<a name="AnnotationLocation.__init__"></a><div id="AnnotationLocation.__init__-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="AnnotationLocation.__init__-toggle" onclick="return toggle('AnnotationLocation.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">widthMultiplier</tt><tt class="py-op">,</tt> <tt class="py-param">heightMultiplier</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AnnotationLocation.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AnnotationLocation.__init__-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt id="link-16" class="py-name" targets="Function pyjamas.chart.AnnotationLocation.validateMultipliers()=pyjamas.chart.AnnotationLocation-module.html#validateMultipliers"><a title="pyjamas.chart.AnnotationLocation.validateMultipliers" class="py-name" href="#" onclick="return doclink('link-16', 'validateMultipliers', 'link-16');">validateMultipliers</a></tt><tt class="py-op">(</tt><tt class="py-name">widthMultiplier</tt><tt class="py-op">,</tt> <tt class="py-name">heightMultiplier</tt><tt class="py-op">)</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widthMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-name">widthMultiplier</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-name">heightMultiplier</tt> </tt>
+</div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">     </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-comment"># These define the alignment of the label within it's</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-comment"># containing 1 x 1 Grid. For example, if this</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt class="py-comment"># containing grid is to the left of the labeled</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">    <tt class="py-comment"># symbol (widthMultiplier==-1) the horizontal</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">    <tt class="py-comment"># alignment will be ALIGN_RIGHT, so as to bring the</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt class="py-comment"># contained label flush against the left edge of the</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-comment"># labeled symbol.</tt> </tt>
+<a name="AnnotationLocation.getHorizontalAlignment"></a><div id="AnnotationLocation.getHorizontalAlignment-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="AnnotationLocation.getHorizontalAlignment-toggle" onclick="return toggle('AnnotationLocation.getHorizontalAlignment');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#getHorizontalAlignment">getHorizontalAlignment</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AnnotationLocation.getHorizontalAlignment-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AnnotationLocation.getHorizontalAlignment-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widthMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="pyjamas.ui.HasHorizontalAlignment" class="py-name" href="#" onclick="return doclink('link-17', 'HasHorizontalAlignment', 'link-2');">HasHorizontalAlignment</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Variable pyjamas.ui.HasAlignment.ALIGN_RIGHT=pyjamas.ui.HasAlignment-class.html#ALIGN_RIGHT,Variable pyjamas.ui.HasHorizontalAlignment.ALIGN_RIGHT=pyjamas.ui.HasHorizontalAlignment-class.html#ALIGN_RIGHT,Variable pyjamas.ui.TextBoxBase.TextBoxBase.ALIGN_RIGHT=pyjamas.ui.TextBoxBase.TextBoxBase-class.html#ALIGN_RIGHT"><a title="pyjamas.ui.HasAlignment.ALIGN_RIGHT
+pyjamas.ui.HasHorizontalAlignment.ALIGN_RIGHT
+pyjamas.ui.TextBoxBase.TextBoxBase.ALIGN_RIGHT" class="py-name" href="#" onclick="return doclink('link-18', 'ALIGN_RIGHT', 'link-18');">ALIGN_RIGHT</a></tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">         </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widthMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name"><a title="pyjamas.ui.HasHorizontalAlignment" class="py-name" href="#" onclick="return doclink('link-19', 'HasHorizontalAlignment', 'link-2');">HasHorizontalAlignment</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Variable pyjamas.ui.HasAlignment.ALIGN_CENTER=pyjamas.ui.HasAlignment-class.html#ALIGN_CENTER,Variable pyjamas.ui.HasHorizontalAlignment.ALIGN_CENTER=pyjamas.ui.HasHorizontalAlignment-class.html#ALIGN_CENTER,Variable pyjamas.ui.TextBoxBase.TextBoxBase.ALIGN_CENTER=pyjamas.ui.TextBoxBase.TextBoxBase-class.html#ALIGN_CENTER"><a title="pyjamas.ui.HasAlignment.ALIGN_CENTER
+pyjamas.ui.HasHorizontalAlignment.ALIGN_CENTER
+pyjamas.ui.TextBoxBase.TextBoxBase.ALIGN_CENTER" class="py-name" href="#" onclick="return doclink('link-20', 'ALIGN_CENTER', 'link-20');">ALIGN_CENTER</a></tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">         </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widthMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="pyjamas.ui.HasHorizontalAlignment" class="py-name" href="#" onclick="return doclink('link-21', 'HasHorizontalAlignment', 'link-2');">HasHorizontalAlignment</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Variable pyjamas.ui.HasAlignment.ALIGN_LEFT=pyjamas.ui.HasAlignment-class.html#ALIGN_LEFT,Variable pyjamas.ui.HasHorizontalAlignment.ALIGN_LEFT=pyjamas.ui.HasHorizontalAlignment-class.html#ALIGN_LEFT,Variable pyjamas.ui.TextBoxBase.TextBoxBase.ALIGN_LEFT=pyjamas.ui.TextBoxBase.TextBoxBase-class.html#ALIGN_LEFT"><a title="pyjamas.ui.HasAlignment.ALIGN_LEFT
+pyjamas.ui.HasHorizontalAlignment.ALIGN_LEFT
+pyjamas.ui.TextBoxBase.TextBoxBase.ALIGN_LEFT" class="py-name" href="#" onclick="return doclink('link-22', 'ALIGN_LEFT', 'link-22');">ALIGN_LEFT</a></tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">         </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">IllegalStateException</tt><tt class="py-op">(</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">                    <tt class="py-string">"Invalid widthMultiplier: "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widthMultiplier</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">                    <tt class="py-string">" 1, 0, or -1 were expected."</tt><tt class="py-op">)</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">         </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">     </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">     </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">    <tt class="py-string">""" Given the x-coordinate at the center of the symbol</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">    * that this annotation annotates, the annotation's</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">    * width, and the symbol's width, this method returns</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-string">    * the x-coordinate of the upper left corner of</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-string">    * this annotation.</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="AnnotationLocation.getUpperLeftX"></a><div id="AnnotationLocation.getUpperLeftX-def"><a name="L137"></a><tt class="py-lineno">137</tt> <a class="py-toggle" href="#" id="AnnotationLocation.getUpperLeftX-toggle" onclick="return toggle('AnnotationLocation.getUpperLeftX');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#getUpperLeftX">getUpperLeftX</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">w</tt><tt class="py-op">,</tt> <tt class="py-param">symbolW</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AnnotationLocation.getUpperLeftX-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AnnotationLocation.getUpperLeftX-expanded"><a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt> <tt class="py-op">(</tt><tt class="py-name">round</tt><tt class="py-op">(</tt><tt class="py-name">x</tt> <tt class="py-op">+</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                    <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widthMultiplier</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">w</tt> <tt class="py-op">+</tt> <tt class="py-name">symbolW</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-name">w</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-number">2.</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">     </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">     </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">    <tt class="py-string">""" analogous to getUpperLeftX, except for the y-coordinate """</tt> </tt>
+<a name="AnnotationLocation.getUpperLeftY"></a><div id="AnnotationLocation.getUpperLeftY-def"><a name="L144"></a><tt class="py-lineno">144</tt> <a class="py-toggle" href="#" id="AnnotationLocation.getUpperLeftY-toggle" onclick="return toggle('AnnotationLocation.getUpperLeftY');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#getUpperLeftY">getUpperLeftY</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">,</tt> <tt class="py-param">h</tt><tt class="py-op">,</tt> <tt class="py-param">symbolH</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AnnotationLocation.getUpperLeftY-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AnnotationLocation.getUpperLeftY-expanded"><a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt> <tt class="py-op">(</tt><tt class="py-name">round</tt><tt class="py-op">(</tt><tt class="py-name">y</tt> <tt class="py-op">+</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                    <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">h</tt> <tt class="py-op">+</tt> <tt class="py-name">symbolH</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-name">h</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-number">2.</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">     </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">    <tt class="py-comment"># analogous to getHorizontalAlignment</tt> </tt>
+<a name="AnnotationLocation.getVerticalAlignment"></a><div id="AnnotationLocation.getVerticalAlignment-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="AnnotationLocation.getVerticalAlignment-toggle" onclick="return toggle('AnnotationLocation.getVerticalAlignment');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#getVerticalAlignment">getVerticalAlignment</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AnnotationLocation.getVerticalAlignment-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AnnotationLocation.getVerticalAlignment-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="pyjamas.ui.HasVerticalAlignment" class="py-name" href="#" onclick="return doclink('link-23', 'HasVerticalAlignment', 'link-5');">HasVerticalAlignment</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Variable pyjamas.ui.HasAlignment.ALIGN_BOTTOM=pyjamas.ui.HasAlignment-class.html#ALIGN_BOTTOM,Variable pyjamas.ui.HasVerticalAlignment.ALIGN_BOTTOM=pyjamas.ui.HasVerticalAlignment-class.html#ALIGN_BOTTOM"><a title="pyjamas.ui.HasAlignment.ALIGN_BOTTOM
+pyjamas.ui.HasVerticalAlignment.ALIGN_BOTTOM" class="py-name" href="#" onclick="return doclink('link-24', 'ALIGN_BOTTOM', 'link-24');">ALIGN_BOTTOM</a></tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">         </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name"><a title="pyjamas.ui.HasVerticalAlignment" class="py-name" href="#" onclick="return doclink('link-25', 'HasVerticalAlignment', 'link-5');">HasVerticalAlignment</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Variable pyjamas.ui.HasAlignment.ALIGN_MIDDLE=pyjamas.ui.HasAlignment-class.html#ALIGN_MIDDLE,Variable pyjamas.ui.HasVerticalAlignment.ALIGN_MIDDLE=pyjamas.ui.HasVerticalAlignment-class.html#ALIGN_MIDDLE"><a title="pyjamas.ui.HasAlignment.ALIGN_MIDDLE
+pyjamas.ui.HasVerticalAlignment.ALIGN_MIDDLE" class="py-name" href="#" onclick="return doclink('link-26', 'ALIGN_MIDDLE', 'link-26');">ALIGN_MIDDLE</a></tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">         </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name"><a title="pyjamas.ui.HasVerticalAlignment" class="py-name" href="#" onclick="return doclink('link-27', 'HasVerticalAlignment', 'link-5');">HasVerticalAlignment</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Variable pyjamas.ui.HasAlignment.ALIGN_TOP=pyjamas.ui.HasAlignment-class.html#ALIGN_TOP,Variable pyjamas.ui.HasVerticalAlignment.ALIGN_TOP=pyjamas.ui.HasVerticalAlignment-class.html#ALIGN_TOP"><a title="pyjamas.ui.HasAlignment.ALIGN_TOP
+pyjamas.ui.HasVerticalAlignment.ALIGN_TOP" class="py-name" href="#" onclick="return doclink('link-28', 'ALIGN_TOP', 'link-28');">ALIGN_TOP</a></tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">         </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">IllegalStateException</tt><tt class="py-op">(</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">            <tt class="py-string">"Invalid heightMultiplier: "</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> <tt class="py-op">+</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">            <tt class="py-string">" -1, 0, or 1 were expected."</tt><tt class="py-op">)</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">         </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">     </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">     </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">     </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-string">    * This method returns the annotation location whose</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-string">    * "attachment point" keeps the annotation either</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-string">    * completely outside, centered on, or completely inside</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-string">    * (depending on if the heightMultiplier of this annotation</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"><tt class="py-string">    * is 1, 0, or -1) the point on the pie's circumference</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line"><tt class="py-string">    * associated with the given angle.</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"><tt class="py-string">    * &lt;p&gt;</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"><tt class="py-string">    *</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-string">    * The use of heightMultiplier rather than widthMultiplier</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"><tt class="py-string">    * is somewhat arbitrary, but was chosen so that the</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-string">    * NORTH, CENTER, and SOUTH annotation locations have the</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-string">    * same interpretation for a pie slice whose bisecting</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-string">    * radius points due south (due south is the default initial</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"><tt class="py-string">    * pie slice orientation) and for a 1px x 1px BOX_CENTER</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-string">    * type symbol positioned at the due south position on the</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"><tt class="py-string">    * pie's circumference. As the pie-slice-arc-bisection</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"><tt class="py-string">    * point moves clockwise around the pie perimeter, the</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line"><tt class="py-string">    * attachment point (except for vertically-centered</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line"><tt class="py-string">    * annotations, which remain centered on the pie arc) also</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line"><tt class="py-string">    * moves clockwise, but in discrete jumps (e.g. from</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line"><tt class="py-string">    * NORTH, to NORTHEAST, to EAST, to SOUTHEAST, to SOUTH,</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line"><tt class="py-string">    * etc. for annotations inside the pie) so the annotation</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line"><tt class="py-string">    * remains appropriately attached to the center of the</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"><tt class="py-string">    * slice's arc as the angle changes.</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line"><tt class="py-string">    *</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="AnnotationLocation.decodePieLocation"></a><div id="AnnotationLocation.decodePieLocation-def"><a name="L196"></a><tt class="py-lineno">196</tt> <a class="py-toggle" href="#" id="AnnotationLocation.decodePieLocation-toggle" onclick="return toggle('AnnotationLocation.decodePieLocation');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#decodePieLocation">decodePieLocation</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">thetaMid</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AnnotationLocation.decodePieLocation-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AnnotationLocation.decodePieLocation-expanded"><a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-comment"># a sin or cos that is small enough so that the</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">        <tt class="py-comment"># associated angle is horizontal (for sines) or vertical</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">        <tt class="py-comment"># (for cosines) enough to warrant use of a "centered"</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">        <tt class="py-comment"># annotation location.</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-name">LOOKS_VERTICAL_OR_HORIZONTAL_DELTA</tt> <tt class="py-op">=</tt> <tt class="py-number">0.1</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">        <tt class="py-name">sinTheta</tt> <tt class="py-op">=</tt> <tt class="py-name">math</tt><tt class="py-op">.</tt><tt class="py-name">sin</tt><tt class="py-op">(</tt><tt class="py-name">thetaMid</tt><tt class="py-op">)</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">        <tt class="py-name">cosTheta</tt> <tt class="py-op">=</tt> <tt class="py-name">math</tt><tt class="py-op">.</tt><tt class="py-name">cos</tt><tt class="py-op">(</tt><tt class="py-name">thetaMid</tt><tt class="py-op">)</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">cosTheta</tt> <tt class="py-op">&lt;</tt> <tt class="py-op">-</tt><tt class="py-name">LOOKS_VERTICAL_OR_HORIZONTAL_DELTA</tt><tt class="py-op">:</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">            <tt class="py-name">pieTransformedWidthMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-op">-</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">cosTheta</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">LOOKS_VERTICAL_OR_HORIZONTAL_DELTA</tt><tt class="py-op">:</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">            <tt class="py-name">pieTransformedWidthMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">            <tt class="py-name">pieTransformedWidthMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">        <tt class="py-comment"># XXX ?? surely this should be widthMultiplier?</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">sinTheta</tt> <tt class="py-op">&lt;</tt> <tt class="py-op">-</tt><tt class="py-name">LOOKS_VERTICAL_OR_HORIZONTAL_DELTA</tt><tt class="py-op">:</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">            <tt class="py-name">pieTransformedHeightMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-op">-</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">sinTheta</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">LOOKS_VERTICAL_OR_HORIZONTAL_DELTA</tt><tt class="py-op">:</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">            <tt class="py-name">pieTransformedHeightMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">heightMultiplier</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">            <tt class="py-name">pieTransformedHeightMultiplier</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">         </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-29" class="py-name"><a title="pyjamas.chart.AnnotationLocation.getAnnotationLocation
+pyjamas.chart.Point.Point.getAnnotationLocation" class="py-name" href="#" onclick="return doclink('link-29', 'getAnnotationLocation', 'link-15');">getAnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-name">pieTransformedWidthMultiplier</tt><tt class="py-op">,</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">                                <tt class="py-name">pieTransformedHeightMultiplier</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">         </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">     </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">     </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"> <tt class="py-comment"># end of class AnnotationLocation</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">     </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line"><tt class="py-comment"># non-tagging-only locations used by ANCHOR_MOUSE_* symbol types</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"><tt id="link-30" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.AT_THE_MOUSE=pyjamas.chart.AnnotationLocation-module.html#AT_THE_MOUSE"><a title="pyjamas.chart.AnnotationLocation.AT_THE_MOUSE" class="py-name" href="#" onclick="return doclink('link-30', 'AT_THE_MOUSE', 'link-30');">AT_THE_MOUSE</a></tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name" targets="Module pyjamas.chart.AnnotationLocation=pyjamas.chart.AnnotationLocation-module.html,Class pyjamas.chart.AnnotationLocation.AnnotationLocation=pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-31', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"><tt id="link-32" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.AT_THE_MOUSE_SNAP_TO_X=pyjamas.chart.AnnotationLocation-module.html#AT_THE_MOUSE_SNAP_TO_X"><a title="pyjamas.chart.AnnotationLocation.AT_THE_MOUSE_SNAP_TO_X" class="py-name" href="#" onclick="return doclink('link-32', 'AT_THE_MOUSE_SNAP_TO_X', 'link-32');">AT_THE_MOUSE_SNAP_TO_X</a></tt> <tt class="py-op">=</tt> <tt id="link-33" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-33', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line"><tt id="link-34" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.AT_THE_MOUSE_SNAP_TO_Y=pyjamas.chart.AnnotationLocation-module.html#AT_THE_MOUSE_SNAP_TO_Y"><a title="pyjamas.chart.AnnotationLocation.AT_THE_MOUSE_SNAP_TO_Y" class="py-name" href="#" onclick="return doclink('link-34', 'AT_THE_MOUSE_SNAP_TO_Y', 'link-34');">AT_THE_MOUSE_SNAP_TO_Y</a></tt> <tt class="py-op">=</tt> <tt id="link-35" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-35', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line"><tt class="py-string">** be positioned so as to be centered on the symbol</tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"><tt class="py-string">** used to represent the point.</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line"><tt id="link-36" class="py-name"><a title="pyjamas.chart.AnnotationLocation.CENTER
+pyjamas.ui.DockPanel.DockPanel.CENTER
+pyjamas.ui.RichTextAreaConsts.CENTER" class="py-name" href="#" onclick="return doclink('link-36', 'CENTER', 'link-10');">CENTER</a></tt> <tt class="py-op">=</tt> <tt id="link-37" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-37', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line"> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line"><tt id="link-38" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.north=pyjamas.chart.AnnotationLocation-module.html#north"><a title="pyjamas.chart.AnnotationLocation.north" class="py-name" href="#" onclick="return doclink('link-38', 'north', 'link-38');">north</a></tt> <tt class="py-op">=</tt> <tt id="link-39" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-39', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.west=pyjamas.chart.AnnotationLocation-module.html#west"><a title="pyjamas.chart.AnnotationLocation.west" class="py-name" href="#" onclick="return doclink('link-40', 'west', 'link-40');">west</a></tt> <tt class="py-op">=</tt> <tt id="link-41" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-41', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line"><tt id="link-42" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.south=pyjamas.chart.AnnotationLocation-module.html#south"><a title="pyjamas.chart.AnnotationLocation.south" class="py-name" href="#" onclick="return doclink('link-42', 'south', 'link-42');">south</a></tt> <tt class="py-op">=</tt> <tt id="link-43" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-43', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line"> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should be</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line"><tt class="py-string">** placed just above, and centered horizontally on,</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line"><tt class="py-string">** vertical bars that grow down from a horizontal</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"><tt class="py-string">** baseline, and just below, and centered horizontally on,</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"><tt class="py-string">** vertical bars that grow up from a horizontal baseline.</tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line"><tt class="py-string">** This another name for</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;AnnotationLocation.NORTH&lt;/tt&gt;. Its sole purpose is</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line"><tt class="py-string">** to clarify/document the behavior of this location type</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line"><tt class="py-string">** when used in conjunction with curves that employ</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;VBAR_BASELINE_*&lt;/tt&gt; symbol types.</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line"><tt class="py-string">** @see SymbolType#VBAR_BASELINE_CENTER SymbolType.VBAR_BASELINE_CENTER</tt> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line"><tt id="link-44" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.CLOSEST_TO_HORIZONTAL_BASELINE=pyjamas.chart.AnnotationLocation-module.html#CLOSEST_TO_HORIZONTAL_BASELINE"><a title="pyjamas.chart.AnnotationLocation.CLOSEST_TO_HORIZONTAL_BASELINE" class="py-name" href="#" onclick="return doclink('link-44', 'CLOSEST_TO_HORIZONTAL_BASELINE', 'link-44');">CLOSEST_TO_HORIZONTAL_BASELINE</a></tt> <tt class="py-op">=</tt> <tt id="link-45" class="py-name"><a title="pyjamas.chart.AnnotationLocation.north" class="py-name" href="#" onclick="return doclink('link-45', 'north', 'link-38');">north</a></tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line"> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should be</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line"><tt class="py-string">** placed just to the right of, and centered vertically</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line"><tt class="py-string">** on, horizontal bars that grow left from a vertical</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line"><tt class="py-string">** baseline, and just to the left of, and centered</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line"><tt class="py-string">** vertically on, horizontal bars that grow right from a</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line"><tt class="py-string">** vertical baseline.</tt> </tt>
+<a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line"><tt class="py-string">** This another name for</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;AnnotationLocation.WEST&lt;/tt&gt;. Its sole purpose is</tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line"><tt class="py-string">** to clarify/document the behavior of this location type</tt> </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line"><tt class="py-string">** when used in conjunction with curves that employ the</tt> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;HBAR_BASELINE_*&lt;/tt&gt; symbol types.</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line"><tt class="py-string">** @see SymbolType#HBAR_BASELINE_CENTER SymbolType.HBAR_BASELINE_CENTER</tt> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line"> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line"><tt id="link-46" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.CLOSEST_TO_VERTICAL_BASELINE=pyjamas.chart.AnnotationLocation-module.html#CLOSEST_TO_VERTICAL_BASELINE"><a title="pyjamas.chart.AnnotationLocation.CLOSEST_TO_VERTICAL_BASELINE" class="py-name" href="#" onclick="return doclink('link-46', 'CLOSEST_TO_VERTICAL_BASELINE', 'link-46');">CLOSEST_TO_VERTICAL_BASELINE</a></tt> <tt class="py-op">=</tt> <tt id="link-47" class="py-name"><a title="pyjamas.chart.AnnotationLocation.west" class="py-name" href="#" onclick="return doclink('link-47', 'west', 'link-40');">west</a></tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line"> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line"><tt class="py-string">** be positioned just to the right of, and vertically</tt> </tt>
+<a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line"><tt class="py-string">** centered on, the symbol used to represent the</tt> </tt>
+<a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line"><tt class="py-string">** point.</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation</tt> </tt>
+<a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line"><tt id="link-48" class="py-name"><a title="pyjamas.chart.AnnotationLocation.EAST
+pyjamas.ui.DockPanel.DockPanel.EAST" class="py-name" href="#" onclick="return doclink('link-48', 'EAST', 'link-11');">EAST</a></tt> <tt class="py-op">=</tt> <tt id="link-49" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-49', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line"> </tt>
+<a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L297"></a><tt class="py-lineno">297</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should be</tt> </tt>
+<a name="L298"></a><tt class="py-lineno">298</tt>  <tt class="py-line"><tt class="py-string">** placed just below, and centered horizontally on,</tt> </tt>
+<a name="L299"></a><tt class="py-lineno">299</tt>  <tt class="py-line"><tt class="py-string">** vertical bars that grow down from a horizontal</tt> </tt>
+<a name="L300"></a><tt class="py-lineno">300</tt>  <tt class="py-line"><tt class="py-string">** baseline, and just above, and centered horizontally on,</tt> </tt>
+<a name="L301"></a><tt class="py-lineno">301</tt>  <tt class="py-line"><tt class="py-string">** vertical bars that grow up from a horizontal baseline.</tt> </tt>
+<a name="L302"></a><tt class="py-lineno">302</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L303"></a><tt class="py-lineno">303</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L304"></a><tt class="py-lineno">304</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L305"></a><tt class="py-lineno">305</tt>  <tt class="py-line"><tt class="py-string">** This another name for</tt> </tt>
+<a name="L306"></a><tt class="py-lineno">306</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;AnnotationLocation.SOUTH&lt;/tt&gt;. Its sole purpose is</tt> </tt>
+<a name="L307"></a><tt class="py-lineno">307</tt>  <tt class="py-line"><tt class="py-string">** to clarify/document the behavior of this location type</tt> </tt>
+<a name="L308"></a><tt class="py-lineno">308</tt>  <tt class="py-line"><tt class="py-string">** when used in conjunction with curves that employ</tt> </tt>
+<a name="L309"></a><tt class="py-lineno">309</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;VBAR_BASELINE_*&lt;/tt&gt; symbol types.</tt> </tt>
+<a name="L310"></a><tt class="py-lineno">310</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L312"></a><tt class="py-lineno">312</tt>  <tt class="py-line"><tt class="py-string">** @see SymbolType#VBAR_BASELINE_CENTER SymbolType.VBAR_BASELINE_CENTER</tt> </tt>
+<a name="L313"></a><tt class="py-lineno">313</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L314"></a><tt class="py-lineno">314</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L315"></a><tt class="py-lineno">315</tt>  <tt class="py-line"><tt id="link-50" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.FARTHEST_FROM_HORIZONTAL_BASELINE=pyjamas.chart.AnnotationLocation-module.html#FARTHEST_FROM_HORIZONTAL_BASELINE"><a title="pyjamas.chart.AnnotationLocation.FARTHEST_FROM_HORIZONTAL_BASELINE" class="py-name" href="#" onclick="return doclink('link-50', 'FARTHEST_FROM_HORIZONTAL_BASELINE', 'link-50');">FARTHEST_FROM_HORIZONTAL_BASELINE</a></tt> <tt class="py-op">=</tt> <tt id="link-51" class="py-name"><a title="pyjamas.chart.AnnotationLocation.south" class="py-name" href="#" onclick="return doclink('link-51', 'south', 'link-42');">south</a></tt> </tt>
+<a name="L316"></a><tt class="py-lineno">316</tt>  <tt class="py-line"> </tt>
+<a name="L317"></a><tt class="py-lineno">317</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L318"></a><tt class="py-lineno">318</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should be</tt> </tt>
+<a name="L319"></a><tt class="py-lineno">319</tt>  <tt class="py-line"><tt class="py-string">** placed just to the left of, and centered vertically on,</tt> </tt>
+<a name="L320"></a><tt class="py-lineno">320</tt>  <tt class="py-line"><tt class="py-string">** horizontal bars that grow left from a vertical</tt> </tt>
+<a name="L321"></a><tt class="py-lineno">321</tt>  <tt class="py-line"><tt class="py-string">** baseline, and just to the right of, and centered</tt> </tt>
+<a name="L322"></a><tt class="py-lineno">322</tt>  <tt class="py-line"><tt class="py-string">** vertically on, horizontal bars that grow right from a</tt> </tt>
+<a name="L323"></a><tt class="py-lineno">323</tt>  <tt class="py-line"><tt class="py-string">** vertical baseline.</tt> </tt>
+<a name="L324"></a><tt class="py-lineno">324</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L325"></a><tt class="py-lineno">325</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L326"></a><tt class="py-lineno">326</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L327"></a><tt class="py-lineno">327</tt>  <tt class="py-line"><tt class="py-string">** This another name for</tt> </tt>
+<a name="L328"></a><tt class="py-lineno">328</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;AnnotationLocation.EAST&lt;/tt&gt;. Its sole purpose is</tt> </tt>
+<a name="L329"></a><tt class="py-lineno">329</tt>  <tt class="py-line"><tt class="py-string">** to clarify/document the behavior of this location type</tt> </tt>
+<a name="L330"></a><tt class="py-lineno">330</tt>  <tt class="py-line"><tt class="py-string">** when used in conjunction with curves that employ the</tt> </tt>
+<a name="L331"></a><tt class="py-lineno">331</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;HBAR_BASELINE_*&lt;/tt&gt; family of symbol types.</tt> </tt>
+<a name="L332"></a><tt class="py-lineno">332</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L333"></a><tt class="py-lineno">333</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L334"></a><tt class="py-lineno">334</tt>  <tt class="py-line"><tt class="py-string">** @see SymbolType#HBAR_BASELINE_CENTER SymbolType.HBAR_BASELINE_CENTER</tt> </tt>
+<a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L337"></a><tt class="py-lineno">337</tt>  <tt class="py-line"><tt id="link-52" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.FARTHEST_FROM_VERTICAL_BASELINE=pyjamas.chart.AnnotationLocation-module.html#FARTHEST_FROM_VERTICAL_BASELINE"><a title="pyjamas.chart.AnnotationLocation.FARTHEST_FROM_VERTICAL_BASELINE" class="py-name" href="#" onclick="return doclink('link-52', 'FARTHEST_FROM_VERTICAL_BASELINE', 'link-52');">FARTHEST_FROM_VERTICAL_BASELINE</a></tt> <tt class="py-op">=</tt> <tt id="link-53" class="py-name"><a title="pyjamas.chart.AnnotationLocation.EAST
+pyjamas.ui.DockPanel.DockPanel.EAST" class="py-name" href="#" onclick="return doclink('link-53', 'EAST', 'link-11');">EAST</a></tt> </tt>
+<a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line"> </tt>
+<a name="L339"></a><tt class="py-lineno">339</tt>  <tt class="py-line"> </tt>
+<a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L341"></a><tt class="py-lineno">341</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L342"></a><tt class="py-lineno">342</tt>  <tt class="py-line"><tt class="py-string">** be positioned just inside, and centered on, the</tt> </tt>
+<a name="L343"></a><tt class="py-lineno">343</tt>  <tt class="py-line"><tt class="py-string">** arc side of a pie slice.</tt> </tt>
+<a name="L344"></a><tt class="py-lineno">344</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L345"></a><tt class="py-lineno">345</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L346"></a><tt class="py-lineno">346</tt>  <tt class="py-line"><tt class="py-string">** You can move a pie slice's annotation a specific number</tt> </tt>
+<a name="L347"></a><tt class="py-lineno">347</tt>  <tt class="py-line"><tt class="py-string">** of pixels radially away from (or towards) the pie</tt> </tt>
+<a name="L348"></a><tt class="py-lineno">348</tt>  <tt class="py-line"><tt class="py-string">** center by passing a positive (or negative) argument to</tt> </tt>
+<a name="L349"></a><tt class="py-lineno">349</tt>  <tt class="py-line"><tt class="py-string">** the associated &lt;tt&gt;Point&lt;/tt&gt;'s</tt> </tt>
+<a name="L350"></a><tt class="py-lineno">350</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;setAnnotationXShift&lt;/tt&gt; method.</tt> </tt>
+<a name="L351"></a><tt class="py-lineno">351</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L352"></a><tt class="py-lineno">352</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt; This is pie-friendly synonym for, and when used</tt> </tt>
+<a name="L353"></a><tt class="py-lineno">353</tt>  <tt class="py-line"><tt class="py-string">** with non-pie symbol types will behave exactly the same</tt> </tt>
+<a name="L354"></a><tt class="py-lineno">354</tt>  <tt class="py-line"><tt class="py-string">** as, &lt;tt&gt;AnnotationLocation.NORTH&lt;/tt&gt;</tt> </tt>
+<a name="L355"></a><tt class="py-lineno">355</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L356"></a><tt class="py-lineno">356</tt>  <tt class="py-line"><tt class="py-string">** @see #OUTSIDE_PIE_ARC OUTSIDE_PIE_ARC</tt> </tt>
+<a name="L357"></a><tt class="py-lineno">357</tt>  <tt class="py-line"><tt class="py-string">** @see #ON_PIE_ARC ON_PIE_ARC</tt> </tt>
+<a name="L358"></a><tt class="py-lineno">358</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L359"></a><tt class="py-lineno">359</tt>  <tt class="py-line"><tt class="py-string">** @see AnnotationLocation#NORTH NORTH</tt> </tt>
+<a name="L360"></a><tt class="py-lineno">360</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L361"></a><tt class="py-lineno">361</tt>  <tt class="py-line"><tt id="link-54" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.INSIDE_PIE_ARC=pyjamas.chart.AnnotationLocation-module.html#INSIDE_PIE_ARC"><a title="pyjamas.chart.AnnotationLocation.INSIDE_PIE_ARC" class="py-name" href="#" onclick="return doclink('link-54', 'INSIDE_PIE_ARC', 'link-54');">INSIDE_PIE_ARC</a></tt> <tt class="py-op">=</tt> <tt id="link-55" class="py-name"><a title="pyjamas.chart.AnnotationLocation.north" class="py-name" href="#" onclick="return doclink('link-55', 'north', 'link-38');">north</a></tt> </tt>
+<a name="L362"></a><tt class="py-lineno">362</tt>  <tt class="py-line"> </tt>
+<a name="L363"></a><tt class="py-lineno">363</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L364"></a><tt class="py-lineno">364</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L365"></a><tt class="py-lineno">365</tt>  <tt class="py-line"><tt class="py-string">** be positioned just above, and horizontally centered on,</tt> </tt>
+<a name="L366"></a><tt class="py-lineno">366</tt>  <tt class="py-line"><tt class="py-string">** the symbol used to represent the point.</tt> </tt>
+<a name="L367"></a><tt class="py-lineno">367</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L368"></a><tt class="py-lineno">368</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L369"></a><tt class="py-lineno">369</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L370"></a><tt class="py-lineno">370</tt>  <tt class="py-line"><tt id="link-56" class="py-name"><a title="pyjamas.chart.AnnotationLocation.NORTH
+pyjamas.ui.DockPanel.DockPanel.NORTH" class="py-name" href="#" onclick="return doclink('link-56', 'NORTH', 'link-7');">NORTH</a></tt> <tt class="py-op">=</tt> <tt id="link-57" class="py-name"><a title="pyjamas.chart.AnnotationLocation.north" class="py-name" href="#" onclick="return doclink('link-57', 'north', 'link-38');">north</a></tt> </tt>
+<a name="L371"></a><tt class="py-lineno">371</tt>  <tt class="py-line"> </tt>
+<a name="L372"></a><tt class="py-lineno">372</tt>  <tt class="py-line"> </tt>
+<a name="L373"></a><tt class="py-lineno">373</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L374"></a><tt class="py-lineno">374</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L375"></a><tt class="py-lineno">375</tt>  <tt class="py-line"><tt class="py-string">** be positioned just to the right of and above,</tt> </tt>
+<a name="L376"></a><tt class="py-lineno">376</tt>  <tt class="py-line"><tt class="py-string">** the symbol used to represent the</tt> </tt>
+<a name="L377"></a><tt class="py-lineno">377</tt>  <tt class="py-line"><tt class="py-string">** point.</tt> </tt>
+<a name="L378"></a><tt class="py-lineno">378</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L379"></a><tt class="py-lineno">379</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation</tt> </tt>
+<a name="L380"></a><tt class="py-lineno">380</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L381"></a><tt class="py-lineno">381</tt>  <tt class="py-line"><tt id="link-58" class="py-name"><a title="pyjamas.chart.AnnotationLocation.NORTHEAST" class="py-name" href="#" onclick="return doclink('link-58', 'NORTHEAST', 'link-8');">NORTHEAST</a></tt> <tt class="py-op">=</tt> <tt id="link-59" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-59', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L382"></a><tt class="py-lineno">382</tt>  <tt class="py-line"> </tt>
+<a name="L383"></a><tt class="py-lineno">383</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L384"></a><tt class="py-lineno">384</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L385"></a><tt class="py-lineno">385</tt>  <tt class="py-line"><tt class="py-string">** be positioned just to the left of and above,</tt> </tt>
+<a name="L386"></a><tt class="py-lineno">386</tt>  <tt class="py-line"><tt class="py-string">** the symbol used to represent the</tt> </tt>
+<a name="L387"></a><tt class="py-lineno">387</tt>  <tt class="py-line"><tt class="py-string">** point.</tt> </tt>
+<a name="L388"></a><tt class="py-lineno">388</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L389"></a><tt class="py-lineno">389</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation</tt> </tt>
+<a name="L390"></a><tt class="py-lineno">390</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L391"></a><tt class="py-lineno">391</tt>  <tt class="py-line"><tt id="link-60" class="py-name"><a title="pyjamas.chart.AnnotationLocation.NORTHWEST" class="py-name" href="#" onclick="return doclink('link-60', 'NORTHWEST', 'link-6');">NORTHWEST</a></tt> <tt class="py-op">=</tt> <tt id="link-61" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-61', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L392"></a><tt class="py-lineno">392</tt>  <tt class="py-line"> </tt>
+<a name="L393"></a><tt class="py-lineno">393</tt>  <tt class="py-line"> </tt>
+<a name="L394"></a><tt class="py-lineno">394</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L395"></a><tt class="py-lineno">395</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L396"></a><tt class="py-lineno">396</tt>  <tt class="py-line"><tt class="py-string">** be centered on the center-point of the</tt> </tt>
+<a name="L397"></a><tt class="py-lineno">397</tt>  <tt class="py-line"><tt class="py-string">** arc side of a pie slice.</tt> </tt>
+<a name="L398"></a><tt class="py-lineno">398</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L399"></a><tt class="py-lineno">399</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L400"></a><tt class="py-lineno">400</tt>  <tt class="py-line"><tt class="py-string">** You can move a pie slice's annotation a specific number</tt> </tt>
+<a name="L401"></a><tt class="py-lineno">401</tt>  <tt class="py-line"><tt class="py-string">** of pixels radially away from (or towards) the pie</tt> </tt>
+<a name="L402"></a><tt class="py-lineno">402</tt>  <tt class="py-line"><tt class="py-string">** center by passing a positive (or negative) argument to</tt> </tt>
+<a name="L403"></a><tt class="py-lineno">403</tt>  <tt class="py-line"><tt class="py-string">** the associated &lt;tt&gt;Point&lt;/tt&gt;'s</tt> </tt>
+<a name="L404"></a><tt class="py-lineno">404</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;setAnnotationXShift&lt;/tt&gt; method.</tt> </tt>
+<a name="L405"></a><tt class="py-lineno">405</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L406"></a><tt class="py-lineno">406</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L407"></a><tt class="py-lineno">407</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L408"></a><tt class="py-lineno">408</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt; This is pie-friendly synonym for, and when used</tt> </tt>
+<a name="L409"></a><tt class="py-lineno">409</tt>  <tt class="py-line"><tt class="py-string">** with non-pie symbol types will behave exactly the same</tt> </tt>
+<a name="L410"></a><tt class="py-lineno">410</tt>  <tt class="py-line"><tt class="py-string">** as, &lt;tt&gt;AnnotationLocation.CENTER&lt;/tt&gt;</tt> </tt>
+<a name="L411"></a><tt class="py-lineno">411</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L412"></a><tt class="py-lineno">412</tt>  <tt class="py-line"><tt class="py-string">** @see #OUTSIDE_PIE_ARC OUTSIDE_PIE_ARC</tt> </tt>
+<a name="L413"></a><tt class="py-lineno">413</tt>  <tt class="py-line"><tt class="py-string">** @see #INSIDE_PIE_ARC INSIDE_PIE_ARC</tt> </tt>
+<a name="L414"></a><tt class="py-lineno">414</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L415"></a><tt class="py-lineno">415</tt>  <tt class="py-line"><tt class="py-string">** @see AnnotationLocation#CENTER CENTER</tt> </tt>
+<a name="L416"></a><tt class="py-lineno">416</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L417"></a><tt class="py-lineno">417</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L418"></a><tt class="py-lineno">418</tt>  <tt class="py-line"><tt id="link-62" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.ON_PIE_ARC=pyjamas.chart.AnnotationLocation-module.html#ON_PIE_ARC"><a title="pyjamas.chart.AnnotationLocation.ON_PIE_ARC" class="py-name" href="#" onclick="return doclink('link-62', 'ON_PIE_ARC', 'link-62');">ON_PIE_ARC</a></tt> <tt class="py-op">=</tt> <tt id="link-63" class="py-name"><a title="pyjamas.chart.AnnotationLocation.CENTER
+pyjamas.ui.DockPanel.DockPanel.CENTER
+pyjamas.ui.RichTextAreaConsts.CENTER" class="py-name" href="#" onclick="return doclink('link-63', 'CENTER', 'link-10');">CENTER</a></tt> </tt>
+<a name="L419"></a><tt class="py-lineno">419</tt>  <tt class="py-line"> </tt>
+<a name="L420"></a><tt class="py-lineno">420</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L421"></a><tt class="py-lineno">421</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L422"></a><tt class="py-lineno">422</tt>  <tt class="py-line"><tt class="py-string">** be positioned just outside, and centered on, the</tt> </tt>
+<a name="L423"></a><tt class="py-lineno">423</tt>  <tt class="py-line"><tt class="py-string">** arc side of a pie slice.</tt> </tt>
+<a name="L424"></a><tt class="py-lineno">424</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L425"></a><tt class="py-lineno">425</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L426"></a><tt class="py-lineno">426</tt>  <tt class="py-line"><tt class="py-string">** You can move a pie slice's annotation a specific number</tt> </tt>
+<a name="L427"></a><tt class="py-lineno">427</tt>  <tt class="py-line"><tt class="py-string">** of pixels radially away from (or towards) the pie</tt> </tt>
+<a name="L428"></a><tt class="py-lineno">428</tt>  <tt class="py-line"><tt class="py-string">** center by passing a positive (or negative) argument to</tt> </tt>
+<a name="L429"></a><tt class="py-lineno">429</tt>  <tt class="py-line"><tt class="py-string">** the associated &lt;tt&gt;Point&lt;/tt&gt;'s</tt> </tt>
+<a name="L430"></a><tt class="py-lineno">430</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;setAnnotationXShift&lt;/tt&gt; method.</tt> </tt>
+<a name="L431"></a><tt class="py-lineno">431</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L432"></a><tt class="py-lineno">432</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt; This is pie-friendly synonym for, and when used</tt> </tt>
+<a name="L433"></a><tt class="py-lineno">433</tt>  <tt class="py-line"><tt class="py-string">** with non-pie symbol types will behave exactly the same</tt> </tt>
+<a name="L434"></a><tt class="py-lineno">434</tt>  <tt class="py-line"><tt class="py-string">** as, &lt;tt&gt;AnnotationLocation.SOUTH&lt;/tt&gt;</tt> </tt>
+<a name="L435"></a><tt class="py-lineno">435</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L436"></a><tt class="py-lineno">436</tt>  <tt class="py-line"><tt class="py-string">** @see #INSIDE_PIE_ARC INSIDE_PIE_ARC</tt> </tt>
+<a name="L437"></a><tt class="py-lineno">437</tt>  <tt class="py-line"><tt class="py-string">** @see #ON_PIE_ARC ON_PIE_ARC</tt> </tt>
+<a name="L438"></a><tt class="py-lineno">438</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L439"></a><tt class="py-lineno">439</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationXShift setAnnotationXShift</tt> </tt>
+<a name="L440"></a><tt class="py-lineno">440</tt>  <tt class="py-line"><tt class="py-string">** @see AnnotationLocation#SOUTH SOUTH</tt> </tt>
+<a name="L441"></a><tt class="py-lineno">441</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L442"></a><tt class="py-lineno">442</tt>  <tt class="py-line"><tt id="link-64" class="py-name" targets="Variable pyjamas.chart.AnnotationLocation.OUTSIDE_PIE_ARC=pyjamas.chart.AnnotationLocation-module.html#OUTSIDE_PIE_ARC"><a title="pyjamas.chart.AnnotationLocation.OUTSIDE_PIE_ARC" class="py-name" href="#" onclick="return doclink('link-64', 'OUTSIDE_PIE_ARC', 'link-64');">OUTSIDE_PIE_ARC</a></tt> <tt class="py-op">=</tt> <tt id="link-65" class="py-name"><a title="pyjamas.chart.AnnotationLocation.south" class="py-name" href="#" onclick="return doclink('link-65', 'south', 'link-42');">south</a></tt> </tt>
+<a name="L443"></a><tt class="py-lineno">443</tt>  <tt class="py-line"> </tt>
+<a name="L444"></a><tt class="py-lineno">444</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L445"></a><tt class="py-lineno">445</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L446"></a><tt class="py-lineno">446</tt>  <tt class="py-line"><tt class="py-string">** be positioned just below, and horizontally centered on,</tt> </tt>
+<a name="L447"></a><tt class="py-lineno">447</tt>  <tt class="py-line"><tt class="py-string">** the symbol used to represent the point.</tt> </tt>
+<a name="L448"></a><tt class="py-lineno">448</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L449"></a><tt class="py-lineno">449</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L450"></a><tt class="py-lineno">450</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L451"></a><tt class="py-lineno">451</tt>  <tt class="py-line"><tt id="link-66" class="py-name"><a title="pyjamas.chart.AnnotationLocation.SOUTH
+pyjamas.ui.DockPanel.DockPanel.SOUTH" class="py-name" href="#" onclick="return doclink('link-66', 'SOUTH', 'link-13');">SOUTH</a></tt> <tt class="py-op">=</tt> <tt id="link-67" class="py-name"><a title="pyjamas.chart.AnnotationLocation.south" class="py-name" href="#" onclick="return doclink('link-67', 'south', 'link-42');">south</a></tt> </tt>
+<a name="L452"></a><tt class="py-lineno">452</tt>  <tt class="py-line"> </tt>
+<a name="L453"></a><tt class="py-lineno">453</tt>  <tt class="py-line"> </tt>
+<a name="L454"></a><tt class="py-lineno">454</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L455"></a><tt class="py-lineno">455</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L456"></a><tt class="py-lineno">456</tt>  <tt class="py-line"><tt class="py-string">** be positioned just to the right of and below,</tt> </tt>
+<a name="L457"></a><tt class="py-lineno">457</tt>  <tt class="py-line"><tt class="py-string">** the symbol used to represent the</tt> </tt>
+<a name="L458"></a><tt class="py-lineno">458</tt>  <tt class="py-line"><tt class="py-string">** point.</tt> </tt>
+<a name="L459"></a><tt class="py-lineno">459</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L460"></a><tt class="py-lineno">460</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L461"></a><tt class="py-lineno">461</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L462"></a><tt class="py-lineno">462</tt>  <tt class="py-line"><tt id="link-68" class="py-name"><a title="pyjamas.chart.AnnotationLocation.SOUTHEAST" class="py-name" href="#" onclick="return doclink('link-68', 'SOUTHEAST', 'link-14');">SOUTHEAST</a></tt> <tt class="py-op">=</tt> <tt id="link-69" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-69', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L463"></a><tt class="py-lineno">463</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L464"></a><tt class="py-lineno">464</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L465"></a><tt class="py-lineno">465</tt>  <tt class="py-line"><tt class="py-string">** be positioned just to the left of and below,</tt> </tt>
+<a name="L466"></a><tt class="py-lineno">466</tt>  <tt class="py-line"><tt class="py-string">** the symbol used to represent the</tt> </tt>
+<a name="L467"></a><tt class="py-lineno">467</tt>  <tt class="py-line"><tt class="py-string">** point.</tt> </tt>
+<a name="L468"></a><tt class="py-lineno">468</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L469"></a><tt class="py-lineno">469</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L470"></a><tt class="py-lineno">470</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L471"></a><tt class="py-lineno">471</tt>  <tt class="py-line"><tt id="link-70" class="py-name"><a title="pyjamas.chart.AnnotationLocation.SOUTHWEST" class="py-name" href="#" onclick="return doclink('link-70', 'SOUTHWEST', 'link-12');">SOUTHWEST</a></tt> <tt class="py-op">=</tt> <tt id="link-71" class="py-name"><a title="pyjamas.chart.AnnotationLocation
+pyjamas.chart.AnnotationLocation.AnnotationLocation" class="py-name" href="#" onclick="return doclink('link-71', 'AnnotationLocation', 'link-31');">AnnotationLocation</a></tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L472"></a><tt class="py-lineno">472</tt>  <tt class="py-line"> </tt>
+<a name="L473"></a><tt class="py-lineno">473</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L474"></a><tt class="py-lineno">474</tt>  <tt class="py-line"><tt class="py-string">** Specifies that a point's annotation (label) should</tt> </tt>
+<a name="L475"></a><tt class="py-lineno">475</tt>  <tt class="py-line"><tt class="py-string">** be positioned just to the left of, and vertically</tt> </tt>
+<a name="L476"></a><tt class="py-lineno">476</tt>  <tt class="py-line"><tt class="py-string">** centered on, the symbol used to represent the</tt> </tt>
+<a name="L477"></a><tt class="py-lineno">477</tt>  <tt class="py-line"><tt class="py-string">** point.</tt> </tt>
+<a name="L478"></a><tt class="py-lineno">478</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L479"></a><tt class="py-lineno">479</tt>  <tt class="py-line"><tt class="py-string">** @see Curve.Point#setAnnotationLocation setAnnotationLocation</tt> </tt>
+<a name="L480"></a><tt class="py-lineno">480</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L481"></a><tt class="py-lineno">481</tt>  <tt class="py-line"><tt id="link-72" class="py-name"><a title="pyjamas.chart.AnnotationLocation.WEST
+pyjamas.ui.DockPanel.DockPanel.WEST" class="py-name" href="#" onclick="return doclink('link-72', 'WEST', 'link-9');">WEST</a></tt> <tt class="py-op">=</tt> <tt id="link-73" class="py-name"><a title="pyjamas.chart.AnnotationLocation.west" class="py-name" href="#" onclick="return doclink('link-73', 'west', 'link-40');">west</a></tt> </tt>
+<a name="L482"></a><tt class="py-lineno">482</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:14 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

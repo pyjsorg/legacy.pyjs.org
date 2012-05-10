@@ -1,0 +1,1747 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.CustomButton.CustomButton</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        <a href="pyjamas.ui.CustomButton-module.html">Module&nbsp;CustomButton</a> ::
+        Class&nbsp;CustomButton
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.CustomButton.CustomButton-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CustomButton</h1><p class="nomargin-top"><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+              object --+                    
+                       |                    
+                 <a href="pyjamas.ui.Applier-class.html">Applier</a> --+                
+                           |                
+           <a href="pyjamas.ui.UIObject.UIObject-class.html">UIObject.UIObject</a> --+            
+                               |            
+                   <a href="pyjamas.ui.Widget.Widget-class.html">Widget.Widget</a> --+        
+                                   |        
+      <a href="pyjamas.ui.FocusListener.FocusHandler-class.html">FocusListener.FocusHandler</a> --+        
+                                   |        
+<a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html">KeyboardListener.KeyboardHandler</a> --+        
+                                   |        
+                      object --+   |        
+                               |   |        
+      <a href="pyjamas.ui.MouseListener.MouseHandler-class.html">MouseListener.MouseHandler</a> --+        
+                                   |        
+                      object --+   |        
+                               |   |        
+      <a href="pyjamas.ui.ClickListener.ClickHandler-class.html">ClickListener.ClickHandler</a> --+        
+                                   |        
+                <a href="pyjamas.ui.Focus.FocusMixin-class.html">Focus.FocusMixin</a> --+        
+                                   |        
+             <a href="pyjamas.ui.FocusWidget.FocusWidget-class.html">FocusWidget.FocusWidget</a> --+    
+                                       |    
+                          object --+   |    
+                                   |   |    
+                 <a href="pyjamas.ui.InnerHTML.InnerHTML-class.html">InnerHTML.InnerHTML</a> --+    
+                                       |    
+                          object --+   |    
+                                   |   |    
+                 <a href="pyjamas.ui.InnerText.InnerText-class.html">InnerText.InnerText</a> --+    
+                                       |    
+                   <a href="pyjamas.ui.ButtonBase.ButtonBase-class.html">ButtonBase.ButtonBase</a> --+
+                                           |
+                                          <strong class="uidshort">CustomButton</strong>
+</pre>
+
+<hr />
+<p>Represents a button's face. Each face is associated with its own style
+  modifier and, optionally, its own contents html, text, or image.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">upImageText</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">downImageText</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">listener</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Constructor for CustomButton.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateButtonFace"></a><span class="summary-sig-name">updateButtonFace</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.updateButtonFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getDownDisabledFace"></a><span class="summary-sig-name">getDownDisabledFace</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the downDisabled face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getDownDisabledFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getDownFace"></a><span class="summary-sig-name">getDownFace</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the down face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getDownFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getDownHoveringFace"></a><span class="summary-sig-name">getDownHoveringFace</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the downHovering face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getDownHoveringFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#getHTML" class="summary-sig-name">getHTML</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the current face's html.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getHTML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#getTabIndex" class="summary-sig-name">getTabIndex</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getTabIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#getText" class="summary-sig-name">getText</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the current face's text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getText">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getUpDisabledFace"></a><span class="summary-sig-name">getUpDisabledFace</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the upDisabled face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getUpDisabledFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getUpFace"></a><span class="summary-sig-name">getUpFace</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the up face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getUpFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getUpHoveringFace"></a><span class="summary-sig-name">getUpHoveringFace</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the upHovering face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getUpHoveringFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#onBrowserEvent" class="summary-sig-name">onBrowserEvent</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">event</span>)</span><br />
+      Listen to events raised by the browser and call the appropriate 
+      method of the listener (widget, ..) object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onBrowserEvent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#setAccessKey" class="summary-sig-name">setAccessKey</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setAccessKey">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#setEnabled" class="summary-sig-name">setEnabled</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enabled</span>)</span><br />
+      Sets whether this button is enabled.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setEnabled">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#setFocus" class="summary-sig-name">setFocus</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">focused</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setFocus">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#setHTML" class="summary-sig-name">setHTML</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">html</span>)</span><br />
+      Sets the current face's html.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setHTML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#setTabIndex" class="summary-sig-name">setTabIndex</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setTabIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#setText" class="summary-sig-name">setText</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Sets the current face's text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setText">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isDown"></a><span class="summary-sig-name">isDown</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Is this button down?</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.isDown">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#onAttach" class="summary-sig-name">onAttach</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Overridden on attach to ensure that a button face has been chosen 
+      before the button is displayed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onAttach">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#onClick" class="summary-sig-name">onClick</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sender</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Called when the user finishes clicking on this button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onClick">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#onClickCancel" class="summary-sig-name">onClickCancel</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Called when the user aborts a click in progress; for example, by 
+      dragging the mouse outside of the button before releasing the mouse 
+      button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onClickCancel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#onClickStart" class="summary-sig-name">onClickStart</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Called when the user begins to click on this button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onClickStart">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#onDetach" class="summary-sig-name">onDetach</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Called when this widget is being removed from the DOM tree of the 
+      document.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onDetach">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDown"></a><span class="summary-sig-name">setDown</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">down</span>)</span><br />
+      Sets whether this button is down.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setDown">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="finishSetup"></a><span class="summary-sig-name">finishSetup</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Common setup between constructors.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.finishSetup">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="fireClickListeners"></a><span class="summary-sig-name">fireClickListeners</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nativeEvent</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.fireClickListeners">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="fireEvent"></a><span class="summary-sig-name">fireEvent</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.fireEvent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#getCurrentFace" class="summary-sig-name">getCurrentFace</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Gets the current face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getCurrentFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isHovering"></a><span class="summary-sig-name">isHovering</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Is the mouse hovering over this button? Returns True</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.isHovering">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setHovering"></a><span class="summary-sig-name">setHovering</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">hovering</span>)</span><br />
+      Sets whether this button is hovering.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setHovering">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="toggleDown"></a><span class="summary-sig-name">toggleDown</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Toggle the up/down attribute.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.toggleDown">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.ui.CustomButton.CustomButton-class.html#cleanupCaptureState" class="summary-sig-name">cleanupCaptureState</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Resets internal state if this button can no longer service events.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.cleanupCaptureState">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="createFace"></a><span class="summary-sig-name">createFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">delegateTo</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">faceID</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.createFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getFaceFromID"></a><span class="summary-sig-name">getFaceFromID</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">face_id</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getFaceFromID">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setAriaPressed"></a><span class="summary-sig-name">setAriaPressed</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">newFace</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setAriaPressed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setCurrentFace"></a><span class="summary-sig-name">setCurrentFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">newFace</span>)</span><br />
+      Implementation note: default access for testing.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setCurrentFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setCurrentFaceFromID"></a><span class="summary-sig-name">setCurrentFaceFromID</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">faceID</span>)</span><br />
+      Sets the current face based on the faceID.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setCurrentFaceFromID">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setCurrentFaceElement"></a><span class="summary-sig-name">setCurrentFaceElement</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">newFaceElement</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setCurrentFaceElement">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDownDisabledFace"></a><span class="summary-sig-name">setDownDisabledFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">downDisabled</span>)</span><br />
+      Sets the downDisabled face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setDownDisabledFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDownFace"></a><span class="summary-sig-name">setDownFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">down</span>)</span><br />
+      Sets the down face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setDownFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDownHoveringFace"></a><span class="summary-sig-name">setDownHoveringFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">downHovering</span>)</span><br />
+      Sets the downHovering face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setDownHoveringFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setUpDisabledFace"></a><span class="summary-sig-name">setUpDisabledFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">upDisabled</span>)</span><br />
+      Sets the upDisabled face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setUpDisabledFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setUpFace"></a><span class="summary-sig-name">setUpFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">up</span>)</span><br />
+      Sets the up face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setUpFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setUpHoveringFace"></a><span class="summary-sig-name">setUpHoveringFace</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">upHovering</span>)</span><br />
+      Sets the upHovering face of the button.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setUpHoveringFace">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="toggleDisabled"></a><span class="summary-sig-name">toggleDisabled</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Toggle the disabled attribute.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.toggleDisabled">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="toggleHover"></a><span class="summary-sig-name">toggleHover</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Toggle the hovering attribute.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.toggleHover">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.ButtonBase.ButtonBase-class.html">ButtonBase.ButtonBase</a></code></b> (private):
+      <code><a href="pyjamas.ui.ButtonBase.ButtonBase-class.html#_setWeirdProps" onclick="show_private();">_setWeirdProps</a></code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Widget.Widget-class.html">Widget.Widget</a></code></b>:
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#doAttachChildren">doAttachChildren</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#doDetachChildren">doDetachChildren</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#getID">getID</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#getLayoutData">getLayoutData</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#getParent">getParent</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#isAttached">isAttached</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#onLoad">onLoad</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#removeFromParent">removeFromParent</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setContextMenu">setContextMenu</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setID">setID</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setLayoutData">setLayoutData</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setParent">setParent</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.UIObject.UIObject-class.html">UIObject.UIObject</a></code></b>:
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#addStyleDependentName">addStyleDependentName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#addStyleName">addStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getAbsoluteLeft">getAbsoluteLeft</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getAbsoluteTop">getAbsoluteTop</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getElement">getElement</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getHeight">getHeight</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getOffsetHeight">getOffsetHeight</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getOffsetWidth">getOffsetWidth</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getStyleAttribute">getStyleAttribute</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getStyleName">getStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getStylePrimaryName">getStylePrimaryName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getTitle">getTitle</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getVisible">getVisible</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getWidth">getWidth</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#isVisible">isVisible</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#removeStyleDependentName">removeStyleDependentName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#removeStyleName">removeStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setElement">setElement</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setHeight">setHeight</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setPixelSize">setPixelSize</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setSize">setSize</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setStyleAttribute">setStyleAttribute</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setStyleName">setStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setTitle">setTitle</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setVisible">setVisible</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setWidth">setWidth</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setzIndex">setzIndex</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#sinkEvents">sinkEvents</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#unsinkEvents">unsinkEvents</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Applier-class.html">Applier</a></code></b>:
+      <code><a href="pyjamas.ui.Applier-class.html#applyValues">applyValues</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#retrieveValues">retrieveValues</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#setDefaults">setDefaults</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#setElementProperties">setElementProperties</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#updateInstance">updateInstance</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html">FocusListener.FocusHandler</a></code></b>:
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#addFocusListener">addFocusListener</a></code>,
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#onFocus">onFocus</a></code>,
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#onLostFocus">onLostFocus</a></code>,
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#removeFocusListener">removeFocusListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html">KeyboardListener.KeyboardHandler</a></code></b>:
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#addKeyboardListener">addKeyboardListener</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyDown">onKeyDown</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyPress">onKeyPress</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyUp">onKeyUp</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#removeKeyboardListener">removeKeyboardListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html">MouseListener.MouseHandler</a></code></b>:
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#addMouseListener">addMouseListener</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseDown">onMouseDown</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseEnter">onMouseEnter</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseGlassEnter">onMouseGlassEnter</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseGlassLeave">onMouseGlassLeave</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseLeave">onMouseLeave</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseMove">onMouseMove</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseUp">onMouseUp</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#removeMouseListener">removeMouseListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html">ClickListener.ClickHandler</a></code></b>:
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#addClickListener">addClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#addDoubleClickListener">addDoubleClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#clearClickListener">clearClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#clearDoubleClickListener">clearDoubleClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#onDoubleClick">onDoubleClick</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#removeClickListener">removeClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#removeDoubleClickListener">removeDoubleClickListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Focus.FocusMixin-class.html">Focus.FocusMixin</a></code></b>:
+      <code><a href="pyjamas.ui.Focus.FocusMixin-class.html#isEnabled">isEnabled</a></code>,
+      <code><a href="pyjamas.ui.Focus.FocusMixin-class.html#isReadonly">isReadonly</a></code>,
+      <code><a href="pyjamas.ui.Focus.FocusMixin-class.html#setReadonly">setReadonly</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.UIObject.UIObject-class.html">UIObject.UIObject</a></code></b> (private):
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#_getProps" onclick="show_private();">_getProps</a></code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Applier-class.html">Applier</a></code></b> (private):
+      <code><a href="pyjamas.ui.Applier-class.html#_getElementProps" onclick="show_private();">_getElementProps</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="STYLENAME_DEFAULT"></a><span class="summary-name">STYLENAME_DEFAULT</span> = <code title="&quot;gwt-CustomButton&quot;">&quot;gwt-CustomButton&quot;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DOWN_ATTRIBUTE"></a><span class="summary-name">DOWN_ATTRIBUTE</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="HOVERING_ATTRIBUTE"></a><span class="summary-name">HOVERING_ATTRIBUTE</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DISABLED_ATTRIBUTE"></a><span class="summary-name">DISABLED_ATTRIBUTE</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="UP"></a><span class="summary-name">UP</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DOWN"></a><span class="summary-name">DOWN</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="UP_HOVERING"></a><span class="summary-name">UP_HOVERING</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="DOWN_HOVERING"></a><span class="summary-name">DOWN_HOVERING</span> = <code title="DOWN_ATTRIBUTE | HOVERING_ATTRIBUTE">DOWN_ATTRIBUTE | HOVERING_ATTRIBUTE</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="UP_DISABLED"></a><span class="summary-name">UP_DISABLED</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.ui.CustomButton.CustomButton-class.html#DOWN_DISABLED" class="summary-name">DOWN_DISABLED</a> = <code title="DOWN | DISABLED_ATTRIBUTE">DOWN | DISABLED_ATTRIBUTE</code><br />
+      Calling possibilities: def __init__(self, upImage): def 
+      __init__(self, upImage, listener): def __init__(self, upImage, 
+      downImage): def __init__(self, upImage, downImage, listener): def 
+      __init__(self, upText): def __init__(self, upText, listener): def 
+      __init__(self, upText, downText): def __init__(self, upText, 
+      downText, listener): def __init__(self):
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.UIObject.UIObject-class.html">UIObject.UIObject</a></code></b> (private):
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#_props" onclick="show_private();">_props</a></code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Applier-class.html">Applier</a></code></b> (private):
+      <code><a href="pyjamas.ui.Applier-class.html#_elem_props" onclick="show_private();">_elem_props</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">upImageText</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">downImageText</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">listener</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Constructor for CustomButton.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getHTML"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getHTML</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getHTML">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Gets the current face's html.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.InnerHTML.InnerHTML-class.html#getHTML">InnerHTML.InnerHTML.getHTML</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTabIndex"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTabIndex</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getTabIndex">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Focus.FocusMixin-class.html#getTabIndex">Focus.FocusMixin.getTabIndex</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getText"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getText</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getText">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Gets the current face's text.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.InnerText.InnerText-class.html#getText">InnerText.InnerText.getText</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onBrowserEvent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onBrowserEvent</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">event</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onBrowserEvent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Listen to events raised by the browser and call the appropriate method
+  of the listener (widget, ..) object.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.ClickListener.ClickHandler-class.html#onBrowserEvent">ClickListener.ClickHandler.onBrowserEvent</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setAccessKey"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setAccessKey</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setAccessKey">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Focus.FocusMixin-class.html#setAccessKey">Focus.FocusMixin.setAccessKey</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setEnabled"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setEnabled</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">enabled</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setEnabled">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets whether this button is enabled.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Focus.FocusMixin-class.html#setEnabled">Focus.FocusMixin.setEnabled</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setFocus"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setFocus</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">focused</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setFocus">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Focus.FocusMixin-class.html#setFocus">Focus.FocusMixin.setFocus</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setHTML"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setHTML</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">html</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setHTML">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the current face's html.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.InnerHTML.InnerHTML-class.html#setHTML">InnerHTML.InnerHTML.setHTML</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setTabIndex"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setTabIndex</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setTabIndex">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Focus.FocusMixin-class.html#setTabIndex">Focus.FocusMixin.setTabIndex</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setText"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setText</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">text</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.setText">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the current face's text.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.InnerText.InnerText-class.html#setText">InnerText.InnerText.setText</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onAttach"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onAttach</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onAttach">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Overridden on attach to ensure that a button face has been chosen 
+  before the button is displayed.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Widget.Widget-class.html#onAttach">Widget.Widget.onAttach</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onClick"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onClick</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">sender</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onClick">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called when the user finishes clicking on this button. The default 
+  behavior is to fire the click event to listeners. Subclasses that 
+  override onClickStart() should override this method to restore the normal
+  widget display.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.ClickListener.ClickHandler-class.html#onClick">ClickListener.ClickHandler.onClick</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onClickCancel"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onClickCancel</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onClickCancel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called when the user aborts a click in progress; for example, by 
+  dragging the mouse outside of the button before releasing the mouse 
+  button. Subclasses that override onClickStart() should override this 
+  method to restore the normal widget display.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="onClickStart"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onClickStart</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onClickStart">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called when the user begins to click on this button. Subclasses may 
+  override this method to display the start of the click visually; such 
+  subclasses should also override onClick() and onClickCancel() to restore 
+  normal visual state. Each onClickStart will eventually be followed by 
+  either onClick or onClickCancel, depending on whether the click is 
+  completed.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="onDetach"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onDetach</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.onDetach">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called when this widget is being removed from the DOM tree of the 
+  document.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Widget.Widget-class.html#onDetach">Widget.Widget.onDetach</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getCurrentFace"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getCurrentFace</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.getCurrentFace">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Gets the current face of the button. Implementation note: Package so 
+  we can use it when testing the button.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="cleanupCaptureState"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cleanupCaptureState</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.ui.CustomButton-pysrc.html#CustomButton.cleanupCaptureState">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Resets internal state if this button can no longer service events. 
+  This can occur when the widget becomes detached or disabled.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="DOWN_DISABLED"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">DOWN_DISABLED</h3>
+  <p>Calling possibilities: def __init__(self, upImage): def __init__(self,
+  upImage, listener): def __init__(self, upImage, downImage): def 
+  __init__(self, upImage, downImage, listener): def __init__(self, upText):
+  def __init__(self, upText, listener): def __init__(self, upText, 
+  downText): def __init__(self, upText, downText, listener): def 
+  __init__(self):</p>
+  <p>TODO: I do not know how to handle the following cases: def 
+  __init__(self, upImage, listener): def __init__(self, upText, 
+  listener):</p>
+  <p>So how can I make difference between listener and downImage/downText 
+  ?</p>
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+DOWN | DISABLED_ATTRIBUTE
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:09 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

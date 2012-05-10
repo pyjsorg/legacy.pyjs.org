@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.Anchor</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        Module&nbsp;Anchor
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.Anchor-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.ui.Anchor-module.html">Module pyjamas.ui.Anchor</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">""" Anchor Widget, use this to create the equivalent of the &lt;a&gt;&lt;/a&gt; tag.</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">Copyright(C) 2010, Martin Hellwig</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">Copyright(C) 2010, Luke Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">License: Apache Software Foundation v2</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring">Here is an example for using it with an image:</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-docstring">---------------------------------------------------------</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">if __name__ == '__main__':</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">    from pyjamas.ui.RootPanel import RootPanel</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">    from pyjamas.ui.Image import Image</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">    root = RootPanel()</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">    image = Image('http://pyjs.org/img/pyjamas.128x128.png')</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">    anchor = Anchor(Widget=image, Href='http://pyjs.org')</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">    root.add(anchor)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">---------------------------------------------------------</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-2', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package pyjamas.ui=pyjamas.ui-module.html"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-3', 'ui', 'link-3');">ui</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Module pyjamas.ui.Widget=pyjamas.ui.Widget-module.html,Class pyjamas.ui.Widget.Widget=pyjamas.ui.Widget.Widget-class.html"><a title="pyjamas.ui.Widget
+pyjamas.ui.Widget.Widget" class="py-name" href="#" onclick="return doclink('link-4', 'Widget', 'link-4');">Widget</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name"><a title="pyjamas.ui.Widget
+pyjamas.ui.Widget.Widget" class="py-name" href="#" onclick="return doclink('link-5', 'Widget', 'link-4');">Widget</a></tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-6', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-7', 'ui', 'link-3');">ui</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Module pyjamas.ui.ClickListener=pyjamas.ui.ClickListener-module.html"><a title="pyjamas.ui.ClickListener" class="py-name" href="#" onclick="return doclink('link-8', 'ClickListener', 'link-8');">ClickListener</a></tt> <tt class="py-keyword">import</tt> <tt id="link-9" class="py-name" targets="Class pyjamas.ui.ClickListener.ClickHandler=pyjamas.ui.ClickListener.ClickHandler-class.html"><a title="pyjamas.ui.ClickListener.ClickHandler" class="py-name" href="#" onclick="return doclink('link-9', 'ClickHandler', 'link-9');">ClickHandler</a></tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt>
+<a name="_Attribute"></a><div id="_Attribute-def"><a name="L24"></a><tt class="py-lineno">24</tt> <a class="py-toggle" href="#" id="_Attribute-toggle" onclick="return toggle('_Attribute');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.Anchor._Attribute-class.html">_Attribute</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_Attribute-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="_Attribute-expanded"><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">    <tt class="py-docstring">"Attribute definition class with method set and remove"</tt> </tt>
+<a name="_Attribute.__init__"></a><div id="_Attribute.__init__-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="_Attribute.__init__-toggle" onclick="return toggle('_Attribute.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor._Attribute-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">element</tt><tt class="py-op">,</tt> <tt class="py-param">attribute</tt><tt class="py-op">,</tt>  </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">                 <tt class="py-param">attribute_type</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">type_restriction</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_Attribute.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="_Attribute.__init__-expanded"><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">element</tt> <tt class="py-op">=</tt> <tt class="py-name">element</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">attribute</tt> <tt class="py-op">=</tt> <tt class="py-name">attribute</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_type</tt> <tt class="py-op">=</tt> <tt class="py-name">attribute_type</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_restriction</tt> <tt class="py-op">=</tt> <tt class="py-name">type_restriction</tt> </tt>
+</div><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">         </tt>
+<a name="_Attribute.get"></a><div id="_Attribute.get-def"><a name="L33"></a><tt class="py-lineno">33</tt> <a class="py-toggle" href="#" id="_Attribute.get-toggle" onclick="return toggle('_Attribute.get');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor._Attribute-class.html#get">get</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_Attribute.get-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="_Attribute.get-expanded"><a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">        <tt class="py-docstring">"Get the value"</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-10" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-10', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Function pyjamas.DOM.getAttribute()=pyjamas.DOM-module.html#getAttribute"><a title="pyjamas.DOM.getAttribute" class="py-name" href="#" onclick="return doclink('link-11', 'getAttribute', 'link-11');">getAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">attribute</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">         </tt>
+<a name="_Attribute.set"></a><div id="_Attribute.set-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="_Attribute.set-toggle" onclick="return toggle('_Attribute.set');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor._Attribute-class.html#set">set</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_Attribute.set-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="_Attribute.set-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-docstring">"Set the value"</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt id="link-12" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-12', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Function pyjamas.DOM.setAttribute()=pyjamas.DOM-module.html#setAttribute"><a title="pyjamas.DOM.setAttribute" class="py-name" href="#" onclick="return doclink('link-13', 'setAttribute', 'link-13');">setAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">attribute</tt><tt class="py-op">,</tt> <tt class="py-name">value</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">         </tt>
+<a name="_Attribute.remove"></a><div id="_Attribute.remove-def"><a name="L41"></a><tt class="py-lineno">41</tt> <a class="py-toggle" href="#" id="_Attribute.remove-toggle" onclick="return toggle('_Attribute.remove');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor._Attribute-class.html#remove">remove</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_Attribute.remove-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="_Attribute.remove-expanded"><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-docstring">"Remove the attribute from the element"</tt>  </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt id="link-14" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-14', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Function pyjamas.DOM.removeAttribute()=pyjamas.DOM-module.html#removeAttribute"><a title="pyjamas.DOM.removeAttribute" class="py-name" href="#" onclick="return doclink('link-15', 'removeAttribute', 'link-15');">removeAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">attribute</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">         </tt>
+<a name="_Attributes"></a><div id="_Attributes-def"><a name="L45"></a><tt class="py-lineno">45</tt> <a class="py-toggle" href="#" id="_Attributes-toggle" onclick="return toggle('_Attributes');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.Anchor._Attributes-class.html">_Attributes</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_Attributes-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="_Attributes-expanded"><a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">    <tt class="py-docstring">"Attribute container class"</tt> </tt>
+<a name="_Attributes.__init__"></a><div id="_Attributes.__init__-def"><a name="L47"></a><tt class="py-lineno">47</tt> <a class="py-toggle" href="#" id="_Attributes.__init__-toggle" onclick="return toggle('_Attributes.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor._Attributes-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">element</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_Attributes.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="_Attributes.__init__-expanded"><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name" targets="Class pyjamas.ui.Anchor._Attribute=pyjamas.ui.Anchor._Attribute-class.html"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-16', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'name'</tt><tt class="py-op">,</tt> <tt class="py-string">'cdata'</tt><tt class="py-op">,</tt> <tt class="py-string">'cs'</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">href</tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-17', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'href'</tt><tt class="py-op">,</tt> <tt class="py-string">'uri'</tt><tt class="py-op">,</tt> <tt class="py-string">'ct'</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">hreflang</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-18', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'hreflang'</tt><tt class="py-op">,</tt> <tt class="py-string">'langcode'</tt><tt class="py-op">,</tt> <tt class="py-string">'ci'</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method pyjamas.dnd.DataTransfer.DataTransferItem.type()=pyjamas.dnd.DataTransfer.DataTransferItem-class.html#type"><a title="pyjamas.dnd.DataTransfer.DataTransferItem.type" class="py-name" href="#" onclick="return doclink('link-19', 'type', 'link-19');">type</a></tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-20', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'type'</tt><tt class="py-op">,</tt> <tt class="py-string">'content-type'</tt><tt class="py-op">,</tt> <tt class="py-string">'ci'</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">rel</tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-21', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'rel'</tt><tt class="py-op">,</tt> <tt class="py-string">'link-types'</tt> <tt class="py-op">,</tt><tt class="py-string">'ci'</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">rev</tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-22', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'rev'</tt><tt class="py-op">,</tt> <tt class="py-string">'link-types'</tt><tt class="py-op">,</tt> <tt class="py-string">'ci'</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">charset</tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-23', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'charset'</tt><tt class="py-op">,</tt> <tt class="py-string">'charset'</tt><tt class="py-op">,</tt> <tt class="py-string">'ci'</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">target</tt> <tt class="py-op">=</tt> <tt id="link-24" class="py-name"><a title="pyjamas.ui.Anchor._Attribute" class="py-name" href="#" onclick="return doclink('link-24', '_Attribute', 'link-16');">_Attribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">'target'</tt><tt class="py-op">,</tt> <tt class="py-string">'target'</tt><tt class="py-op">,</tt> <tt class="py-string">'ci'</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">         </tt>
+<a name="Anchor"></a><div id="Anchor-def"><a name="L57"></a><tt class="py-lineno">57</tt> <a class="py-toggle" href="#" id="Anchor-toggle" onclick="return toggle('Anchor');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.Anchor.Anchor-class.html">Anchor</a><tt class="py-op">(</tt><tt class="py-base-class">Widget</tt><tt class="py-op">,</tt> <tt class="py-base-class">ClickHandler</tt><tt class="py-op">,</tt> <tt class="py-base-class">_Attributes</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Anchor-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Anchor-expanded"><a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">    <tt class="py-docstring">"""Anchor attribute, use this to create the equivalent of the &lt;a&gt;&lt;/a&gt; tag.</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"><tt class="py-docstring">    The attributes: name, href. hreflang, type, rel, rev, charset are in the</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"><tt class="py-docstring">    namespace of the Anchor instance.</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt class="py-docstring">    These attributes themselves have the functions 'set' and 'remove'</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-docstring">    For example:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt class="py-docstring">    anchor = Anchor()</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"><tt class="py-docstring">    anchor.href.set('http://www.dcuktec.com')</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="Anchor.__init__"></a><div id="Anchor.__init__-def"><a name="L66"></a><tt class="py-lineno">66</tt> <a class="py-toggle" href="#" id="Anchor.__init__-toggle" onclick="return toggle('Anchor.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor.Anchor-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Anchor.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Anchor.__init__-expanded"><a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">        <tt class="py-name">element</tt> <tt class="py-op">=</tt> <tt class="py-name">kwargs</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method pyjamas.Canvas.JSOStack.JSOStack.pop()=pyjamas.Canvas.JSOStack.JSOStack-class.html#pop"><a title="pyjamas.Canvas.JSOStack.JSOStack.pop" class="py-name" href="#" onclick="return doclink('link-25', 'pop', 'link-25');">pop</a></tt><tt class="py-op">(</tt><tt class="py-string">'Element'</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> <tt class="py-keyword">or</tt> <tt id="link-26" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-26', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Function pyjamas.DOM.createAnchor()=pyjamas.DOM-module.html#createAnchor"><a title="pyjamas.DOM.createAnchor" class="py-name" href="#" onclick="return doclink('link-27', 'createAnchor', 'link-27');">createAnchor</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">        <tt class="py-name">kwargs</tt><tt class="py-op">[</tt><tt class="py-string">'StyleName'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">kwargs</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.pop" class="py-name" href="#" onclick="return doclink('link-28', 'pop', 'link-25');">pop</a></tt><tt class="py-op">(</tt><tt class="py-string">'StyleName'</tt><tt class="py-op">,</tt> <tt class="py-string">'gwt-Anchor'</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">        <tt id="link-29" class="py-name" targets="Class pyjamas.ui.Anchor._Attributes=pyjamas.ui.Anchor._Attributes-class.html"><a title="pyjamas.ui.Anchor._Attributes" class="py-name" href="#" onclick="return doclink('link-29', '_Attributes', 'link-29');">_Attributes</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault.__init__()=pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault-class.html#__init__,Method pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6.__init__()=pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6-class.html#__init__,Method pyjamas.Canvas.Color.Color.__init__()=pyjamas.Canvas.Color.Color-class.html#__init__,Method pyjamas.Canvas.ColorStop.ColorStop.__init__()=pyjamas.Canvas.ColorStop.ColorStop-class.html#__init__,Method pyjamas.Canvas.GWTCanvas.GWTCanvas.__init__()=pyjamas.Canvas.GWTCanvas.GWTCanvas-class.html#__init__,Method pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.__init__()=pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault-class.html#__init__,Method pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.__init__()=pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6-class.html#__init__,Method pyjamas.Canvas.ImageData.ImageData.__init__()=pyjamas.Canvas.ImageData.ImageData-class.html#__init__,Method pyjamas.Canvas.ImageLoader.ImageLoader.__init__()=pyjamas.Canvas.ImageLoader.ImageLoader-class.html#__init__,Method pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.__init__()=pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#__init__,Method pyjamas.Canvas.JSOStack.JSOStack.__init__()=pyjamas.Canvas.JSOStack.JSOStack-class.html#__init__,Method pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault.__init__()=pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault-class.html#__init__,Method pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6.__init__()=pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6-class.html#__init__,Method pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault.__init__()=pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault-class.html#__init__,Method pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6.__init__()=pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvas.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvas-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvasGradient.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvasGradient-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient-class.html#__init__,Method pyjamas.Canvas.VMLContext.VMLContext.__init__()=pyjamas.Canvas.VMLContext.VMLContext-class.html#__init__,Method pyjamas.Canvas.VMLContext.VMLStyle.__init__()=pyjamas.Canvas.VMLContext.VMLStyle-class.html#__init__,Method pyjamas.Canvas2D.Canvas.__init__()=pyjamas.Canvas2D.Canvas-class.html#__init__,Method pyjamas.Canvas2D.CanvasImage.__init__()=pyjamas.Canvas2D.CanvasImage-class.html#__init__,Method pyjamas.Canvas2D.ImageLoadListener.__init__()=pyjamas.Canvas2D.ImageLoadListener-class.html#__init__,Method pyjamas.DOM.IterChildrenClass.__init__()=pyjamas.DOM.IterChildrenClass-class.html#__init__,Method pyjamas.DOM.IterWalkChildren.__init__()=pyjamas.DOM.IterWalkChildren-class.html#__init__,Method pyjamas.EventController.EventListener.__init__()=pyjamas.EventController.EventListener-class.html#__init__,Method pyjamas.EventController.Handler.__init__()=pyjamas.EventController.Handler-class.html#__init__,Method pyjamas.HTTPRequest.XULrunnerHackCallback.__init__()=pyjamas.HTTPRequest.XULrunnerHackCallback-class.html#__init__,Method pyjamas.JSONService.JSONProxy.__init__()=pyjamas.JSONService.JSONProxy-class.html#__init__,Method pyjamas.JSONService.JSONRequestInfo.__init__()=pyjamas.JSONService.JSONRequestInfo-class.html#__init__,Method pyjamas.JSONService.JSONResponseTextHandler.__init__()=pyjamas.JSONService.JSONResponseTextHandler-class.html#__init__,Method pyjamas.JSONService.JSONService.__init__()=pyjamas.JSONService.JSONService-class.html#__init__,Method pyjamas.JSONService.ServiceProxy.__init__()=pyjamas.JSONService.ServiceProxy-class.html#__init__,Method pyjamas.Location.Location.__init__()=pyjamas.Location.Location-class.html#__init__,Method pyjamas.PyExternalMod.PyjamasExternalModule.__init__()=pyjamas.PyExternalMod.PyjamasExternalModule-class.html#__init__,Method pyjamas.PyExternalMod.PyjamasExternalProxy.__init__()=pyjamas.PyExternalMod.PyjamasExternalProxy-class.html#__init__,Method pyjamas.Timer.Timer.__init__()=pyjamas.Timer.Timer-class.html#__init__,Method pyjamas.builder.Builder.Builder.__init__()=pyjamas.builder.Builder.Builder-class.html#__init__,Method pyjamas.builder.Builder.BuilderState.__init__()=pyjamas.builder.Builder.BuilderState-class.html#__init__,Method pyjamas.builder.Builder.HTTPUILoader.__init__()=pyjamas.builder.Builder.HTTPUILoader-class.html#__init__,Method pyjamas.builder.XMLFile.XMLFile.__init__()=pyjamas.builder.XMLFile.XMLFile-class.html#__init__,Method pyjamas.chart.Annotation.Annotation.__init__()=pyjamas.chart.Annotation.Annotation-class.html#__init__,Method pyjamas.chart.AnnotationLocation.AnnotationLocation.__init__()=pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#__init__,Method pyjamas.chart.Axis.Axis.__init__()=pyjamas.chart.Axis.Axis-class.html#__init__,Method pyjamas.chart.Axis.AxisLimits.__init__()=pyjamas.chart.Axis.AxisLimits-class.html#__init__,Method pyjamas.chart.Axis.XAxis.__init__()=pyjamas.chart.Axis.XAxis-class.html#__init__,Method pyjamas.chart.Axis.Y2Axis.__init__()=pyjamas.chart.Axis.Y2Axis-class.html#__init__,Method pyjamas.chart.Axis.YAxis.__init__()=pyjamas.chart.Axis.YAxis-class.html#__init__,Method pyjamas.chart.Curve.Curve.__init__()=pyjamas.chart.Curve.Curve-class.html#__init__,Method pyjamas.chart.DateTimeFormat.DF.__init__()=pyjamas.chart.DateTimeFormat.DF-class.html#__init__,Method pyjamas.chart.GChart.GChart.__init__()=pyjamas.chart.GChart.GChart-class.html#__init__,Method pyjamas.chart.GChartWidgets.AlignedLabel.__init__()=pyjamas.chart.GChartWidgets.AlignedLabel-class.html#__init__,Method pyjamas.chart.GChartWidgets.AnnotationRenderingPanel.__init__()=pyjamas.chart.GChartWidgets.AnnotationRenderingPanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.GraphicsRenderingPanel.__init__()=pyjamas.chart.GChartWidgets.GraphicsRenderingPanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel.__init__()=pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel-class.html#__init__,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.__init__()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.PlotPanel.__init__()=pyjamas.chart.GChartWidgets.PlotPanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.ReusableImage.__init__()=pyjamas.chart.GChartWidgets.ReusableImage-class.html#__init__,Method pyjamas.chart.HovertextChunk.HovertextChunk.__init__()=pyjamas.chart.HovertextChunk.HovertextChunk-class.html#__init__,Method pyjamas.chart.NumberFormat.NF.__init__()=pyjamas.chart.NumberFormat.NF-class.html#__init__,Method pyjamas.chart.Point.Point.__init__()=pyjamas.chart.Point.Point-class.html#__init__,Method pyjamas.chart.Symbol.Symbol.__init__()=pyjamas.chart.Symbol.Symbol-class.html#__init__,Method pyjamas.chart.SymbolType.AnnotationAnchor.__init__()=pyjamas.chart.SymbolType.AnnotationAnchor-class.html#__init__,Method pyjamas.chart.SymbolType.HBarBaseline.__init__()=pyjamas.chart.SymbolType.HBarBaseline-class.html#__init__,Method pyjamas.chart.SymbolType.HBarLeft.__init__()=pyjamas.chart.SymbolType.HBarLeft-class.html#__init__,Method pyjamas.chart.SymbolType.HBarRight.__init__()=pyjamas.chart.SymbolType.HBarRight-class.html#__init__,Method pyjamas.chart.SymbolType.LineSymbolType.__init__()=pyjamas.chart.SymbolType.LineSymbolType-class.html#__init__,Method pyjamas.chart.SymbolType.PieSliceSymbolType.__init__()=pyjamas.chart.SymbolType.PieSliceSymbolType-class.html#__init__,Method pyjamas.chart.SymbolType.SymbolType.__init__()=pyjamas.chart.SymbolType.SymbolType-class.html#__init__,Method pyjamas.chart.SymbolType.VBarBaseline.__init__()=pyjamas.chart.SymbolType.VBarBaseline-class.html#__init__,Method pyjamas.chart.SymbolType.VBarBottom.__init__()=pyjamas.chart.SymbolType.VBarBottom-class.html#__init__,Method pyjamas.chart.SymbolType.VBarTop.__init__()=pyjamas.chart.SymbolType.VBarTop-class.html#__init__,Method pyjamas.chart.TickLocation.TickLocation.__init__()=pyjamas.chart.TickLocation.TickLocation-class.html#__init__,Method pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption.__init__()=pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption-class.html#__init__,Method pyjamas.django.Form.CharField.__init__()=pyjamas.django.Form.CharField-class.html#__init__,Method pyjamas.django.Form.FloatField.__init__()=pyjamas.django.Form.FloatField-class.html#__init__,Method pyjamas.django.Form.Form.__init__()=pyjamas.django.Form.Form-class.html#__init__,Method pyjamas.django.Form.FormDescribeGrid.__init__()=pyjamas.django.Form.FormDescribeGrid-class.html#__init__,Method pyjamas.django.Form.FormGetGrid.__init__()=pyjamas.django.Form.FormGetGrid-class.html#__init__,Method pyjamas.django.Form.FormSaveGrid.__init__()=pyjamas.django.Form.FormSaveGrid-class.html#__init__,Method pyjamas.django.Form.IntegerField.__init__()=pyjamas.django.Form.IntegerField-class.html#__init__,Method pyjamas.dnd.DNDHelper.DNDHelper.__init__()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#__init__,Method pyjamas.dnd.DataTransfer.DataTransfer.__init__()=pyjamas.dnd.DataTransfer.DataTransfer-class.html#__init__,Method pyjamas.dnd.DataTransfer.DataTransferItem.__init__()=pyjamas.dnd.DataTransfer.DataTransferItem-class.html#__init__,Method pyjamas.dnd.DataTransfer.DragDataStore.__init__()=pyjamas.dnd.DataTransfer.DragDataStore-class.html#__init__,Method pyjamas.dnd.DragEvent.DragEvent.__init__()=pyjamas.dnd.DragEvent.DragEvent-class.html#__init__,Method pyjamas.dnd.utils.DOMStringList.__init__()=pyjamas.dnd.utils.DOMStringList-class.html#__init__,Method pyjamas.dnd.utils.DraggingWidget.__init__()=pyjamas.dnd.utils.DraggingWidget-class.html#__init__,Method pyjamas.dnd.utils.Uri_list.__init__()=pyjamas.dnd.utils.Uri_list-class.html#__init__,Method pyjamas.feed.Feed.Feed.__init__()=pyjamas.feed.Feed.Feed-class.html#__init__,Method pyjamas.gears.GearsException.GearsException.__init__()=pyjamas.gears.GearsException.GearsException-class.html#__init__,Method pyjamas.gears.database.Database.GearsDatabase.__init__()=pyjamas.gears.database.Database.GearsDatabase-class.html#__init__,Method pyjamas.gears.database.DatabaseException.DatabaseException.__init__()=pyjamas.gears.database.DatabaseException.DatabaseException-class.html#__init__,Method pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer.__init__()=pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer-class.html#__init__,Method pyjamas.gmaps.DirectionsService.DirectionsService.__init__()=pyjamas.gmaps.DirectionsService.DirectionsService-class.html#__init__,Method pyjamas.gmaps.Geocoder.Geocoder.__init__()=pyjamas.gmaps.Geocoder.Geocoder-class.html#__init__,Method pyjamas.logging.handlers.AlertHandler.__init__()=pyjamas.logging.handlers.AlertHandler-class.html#__init__,Method pyjamas.logging.handlers.AppendHandler.__init__()=pyjamas.logging.handlers.AppendHandler-class.html#__init__,Method pyjamas.logging.handlers.ConsoleHandler.__init__()=pyjamas.logging.handlers.ConsoleHandler-class.html#__init__,Method pyjamas.logging.handlers.NullHandler.__init__()=pyjamas.logging.handlers.NullHandler-class.html#__init__,Method pyjamas.media.Audio.Audio.__init__()=pyjamas.media.Audio.Audio-class.html#__init__,Method pyjamas.media.Media.Media.__init__()=pyjamas.media.Media.Media-class.html#__init__,Method pyjamas.media.Video.Video.__init__()=pyjamas.media.Video.Video-class.html#__init__,Method pyjamas.selection.Range.Range.__init__()=pyjamas.selection.Range.Range-class.html#__init__,Method pyjamas.selection.RangeEndPoint.FindLocRes.__init__()=pyjamas.selection.RangeEndPoint.FindLocRes-class.html#__init__,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.__init__()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#__init__,Method pyjamas.ui.AbsolutePanel.AbsolutePanel.__init__()=pyjamas.ui.AbsolutePanel.AbsolutePanel-class.html#__init__,Method pyjamas.ui.Anchor.Anchor.__init__()=pyjamas.ui.Anchor.Anchor-class.html#__init__,Method pyjamas.ui.Anchor._Attribute.__init__()=pyjamas.ui.Anchor._Attribute-class.html#__init__,Method pyjamas.ui.Anchor._Attributes.__init__()=pyjamas.ui.Anchor._Attributes-class.html#__init__,Method pyjamas.ui.Applier.__init__()=pyjamas.ui.Applier-class.html#__init__,Method pyjamas.ui.AreaSlider.AreaSlider.__init__()=pyjamas.ui.AreaSlider.AreaSlider-class.html#__init__,Method pyjamas.ui.AutoComplete.AutoCompleteTextBox.__init__()=pyjamas.ui.AutoComplete.AutoCompleteTextBox-class.html#__init__,Method pyjamas.ui.AutoComplete.SimpleAutoCompletionItems.__init__()=pyjamas.ui.AutoComplete.SimpleAutoCompletionItems-class.html#__init__,Method pyjamas.ui.BuilderPanel.BuilderPanel.__init__()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#__init__,Method pyjamas.ui.BuilderWidget.BuilderWidget.__init__()=pyjamas.ui.BuilderWidget.BuilderWidget-class.html#__init__,Method pyjamas.ui.Button.Button.__init__()=pyjamas.ui.Button.Button-class.html#__init__,Method pyjamas.ui.ButtonBase.ButtonBase.__init__()=pyjamas.ui.ButtonBase.ButtonBase-class.html#__init__,Method pyjamas.ui.CSS.StyleSheetCssFile.__init__()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#__init__,Method pyjamas.ui.CSS.StyleSheetCssText.__init__()=pyjamas.ui.CSS.StyleSheetCssText-class.html#__init__,Method pyjamas.ui.Calendar.Calendar.__init__()=pyjamas.ui.Calendar.Calendar-class.html#__init__,Method pyjamas.ui.Calendar.CalendarPopup.__init__()=pyjamas.ui.Calendar.CalendarPopup-class.html#__init__,Method pyjamas.ui.Calendar.DateField.__init__()=pyjamas.ui.Calendar.DateField-class.html#__init__,Method pyjamas.ui.CaptionPanel.CaptionPanel.__init__()=pyjamas.ui.CaptionPanel.CaptionPanel-class.html#__init__,Method pyjamas.ui.CellFormatter.CellFormatter.__init__()=pyjamas.ui.CellFormatter.CellFormatter-class.html#__init__,Method pyjamas.ui.CellPanel.CellPanel.__init__()=pyjamas.ui.CellPanel.CellPanel-class.html#__init__,Method pyjamas.ui.ChangeListener.ChangeHandler.__init__()=pyjamas.ui.ChangeListener.ChangeHandler-class.html#__init__,Method pyjamas.ui.CheckBox.CheckBox.__init__()=pyjamas.ui.CheckBox.CheckBox-class.html#__init__,Method pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel.__init__()=pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel-class.html#__init__,Method pyjamas.ui.ClickListener.ClickHandler.__init__()=pyjamas.ui.ClickListener.ClickHandler-class.html#__init__,Method pyjamas.ui.Composite.Composite.__init__()=pyjamas.ui.Composite.Composite-class.html#__init__,Method pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel.__init__()=pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel-class.html#__init__,Method pyjamas.ui.Control.Control.__init__()=pyjamas.ui.Control.Control-class.html#__init__,Method pyjamas.ui.Controls.AreaDemoSlider2.__init__()=pyjamas.ui.Controls.AreaDemoSlider2-class.html#__init__,Method pyjamas.ui.Controls.HorizontalDemoSlider2.__init__()=pyjamas.ui.Controls.HorizontalDemoSlider2-class.html#__init__,Method pyjamas.ui.Controls.VerticalDemoSlider2.__init__()=pyjamas.ui.Controls.VerticalDemoSlider2-class.html#__init__,Method pyjamas.ui.CustomButton.CustomButton.__init__()=pyjamas.ui.CustomButton.CustomButton-class.html#__init__,Method pyjamas.ui.CustomButton.Face.__init__()=pyjamas.ui.CustomButton.Face-class.html#__init__,Method pyjamas.ui.DeckPanel.DeckPanel.__init__()=pyjamas.ui.DeckPanel.DeckPanel-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratedTabBar.__init__()=pyjamas.ui.DecoratorPanel.DecoratedTabBar-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratedTabPanel.__init__()=pyjamas.ui.DecoratorPanel.DecoratedTabPanel-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratorPanel.__init__()=pyjamas.ui.DecoratorPanel.DecoratorPanel-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratorTitledPanel.__init__()=pyjamas.ui.DecoratorPanel.DecoratorTitledPanel-class.html#__init__,Method pyjamas.ui.DialogBox.DialogBox.__init__()=pyjamas.ui.DialogBox.DialogBox-class.html#__init__,Method pyjamas.ui.DialogWindow.DialogWindow.__init__()=pyjamas.ui.DialogWindow.DialogWindow-class.html#__init__,Method pyjamas.ui.DisclosurePanel.ClickableHeader.__init__()=pyjamas.ui.DisclosurePanel.ClickableHeader-class.html#__init__,Method pyjamas.ui.DisclosurePanel.DefaultHeader.__init__()=pyjamas.ui.DisclosurePanel.DefaultHeader-class.html#__init__,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.__init__()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#__init__,Method pyjamas.ui.DockPanel.DockPanel.__init__()=pyjamas.ui.DockPanel.DockPanel-class.html#__init__,Method pyjamas.ui.DockPanel.LayoutData.__init__()=pyjamas.ui.DockPanel.LayoutData-class.html#__init__,Method pyjamas.ui.DoubleControl.DoubleControl.__init__()=pyjamas.ui.DoubleControl.DoubleControl-class.html#__init__,Method pyjamas.ui.DragHandler.DragHandler.__init__()=pyjamas.ui.DragHandler.DragHandler-class.html#__init__,Method pyjamas.ui.DragWidget.Html5DragContainer.__init__()=pyjamas.ui.DragWidget.Html5DragContainer-class.html#__init__,Method pyjamas.ui.DragWidget.Html5DragWidget.__init__()=pyjamas.ui.DragWidget.Html5DragWidget-class.html#__init__,Method pyjamas.ui.DragWidget.MouseDragContainer.__init__()=pyjamas.ui.DragWidget.MouseDragContainer-class.html#__init__,Method pyjamas.ui.DragWidget.MouseDragWidget.__init__()=pyjamas.ui.DragWidget.MouseDragWidget-class.html#__init__,Method pyjamas.ui.DropHandler.DropHandler.__init__()=pyjamas.ui.DropHandler.DropHandler-class.html#__init__,Method pyjamas.ui.DropWidget.EmulatedDropWidget.__init__()=pyjamas.ui.DropWidget.EmulatedDropWidget-class.html#__init__,Method pyjamas.ui.DropWidget.Html5DropWidget.__init__()=pyjamas.ui.DropWidget.Html5DropWidget-class.html#__init__,Method pyjamas.ui.EventObject.EventObject.__init__()=pyjamas.ui.EventObject.EventObject-class.html#__init__,Method pyjamas.ui.FileUpload.FileUpload.__init__()=pyjamas.ui.FileUpload.FileUpload-class.html#__init__,Method pyjamas.ui.FlashPanel.FlashPanel.__init__()=pyjamas.ui.FlashPanel.FlashPanel-class.html#__init__,Method pyjamas.ui.FlexCellFormatter.FlexCellFormatter.__init__()=pyjamas.ui.FlexCellFormatter.FlexCellFormatter-class.html#__init__,Method pyjamas.ui.FlexTable.FlexTable.__init__()=pyjamas.ui.FlexTable.FlexTable-class.html#__init__,Method pyjamas.ui.FlowPanel.FlowPanel.__init__()=pyjamas.ui.FlowPanel.FlowPanel-class.html#__init__,Method pyjamas.ui.FlowTabBar.FlowTabBar.__init__()=pyjamas.ui.FlowTabBar.FlowTabBar-class.html#__init__,Method pyjamas.ui.FocusListener.FocusHandler.__init__()=pyjamas.ui.FocusListener.FocusHandler-class.html#__init__,Method pyjamas.ui.FocusPanel.FocusPanel.__init__()=pyjamas.ui.FocusPanel.FocusPanel-class.html#__init__,Method pyjamas.ui.FocusWidget.FocusWidget.__init__()=pyjamas.ui.FocusWidget.FocusWidget-class.html#__init__,Method pyjamas.ui.FormPanel.FormPanel.__init__()=pyjamas.ui.FormPanel.FormPanel-class.html#__init__,Method pyjamas.ui.FormPanel.FormSubmitCompleteEvent.__init__()=pyjamas.ui.FormPanel.FormSubmitCompleteEvent-class.html#__init__,Method pyjamas.ui.FormPanel.FormSubmitEvent.__init__()=pyjamas.ui.FormPanel.FormSubmitEvent-class.html#__init__,Method pyjamas.ui.Frame.Frame.__init__()=pyjamas.ui.Frame.Frame-class.html#__init__,Method pyjamas.ui.GlassWidget.GlassWidget.__init__()=pyjamas.ui.GlassWidget.GlassWidget-class.html#__init__,Method pyjamas.ui.Grid.Grid.__init__()=pyjamas.ui.Grid.Grid-class.html#__init__,Method pyjamas.ui.HTML.HTML.__init__()=pyjamas.ui.HTML.HTML-class.html#__init__,Method pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel.__init__()=pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel-class.html#__init__,Method pyjamas.ui.HTMLPanel.HTMLPanel.__init__()=pyjamas.ui.HTMLPanel.HTMLPanel-class.html#__init__,Method pyjamas.ui.HTMLTable.HTMLTable.__init__()=pyjamas.ui.HTMLTable.HTMLTable-class.html#__init__,Method pyjamas.ui.Hidden.Hidden.__init__()=pyjamas.ui.Hidden.Hidden-class.html#__init__,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.__init__()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#__init__,Method pyjamas.ui.HorizontalSlider.HorizontalSlider.__init__()=pyjamas.ui.HorizontalSlider.HorizontalSlider-class.html#__init__,Method pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel.__init__()=pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel-class.html#__init__,Method pyjamas.ui.Hyperlink.Hyperlink.__init__()=pyjamas.ui.Hyperlink.Hyperlink-class.html#__init__,Method pyjamas.ui.HyperlinkImage.HyperlinkImage.__init__()=pyjamas.ui.HyperlinkImage.HyperlinkImage-class.html#__init__,Method pyjamas.ui.Image.Image.__init__()=pyjamas.ui.Image.Image-class.html#__init__,Method pyjamas.ui.InlineHTML.InlineHTML.__init__()=pyjamas.ui.InlineHTML.InlineHTML-class.html#__init__,Method pyjamas.ui.InlineLabel.InlineLabel.__init__()=pyjamas.ui.InlineLabel.InlineLabel-class.html#__init__,Method pyjamas.ui.InputControl.InputControl.__init__()=pyjamas.ui.InputControl.InputControl-class.html#__init__,Method pyjamas.ui.InputListener.InputHandler.__init__()=pyjamas.ui.InputListener.InputHandler-class.html#__init__,Method pyjamas.ui.KeyboardListener.KeyboardHandler.__init__()=pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#__init__,Method pyjamas.ui.Label.Label.__init__()=pyjamas.ui.Label.Label-class.html#__init__,Method pyjamas.ui.ListBox.ListBox.__init__()=pyjamas.ui.ListBox.ListBox-class.html#__init__,Method pyjamas.ui.Map.ImageMap.__init__()=pyjamas.ui.Map.ImageMap-class.html#__init__,Method pyjamas.ui.Map.MapArea.__init__()=pyjamas.ui.Map.MapArea-class.html#__init__,Method pyjamas.ui.MenuBar.MenuBar.__init__()=pyjamas.ui.MenuBar.MenuBar-class.html#__init__,Method pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel.__init__()=pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel-class.html#__init__,Method pyjamas.ui.MenuItem.MenuItem.__init__()=pyjamas.ui.MenuItem.MenuItem-class.html#__init__,Method pyjamas.ui.MonthField.MonthField.__init__()=pyjamas.ui.MonthField.MonthField-class.html#__init__,Method pyjamas.ui.MouseInputControl.MouseInputControl.__init__()=pyjamas.ui.MouseInputControl.MouseInputControl-class.html#__init__,Method pyjamas.ui.MouseListener.MouseHandler.__init__()=pyjamas.ui.MouseListener.MouseHandler-class.html#__init__,Method pyjamas.ui.MouseListener.MouseWheelHandler.__init__()=pyjamas.ui.MouseListener.MouseWheelHandler-class.html#__init__,Method pyjamas.ui.MultiListener.MultiListener.__init__()=pyjamas.ui.MultiListener.MultiListener-class.html#__init__,Method pyjamas.ui.NamedFrame.NamedFrame.__init__()=pyjamas.ui.NamedFrame.NamedFrame-class.html#__init__,Method pyjamas.ui.Panel.Panel.__init__()=pyjamas.ui.Panel.Panel-class.html#__init__,Method pyjamas.ui.PasswordTextBox.PasswordTextBox.__init__()=pyjamas.ui.PasswordTextBox.PasswordTextBox-class.html#__init__,Method pyjamas.ui.PopupPanel.PopupPanel.__init__()=pyjamas.ui.PopupPanel.PopupPanel-class.html#__init__,Method pyjamas.ui.PushButton.PushButton.__init__()=pyjamas.ui.PushButton.PushButton-class.html#__init__,Method pyjamas.ui.RadioButton.RadioButton.__init__()=pyjamas.ui.RadioButton.RadioButton-class.html#__init__,Method pyjamas.ui.RichTextArea.RichTextArea.__init__()=pyjamas.ui.RichTextArea.RichTextArea-class.html#__init__,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.__init__()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#__init__,Method pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.__init__()=pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard-class.html#__init__,Method pyjamas.ui.RichTextToolbar.CustomStyleManager.__init__()=pyjamas.ui.RichTextToolbar.CustomStyleManager-class.html#__init__,Method pyjamas.ui.RichTextToolbar.EventLinkPopup.__init__()=pyjamas.ui.RichTextToolbar.EventLinkPopup-class.html#__init__,Method pyjamas.ui.RichTextToolbar.FontFamilyManager.__init__()=pyjamas.ui.RichTextToolbar.FontFamilyManager-class.html#__init__,Method pyjamas.ui.RichTextToolbar.HeadingStyleManager.__init__()=pyjamas.ui.RichTextToolbar.HeadingStyleManager-class.html#__init__,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.__init__()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#__init__,Method pyjamas.ui.RootPanel.RootPanelCls.__init__()=pyjamas.ui.RootPanel.RootPanelCls-class.html#__init__,Method pyjamas.ui.RowFormatter.RowFormatter.__init__()=pyjamas.ui.RowFormatter.RowFormatter-class.html#__init__,Method pyjamas.ui.ScrollPanel.ScrollPanel.__init__()=pyjamas.ui.ScrollPanel.ScrollPanel-class.html#__init__,Method pyjamas.ui.SimplePanel.SimplePanel.__init__()=pyjamas.ui.SimplePanel.SimplePanel-class.html#__init__,Method pyjamas.ui.Sink.Sink.__init__()=pyjamas.ui.Sink.Sink-class.html#__init__,Method pyjamas.ui.Sink.SinkInfo.__init__()=pyjamas.ui.Sink.SinkInfo-class.html#__init__,Method pyjamas.ui.Sink.SinkList.__init__()=pyjamas.ui.Sink.SinkList-class.html#__init__,Method pyjamas.ui.SplitPanel.SplitPanel.__init__()=pyjamas.ui.SplitPanel.SplitPanel-class.html#__init__,Method pyjamas.ui.SplitPanel.SplitPanelSplitter.__init__()=pyjamas.ui.SplitPanel.SplitPanelSplitter-class.html#__init__,Method pyjamas.ui.StackPanel.StackPanel.__init__()=pyjamas.ui.StackPanel.StackPanel-class.html#__init__,Method pyjamas.ui.TabBar.TabBar.__init__()=pyjamas.ui.TabBar.TabBar-class.html#__init__,Method pyjamas.ui.TabPanel.TabPanel.__init__()=pyjamas.ui.TabPanel.TabPanel-class.html#__init__,Method pyjamas.ui.TextArea.TextArea.__init__()=pyjamas.ui.TextArea.TextArea-class.html#__init__,Method pyjamas.ui.TextBox.TextBox.__init__()=pyjamas.ui.TextBox.TextBox-class.html#__init__,Method pyjamas.ui.TextBoxBase.TextBoxBase.__init__()=pyjamas.ui.TextBoxBase.TextBoxBase-class.html#__init__,Method pyjamas.ui.ToggleButton.ToggleButton.__init__()=pyjamas.ui.ToggleButton.ToggleButton-class.html#__init__,Method pyjamas.ui.Tooltip.Tooltip.__init__()=pyjamas.ui.Tooltip.Tooltip-class.html#__init__,Method pyjamas.ui.Tooltip.TooltipListener.__init__()=pyjamas.ui.Tooltip.TooltipListener-class.html#__init__,Method pyjamas.ui.Tree.Tree.__init__()=pyjamas.ui.Tree.Tree-class.html#__init__,Method pyjamas.ui.TreeContentPanel.TreeContentPanel.__init__()=pyjamas.ui.TreeContentPanel.TreeContentPanel-class.html#__init__,Method pyjamas.ui.TreeItem.TreeItem.__init__()=pyjamas.ui.TreeItem.TreeItem-class.html#__init__,Method pyjamas.ui.UIObject.UIObject.__init__()=pyjamas.ui.UIObject.UIObject-class.html#__init__,Method pyjamas.ui.VerticalSlider.VerticalSlider.__init__()=pyjamas.ui.VerticalSlider.VerticalSlider-class.html#__init__,Method pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel.__init__()=pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel-class.html#__init__,Method pyjamas.ui.Widget.Widget.__init__()=pyjamas.ui.Widget.Widget-class.html#__init__"><a title="pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault.__init__
+pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6.__init__
+pyjamas.Canvas.Color.Color.__init__
+pyjamas.Canvas.ColorStop.ColorStop.__init__
+pyjamas.Canvas.GWTCanvas.GWTCanvas.__init__
+pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.__init__
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.__init__
+pyjamas.Canvas.ImageData.ImageData.__init__
+pyjamas.Canvas.ImageLoader.ImageLoader.__init__
+pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.__init__
+pyjamas.Canvas.JSOStack.JSOStack.__init__
+pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault.__init__
+pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6.__init__
+pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault.__init__
+pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvas.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient.__init__
+pyjamas.Canvas.VMLContext.VMLContext.__init__
+pyjamas.Canvas.VMLContext.VMLStyle.__init__
+pyjamas.Canvas2D.Canvas.__init__
+pyjamas.Canvas2D.CanvasImage.__init__
+pyjamas.Canvas2D.ImageLoadListener.__init__
+pyjamas.DOM.IterChildrenClass.__init__
+pyjamas.DOM.IterWalkChildren.__init__
+pyjamas.EventController.EventListener.__init__
+pyjamas.EventController.Handler.__init__
+pyjamas.HTTPRequest.XULrunnerHackCallback.__init__
+pyjamas.JSONService.JSONProxy.__init__
+pyjamas.JSONService.JSONRequestInfo.__init__
+pyjamas.JSONService.JSONResponseTextHandler.__init__
+pyjamas.JSONService.JSONService.__init__
+pyjamas.JSONService.ServiceProxy.__init__
+pyjamas.Location.Location.__init__
+pyjamas.PyExternalMod.PyjamasExternalModule.__init__
+pyjamas.PyExternalMod.PyjamasExternalProxy.__init__
+pyjamas.Timer.Timer.__init__
+pyjamas.builder.Builder.Builder.__init__
+pyjamas.builder.Builder.BuilderState.__init__
+pyjamas.builder.Builder.HTTPUILoader.__init__
+pyjamas.builder.XMLFile.XMLFile.__init__
+pyjamas.chart.Annotation.Annotation.__init__
+pyjamas.chart.AnnotationLocation.AnnotationLocation.__init__
+pyjamas.chart.Axis.Axis.__init__
+pyjamas.chart.Axis.AxisLimits.__init__
+pyjamas.chart.Axis.XAxis.__init__
+pyjamas.chart.Axis.Y2Axis.__init__
+pyjamas.chart.Axis.YAxis.__init__
+pyjamas.chart.Curve.Curve.__init__
+pyjamas.chart.DateTimeFormat.DF.__init__
+pyjamas.chart.GChart.GChart.__init__
+pyjamas.chart.GChartWidgets.AlignedLabel.__init__
+pyjamas.chart.GChartWidgets.AnnotationRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.GraphicsRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel.__init__
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.__init__
+pyjamas.chart.GChartWidgets.PlotPanel.__init__
+pyjamas.chart.GChartWidgets.ReusableImage.__init__
+pyjamas.chart.HovertextChunk.HovertextChunk.__init__
+pyjamas.chart.NumberFormat.NF.__init__
+pyjamas.chart.Point.Point.__init__
+pyjamas.chart.Symbol.Symbol.__init__
+pyjamas.chart.SymbolType.AnnotationAnchor.__init__
+pyjamas.chart.SymbolType.HBarBaseline.__init__
+pyjamas.chart.SymbolType.HBarLeft.__init__
+pyjamas.chart.SymbolType.HBarRight.__init__
+pyjamas.chart.SymbolType.LineSymbolType.__init__
+pyjamas.chart.SymbolType.PieSliceSymbolType.__init__
+pyjamas.chart.SymbolType.SymbolType.__init__
+pyjamas.chart.SymbolType.VBarBaseline.__init__
+pyjamas.chart.SymbolType.VBarBottom.__init__
+pyjamas.chart.SymbolType.VBarTop.__init__
+pyjamas.chart.TickLocation.TickLocation.__init__
+pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption.__init__
+pyjamas.django.Form.CharField.__init__
+pyjamas.django.Form.FloatField.__init__
+pyjamas.django.Form.Form.__init__
+pyjamas.django.Form.FormDescribeGrid.__init__
+pyjamas.django.Form.FormGetGrid.__init__
+pyjamas.django.Form.FormSaveGrid.__init__
+pyjamas.django.Form.IntegerField.__init__
+pyjamas.dnd.DNDHelper.DNDHelper.__init__
+pyjamas.dnd.DataTransfer.DataTransfer.__init__
+pyjamas.dnd.DataTransfer.DataTransferItem.__init__
+pyjamas.dnd.DataTransfer.DragDataStore.__init__
+pyjamas.dnd.DragEvent.DragEvent.__init__
+pyjamas.dnd.utils.DOMStringList.__init__
+pyjamas.dnd.utils.DraggingWidget.__init__
+pyjamas.dnd.utils.Uri_list.__init__
+pyjamas.feed.Feed.Feed.__init__
+pyjamas.gears.GearsException.GearsException.__init__
+pyjamas.gears.database.Database.GearsDatabase.__init__
+pyjamas.gears.database.DatabaseException.DatabaseException.__init__
+pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer.__init__
+pyjamas.gmaps.DirectionsService.DirectionsService.__init__
+pyjamas.gmaps.Geocoder.Geocoder.__init__
+pyjamas.logging.handlers.AlertHandler.__init__
+pyjamas.logging.handlers.AppendHandler.__init__
+pyjamas.logging.handlers.ConsoleHandler.__init__
+pyjamas.logging.handlers.NullHandler.__init__
+pyjamas.media.Audio.Audio.__init__
+pyjamas.media.Media.Media.__init__
+pyjamas.media.Video.Video.__init__
+pyjamas.selection.Range.Range.__init__
+pyjamas.selection.RangeEndPoint.FindLocRes.__init__
+pyjamas.selection.RangeEndPoint.RangeEndPoint.__init__
+pyjamas.ui.AbsolutePanel.AbsolutePanel.__init__
+pyjamas.ui.Anchor.Anchor.__init__
+pyjamas.ui.Anchor._Attribute.__init__
+pyjamas.ui.Anchor._Attributes.__init__
+pyjamas.ui.Applier.__init__
+pyjamas.ui.AreaSlider.AreaSlider.__init__
+pyjamas.ui.AutoComplete.AutoCompleteTextBox.__init__
+pyjamas.ui.AutoComplete.SimpleAutoCompletionItems.__init__
+pyjamas.ui.BuilderPanel.BuilderPanel.__init__
+pyjamas.ui.BuilderWidget.BuilderWidget.__init__
+pyjamas.ui.Button.Button.__init__
+pyjamas.ui.ButtonBase.ButtonBase.__init__
+pyjamas.ui.CSS.StyleSheetCssFile.__init__
+pyjamas.ui.CSS.StyleSheetCssText.__init__
+pyjamas.ui.Calendar.Calendar.__init__
+pyjamas.ui.Calendar.CalendarPopup.__init__
+pyjamas.ui.Calendar.DateField.__init__
+pyjamas.ui.CaptionPanel.CaptionPanel.__init__
+pyjamas.ui.CellFormatter.CellFormatter.__init__
+pyjamas.ui.CellPanel.CellPanel.__init__
+pyjamas.ui.ChangeListener.ChangeHandler.__init__
+pyjamas.ui.CheckBox.CheckBox.__init__
+pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel.__init__
+pyjamas.ui.ClickListener.ClickHandler.__init__
+pyjamas.ui.Composite.Composite.__init__
+pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel.__init__
+pyjamas.ui.Control.Control.__init__
+pyjamas.ui.Controls.AreaDemoSlider2.__init__
+pyjamas.ui.Controls.HorizontalDemoSlider2.__init__
+pyjamas.ui.Controls.VerticalDemoSlider2.__init__
+pyjamas.ui.CustomButton.CustomButton.__init__
+pyjamas.ui.CustomButton.Face.__init__
+pyjamas.ui.DeckPanel.DeckPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabBar.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorTitledPanel.__init__
+pyjamas.ui.DialogBox.DialogBox.__init__
+pyjamas.ui.DialogWindow.DialogWindow.__init__
+pyjamas.ui.DisclosurePanel.ClickableHeader.__init__
+pyjamas.ui.DisclosurePanel.DefaultHeader.__init__
+pyjamas.ui.DisclosurePanel.DisclosurePanel.__init__
+pyjamas.ui.DockPanel.DockPanel.__init__
+pyjamas.ui.DockPanel.LayoutData.__init__
+pyjamas.ui.DoubleControl.DoubleControl.__init__
+pyjamas.ui.DragHandler.DragHandler.__init__
+pyjamas.ui.DragWidget.Html5DragContainer.__init__
+pyjamas.ui.DragWidget.Html5DragWidget.__init__
+pyjamas.ui.DragWidget.MouseDragContainer.__init__
+pyjamas.ui.DragWidget.MouseDragWidget.__init__
+pyjamas.ui.DropHandler.DropHandler.__init__
+pyjamas.ui.DropWidget.EmulatedDropWidget.__init__
+pyjamas.ui.DropWidget.Html5DropWidget.__init__
+pyjamas.ui.EventObject.EventObject.__init__
+pyjamas.ui.FileUpload.FileUpload.__init__
+pyjamas.ui.FlashPanel.FlashPanel.__init__
+pyjamas.ui.FlexCellFormatter.FlexCellFormatter.__init__
+pyjamas.ui.FlexTable.FlexTable.__init__
+pyjamas.ui.FlowPanel.FlowPanel.__init__
+pyjamas.ui.FlowTabBar.FlowTabBar.__init__
+pyjamas.ui.FocusListener.FocusHandler.__init__
+pyjamas.ui.FocusPanel.FocusPanel.__init__
+pyjamas.ui.FocusWidget.FocusWidget.__init__
+pyjamas.ui.FormPanel.FormPanel.__init__
+pyjamas.ui.FormPanel.FormSubmitCompleteEvent.__init__
+pyjamas.ui.FormPanel.FormSubmitEvent.__init__
+pyjamas.ui.Frame.Frame.__init__
+pyjamas.ui.GlassWidget.GlassWidget.__init__
+pyjamas.ui.Grid.Grid.__init__
+pyjamas.ui.HTML.HTML.__init__
+pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel.__init__
+pyjamas.ui.HTMLPanel.HTMLPanel.__init__
+pyjamas.ui.HTMLTable.HTMLTable.__init__
+pyjamas.ui.Hidden.Hidden.__init__
+pyjamas.ui.HorizontalPanel.HorizontalPanel.__init__
+pyjamas.ui.HorizontalSlider.HorizontalSlider.__init__
+pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel.__init__
+pyjamas.ui.Hyperlink.Hyperlink.__init__
+pyjamas.ui.HyperlinkImage.HyperlinkImage.__init__
+pyjamas.ui.Image.Image.__init__
+pyjamas.ui.InlineHTML.InlineHTML.__init__
+pyjamas.ui.InlineLabel.InlineLabel.__init__
+pyjamas.ui.InputControl.InputControl.__init__
+pyjamas.ui.InputListener.InputHandler.__init__
+pyjamas.ui.KeyboardListener.KeyboardHandler.__init__
+pyjamas.ui.Label.Label.__init__
+pyjamas.ui.ListBox.ListBox.__init__
+pyjamas.ui.Map.ImageMap.__init__
+pyjamas.ui.Map.MapArea.__init__
+pyjamas.ui.MenuBar.MenuBar.__init__
+pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel.__init__
+pyjamas.ui.MenuItem.MenuItem.__init__
+pyjamas.ui.MonthField.MonthField.__init__
+pyjamas.ui.MouseInputControl.MouseInputControl.__init__
+pyjamas.ui.MouseListener.MouseHandler.__init__
+pyjamas.ui.MouseListener.MouseWheelHandler.__init__
+pyjamas.ui.MultiListener.MultiListener.__init__
+pyjamas.ui.NamedFrame.NamedFrame.__init__
+pyjamas.ui.Panel.Panel.__init__
+pyjamas.ui.PasswordTextBox.PasswordTextBox.__init__
+pyjamas.ui.PopupPanel.PopupPanel.__init__
+pyjamas.ui.PushButton.PushButton.__init__
+pyjamas.ui.RadioButton.RadioButton.__init__
+pyjamas.ui.RichTextArea.RichTextArea.__init__
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.__init__
+pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.__init__
+pyjamas.ui.RichTextToolbar.CustomStyleManager.__init__
+pyjamas.ui.RichTextToolbar.EventLinkPopup.__init__
+pyjamas.ui.RichTextToolbar.FontFamilyManager.__init__
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.__init__
+pyjamas.ui.RichTextToolbar.RichTextToolbar.__init__
+pyjamas.ui.RootPanel.RootPanelCls.__init__
+pyjamas.ui.RowFormatter.RowFormatter.__init__
+pyjamas.ui.ScrollPanel.ScrollPanel.__init__
+pyjamas.ui.SimplePanel.SimplePanel.__init__
+pyjamas.ui.Sink.Sink.__init__
+pyjamas.ui.Sink.SinkInfo.__init__
+pyjamas.ui.Sink.SinkList.__init__
+pyjamas.ui.SplitPanel.SplitPanel.__init__
+pyjamas.ui.SplitPanel.SplitPanelSplitter.__init__
+pyjamas.ui.StackPanel.StackPanel.__init__
+pyjamas.ui.TabBar.TabBar.__init__
+pyjamas.ui.TabPanel.TabPanel.__init__
+pyjamas.ui.TextArea.TextArea.__init__
+pyjamas.ui.TextBox.TextBox.__init__
+pyjamas.ui.TextBoxBase.TextBoxBase.__init__
+pyjamas.ui.ToggleButton.ToggleButton.__init__
+pyjamas.ui.Tooltip.Tooltip.__init__
+pyjamas.ui.Tooltip.TooltipListener.__init__
+pyjamas.ui.Tree.Tree.__init__
+pyjamas.ui.TreeContentPanel.TreeContentPanel.__init__
+pyjamas.ui.TreeItem.TreeItem.__init__
+pyjamas.ui.UIObject.UIObject.__init__
+pyjamas.ui.VerticalSlider.VerticalSlider.__init__
+pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel.__init__
+pyjamas.ui.Widget.Widget.__init__" class="py-name" href="#" onclick="return doclink('link-30', '__init__', 'link-30');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">element</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Method pyjamas.selection.RangeEndPoint.RangeEndPoint.setElement()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#setElement,Method pyjamas.ui.UIObject.UIObject.setElement()=pyjamas.ui.UIObject.UIObject-class.html#setElement"><a title="pyjamas.selection.RangeEndPoint.RangeEndPoint.setElement
+pyjamas.ui.UIObject.UIObject.setElement" class="py-name" href="#" onclick="return doclink('link-31', 'setElement', 'link-31');">setElement</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widget</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">        <tt id="link-32" class="py-name"><a title="pyjamas.ui.Widget
+pyjamas.ui.Widget.Widget" class="py-name" href="#" onclick="return doclink('link-32', 'Widget', 'link-4');">Widget</a></tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault.__init__
+pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6.__init__
+pyjamas.Canvas.Color.Color.__init__
+pyjamas.Canvas.ColorStop.ColorStop.__init__
+pyjamas.Canvas.GWTCanvas.GWTCanvas.__init__
+pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.__init__
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.__init__
+pyjamas.Canvas.ImageData.ImageData.__init__
+pyjamas.Canvas.ImageLoader.ImageLoader.__init__
+pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.__init__
+pyjamas.Canvas.JSOStack.JSOStack.__init__
+pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault.__init__
+pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6.__init__
+pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault.__init__
+pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvas.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient.__init__
+pyjamas.Canvas.VMLContext.VMLContext.__init__
+pyjamas.Canvas.VMLContext.VMLStyle.__init__
+pyjamas.Canvas2D.Canvas.__init__
+pyjamas.Canvas2D.CanvasImage.__init__
+pyjamas.Canvas2D.ImageLoadListener.__init__
+pyjamas.DOM.IterChildrenClass.__init__
+pyjamas.DOM.IterWalkChildren.__init__
+pyjamas.EventController.EventListener.__init__
+pyjamas.EventController.Handler.__init__
+pyjamas.HTTPRequest.XULrunnerHackCallback.__init__
+pyjamas.JSONService.JSONProxy.__init__
+pyjamas.JSONService.JSONRequestInfo.__init__
+pyjamas.JSONService.JSONResponseTextHandler.__init__
+pyjamas.JSONService.JSONService.__init__
+pyjamas.JSONService.ServiceProxy.__init__
+pyjamas.Location.Location.__init__
+pyjamas.PyExternalMod.PyjamasExternalModule.__init__
+pyjamas.PyExternalMod.PyjamasExternalProxy.__init__
+pyjamas.Timer.Timer.__init__
+pyjamas.builder.Builder.Builder.__init__
+pyjamas.builder.Builder.BuilderState.__init__
+pyjamas.builder.Builder.HTTPUILoader.__init__
+pyjamas.builder.XMLFile.XMLFile.__init__
+pyjamas.chart.Annotation.Annotation.__init__
+pyjamas.chart.AnnotationLocation.AnnotationLocation.__init__
+pyjamas.chart.Axis.Axis.__init__
+pyjamas.chart.Axis.AxisLimits.__init__
+pyjamas.chart.Axis.XAxis.__init__
+pyjamas.chart.Axis.Y2Axis.__init__
+pyjamas.chart.Axis.YAxis.__init__
+pyjamas.chart.Curve.Curve.__init__
+pyjamas.chart.DateTimeFormat.DF.__init__
+pyjamas.chart.GChart.GChart.__init__
+pyjamas.chart.GChartWidgets.AlignedLabel.__init__
+pyjamas.chart.GChartWidgets.AnnotationRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.GraphicsRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel.__init__
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.__init__
+pyjamas.chart.GChartWidgets.PlotPanel.__init__
+pyjamas.chart.GChartWidgets.ReusableImage.__init__
+pyjamas.chart.HovertextChunk.HovertextChunk.__init__
+pyjamas.chart.NumberFormat.NF.__init__
+pyjamas.chart.Point.Point.__init__
+pyjamas.chart.Symbol.Symbol.__init__
+pyjamas.chart.SymbolType.AnnotationAnchor.__init__
+pyjamas.chart.SymbolType.HBarBaseline.__init__
+pyjamas.chart.SymbolType.HBarLeft.__init__
+pyjamas.chart.SymbolType.HBarRight.__init__
+pyjamas.chart.SymbolType.LineSymbolType.__init__
+pyjamas.chart.SymbolType.PieSliceSymbolType.__init__
+pyjamas.chart.SymbolType.SymbolType.__init__
+pyjamas.chart.SymbolType.VBarBaseline.__init__
+pyjamas.chart.SymbolType.VBarBottom.__init__
+pyjamas.chart.SymbolType.VBarTop.__init__
+pyjamas.chart.TickLocation.TickLocation.__init__
+pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption.__init__
+pyjamas.django.Form.CharField.__init__
+pyjamas.django.Form.FloatField.__init__
+pyjamas.django.Form.Form.__init__
+pyjamas.django.Form.FormDescribeGrid.__init__
+pyjamas.django.Form.FormGetGrid.__init__
+pyjamas.django.Form.FormSaveGrid.__init__
+pyjamas.django.Form.IntegerField.__init__
+pyjamas.dnd.DNDHelper.DNDHelper.__init__
+pyjamas.dnd.DataTransfer.DataTransfer.__init__
+pyjamas.dnd.DataTransfer.DataTransferItem.__init__
+pyjamas.dnd.DataTransfer.DragDataStore.__init__
+pyjamas.dnd.DragEvent.DragEvent.__init__
+pyjamas.dnd.utils.DOMStringList.__init__
+pyjamas.dnd.utils.DraggingWidget.__init__
+pyjamas.dnd.utils.Uri_list.__init__
+pyjamas.feed.Feed.Feed.__init__
+pyjamas.gears.GearsException.GearsException.__init__
+pyjamas.gears.database.Database.GearsDatabase.__init__
+pyjamas.gears.database.DatabaseException.DatabaseException.__init__
+pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer.__init__
+pyjamas.gmaps.DirectionsService.DirectionsService.__init__
+pyjamas.gmaps.Geocoder.Geocoder.__init__
+pyjamas.logging.handlers.AlertHandler.__init__
+pyjamas.logging.handlers.AppendHandler.__init__
+pyjamas.logging.handlers.ConsoleHandler.__init__
+pyjamas.logging.handlers.NullHandler.__init__
+pyjamas.media.Audio.Audio.__init__
+pyjamas.media.Media.Media.__init__
+pyjamas.media.Video.Video.__init__
+pyjamas.selection.Range.Range.__init__
+pyjamas.selection.RangeEndPoint.FindLocRes.__init__
+pyjamas.selection.RangeEndPoint.RangeEndPoint.__init__
+pyjamas.ui.AbsolutePanel.AbsolutePanel.__init__
+pyjamas.ui.Anchor.Anchor.__init__
+pyjamas.ui.Anchor._Attribute.__init__
+pyjamas.ui.Anchor._Attributes.__init__
+pyjamas.ui.Applier.__init__
+pyjamas.ui.AreaSlider.AreaSlider.__init__
+pyjamas.ui.AutoComplete.AutoCompleteTextBox.__init__
+pyjamas.ui.AutoComplete.SimpleAutoCompletionItems.__init__
+pyjamas.ui.BuilderPanel.BuilderPanel.__init__
+pyjamas.ui.BuilderWidget.BuilderWidget.__init__
+pyjamas.ui.Button.Button.__init__
+pyjamas.ui.ButtonBase.ButtonBase.__init__
+pyjamas.ui.CSS.StyleSheetCssFile.__init__
+pyjamas.ui.CSS.StyleSheetCssText.__init__
+pyjamas.ui.Calendar.Calendar.__init__
+pyjamas.ui.Calendar.CalendarPopup.__init__
+pyjamas.ui.Calendar.DateField.__init__
+pyjamas.ui.CaptionPanel.CaptionPanel.__init__
+pyjamas.ui.CellFormatter.CellFormatter.__init__
+pyjamas.ui.CellPanel.CellPanel.__init__
+pyjamas.ui.ChangeListener.ChangeHandler.__init__
+pyjamas.ui.CheckBox.CheckBox.__init__
+pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel.__init__
+pyjamas.ui.ClickListener.ClickHandler.__init__
+pyjamas.ui.Composite.Composite.__init__
+pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel.__init__
+pyjamas.ui.Control.Control.__init__
+pyjamas.ui.Controls.AreaDemoSlider2.__init__
+pyjamas.ui.Controls.HorizontalDemoSlider2.__init__
+pyjamas.ui.Controls.VerticalDemoSlider2.__init__
+pyjamas.ui.CustomButton.CustomButton.__init__
+pyjamas.ui.CustomButton.Face.__init__
+pyjamas.ui.DeckPanel.DeckPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabBar.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorTitledPanel.__init__
+pyjamas.ui.DialogBox.DialogBox.__init__
+pyjamas.ui.DialogWindow.DialogWindow.__init__
+pyjamas.ui.DisclosurePanel.ClickableHeader.__init__
+pyjamas.ui.DisclosurePanel.DefaultHeader.__init__
+pyjamas.ui.DisclosurePanel.DisclosurePanel.__init__
+pyjamas.ui.DockPanel.DockPanel.__init__
+pyjamas.ui.DockPanel.LayoutData.__init__
+pyjamas.ui.DoubleControl.DoubleControl.__init__
+pyjamas.ui.DragHandler.DragHandler.__init__
+pyjamas.ui.DragWidget.Html5DragContainer.__init__
+pyjamas.ui.DragWidget.Html5DragWidget.__init__
+pyjamas.ui.DragWidget.MouseDragContainer.__init__
+pyjamas.ui.DragWidget.MouseDragWidget.__init__
+pyjamas.ui.DropHandler.DropHandler.__init__
+pyjamas.ui.DropWidget.EmulatedDropWidget.__init__
+pyjamas.ui.DropWidget.Html5DropWidget.__init__
+pyjamas.ui.EventObject.EventObject.__init__
+pyjamas.ui.FileUpload.FileUpload.__init__
+pyjamas.ui.FlashPanel.FlashPanel.__init__
+pyjamas.ui.FlexCellFormatter.FlexCellFormatter.__init__
+pyjamas.ui.FlexTable.FlexTable.__init__
+pyjamas.ui.FlowPanel.FlowPanel.__init__
+pyjamas.ui.FlowTabBar.FlowTabBar.__init__
+pyjamas.ui.FocusListener.FocusHandler.__init__
+pyjamas.ui.FocusPanel.FocusPanel.__init__
+pyjamas.ui.FocusWidget.FocusWidget.__init__
+pyjamas.ui.FormPanel.FormPanel.__init__
+pyjamas.ui.FormPanel.FormSubmitCompleteEvent.__init__
+pyjamas.ui.FormPanel.FormSubmitEvent.__init__
+pyjamas.ui.Frame.Frame.__init__
+pyjamas.ui.GlassWidget.GlassWidget.__init__
+pyjamas.ui.Grid.Grid.__init__
+pyjamas.ui.HTML.HTML.__init__
+pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel.__init__
+pyjamas.ui.HTMLPanel.HTMLPanel.__init__
+pyjamas.ui.HTMLTable.HTMLTable.__init__
+pyjamas.ui.Hidden.Hidden.__init__
+pyjamas.ui.HorizontalPanel.HorizontalPanel.__init__
+pyjamas.ui.HorizontalSlider.HorizontalSlider.__init__
+pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel.__init__
+pyjamas.ui.Hyperlink.Hyperlink.__init__
+pyjamas.ui.HyperlinkImage.HyperlinkImage.__init__
+pyjamas.ui.Image.Image.__init__
+pyjamas.ui.InlineHTML.InlineHTML.__init__
+pyjamas.ui.InlineLabel.InlineLabel.__init__
+pyjamas.ui.InputControl.InputControl.__init__
+pyjamas.ui.InputListener.InputHandler.__init__
+pyjamas.ui.KeyboardListener.KeyboardHandler.__init__
+pyjamas.ui.Label.Label.__init__
+pyjamas.ui.ListBox.ListBox.__init__
+pyjamas.ui.Map.ImageMap.__init__
+pyjamas.ui.Map.MapArea.__init__
+pyjamas.ui.MenuBar.MenuBar.__init__
+pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel.__init__
+pyjamas.ui.MenuItem.MenuItem.__init__
+pyjamas.ui.MonthField.MonthField.__init__
+pyjamas.ui.MouseInputControl.MouseInputControl.__init__
+pyjamas.ui.MouseListener.MouseHandler.__init__
+pyjamas.ui.MouseListener.MouseWheelHandler.__init__
+pyjamas.ui.MultiListener.MultiListener.__init__
+pyjamas.ui.NamedFrame.NamedFrame.__init__
+pyjamas.ui.Panel.Panel.__init__
+pyjamas.ui.PasswordTextBox.PasswordTextBox.__init__
+pyjamas.ui.PopupPanel.PopupPanel.__init__
+pyjamas.ui.PushButton.PushButton.__init__
+pyjamas.ui.RadioButton.RadioButton.__init__
+pyjamas.ui.RichTextArea.RichTextArea.__init__
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.__init__
+pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.__init__
+pyjamas.ui.RichTextToolbar.CustomStyleManager.__init__
+pyjamas.ui.RichTextToolbar.EventLinkPopup.__init__
+pyjamas.ui.RichTextToolbar.FontFamilyManager.__init__
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.__init__
+pyjamas.ui.RichTextToolbar.RichTextToolbar.__init__
+pyjamas.ui.RootPanel.RootPanelCls.__init__
+pyjamas.ui.RowFormatter.RowFormatter.__init__
+pyjamas.ui.ScrollPanel.ScrollPanel.__init__
+pyjamas.ui.SimplePanel.SimplePanel.__init__
+pyjamas.ui.Sink.Sink.__init__
+pyjamas.ui.Sink.SinkInfo.__init__
+pyjamas.ui.Sink.SinkList.__init__
+pyjamas.ui.SplitPanel.SplitPanel.__init__
+pyjamas.ui.SplitPanel.SplitPanelSplitter.__init__
+pyjamas.ui.StackPanel.StackPanel.__init__
+pyjamas.ui.TabBar.TabBar.__init__
+pyjamas.ui.TabPanel.TabPanel.__init__
+pyjamas.ui.TextArea.TextArea.__init__
+pyjamas.ui.TextBox.TextBox.__init__
+pyjamas.ui.TextBoxBase.TextBoxBase.__init__
+pyjamas.ui.ToggleButton.ToggleButton.__init__
+pyjamas.ui.Tooltip.Tooltip.__init__
+pyjamas.ui.Tooltip.TooltipListener.__init__
+pyjamas.ui.Tree.Tree.__init__
+pyjamas.ui.TreeContentPanel.TreeContentPanel.__init__
+pyjamas.ui.TreeItem.TreeItem.__init__
+pyjamas.ui.UIObject.UIObject.__init__
+pyjamas.ui.VerticalSlider.VerticalSlider.__init__
+pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel.__init__
+pyjamas.ui.Widget.Widget.__init__" class="py-name" href="#" onclick="return doclink('link-33', '__init__', 'link-30');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">        <tt id="link-34" class="py-name"><a title="pyjamas.ui.ClickListener.ClickHandler" class="py-name" href="#" onclick="return doclink('link-34', 'ClickHandler', 'link-9');">ClickHandler</a></tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault.__init__
+pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6.__init__
+pyjamas.Canvas.Color.Color.__init__
+pyjamas.Canvas.ColorStop.ColorStop.__init__
+pyjamas.Canvas.GWTCanvas.GWTCanvas.__init__
+pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.__init__
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.__init__
+pyjamas.Canvas.ImageData.ImageData.__init__
+pyjamas.Canvas.ImageLoader.ImageLoader.__init__
+pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.__init__
+pyjamas.Canvas.JSOStack.JSOStack.__init__
+pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault.__init__
+pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6.__init__
+pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault.__init__
+pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvas.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient.__init__
+pyjamas.Canvas.VMLContext.VMLContext.__init__
+pyjamas.Canvas.VMLContext.VMLStyle.__init__
+pyjamas.Canvas2D.Canvas.__init__
+pyjamas.Canvas2D.CanvasImage.__init__
+pyjamas.Canvas2D.ImageLoadListener.__init__
+pyjamas.DOM.IterChildrenClass.__init__
+pyjamas.DOM.IterWalkChildren.__init__
+pyjamas.EventController.EventListener.__init__
+pyjamas.EventController.Handler.__init__
+pyjamas.HTTPRequest.XULrunnerHackCallback.__init__
+pyjamas.JSONService.JSONProxy.__init__
+pyjamas.JSONService.JSONRequestInfo.__init__
+pyjamas.JSONService.JSONResponseTextHandler.__init__
+pyjamas.JSONService.JSONService.__init__
+pyjamas.JSONService.ServiceProxy.__init__
+pyjamas.Location.Location.__init__
+pyjamas.PyExternalMod.PyjamasExternalModule.__init__
+pyjamas.PyExternalMod.PyjamasExternalProxy.__init__
+pyjamas.Timer.Timer.__init__
+pyjamas.builder.Builder.Builder.__init__
+pyjamas.builder.Builder.BuilderState.__init__
+pyjamas.builder.Builder.HTTPUILoader.__init__
+pyjamas.builder.XMLFile.XMLFile.__init__
+pyjamas.chart.Annotation.Annotation.__init__
+pyjamas.chart.AnnotationLocation.AnnotationLocation.__init__
+pyjamas.chart.Axis.Axis.__init__
+pyjamas.chart.Axis.AxisLimits.__init__
+pyjamas.chart.Axis.XAxis.__init__
+pyjamas.chart.Axis.Y2Axis.__init__
+pyjamas.chart.Axis.YAxis.__init__
+pyjamas.chart.Curve.Curve.__init__
+pyjamas.chart.DateTimeFormat.DF.__init__
+pyjamas.chart.GChart.GChart.__init__
+pyjamas.chart.GChartWidgets.AlignedLabel.__init__
+pyjamas.chart.GChartWidgets.AnnotationRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.GraphicsRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel.__init__
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.__init__
+pyjamas.chart.GChartWidgets.PlotPanel.__init__
+pyjamas.chart.GChartWidgets.ReusableImage.__init__
+pyjamas.chart.HovertextChunk.HovertextChunk.__init__
+pyjamas.chart.NumberFormat.NF.__init__
+pyjamas.chart.Point.Point.__init__
+pyjamas.chart.Symbol.Symbol.__init__
+pyjamas.chart.SymbolType.AnnotationAnchor.__init__
+pyjamas.chart.SymbolType.HBarBaseline.__init__
+pyjamas.chart.SymbolType.HBarLeft.__init__
+pyjamas.chart.SymbolType.HBarRight.__init__
+pyjamas.chart.SymbolType.LineSymbolType.__init__
+pyjamas.chart.SymbolType.PieSliceSymbolType.__init__
+pyjamas.chart.SymbolType.SymbolType.__init__
+pyjamas.chart.SymbolType.VBarBaseline.__init__
+pyjamas.chart.SymbolType.VBarBottom.__init__
+pyjamas.chart.SymbolType.VBarTop.__init__
+pyjamas.chart.TickLocation.TickLocation.__init__
+pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption.__init__
+pyjamas.django.Form.CharField.__init__
+pyjamas.django.Form.FloatField.__init__
+pyjamas.django.Form.Form.__init__
+pyjamas.django.Form.FormDescribeGrid.__init__
+pyjamas.django.Form.FormGetGrid.__init__
+pyjamas.django.Form.FormSaveGrid.__init__
+pyjamas.django.Form.IntegerField.__init__
+pyjamas.dnd.DNDHelper.DNDHelper.__init__
+pyjamas.dnd.DataTransfer.DataTransfer.__init__
+pyjamas.dnd.DataTransfer.DataTransferItem.__init__
+pyjamas.dnd.DataTransfer.DragDataStore.__init__
+pyjamas.dnd.DragEvent.DragEvent.__init__
+pyjamas.dnd.utils.DOMStringList.__init__
+pyjamas.dnd.utils.DraggingWidget.__init__
+pyjamas.dnd.utils.Uri_list.__init__
+pyjamas.feed.Feed.Feed.__init__
+pyjamas.gears.GearsException.GearsException.__init__
+pyjamas.gears.database.Database.GearsDatabase.__init__
+pyjamas.gears.database.DatabaseException.DatabaseException.__init__
+pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer.__init__
+pyjamas.gmaps.DirectionsService.DirectionsService.__init__
+pyjamas.gmaps.Geocoder.Geocoder.__init__
+pyjamas.logging.handlers.AlertHandler.__init__
+pyjamas.logging.handlers.AppendHandler.__init__
+pyjamas.logging.handlers.ConsoleHandler.__init__
+pyjamas.logging.handlers.NullHandler.__init__
+pyjamas.media.Audio.Audio.__init__
+pyjamas.media.Media.Media.__init__
+pyjamas.media.Video.Video.__init__
+pyjamas.selection.Range.Range.__init__
+pyjamas.selection.RangeEndPoint.FindLocRes.__init__
+pyjamas.selection.RangeEndPoint.RangeEndPoint.__init__
+pyjamas.ui.AbsolutePanel.AbsolutePanel.__init__
+pyjamas.ui.Anchor.Anchor.__init__
+pyjamas.ui.Anchor._Attribute.__init__
+pyjamas.ui.Anchor._Attributes.__init__
+pyjamas.ui.Applier.__init__
+pyjamas.ui.AreaSlider.AreaSlider.__init__
+pyjamas.ui.AutoComplete.AutoCompleteTextBox.__init__
+pyjamas.ui.AutoComplete.SimpleAutoCompletionItems.__init__
+pyjamas.ui.BuilderPanel.BuilderPanel.__init__
+pyjamas.ui.BuilderWidget.BuilderWidget.__init__
+pyjamas.ui.Button.Button.__init__
+pyjamas.ui.ButtonBase.ButtonBase.__init__
+pyjamas.ui.CSS.StyleSheetCssFile.__init__
+pyjamas.ui.CSS.StyleSheetCssText.__init__
+pyjamas.ui.Calendar.Calendar.__init__
+pyjamas.ui.Calendar.CalendarPopup.__init__
+pyjamas.ui.Calendar.DateField.__init__
+pyjamas.ui.CaptionPanel.CaptionPanel.__init__
+pyjamas.ui.CellFormatter.CellFormatter.__init__
+pyjamas.ui.CellPanel.CellPanel.__init__
+pyjamas.ui.ChangeListener.ChangeHandler.__init__
+pyjamas.ui.CheckBox.CheckBox.__init__
+pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel.__init__
+pyjamas.ui.ClickListener.ClickHandler.__init__
+pyjamas.ui.Composite.Composite.__init__
+pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel.__init__
+pyjamas.ui.Control.Control.__init__
+pyjamas.ui.Controls.AreaDemoSlider2.__init__
+pyjamas.ui.Controls.HorizontalDemoSlider2.__init__
+pyjamas.ui.Controls.VerticalDemoSlider2.__init__
+pyjamas.ui.CustomButton.CustomButton.__init__
+pyjamas.ui.CustomButton.Face.__init__
+pyjamas.ui.DeckPanel.DeckPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabBar.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorTitledPanel.__init__
+pyjamas.ui.DialogBox.DialogBox.__init__
+pyjamas.ui.DialogWindow.DialogWindow.__init__
+pyjamas.ui.DisclosurePanel.ClickableHeader.__init__
+pyjamas.ui.DisclosurePanel.DefaultHeader.__init__
+pyjamas.ui.DisclosurePanel.DisclosurePanel.__init__
+pyjamas.ui.DockPanel.DockPanel.__init__
+pyjamas.ui.DockPanel.LayoutData.__init__
+pyjamas.ui.DoubleControl.DoubleControl.__init__
+pyjamas.ui.DragHandler.DragHandler.__init__
+pyjamas.ui.DragWidget.Html5DragContainer.__init__
+pyjamas.ui.DragWidget.Html5DragWidget.__init__
+pyjamas.ui.DragWidget.MouseDragContainer.__init__
+pyjamas.ui.DragWidget.MouseDragWidget.__init__
+pyjamas.ui.DropHandler.DropHandler.__init__
+pyjamas.ui.DropWidget.EmulatedDropWidget.__init__
+pyjamas.ui.DropWidget.Html5DropWidget.__init__
+pyjamas.ui.EventObject.EventObject.__init__
+pyjamas.ui.FileUpload.FileUpload.__init__
+pyjamas.ui.FlashPanel.FlashPanel.__init__
+pyjamas.ui.FlexCellFormatter.FlexCellFormatter.__init__
+pyjamas.ui.FlexTable.FlexTable.__init__
+pyjamas.ui.FlowPanel.FlowPanel.__init__
+pyjamas.ui.FlowTabBar.FlowTabBar.__init__
+pyjamas.ui.FocusListener.FocusHandler.__init__
+pyjamas.ui.FocusPanel.FocusPanel.__init__
+pyjamas.ui.FocusWidget.FocusWidget.__init__
+pyjamas.ui.FormPanel.FormPanel.__init__
+pyjamas.ui.FormPanel.FormSubmitCompleteEvent.__init__
+pyjamas.ui.FormPanel.FormSubmitEvent.__init__
+pyjamas.ui.Frame.Frame.__init__
+pyjamas.ui.GlassWidget.GlassWidget.__init__
+pyjamas.ui.Grid.Grid.__init__
+pyjamas.ui.HTML.HTML.__init__
+pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel.__init__
+pyjamas.ui.HTMLPanel.HTMLPanel.__init__
+pyjamas.ui.HTMLTable.HTMLTable.__init__
+pyjamas.ui.Hidden.Hidden.__init__
+pyjamas.ui.HorizontalPanel.HorizontalPanel.__init__
+pyjamas.ui.HorizontalSlider.HorizontalSlider.__init__
+pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel.__init__
+pyjamas.ui.Hyperlink.Hyperlink.__init__
+pyjamas.ui.HyperlinkImage.HyperlinkImage.__init__
+pyjamas.ui.Image.Image.__init__
+pyjamas.ui.InlineHTML.InlineHTML.__init__
+pyjamas.ui.InlineLabel.InlineLabel.__init__
+pyjamas.ui.InputControl.InputControl.__init__
+pyjamas.ui.InputListener.InputHandler.__init__
+pyjamas.ui.KeyboardListener.KeyboardHandler.__init__
+pyjamas.ui.Label.Label.__init__
+pyjamas.ui.ListBox.ListBox.__init__
+pyjamas.ui.Map.ImageMap.__init__
+pyjamas.ui.Map.MapArea.__init__
+pyjamas.ui.MenuBar.MenuBar.__init__
+pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel.__init__
+pyjamas.ui.MenuItem.MenuItem.__init__
+pyjamas.ui.MonthField.MonthField.__init__
+pyjamas.ui.MouseInputControl.MouseInputControl.__init__
+pyjamas.ui.MouseListener.MouseHandler.__init__
+pyjamas.ui.MouseListener.MouseWheelHandler.__init__
+pyjamas.ui.MultiListener.MultiListener.__init__
+pyjamas.ui.NamedFrame.NamedFrame.__init__
+pyjamas.ui.Panel.Panel.__init__
+pyjamas.ui.PasswordTextBox.PasswordTextBox.__init__
+pyjamas.ui.PopupPanel.PopupPanel.__init__
+pyjamas.ui.PushButton.PushButton.__init__
+pyjamas.ui.RadioButton.RadioButton.__init__
+pyjamas.ui.RichTextArea.RichTextArea.__init__
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.__init__
+pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.__init__
+pyjamas.ui.RichTextToolbar.CustomStyleManager.__init__
+pyjamas.ui.RichTextToolbar.EventLinkPopup.__init__
+pyjamas.ui.RichTextToolbar.FontFamilyManager.__init__
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.__init__
+pyjamas.ui.RichTextToolbar.RichTextToolbar.__init__
+pyjamas.ui.RootPanel.RootPanelCls.__init__
+pyjamas.ui.RowFormatter.RowFormatter.__init__
+pyjamas.ui.ScrollPanel.ScrollPanel.__init__
+pyjamas.ui.SimplePanel.SimplePanel.__init__
+pyjamas.ui.Sink.Sink.__init__
+pyjamas.ui.Sink.SinkInfo.__init__
+pyjamas.ui.Sink.SinkList.__init__
+pyjamas.ui.SplitPanel.SplitPanel.__init__
+pyjamas.ui.SplitPanel.SplitPanelSplitter.__init__
+pyjamas.ui.StackPanel.StackPanel.__init__
+pyjamas.ui.TabBar.TabBar.__init__
+pyjamas.ui.TabPanel.TabPanel.__init__
+pyjamas.ui.TextArea.TextArea.__init__
+pyjamas.ui.TextBox.TextBox.__init__
+pyjamas.ui.TextBoxBase.TextBoxBase.__init__
+pyjamas.ui.ToggleButton.ToggleButton.__init__
+pyjamas.ui.Tooltip.Tooltip.__init__
+pyjamas.ui.Tooltip.TooltipListener.__init__
+pyjamas.ui.Tree.Tree.__init__
+pyjamas.ui.TreeContentPanel.TreeContentPanel.__init__
+pyjamas.ui.TreeItem.TreeItem.__init__
+pyjamas.ui.UIObject.UIObject.__init__
+pyjamas.ui.VerticalSlider.VerticalSlider.__init__
+pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel.__init__
+pyjamas.ui.Widget.Widget.__init__" class="py-name" href="#" onclick="return doclink('link-35', '__init__', 'link-30');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">         </tt>
+<a name="Anchor.setWidget"></a><div id="Anchor.setWidget-def"><a name="L75"></a><tt class="py-lineno">75</tt> <a class="py-toggle" href="#" id="Anchor.setWidget-toggle" onclick="return toggle('Anchor.setWidget');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor.Anchor-class.html#setWidget">setWidget</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">widget</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Anchor.setWidget-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Anchor.setWidget-expanded"><a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-docstring">""" Add child widget</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">        <tt class="py-name">widget</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name" targets="Method pyjamas.ui.Widget.Widget.removeFromParent()=pyjamas.ui.Widget.Widget-class.html#removeFromParent"><a title="pyjamas.ui.Widget.Widget.removeFromParent" class="py-name" href="#" onclick="return doclink('link-36', 'removeFromParent', 'link-36');">removeFromParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-name">widget</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method pyjamas.ui.TreeContentPanel.TreeContentPanel.setParent()=pyjamas.ui.TreeContentPanel.TreeContentPanel-class.html#setParent,Method pyjamas.ui.Widget.Widget.setParent()=pyjamas.ui.Widget.Widget-class.html#setParent"><a title="pyjamas.ui.TreeContentPanel.TreeContentPanel.setParent
+pyjamas.ui.Widget.Widget.setParent" class="py-name" href="#" onclick="return doclink('link-37', 'setParent', 'link-37');">setParent</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widget</tt> <tt class="py-op">=</tt> <tt class="py-name">widget</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">        <tt id="link-38" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-38', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Function pyjamas.DOM.appendChild()=pyjamas.DOM-module.html#appendChild"><a title="pyjamas.DOM.appendChild" class="py-name" href="#" onclick="return doclink('link-39', 'appendChild', 'link-39');">appendChild</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.getElement()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getElement,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#getElement,Method pyjamas.ui.CellFormatter.CellFormatter.getElement()=pyjamas.ui.CellFormatter.CellFormatter-class.html#getElement,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getElement,Method pyjamas.ui.RowFormatter.RowFormatter.getElement()=pyjamas.ui.RowFormatter.RowFormatter-class.html#getElement,Method pyjamas.ui.SplitPanel.SplitPanel.getElement()=pyjamas.ui.SplitPanel.SplitPanel-class.html#getElement,Method pyjamas.ui.UIObject.UIObject.getElement()=pyjamas.ui.UIObject.UIObject-class.html#getElement"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-40', 'getElement', 'link-40');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">widget</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-41', 'getElement', 'link-40');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line"> </tt>
+<a name="Anchor.removeWidget"></a><div id="Anchor.removeWidget-def"><a name="L83"></a><tt class="py-lineno">83</tt> <a class="py-toggle" href="#" id="Anchor.removeWidget-toggle" onclick="return toggle('Anchor.removeWidget');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor.Anchor-class.html#removeWidget">removeWidget</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Anchor.removeWidget-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Anchor.removeWidget-expanded"><a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">        <tt class="py-docstring">""" remove child widget</tt> </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widget</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="pyjamas.ui.Widget.Widget.removeFromParent" class="py-name" href="#" onclick="return doclink('link-42', 'removeFromParent', 'link-36');">removeFromParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line">        <tt id="link-43" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-43', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Function pyjamas.DOM.removeChild()=pyjamas.DOM-module.html#removeChild"><a title="pyjamas.DOM.removeChild" class="py-name" href="#" onclick="return doclink('link-44', 'removeChild', 'link-44');">removeChild</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-45', 'getElement', 'link-40');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widget</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-46', 'getElement', 'link-40');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">widget</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line"> </tt>
+<a name="Anchor.setHref"></a><div id="Anchor.setHref-def"><a name="L90"></a><tt class="py-lineno">90</tt> <a class="py-toggle" href="#" id="Anchor.setHref-toggle" onclick="return toggle('Anchor.setHref');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.Anchor.Anchor-class.html#setHref">setHref</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">url</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Anchor.setHref-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Anchor.setHref-expanded"><a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">href</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name" targets="Method pyjamas.ui.Anchor._Attribute.set()=pyjamas.ui.Anchor._Attribute-class.html#set,Method pyjamas.ui.MultiListener.MultiListener.set()=pyjamas.ui.MultiListener.MultiListener-class.html#set"><a title="pyjamas.ui.Anchor._Attribute.set
+pyjamas.ui.MultiListener.MultiListener.set" class="py-name" href="#" onclick="return doclink('link-47', 'set', 'link-47');">set</a></tt><tt class="py-op">(</tt><tt class="py-name">url</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L92"></a><tt class="py-lineno">92</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:12 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

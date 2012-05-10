@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.dnd.DragEvent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.dnd-module.html">Package&nbsp;dnd</a> ::
+        Module&nbsp;DragEvent
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.dnd.DragEvent-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.dnd.DragEvent-module.html">Module pyjamas.dnd.DragEvent</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="DragEvent"></a><div id="DragEvent-def"><a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt> <a class="py-toggle" href="#" id="DragEvent-toggle" onclick="return toggle('DragEvent');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html">DragEvent</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="DragEvent-expanded"><a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">    emulates a drag event.</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">    http://dev.w3.org/html5/spec/dnd.html#dragevent</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line">    <tt id="link-2" class="py-name" targets="Variable pyjamas.dnd.DragEvent.DragEvent.relatedTarget=pyjamas.dnd.DragEvent.DragEvent-class.html#relatedTarget"><a title="pyjamas.dnd.DragEvent.DragEvent.relatedTarget" class="py-name" href="#" onclick="return doclink('link-2', 'relatedTarget', 'link-2');">relatedTarget</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line">    <tt id="link-3" class="py-name" targets="Variable pyjamas.dnd.DragEvent.DragEvent.detail=pyjamas.dnd.DragEvent.DragEvent-class.html#detail"><a title="pyjamas.dnd.DragEvent.DragEvent.detail" class="py-name" href="#" onclick="return doclink('link-3', 'detail', 'link-3');">detail</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt id="link-4" class="py-name" targets="Variable pyjamas.dnd.DragEvent.DragEvent.returnValue=pyjamas.dnd.DragEvent.DragEvent-class.html#returnValue"><a title="pyjamas.dnd.DragEvent.DragEvent.returnValue" class="py-name" href="#" onclick="return doclink('link-4', 'returnValue', 'link-4');">returnValue</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="DragEvent.__init__"></a><div id="DragEvent.__init__-def"><a name="L11"></a><tt class="py-lineno"> 11</tt> <a class="py-toggle" href="#" id="DragEvent.__init__-toggle" onclick="return toggle('DragEvent.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">evt</tt><tt class="py-op">,</tt> <tt class="py-param">type</tt><tt class="py-op">,</tt> <tt class="py-param">dataTransfer</tt><tt class="py-op">,</tt> <tt class="py-param">target</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.__init__-expanded"><a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt> <tt class="py-op">=</tt> <tt class="py-name">evt</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method pyjamas.dnd.DataTransfer.DataTransferItem.type()=pyjamas.dnd.DataTransfer.DataTransferItem-class.html#type"><a title="pyjamas.dnd.DataTransfer.DataTransferItem.type" class="py-name" href="#" onclick="return doclink('link-5', 'type', 'link-5');">type</a></tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name"><a title="pyjamas.dnd.DataTransfer.DataTransferItem.type" class="py-name" href="#" onclick="return doclink('link-6', 'type', 'link-5');">type</a></tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.setTarget()=pyjamas.dnd.DragEvent.DragEvent-class.html#setTarget,Method pyjamas.ui.FormPanel.FormPanel.setTarget()=pyjamas.ui.FormPanel.FormPanel-class.html#setTarget"><a title="pyjamas.dnd.DragEvent.DragEvent.setTarget
+pyjamas.ui.FormPanel.FormPanel.setTarget" class="py-name" href="#" onclick="return doclink('link-7', 'setTarget', 'link-7');">setTarget</a></tt><tt class="py-op">(</tt><tt class="py-name">target</tt><tt class="py-op">)</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dataTransfer</tt> <tt class="py-op">=</tt> <tt class="py-name">dataTransfer</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">canBubble</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="pyjamas.dnd.DataTransfer.DataTransferItem.type" class="py-name" href="#" onclick="return doclink('link-8', 'type', 'link-5');">type</a></tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt class="py-string">'dragleave'</tt><tt class="py-op">,</tt> <tt class="py-string">'dragend'</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cancelable</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">cancelable</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="DragEvent.setTarget"></a><div id="DragEvent.setTarget-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="DragEvent.setTarget-toggle" onclick="return toggle('DragEvent.setTarget');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#setTarget">setTarget</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">target</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.setTarget-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.setTarget-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">target</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">target</tt> <tt class="py-op">=</tt> <tt class="py-name">target</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">target</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-9', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Function pyjamas.DOM.eventGetTarget()=pyjamas.DOM-module.html#eventGetTarget"><a title="pyjamas.DOM.eventGetTarget" class="py-name" href="#" onclick="return doclink('link-10', 'eventGetTarget', 'link-10');">eventGetTarget</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">    <tt class="py-comment"># rather than copying a bunch of attributes on init, we provide a bunch</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">    <tt class="py-comment"># of property statements.  These properties hardly ever get looked at</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">    <tt class="py-comment"># during dnd events anyway, but they're there if we need them.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="DragEvent.stopPropagation"></a><div id="DragEvent.stopPropagation-def"><a name="L32"></a><tt class="py-lineno"> 32</tt> <a class="py-toggle" href="#" id="DragEvent.stopPropagation-toggle" onclick="return toggle('DragEvent.stopPropagation');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#stopPropagation">stopPropagation</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.stopPropagation-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.stopPropagation-expanded"><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.stopPropagation()=pyjamas.dnd.DragEvent.DragEvent-class.html#stopPropagation"><a title="pyjamas.dnd.DragEvent.DragEvent.stopPropagation" class="py-name" href="#" onclick="return doclink('link-11', 'stopPropagation', 'link-11');">stopPropagation</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.screenX"></a><div id="DragEvent.screenX-def"><a name="L36"></a><tt class="py-lineno"> 36</tt> <a class="py-toggle" href="#" id="DragEvent.screenX-toggle" onclick="return toggle('DragEvent.screenX');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#screenX">screenX</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.screenX-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.screenX-expanded"><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.screenX()=pyjamas.dnd.DragEvent.DragEvent-class.html#screenX"><a title="pyjamas.dnd.DragEvent.DragEvent.screenX" class="py-name" href="#" onclick="return doclink('link-12', 'screenX', 'link-12');">screenX</a></tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.screenY"></a><div id="DragEvent.screenY-def"><a name="L40"></a><tt class="py-lineno"> 40</tt> <a class="py-toggle" href="#" id="DragEvent.screenY-toggle" onclick="return toggle('DragEvent.screenY');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#screenY">screenY</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.screenY-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.screenY-expanded"><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.screenY()=pyjamas.dnd.DragEvent.DragEvent-class.html#screenY"><a title="pyjamas.dnd.DragEvent.DragEvent.screenY" class="py-name" href="#" onclick="return doclink('link-13', 'screenY', 'link-13');">screenY</a></tt> </tt>
+</div><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.pageX"></a><div id="DragEvent.pageX-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="DragEvent.pageX-toggle" onclick="return toggle('DragEvent.pageX');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#pageX">pageX</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.pageX-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.pageX-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.pageX()=pyjamas.dnd.DragEvent.DragEvent-class.html#pageX"><a title="pyjamas.dnd.DragEvent.DragEvent.pageX" class="py-name" href="#" onclick="return doclink('link-14', 'pageX', 'link-14');">pageX</a></tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.pageY"></a><div id="DragEvent.pageY-def"><a name="L48"></a><tt class="py-lineno"> 48</tt> <a class="py-toggle" href="#" id="DragEvent.pageY-toggle" onclick="return toggle('DragEvent.pageY');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#pageY">pageY</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.pageY-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.pageY-expanded"><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.pageY()=pyjamas.dnd.DragEvent.DragEvent-class.html#pageY"><a title="pyjamas.dnd.DragEvent.DragEvent.pageY" class="py-name" href="#" onclick="return doclink('link-15', 'pageY', 'link-15');">pageY</a></tt> </tt>
+</div><a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.clientX"></a><div id="DragEvent.clientX-def"><a name="L52"></a><tt class="py-lineno"> 52</tt> <a class="py-toggle" href="#" id="DragEvent.clientX-toggle" onclick="return toggle('DragEvent.clientX');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#clientX">clientX</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.clientX-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.clientX-expanded"><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.clientX()=pyjamas.dnd.DragEvent.DragEvent-class.html#clientX"><a title="pyjamas.dnd.DragEvent.DragEvent.clientX" class="py-name" href="#" onclick="return doclink('link-16', 'clientX', 'link-16');">clientX</a></tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.clientY"></a><div id="DragEvent.clientY-def"><a name="L56"></a><tt class="py-lineno"> 56</tt> <a class="py-toggle" href="#" id="DragEvent.clientY-toggle" onclick="return toggle('DragEvent.clientY');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#clientY">clientY</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.clientY-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.clientY-expanded"><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.clientY()=pyjamas.dnd.DragEvent.DragEvent-class.html#clientY"><a title="pyjamas.dnd.DragEvent.DragEvent.clientY" class="py-name" href="#" onclick="return doclink('link-17', 'clientY', 'link-17');">clientY</a></tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.altKey"></a><div id="DragEvent.altKey-def"><a name="L60"></a><tt class="py-lineno"> 60</tt> <a class="py-toggle" href="#" id="DragEvent.altKey-toggle" onclick="return toggle('DragEvent.altKey');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#altKey">altKey</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.altKey-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.altKey-expanded"><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.altKey()=pyjamas.dnd.DragEvent.DragEvent-class.html#altKey"><a title="pyjamas.dnd.DragEvent.DragEvent.altKey" class="py-name" href="#" onclick="return doclink('link-18', 'altKey', 'link-18');">altKey</a></tt> </tt>
+</div><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.ctrlKey"></a><div id="DragEvent.ctrlKey-def"><a name="L64"></a><tt class="py-lineno"> 64</tt> <a class="py-toggle" href="#" id="DragEvent.ctrlKey-toggle" onclick="return toggle('DragEvent.ctrlKey');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#ctrlKey">ctrlKey</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.ctrlKey-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.ctrlKey-expanded"><a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.ctrlKey()=pyjamas.dnd.DragEvent.DragEvent-class.html#ctrlKey"><a title="pyjamas.dnd.DragEvent.DragEvent.ctrlKey" class="py-name" href="#" onclick="return doclink('link-19', 'ctrlKey', 'link-19');">ctrlKey</a></tt> </tt>
+</div><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.shiftKey"></a><div id="DragEvent.shiftKey-def"><a name="L68"></a><tt class="py-lineno"> 68</tt> <a class="py-toggle" href="#" id="DragEvent.shiftKey-toggle" onclick="return toggle('DragEvent.shiftKey');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#shiftKey">shiftKey</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.shiftKey-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.shiftKey-expanded"><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.shiftKey()=pyjamas.dnd.DragEvent.DragEvent-class.html#shiftKey"><a title="pyjamas.dnd.DragEvent.DragEvent.shiftKey" class="py-name" href="#" onclick="return doclink('link-20', 'shiftKey', 'link-20');">shiftKey</a></tt> </tt>
+</div><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.metaKey"></a><div id="DragEvent.metaKey-def"><a name="L72"></a><tt class="py-lineno"> 72</tt> <a class="py-toggle" href="#" id="DragEvent.metaKey-toggle" onclick="return toggle('DragEvent.metaKey');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#metaKey">metaKey</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.metaKey-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.metaKey-expanded"><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.metaKey()=pyjamas.dnd.DragEvent.DragEvent-class.html#metaKey"><a title="pyjamas.dnd.DragEvent.DragEvent.metaKey" class="py-name" href="#" onclick="return doclink('link-21', 'metaKey', 'link-21');">metaKey</a></tt> </tt>
+</div><a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="DragEvent.button"></a><div id="DragEvent.button-def"><a name="L76"></a><tt class="py-lineno"> 76</tt> <a class="py-toggle" href="#" id="DragEvent.button-toggle" onclick="return toggle('DragEvent.button');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#button">button</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.button-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.button-expanded"><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">evt</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.button()=pyjamas.dnd.DragEvent.DragEvent-class.html#button"><a title="pyjamas.dnd.DragEvent.DragEvent.button" class="py-name" href="#" onclick="return doclink('link-22', 'button', 'link-22');">button</a></tt> </tt>
+</div><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="DragEvent.preventDefault"></a><div id="DragEvent.preventDefault-def"><a name="L79"></a><tt class="py-lineno"> 79</tt> <a class="py-toggle" href="#" id="DragEvent.preventDefault-toggle" onclick="return toggle('DragEvent.preventDefault');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#preventDefault">preventDefault</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.preventDefault-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.preventDefault-expanded"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">        ie6 sets returnValue to False, so we do, too.</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="pyjamas.dnd.DragEvent.DragEvent.returnValue" class="py-name" href="#" onclick="return doclink('link-23', 'returnValue', 'link-4');">returnValue</a></tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="DragEvent.initDragEvent"></a><div id="DragEvent.initDragEvent-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="DragEvent.initDragEvent-toggle" onclick="return toggle('DragEvent.initDragEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.dnd.DragEvent.DragEvent-class.html#initDragEvent">initDragEvent</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">type</tt><tt class="py-op">,</tt> <tt class="py-param">canBubble</tt><tt class="py-op">,</tt> <tt class="py-param">cancelable</tt><tt class="py-op">,</tt> <tt class="py-param">dummy</tt><tt class="py-op">,</tt> <tt class="py-param">detail</tt><tt class="py-op">,</tt> <tt class="py-param">screenX</tt><tt class="py-op">,</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                      <tt class="py-param">screenY</tt><tt class="py-op">,</tt> <tt class="py-param">clientX</tt><tt class="py-op">,</tt> <tt class="py-param">clientY</tt><tt class="py-op">,</tt> <tt class="py-param">ctrlKey</tt><tt class="py-op">,</tt> <tt class="py-param">altKey</tt><tt class="py-op">,</tt> <tt class="py-param">shiftKey</tt><tt class="py-op">,</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                      <tt class="py-param">metaKey</tt><tt class="py-op">,</tt> <tt class="py-param">button</tt><tt class="py-op">,</tt> <tt class="py-param">relatedTarget</tt><tt class="py-op">,</tt> <tt class="py-param">dataTransfer</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DragEvent.initDragEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="DragEvent.initDragEvent-expanded"><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring">        Just raise NotImplemented.  Provided only for completeness with the</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">        Interface.</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplemented</tt><tt class="py-op">(</tt><tt class="py-string">"Instanciate this class with a mouse event."</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-comment">#        self.type = type</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-comment">#        self.canBubble = canBubble</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-comment">#        self.cancelable = cancelable</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-comment">#        self.dummy = dummy</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-comment">#        self.detail = detail</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-comment">#        self.screenX = screenX</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-comment">#        self.screenY = screenY</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-comment">#        self.clientX = clientX</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-comment">#        self.clientY = clientY</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-comment">#        self.ctrlKey = ctrlKey</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-comment">#        self.altKey = altKey</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-comment">#        self.shiftKey = shiftKey</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-comment">#        self.metaKey = metaKey</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-comment">#        self.button = button</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-comment">#        self.relatedTarget = relatedTarget</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-comment">#        self.dataTransfer = dataTransfer</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:15 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

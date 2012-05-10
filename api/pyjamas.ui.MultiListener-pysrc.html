@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.MultiListener</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        Module&nbsp;MultiListener
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.MultiListener-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.ui.MultiListener-module.html">Module pyjamas.ui.MultiListener</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="MultiListener"></a><div id="MultiListener-def"><a name="L3"></a><tt class="py-lineno"> 3</tt> <a class="py-toggle" href="#" id="MultiListener-toggle" onclick="return toggle('MultiListener');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.MultiListener.MultiListener-class.html">MultiListener</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MultiListener-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="MultiListener-expanded"><a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line">    <tt class="py-comment"># The combinations that are coupled. E.g., if onFocus is defined, then</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line">    <tt class="py-comment"># onLostFocus should also be defined. The set method will substitute the </tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">    <tt class="py-comment"># missing methods with the ignore method.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line">    <tt class="py-comment"># See also pyjamas.builder.Builder.eventListeners</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line">    <tt id="link-0" class="py-name" targets="Variable pyjamas.ui.MultiListener.MultiListener.combinations=pyjamas.ui.MultiListener.MultiListener-class.html#combinations"><a title="pyjamas.ui.MultiListener.MultiListener.combinations" class="py-name" href="#" onclick="return doclink('link-0', 'combinations', 'link-0');">combinations</a></tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">        <tt id="link-1" class="py-name" targets="Method pyjamas.ui.AreaSlider.AreaSlider.onFocus()=pyjamas.ui.AreaSlider.AreaSlider-class.html#onFocus,Method pyjamas.ui.Calendar.DateField.onFocus()=pyjamas.ui.Calendar.DateField-class.html#onFocus,Method pyjamas.ui.Control.Control.onFocus()=pyjamas.ui.Control.Control-class.html#onFocus,Method pyjamas.ui.FocusListener.FocusHandler.onFocus()=pyjamas.ui.FocusListener.FocusHandler-class.html#onFocus,Method pyjamas.ui.InputControl.InputControl.onFocus()=pyjamas.ui.InputControl.InputControl-class.html#onFocus,Method pyjamas.ui.MouseInputControl.MouseInputControl.onFocus()=pyjamas.ui.MouseInputControl.MouseInputControl-class.html#onFocus,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onFocus()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onFocus,Method pyjamas.ui.VerticalSlider.VerticalSlider.onFocus()=pyjamas.ui.VerticalSlider.VerticalSlider-class.html#onFocus"><a title="pyjamas.ui.AreaSlider.AreaSlider.onFocus
+pyjamas.ui.Calendar.DateField.onFocus
+pyjamas.ui.Control.Control.onFocus
+pyjamas.ui.FocusListener.FocusHandler.onFocus
+pyjamas.ui.InputControl.InputControl.onFocus
+pyjamas.ui.MouseInputControl.MouseInputControl.onFocus
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onFocus
+pyjamas.ui.VerticalSlider.VerticalSlider.onFocus" class="py-name" href="#" onclick="return doclink('link-1', 'onFocus', 'link-1');">onFocus</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onLostFocus"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line">        <tt id="link-2" class="py-name" targets="Method pyjamas.ui.AreaSlider.AreaSlider.onLostFocus()=pyjamas.ui.AreaSlider.AreaSlider-class.html#onLostFocus,Method pyjamas.ui.Calendar.DateField.onLostFocus()=pyjamas.ui.Calendar.DateField-class.html#onLostFocus,Method pyjamas.ui.Control.Control.onLostFocus()=pyjamas.ui.Control.Control-class.html#onLostFocus,Method pyjamas.ui.FocusListener.FocusHandler.onLostFocus()=pyjamas.ui.FocusListener.FocusHandler-class.html#onLostFocus,Method pyjamas.ui.InputControl.InputControl.onLostFocus()=pyjamas.ui.InputControl.InputControl-class.html#onLostFocus,Method pyjamas.ui.MouseInputControl.MouseInputControl.onLostFocus()=pyjamas.ui.MouseInputControl.MouseInputControl-class.html#onLostFocus,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onLostFocus()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onLostFocus,Method pyjamas.ui.VerticalSlider.VerticalSlider.onLostFocus()=pyjamas.ui.VerticalSlider.VerticalSlider-class.html#onLostFocus"><a title="pyjamas.ui.AreaSlider.AreaSlider.onLostFocus
+pyjamas.ui.Calendar.DateField.onLostFocus
+pyjamas.ui.Control.Control.onLostFocus
+pyjamas.ui.FocusListener.FocusHandler.onLostFocus
+pyjamas.ui.InputControl.InputControl.onLostFocus
+pyjamas.ui.MouseInputControl.MouseInputControl.onLostFocus
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onLostFocus
+pyjamas.ui.VerticalSlider.VerticalSlider.onLostFocus" class="py-name" href="#" onclick="return doclink('link-2', 'onLostFocus', 'link-2');">onLostFocus</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onFocus"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">        <tt id="link-3" class="py-name" targets="Method pyjamas.ui.AutoComplete.AutoCompleteTextBox.onKeyDown()=pyjamas.ui.AutoComplete.AutoCompleteTextBox-class.html#onKeyDown,Method pyjamas.ui.Control.Control.onKeyDown()=pyjamas.ui.Control.Control-class.html#onKeyDown,Method pyjamas.ui.DoubleControl.DoubleControl.onKeyDown()=pyjamas.ui.DoubleControl.DoubleControl-class.html#onKeyDown,Method pyjamas.ui.KeyboardListener.KeyboardHandler.onKeyDown()=pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyDown,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onKeyDown()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onKeyDown"><a title="pyjamas.ui.AutoComplete.AutoCompleteTextBox.onKeyDown
+pyjamas.ui.Control.Control.onKeyDown
+pyjamas.ui.DoubleControl.DoubleControl.onKeyDown
+pyjamas.ui.KeyboardListener.KeyboardHandler.onKeyDown
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onKeyDown" class="py-name" href="#" onclick="return doclink('link-3', 'onKeyDown', 'link-3');">onKeyDown</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onKeyUp"</tt><tt class="py-op">,</tt> <tt class="py-string">"onKeyPress"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">        <tt id="link-4" class="py-name" targets="Method pyjamas.ui.AutoComplete.AutoCompleteTextBox.onKeyUp()=pyjamas.ui.AutoComplete.AutoCompleteTextBox-class.html#onKeyUp,Method pyjamas.ui.Control.Control.onKeyUp()=pyjamas.ui.Control.Control-class.html#onKeyUp,Method pyjamas.ui.KeyboardListener.KeyboardHandler.onKeyUp()=pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyUp,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onKeyUp()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onKeyUp"><a title="pyjamas.ui.AutoComplete.AutoCompleteTextBox.onKeyUp
+pyjamas.ui.Control.Control.onKeyUp
+pyjamas.ui.KeyboardListener.KeyboardHandler.onKeyUp
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onKeyUp" class="py-name" href="#" onclick="return doclink('link-4', 'onKeyUp', 'link-4');">onKeyUp</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onKeyPress"</tt><tt class="py-op">,</tt> <tt class="py-string">"onKeyDown"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">        <tt id="link-5" class="py-name" targets="Method pyjamas.ui.AutoComplete.AutoCompleteTextBox.onKeyPress()=pyjamas.ui.AutoComplete.AutoCompleteTextBox-class.html#onKeyPress,Method pyjamas.ui.Control.Control.onKeyPress()=pyjamas.ui.Control.Control-class.html#onKeyPress,Method pyjamas.ui.InputControl.InputControl.onKeyPress()=pyjamas.ui.InputControl.InputControl-class.html#onKeyPress,Method pyjamas.ui.KeyboardListener.KeyboardHandler.onKeyPress()=pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyPress,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onKeyPress()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onKeyPress"><a title="pyjamas.ui.AutoComplete.AutoCompleteTextBox.onKeyPress
+pyjamas.ui.Control.Control.onKeyPress
+pyjamas.ui.InputControl.InputControl.onKeyPress
+pyjamas.ui.KeyboardListener.KeyboardHandler.onKeyPress
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onKeyPress" class="py-name" href="#" onclick="return doclink('link-5', 'onKeyPress', 'link-5');">onKeyPress</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onKeyDown"</tt><tt class="py-op">,</tt> <tt class="py-string">"onKeyUp"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">        <tt id="link-6" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseMove()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseMove,Method pyjamas.ui.Control.Control.onMouseMove()=pyjamas.ui.Control.Control-class.html#onMouseMove,Method pyjamas.ui.DialogBox.DialogBox.onMouseMove()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseMove,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseMove()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseMove,Method pyjamas.ui.MouseListener.MouseHandler.onMouseMove()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseMove,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseMove()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseMove,Method pyjamas.ui.SplitPanel.SplitPanel.onMouseMove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#onMouseMove,Method pyjamas.ui.Tooltip.TooltipListener.onMouseMove()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseMove"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseMove
+pyjamas.ui.Control.Control.onMouseMove
+pyjamas.ui.DialogBox.DialogBox.onMouseMove
+pyjamas.ui.GlassWidget.GlassWidget.onMouseMove
+pyjamas.ui.MouseListener.MouseHandler.onMouseMove
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseMove
+pyjamas.ui.SplitPanel.SplitPanel.onMouseMove
+pyjamas.ui.Tooltip.TooltipListener.onMouseMove" class="py-name" href="#" onclick="return doclink('link-6', 'onMouseMove', 'link-6');">onMouseMove</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onMouseDown"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseUp"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseEnter"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseLeave"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">        <tt id="link-7" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseDown()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseDown,Method pyjamas.ui.Control.Control.onMouseDown()=pyjamas.ui.Control.Control-class.html#onMouseDown,Method pyjamas.ui.DialogBox.DialogBox.onMouseDown()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseDown,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseDown()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseDown,Method pyjamas.ui.MouseListener.MouseHandler.onMouseDown()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseDown,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseDown()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseDown,Method pyjamas.ui.SplitPanel.SplitPanelSplitter.onMouseDown()=pyjamas.ui.SplitPanel.SplitPanelSplitter-class.html#onMouseDown,Method pyjamas.ui.Tooltip.TooltipListener.onMouseDown()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseDown"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseDown
+pyjamas.ui.Control.Control.onMouseDown
+pyjamas.ui.DialogBox.DialogBox.onMouseDown
+pyjamas.ui.GlassWidget.GlassWidget.onMouseDown
+pyjamas.ui.MouseListener.MouseHandler.onMouseDown
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseDown
+pyjamas.ui.SplitPanel.SplitPanelSplitter.onMouseDown
+pyjamas.ui.Tooltip.TooltipListener.onMouseDown" class="py-name" href="#" onclick="return doclink('link-7', 'onMouseDown', 'link-7');">onMouseDown</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onMouseUp"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseEnter"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseLeave"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseMove"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">        <tt id="link-8" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseUp()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseUp,Method pyjamas.ui.Control.Control.onMouseUp()=pyjamas.ui.Control.Control-class.html#onMouseUp,Method pyjamas.ui.DialogBox.DialogBox.onMouseUp()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseUp,Method pyjamas.ui.DialogWindow.DialogWindow.onMouseUp()=pyjamas.ui.DialogWindow.DialogWindow-class.html#onMouseUp,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseUp()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseUp,Method pyjamas.ui.MouseListener.MouseHandler.onMouseUp()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseUp,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseUp()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseUp,Method pyjamas.ui.SplitPanel.SplitPanel.onMouseUp()=pyjamas.ui.SplitPanel.SplitPanel-class.html#onMouseUp,Method pyjamas.ui.Tooltip.TooltipListener.onMouseUp()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseUp"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseUp
+pyjamas.ui.Control.Control.onMouseUp
+pyjamas.ui.DialogBox.DialogBox.onMouseUp
+pyjamas.ui.DialogWindow.DialogWindow.onMouseUp
+pyjamas.ui.GlassWidget.GlassWidget.onMouseUp
+pyjamas.ui.MouseListener.MouseHandler.onMouseUp
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseUp
+pyjamas.ui.SplitPanel.SplitPanel.onMouseUp
+pyjamas.ui.Tooltip.TooltipListener.onMouseUp" class="py-name" href="#" onclick="return doclink('link-8', 'onMouseUp', 'link-8');">onMouseUp</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onMouseEnter"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseLeave"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseMove"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseDown"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">        <tt id="link-9" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseEnter()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseEnter,Method pyjamas.ui.Control.Control.onMouseEnter()=pyjamas.ui.Control.Control-class.html#onMouseEnter,Method pyjamas.ui.DialogBox.DialogBox.onMouseEnter()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseEnter,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseEnter()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseEnter,Method pyjamas.ui.MouseListener.MouseHandler.onMouseEnter()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseEnter,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseEnter()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseEnter,Method pyjamas.ui.Tooltip.TooltipListener.onMouseEnter()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseEnter"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseEnter
+pyjamas.ui.Control.Control.onMouseEnter
+pyjamas.ui.DialogBox.DialogBox.onMouseEnter
+pyjamas.ui.GlassWidget.GlassWidget.onMouseEnter
+pyjamas.ui.MouseListener.MouseHandler.onMouseEnter
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseEnter
+pyjamas.ui.Tooltip.TooltipListener.onMouseEnter" class="py-name" href="#" onclick="return doclink('link-9', 'onMouseEnter', 'link-9');">onMouseEnter</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onMouseLeave"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseMove"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseDown"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseUp"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">        <tt id="link-10" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseLeave()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseLeave,Method pyjamas.ui.Control.Control.onMouseLeave()=pyjamas.ui.Control.Control-class.html#onMouseLeave,Method pyjamas.ui.DialogBox.DialogBox.onMouseLeave()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseLeave,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseLeave()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseLeave,Method pyjamas.ui.MouseListener.MouseHandler.onMouseLeave()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseLeave,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseLeave()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseLeave,Method pyjamas.ui.Tooltip.TooltipListener.onMouseLeave()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseLeave"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseLeave
+pyjamas.ui.Control.Control.onMouseLeave
+pyjamas.ui.DialogBox.DialogBox.onMouseLeave
+pyjamas.ui.GlassWidget.GlassWidget.onMouseLeave
+pyjamas.ui.MouseListener.MouseHandler.onMouseLeave
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseLeave
+pyjamas.ui.Tooltip.TooltipListener.onMouseLeave" class="py-name" href="#" onclick="return doclink('link-10', 'onMouseLeave', 'link-10');">onMouseLeave</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onMouseMove"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseDown"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseUp"</tt><tt class="py-op">,</tt><tt class="py-string">"onMouseEnter"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">        <tt id="link-11" class="py-name" targets="Method pyjamas.ui.TabPanel.TabPanel.onTabSelected()=pyjamas.ui.TabPanel.TabPanel-class.html#onTabSelected"><a title="pyjamas.ui.TabPanel.TabPanel.onTabSelected" class="py-name" href="#" onclick="return doclink('link-11', 'onTabSelected', 'link-11');">onTabSelected</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onBeforeTabSelected"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">        <tt id="link-12" class="py-name" targets="Method pyjamas.ui.TabPanel.TabPanel.onBeforeTabSelected()=pyjamas.ui.TabPanel.TabPanel-class.html#onBeforeTabSelected"><a title="pyjamas.ui.TabPanel.TabPanel.onBeforeTabSelected" class="py-name" href="#" onclick="return doclink('link-12', 'onBeforeTabSelected', 'link-12');">onBeforeTabSelected</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"onTabSelected"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">    <tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="MultiListener.__init__"></a><div id="MultiListener.__init__-def"><a name="L23"></a><tt class="py-lineno">23</tt> <a class="py-toggle" href="#" id="MultiListener.__init__-toggle" onclick="return toggle('MultiListener.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MultiListener.MultiListener-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">obj</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MultiListener.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="MultiListener.__init__-expanded"><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method pyjamas.ui.Anchor._Attribute.set()=pyjamas.ui.Anchor._Attribute-class.html#set,Method pyjamas.ui.MultiListener.MultiListener.set()=pyjamas.ui.MultiListener.MultiListener-class.html#set"><a title="pyjamas.ui.Anchor._Attribute.set
+pyjamas.ui.MultiListener.MultiListener.set" class="py-name" href="#" onclick="return doclink('link-13', 'set', 'link-13');">set</a></tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="MultiListener.set"></a><div id="MultiListener.set-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="MultiListener.set-toggle" onclick="return toggle('MultiListener.set');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MultiListener.MultiListener-class.html#set">set</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">obj</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MultiListener.set-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="MultiListener.set-expanded"><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-docstring">"""Check for missing event functions and substitute these with """</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-string">"""the ignore method"""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt id="link-14" class="py-name" targets="Method pyjamas.ui.MultiListener.MultiListener.ignore()=pyjamas.ui.MultiListener.MultiListener-class.html#ignore"><a title="pyjamas.ui.MultiListener.MultiListener.ignore" class="py-name" href="#" onclick="return doclink('link-14', 'ignore', 'link-14');">ignore</a></tt> <tt class="py-op">=</tt> <tt class="py-name">getattr</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-string">"ignore"</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">k</tt><tt class="py-op">,</tt> <tt class="py-name">v</tt> <tt class="py-keyword">in</tt> <tt class="py-name">kwargs</tt><tt class="py-op">.</tt><tt class="py-name">iteritems</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">            <tt class="py-name">setattr</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">k</tt><tt class="py-op">,</tt> <tt class="py-name">getattr</tt><tt class="py-op">(</tt><tt class="py-name">obj</tt><tt class="py-op">,</tt> <tt class="py-name">v</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">k</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="pyjamas.ui.MultiListener.MultiListener.combinations" class="py-name" href="#" onclick="return doclink('link-15', 'combinations', 'link-0');">combinations</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">k1</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="pyjamas.ui.MultiListener.MultiListener.combinations" class="py-name" href="#" onclick="return doclink('link-16', 'combinations', 'link-0');">combinations</a></tt><tt class="py-op">[</tt><tt class="py-name">k</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">k1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">                        <tt class="py-name">setattr</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">k1</tt><tt class="py-op">,</tt> <tt id="link-17" class="py-name"><a title="pyjamas.ui.MultiListener.MultiListener.ignore" class="py-name" href="#" onclick="return doclink('link-17', 'ignore', 'link-14');">ignore</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"> </tt>
+<a name="MultiListener.ignore"></a><div id="MultiListener.ignore-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="MultiListener.ignore-toggle" onclick="return toggle('MultiListener.ignore');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MultiListener.MultiListener-class.html#ignore">ignore</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MultiListener.ignore-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="MultiListener.ignore-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-docstring">"""Ignore event"""</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-comment"># The methods returns True, which is only needed for the method</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">        <tt class="py-comment"># onBeforeTabSelected.</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div></div><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:15 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

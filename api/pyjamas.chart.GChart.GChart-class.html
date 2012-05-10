@@ -1,0 +1,3749 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.chart.GChart.GChart</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.chart-module.html">Package&nbsp;chart</a> ::
+        <a href="pyjamas.chart.GChart-module.html">Module&nbsp;GChart</a> ::
+        Class&nbsp;GChart
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.chart.GChart.GChart-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class GChart</h1><p class="nomargin-top"><span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+             object --+                
+                      |                
+             <a href="pyjamas.ui.Applier-class.html">ui.Applier</a> --+            
+                          |            
+       <a href="pyjamas.ui.UIObject.UIObject-class.html">ui.UIObject.UIObject</a> --+        
+                              |        
+               <a href="pyjamas.ui.Widget.Widget-class.html">ui.Widget.Widget</a> --+    
+                                  |    
+             <a href="pyjamas.ui.Composite.Composite-class.html">ui.Composite.Composite</a> --+
+                                      |
+      <a href="pyjamas.ui.FocusListener.FocusHandler-class.html">ui.FocusListener.FocusHandler</a> --+
+                                      |
+<a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html">ui.KeyboardListener.KeyboardHandler</a> --+
+                                      |
+                         object --+   |
+                                  |   |
+      <a href="pyjamas.ui.MouseListener.MouseHandler-class.html">ui.MouseListener.MouseHandler</a> --+
+                                      |
+                         object --+   |
+                                  |   |
+      <a href="pyjamas.ui.ClickListener.ClickHandler-class.html">ui.ClickListener.ClickHandler</a> --+
+                                      |
+                                     <strong class="uidshort">GChart</strong>
+</pre>
+
+<hr />
+<p>* * Instantiates a GChart with a curve display region of * the 
+  specified size. * * * @param xChartSize the width of the curve display 
+  region, in pixels. * @param yChartSize the height of the curve display 
+  region, in pixels. * * @see #setXChartSize setXChartSize * @see 
+  #setYChartSize setYChartSize * @see #setChartSize setChartSize</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.chart.GChart.GChart-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      use this to apply properties as a dictionary, e.g.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCanvasFactory"></a><span class="summary-sig-name">getCanvasFactory</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getCanvasFactory">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLastPieSliceOrientation"></a><span class="summary-sig-name">getLastPieSliceOrientation</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLastPieSliceOrientation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLastPieSliceOrientation"></a><span class="summary-sig-name">setLastPieSliceOrientation</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">lastOrientation</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLastPieSliceOrientation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setInitialPieSliceOrientation"></a><span class="summary-sig-name">setInitialPieSliceOrientation</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">orientation</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setInitialPieSliceOrientation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getInitialPieSliceOrientation"></a><span class="summary-sig-name">getInitialPieSliceOrientation</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getInitialPieSliceOrientation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addSystemCurves"></a><span class="summary-sig-name">addSystemCurves</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addSystemCurves">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateDecorations"></a><span class="summary-sig-name">updateDecorations</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">xChartSizeDecorated</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.updateDecorations">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addClickHandler"></a><span class="summary-sig-name">addClickHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addClickHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addDoubleClickHandler"></a><span class="summary-sig-name">addDoubleClickHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addDoubleClickHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addMouseDownHandler"></a><span class="summary-sig-name">addMouseDownHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addMouseDownHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addMouseMoveHandler"></a><span class="summary-sig-name">addMouseMoveHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addMouseMoveHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addMouseOutHandler"></a><span class="summary-sig-name">addMouseOutHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addMouseOutHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addMouseOverHandler"></a><span class="summary-sig-name">addMouseOverHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addMouseOverHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addMouseUpHandler"></a><span class="summary-sig-name">addMouseUpHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addMouseUpHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addMouseWheelHandler"></a><span class="summary-sig-name">addMouseWheelHandler</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">handler</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addMouseWheelHandler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="internalCurveIndex"></a><span class="summary-sig-name">internalCurveIndex</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">externalIndex</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.internalCurveIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="externalCurveIndex"></a><span class="summary-sig-name">externalCurveIndex</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">internalIndex</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.externalCurveIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isSystemCurveIndex"></a><span class="summary-sig-name">isSystemCurveIndex</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">externalIndex</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.isSystemCurveIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addCurve"></a><span class="summary-sig-name">addCurve</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iCurve</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.addCurve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clearCurves"></a><span class="summary-sig-name">clearCurves</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.clearCurves">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBackgroundColor"></a><span class="summary-sig-name">getBackgroundColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBorderColor"></a><span class="summary-sig-name">getBorderColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getBorderColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBorderWidth"></a><span class="summary-sig-name">getBorderWidth</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getBorderWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBorderStyle"></a><span class="summary-sig-name">getBorderStyle</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getBorderStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getChartFootnotes"></a><span class="summary-sig-name">getChartFootnotes</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getChartFootnotes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getChartFootnotesLeftJustified"></a><span class="summary-sig-name">getChartFootnotesLeftJustified</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getChartFootnotesLeftJustified">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getChartFootnotesThickness"></a><span class="summary-sig-name">getChartFootnotesThickness</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getChartFootnotesThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getChartTitle"></a><span class="summary-sig-name">getChartTitle</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getChartTitle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getChartTitleThickness"></a><span class="summary-sig-name">getChartTitleThickness</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getChartTitleThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getClipToDecoratedChart"></a><span class="summary-sig-name">getClipToDecoratedChart</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getClipToDecoratedChart">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getClipToPlotArea"></a><span class="summary-sig-name">getClipToPlotArea</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getClipToPlotArea">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getClosestBrushTouchingPointNoCheck"></a><span class="summary-sig-name">getClosestBrushTouchingPointNoCheck</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getClosestBrushTouchingPointNoCheck">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getClosestBrushTouchingPoint"></a><span class="summary-sig-name">getClosestBrushTouchingPoint</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">xPlotArea</span>,
+        <span class="summary-sig-arg">yPlotArea</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getClosestBrushTouchingPoint">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCurve"></a><span class="summary-sig-name">getCurve</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iCurve</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getCurve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getSystemCurve"></a><span class="summary-sig-name">getSystemCurve</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iCurve</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getSystemCurve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCurveIndex"></a><span class="summary-sig-name">getCurveIndex</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">curve</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getCurveIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getInternalCurveIndex"></a><span class="summary-sig-name">getInternalCurveIndex</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">curve</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getInternalCurveIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getRenderingPanelIndex"></a><span class="summary-sig-name">getRenderingPanelIndex</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">internalCurveIndex</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getRenderingPanelIndex">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getFontFamily"></a><span class="summary-sig-name">getFontFamily</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getFontFamily">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getGridColor"></a><span class="summary-sig-name">getGridColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getGridColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendBackgroundColor"></a><span class="summary-sig-name">getLegendBackgroundColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendBorderColor"></a><span class="summary-sig-name">getLegendBorderColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendBorderColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendBorderWidth"></a><span class="summary-sig-name">getLegendBorderWidth</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendBorderWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendBorderStyle"></a><span class="summary-sig-name">getLegendBorderStyle</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendBorderStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendFontColor"></a><span class="summary-sig-name">getLegendFontColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendFontColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendFontSize"></a><span class="summary-sig-name">getLegendFontSize</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendFontSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendFontStyle"></a><span class="summary-sig-name">getLegendFontStyle</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendFontStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendFontWeight"></a><span class="summary-sig-name">getLegendFontWeight</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendFontWeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getLegendThickness"></a><span class="summary-sig-name">getLegendThickness</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getLegendThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getNCurves"></a><span class="summary-sig-name">getNCurves</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getNCurves">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPadding"></a><span class="summary-sig-name">getPadding</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getPadding">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPlotAreaBackgroundColor"></a><span class="summary-sig-name">getPlotAreaBackgroundColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getPlotAreaBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPlotAreaBorderColor"></a><span class="summary-sig-name">getPlotAreaBorderColor</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getPlotAreaBorderColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPlotAreaBorderWidth"></a><span class="summary-sig-name">getPlotAreaBorderWidth</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getPlotAreaBorderWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPlotAreaBorderStyle"></a><span class="summary-sig-name">getPlotAreaBorderStyle</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getPlotAreaBorderStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPlotAreaImageURL"></a><span class="summary-sig-name">getPlotAreaImageURL</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getPlotAreaImageURL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getOptimizeForMemory"></a><span class="summary-sig-name">getOptimizeForMemory</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getOptimizeForMemory">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getShowOffChartPoints"></a><span class="summary-sig-name">getShowOffChartPoints</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getShowOffChartPoints">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getShowOffDecoratedChartGlyphs"></a><span class="summary-sig-name">getShowOffDecoratedChartGlyphs</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getShowOffDecoratedChartGlyphs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBlankImageURL"></a><span class="summary-sig-name">getBlankImageURL</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getBlankImageURL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getHoverParameterInterpreter"></a><span class="summary-sig-name">getHoverParameterInterpreter</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getHoverParameterInterpreter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getHoverTouchingEnabled"></a><span class="summary-sig-name">getHoverTouchingEnabled</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getHoverTouchingEnabled">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getXAxis"></a><span class="summary-sig-name">getXAxis</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getXAxis">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getXChartSize"></a><span class="summary-sig-name">getXChartSize</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getXChartSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getXChartSizeDecorated"></a><span class="summary-sig-name">getXChartSizeDecorated</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getXChartSizeDecorated">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getY2Axis"></a><span class="summary-sig-name">getY2Axis</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getY2Axis">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getYAxis"></a><span class="summary-sig-name">getYAxis</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getYAxis">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getYChartSize"></a><span class="summary-sig-name">getYChartSize</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getYChartSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getYChartSizeDecorated"></a><span class="summary-sig-name">getYChartSizeDecorated</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getYChartSizeDecorated">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="hasY2Axis"></a><span class="summary-sig-name">hasY2Axis</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.hasY2Axis">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="hasYAxis"></a><span class="summary-sig-name">hasYAxis</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.hasYAxis">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isLegendVisible"></a><span class="summary-sig-name">isLegendVisible</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.isLegendVisible">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isUpdateNeeded"></a><span class="summary-sig-name">isUpdateNeeded</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.isUpdateNeeded">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="removeCurve"></a><span class="summary-sig-name">removeCurve</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">curve</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.removeCurve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setBackgroundColor"></a><span class="summary-sig-name">setBackgroundColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setBlankImageURL"></a><span class="summary-sig-name">setBlankImageURL</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">_blankImageURL</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setBlankImageURL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setHoverParameterInterpreter"></a><span class="summary-sig-name">setHoverParameterInterpreter</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">hpi</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setHoverParameterInterpreter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setHoverTouchingEnabled"></a><span class="summary-sig-name">setHoverTouchingEnabled</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">hoverTouchingEnabled</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setHoverTouchingEnabled">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setBorderColor"></a><span class="summary-sig-name">setBorderColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setBorderColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setBorderStyle"></a><span class="summary-sig-name">setBorderStyle</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">borderStyle</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setBorderStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setBorderWidth"></a><span class="summary-sig-name">setBorderWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssWidth</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setBorderWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setChartFootnotes"></a><span class="summary-sig-name">setChartFootnotes</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">chartFootnotes</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setChartFootnotes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setChartFootnotesLeftJustified"></a><span class="summary-sig-name">setChartFootnotesLeftJustified</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">footnotesLeftJustified</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setChartFootnotesLeftJustified">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setChartFootnotesThickness"></a><span class="summary-sig-name">setChartFootnotesThickness</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">thickness</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setChartFootnotesThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setChartSize"></a><span class="summary-sig-name">setChartSize</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">xChartSize</span>,
+        <span class="summary-sig-arg">yChartSize</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setChartSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setChartTitle"></a><span class="summary-sig-name">setChartTitle</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">chartTitle</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setChartTitle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setChartTitleThickness"></a><span class="summary-sig-name">setChartTitleThickness</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">thickness</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setChartTitleThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setClipToDecoratedChart"></a><span class="summary-sig-name">setClipToDecoratedChart</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">clipToDecoratedChart</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setClipToDecoratedChart">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setClipToPlotArea"></a><span class="summary-sig-name">setClipToPlotArea</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">clipToPlotArea</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setClipToPlotArea">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDefaultSymbolBorderColors"></a><span class="summary-sig-name">setDefaultSymbolBorderColors</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">defaultBorderColors</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setDefaultSymbolBorderColors">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setFontFamily"></a><span class="summary-sig-name">setFontFamily</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fontFamily</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setFontFamily">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setGridColor"></a><span class="summary-sig-name">setGridColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setGridColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendBackgroundColor"></a><span class="summary-sig-name">setLegendBackgroundColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendBorderColor"></a><span class="summary-sig-name">setLegendBorderColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendBorderColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendBorderWidth"></a><span class="summary-sig-name">setLegendBorderWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">width</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendBorderWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendBorderStyle"></a><span class="summary-sig-name">setLegendBorderStyle</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">borderStyle</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendBorderStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendFontColor"></a><span class="summary-sig-name">setLegendFontColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendFontColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendFontSize"></a><span class="summary-sig-name">setLegendFontSize</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">legendFontSize</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendFontSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendFontStyle"></a><span class="summary-sig-name">setLegendFontStyle</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssStyle</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendFontStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendFontWeight"></a><span class="summary-sig-name">setLegendFontWeight</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssWeight</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendFontWeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendThickness"></a><span class="summary-sig-name">setLegendThickness</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">legendThickness</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setLegendVisible"></a><span class="summary-sig-name">setLegendVisible</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">legendVisible</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setLegendVisible">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setOptimizeForMemory"></a><span class="summary-sig-name">setOptimizeForMemory</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">optimizeForMemory</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setOptimizeForMemory">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setPadding"></a><span class="summary-sig-name">setPadding</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssPadding</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setPadding">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setPlotAreaBackgroundColor"></a><span class="summary-sig-name">setPlotAreaBackgroundColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setPlotAreaBackgroundColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setPlotAreaBorderColor"></a><span class="summary-sig-name">setPlotAreaBorderColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cssColor</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setPlotAreaBorderColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setPlotAreaBorderWidth"></a><span class="summary-sig-name">setPlotAreaBorderWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">width</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setPlotAreaBorderWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setPlotAreaBorderStyle"></a><span class="summary-sig-name">setPlotAreaBorderStyle</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">borderStyle</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setPlotAreaBorderStyle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setPlotAreaImageURL"></a><span class="summary-sig-name">setPlotAreaImageURL</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">imageURL</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setPlotAreaImageURL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setShowOffChartPoints"></a><span class="summary-sig-name">setShowOffChartPoints</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">showOffChartPoints</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setShowOffChartPoints">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setShowOffDecoratedChartGlyphs"></a><span class="summary-sig-name">setShowOffDecoratedChartGlyphs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">showOffDecoratedChartGlyphs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setShowOffDecoratedChartGlyphs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getTouchedCurve"></a><span class="summary-sig-name">getTouchedCurve</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getTouchedCurve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getTouchedPoint"></a><span class="summary-sig-name">getTouchedPoint</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getTouchedPoint">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setXChartSize"></a><span class="summary-sig-name">setXChartSize</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">xChartSize</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setXChartSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setYChartSize"></a><span class="summary-sig-name">setYChartSize</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">yChartSize</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setYChartSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="touch"></a><span class="summary-sig-name">touch</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pointToTouch</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.touch">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.chart.GChart.GChart-class.html#update" class="summary-sig-name">update</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">option</span>=<span class="summary-sig-default">None</span>)</span><br />
+      * This method defines each curve's default pie slice * orientations, 
+      and also separates each curve's points * into the vertically or 
+      horizontally banded bins, * that GChart needs to perform the hit 
+      testing * that allows it to emulate &quot;touching&quot; points with 
+      * the mouse.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.update">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="assembleChart"></a><span class="summary-sig-name">assembleChart</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.assembleChart">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="createLegend"></a><span class="summary-sig-name">createLegend</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.createLegend">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getDefaultLegendThickness"></a><span class="summary-sig-name">getDefaultLegendThickness</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getDefaultLegendThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getNVisibleCurvesOnLegend"></a><span class="summary-sig-name">getNVisibleCurvesOnLegend</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.getNVisibleCurvesOnLegend">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDefaultBorderColor"></a><span class="summary-sig-name">setDefaultBorderColor</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">curve</span>,
+        <span class="summary-sig-arg">index</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setDefaultBorderColor">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="realizeCurve"></a><span class="summary-sig-name">realizeCurve</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">c</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.realizeCurve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="invalidateEveryCurve"></a><span class="summary-sig-name">invalidateEveryCurve</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.invalidateEveryCurve">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="invalidateAccessibleCurves"></a><span class="summary-sig-name">invalidateAccessibleCurves</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.invalidateAccessibleCurves">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="invalidateAllSlices"></a><span class="summary-sig-name">invalidateAllSlices</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.invalidateAllSlices">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="invalidateDependentSlices"></a><span class="summary-sig-name">invalidateDependentSlices</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">iFirstCurve</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.invalidateDependentSlices">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDefaultPieSliceOrientations"></a><span class="summary-sig-name">setDefaultPieSliceOrientations</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.setDefaultPieSliceOrientations">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="realizePlotPanel"></a><span class="summary-sig-name">realizePlotPanel</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.realizePlotPanel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isHoverFeedbackRenderingPanel"></a><span class="summary-sig-name">isHoverFeedbackRenderingPanel</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rpIndex</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.isHoverFeedbackRenderingPanel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="onUnload"></a><span class="summary-sig-name">onUnload</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.onUnload">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyjamas.chart.GChart.GChart-class.html#onLoad" class="summary-sig-name">onLoad</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.onLoad">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Composite.Composite-class.html">ui.Composite.Composite</a></code></b>:
+      <code><a href="pyjamas.ui.Composite.Composite-class.html#initWidget">initWidget</a></code>,
+      <code><a href="pyjamas.ui.Composite.Composite-class.html#isAttached">isAttached</a></code>,
+      <code><a href="pyjamas.ui.Composite.Composite-class.html#onAttach">onAttach</a></code>,
+      <code><a href="pyjamas.ui.Composite.Composite-class.html#onBrowserEvent">onBrowserEvent</a></code>,
+      <code><a href="pyjamas.ui.Composite.Composite-class.html#onDetach">onDetach</a></code>,
+      <code><a href="pyjamas.ui.Composite.Composite-class.html#setWidget">setWidget</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Widget.Widget-class.html">ui.Widget.Widget</a></code></b>:
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#doAttachChildren">doAttachChildren</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#doDetachChildren">doDetachChildren</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#getID">getID</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#getLayoutData">getLayoutData</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#getParent">getParent</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#removeFromParent">removeFromParent</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setContextMenu">setContextMenu</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setID">setID</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setLayoutData">setLayoutData</a></code>,
+      <code><a href="pyjamas.ui.Widget.Widget-class.html#setParent">setParent</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.UIObject.UIObject-class.html">ui.UIObject.UIObject</a></code></b>:
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#addStyleDependentName">addStyleDependentName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#addStyleName">addStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getAbsoluteLeft">getAbsoluteLeft</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getAbsoluteTop">getAbsoluteTop</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getElement">getElement</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getHeight">getHeight</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getOffsetHeight">getOffsetHeight</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getOffsetWidth">getOffsetWidth</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getStyleAttribute">getStyleAttribute</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getStyleName">getStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getStylePrimaryName">getStylePrimaryName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getTitle">getTitle</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getVisible">getVisible</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#getWidth">getWidth</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#isVisible">isVisible</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#removeStyleDependentName">removeStyleDependentName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#removeStyleName">removeStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setElement">setElement</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setHeight">setHeight</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setPixelSize">setPixelSize</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setSize">setSize</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setStyleAttribute">setStyleAttribute</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setStyleName">setStyleName</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setTitle">setTitle</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setVisible">setVisible</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setWidth">setWidth</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#setzIndex">setzIndex</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#sinkEvents">sinkEvents</a></code>,
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#unsinkEvents">unsinkEvents</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Applier-class.html">ui.Applier</a></code></b>:
+      <code><a href="pyjamas.ui.Applier-class.html#applyValues">applyValues</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#retrieveValues">retrieveValues</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#setDefaults">setDefaults</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#setElementProperties">setElementProperties</a></code>,
+      <code><a href="pyjamas.ui.Applier-class.html#updateInstance">updateInstance</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html">ui.FocusListener.FocusHandler</a></code></b>:
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#addFocusListener">addFocusListener</a></code>,
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#onFocus">onFocus</a></code>,
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#onLostFocus">onLostFocus</a></code>,
+      <code><a href="pyjamas.ui.FocusListener.FocusHandler-class.html#removeFocusListener">removeFocusListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html">ui.KeyboardListener.KeyboardHandler</a></code></b>:
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#addKeyboardListener">addKeyboardListener</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyDown">onKeyDown</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyPress">onKeyPress</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#onKeyUp">onKeyUp</a></code>,
+      <code><a href="pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#removeKeyboardListener">removeKeyboardListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html">ui.MouseListener.MouseHandler</a></code></b>:
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#addMouseListener">addMouseListener</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseDown">onMouseDown</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseEnter">onMouseEnter</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseGlassEnter">onMouseGlassEnter</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseGlassLeave">onMouseGlassLeave</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseLeave">onMouseLeave</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseMove">onMouseMove</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseUp">onMouseUp</a></code>,
+      <code><a href="pyjamas.ui.MouseListener.MouseHandler-class.html#removeMouseListener">removeMouseListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html">ui.ClickListener.ClickHandler</a></code></b>:
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#addClickListener">addClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#addDoubleClickListener">addDoubleClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#clearClickListener">clearClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#clearDoubleClickListener">clearDoubleClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#onClick">onClick</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#onDoubleClick">onDoubleClick</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#removeClickListener">removeClickListener</a></code>,
+      <code><a href="pyjamas.ui.ClickListener.ClickHandler-class.html#removeDoubleClickListener">removeDoubleClickListener</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS METHODS ==================== -->
+<a name="section-ClassMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.UIObject.UIObject-class.html">ui.UIObject.UIObject</a></code></b> (private):
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#_getProps" onclick="show_private();">_getProps</a></code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Applier-class.html">ui.Applier</a></code></b> (private):
+      <code><a href="pyjamas.ui.Applier-class.html#_getElementProps" onclick="show_private();">_getElementProps</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.UIObject.UIObject-class.html">ui.UIObject.UIObject</a></code></b> (private):
+      <code><a href="pyjamas.ui.UIObject.UIObject-class.html#_props" onclick="show_private();">_props</a></code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="pyjamas.ui.Applier-class.html">ui.Applier</a></code></b> (private):
+      <code><a href="pyjamas.ui.Applier-class.html#_elem_props" onclick="show_private();">_elem_props</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#initialPieSliceOrientation" class="summary-name">initialPieSliceOrientation</a><br />
+      * Contains the plotting region, as well as axes, ticks, and * 
+      tick-labels associated with that region.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#y2Axis" class="summary-name">y2Axis</a><br />
+      * See the block comment at top of &quot;class GChart&quot; for a 
+      detailed * discussion/rational for GChart's (very minimal support) of
+      * stylenames.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#lastPieSliceOrientation" class="summary-name">lastPieSliceOrientation</a><br />
+      * Sets the default initial orientation for pie slices.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#backgroundColor" class="summary-name">backgroundColor</a><br />
+      * ** Specifies a URL that points to the transparent, 1 x 1 pixel, ** 
+      &quot;blank GIF&quot; that GChart uses in order to render your ** 
+      chart without adding spurious &quot;missing image&quot; icons to it.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#blankImageURL" class="summary-name">blankImageURL</a><br />
+      * * Defines this GChart's hover parameter interpreter.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#hoverParameterInterpreter" class="summary-name">hoverParameterInterpreter</a><br />
+      * * Specifies if merely hovering over a point is sufficient to select
+      * it and display its hover annotation (&lt;tt&gt;True&lt;/tt&gt;), or
+      if an * actual click is needed (&lt;tt&gt;False&lt;/tt&gt;).
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#hoverTouchingEnabled" class="summary-name">hoverTouchingEnabled</a><br />
+      * ** Specifies the color of the border around the chart as ** a 
+      whole.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#borderColor" class="summary-name">borderColor</a><br />
+      * ** Sets style of the border around the chart as a whole.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#borderStyle" class="summary-name">borderStyle</a><br />
+      * ** Specifies the width of the border around the chart as a whole.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#borderWidth" class="summary-name">borderWidth</a><br />
+      * * Convenience method equivalent to * 
+      &lt;tt&gt;setChartFootnotes(HTML(html))&lt;/tt&gt;.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#chartFootnotes" class="summary-name">chartFootnotes</a><br />
+      * Defines if this chart's footnotes are left justified, *  or 
+      horizontally centered across the bottom edge of the *  chart.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#chartFootnotesLeftJustified" class="summary-name">chartFootnotesLeftJustified</a><br />
+      * ** Sets the thickness (height) of the rectangular region at ** the 
+      bottom of the chart allocated for the footnotes.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#footnotesThickness" class="summary-name">footnotesThickness</a><br />
+      * * Convenience method equivalent to * 
+      &lt;tt&gt;setXChartSize(xChartSize); 
+      setYChartSize(yChartSize)&lt;/tt&gt;.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#chartTitle" class="summary-name">chartTitle</a><br />
+      * ** Sets the thickness (height) of the rectangular region at ** the 
+      top of the chart allocated for the title.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#titleThickness" class="summary-name">titleThickness</a><br />
+      * * Specifies if this chart will clip any rendered chart elements * 
+      (including hover selection feedback and popup annotations) * that 
+      extends beyond the bounds of the decorated chart.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#clipToDecoratedChart" class="summary-name">clipToDecoratedChart</a><br />
+      * Specifies if rendered graphics falling ** outside the plot area 
+      will be clipped off.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#clipToPlotArea" class="summary-name">clipToPlotArea</a><br />
+      * * Sets the symbol border colors that are used by default for * 
+      newly created curves.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#defaultSymbolBorderColors" class="summary-name">defaultSymbolBorderColors</a><br />
+      * Sets the font-family used in tick labels, point annotations, ** 
+      legends, titles, footnotes, and ** axis labels.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#fontFamily" class="summary-name">fontFamily</a><br />
+      * ** Specifies the single color used for all gridlines, axes ** 
+      lines, and tick marks.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendBackgroundColor" class="summary-name">legendBackgroundColor</a><br />
+      * ** Sets the border color of the chart's legend.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendBorderColor" class="summary-name">legendBorderColor</a><br />
+      * ** Sets the width of the chart legend's border.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendBorderWidth" class="summary-name">legendBorderWidth</a><br />
+      * ** Sets style of the border around the chart's legend (key).
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendBorderStyle" class="summary-name">legendBorderStyle</a><br />
+      * ** Specifies the color of the legend's font.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendFontColor" class="summary-name">legendFontColor</a><br />
+      * * Specifies the CSS font size, in pixels, of text displayed * in 
+      the chart's legend (also know as a chart's key).
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendFontSize" class="summary-name">legendFontSize</a><br />
+      * ** Specifies the cssStyle of the font used to render the ** 
+      legend's labels.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendFontStyle" class="summary-name">legendFontStyle</a><br />
+      * ** Specifies the weight of the font used in the labels of the ** 
+      legend.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendFontWeight" class="summary-name">legendFontWeight</a><br />
+      * ** Sets the thickness (width) of the rectangular region at ** the 
+      right of the chart allocated for the legend key.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendThickness" class="summary-name">legendThickness</a><br />
+      * * Specifies if the legend is to be visible on this chart.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#legendVisible" class="summary-name">legendVisible</a><br />
+      * * By default, this property is &lt;tt&gt;False&lt;/tt&gt;, which 
+      means * that GChart will retain no-longer-needed Image and Grid * 
+      widgets (plus any user object references associated with * those 
+      widgets, such as those created via the * 
+      &lt;tt&gt;setAnnotationText&lt;/tt&gt; and * 
+      &lt;tt&gt;setAnnotationWidget&lt;/tt&gt; methods) between * 
+      &lt;tt&gt;updates&lt;/tt&gt; in the expectation that they may be * 
+      needed by future updates.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#optimizeForMemory" class="summary-name">optimizeForMemory</a><br />
+      * ** Specifies the amount of padding to add just inside of the ** 
+      chart's border, as a CSS padding specification string.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyjamas.chart.GChart.GChart-class.html#padding" class="summary-name">padding</a><br />
+      * ** Specifies the background color of the area of the chart ** in 
+      which symbols representing curve data are displayed ** ** ** 
+      &lt;p&gt; ** For more information on standard CSS color ** 
+      specifications see the discussion in ** {@link 
+      Symbol#setBackgroundColor Symbol.setBackgroundColor}.
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+use this to apply properties as a dictionary, e.g.
+    x = klass(..., StyleName='class-name')
+will do:
+    x = klass(...)
+    x.setStyleName('class-name')
+
+and:
+    x = klass(..., Size=(&quot;100%&quot;, &quot;20px&quot;), Visible=False)
+will do:
+    x = klass(...)
+    x.setSize(&quot;100%&quot;, &quot;20px&quot;)
+    x.setVisible(False)
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="update"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">option</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.update">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>* This method defines each curve's default pie slice * orientations, 
+  and also separates each curve's points * into the vertically or 
+  horizontally banded bins, * that GChart needs to perform the hit testing 
+  * that allows it to emulate &quot;touching&quot; points with * the mouse.
+  * &lt;p&gt; * * Therefore, this line must come first. *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="onLoad"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onLoad</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyjamas.chart.GChart-pysrc.html#GChart.onLoad">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="pyjamas.ui.Widget.Widget-class.html#onLoad">ui.Widget.Widget.onLoad</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="initialPieSliceOrientation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">initialPieSliceOrientation</h3>
+  <p>* Contains the plotting region, as well as axes, ticks, and * 
+  tick-labels associated with that region. Note that tickText * must be 
+  centered on the ticks--placing them on the same * AbsolutePanel as the 
+  ticks/plots facilitates self. *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="y2Axis"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">y2Axis</h3>
+  <p>* See the block comment at top of &quot;class GChart&quot; for a 
+  detailed * discussion/rational for GChart's (very minimal support) of * 
+  stylenames. Would like deeper support if I can ever figure out * how to 
+  do it without hamstringing future versions by locking * them into a 
+  particular implementation I might need to change * later on. In 
+  particular, I don't know how to provide such &quot;deep&quot; * 
+  stylenames that also work consistently with canvas-rendered * curves.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="lastPieSliceOrientation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">lastPieSliceOrientation</h3>
+  <p>* Sets the default initial orientation for pie slices. ** ** The 
+  default initial orientation is used as the first pie ** slice's first 
+  edge's orientation setting only if the symbol associated ** with that pie
+  slice has the default, undefined, orientation ** setting of 
+  &lt;tt&gt;Double.NaN&lt;/tt&gt;. ** &lt;p&gt; ** The default value of 
+  this setting is 0, which corresponds ** to due south (6 o'clock). The 
+  value specifies the ** fraction of a complete clockwise rotation, 
+  beginning ** at due south required to reach the first edge of the ** pie 
+  slice. ** ** @see Symbol#setPieSliceOrientation setPieSliceOrientation **
+  ** @param orientation the orientation to use for the first **   edge of 
+  the first pie slice in this GChart, in cases **   in which that first pie
+  slice's orientation is undefined **   (&lt;tt&gt;Double.NaN&lt;/tt&gt;). 
+  *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="backgroundColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">backgroundColor</h3>
+  <p>* ** Specifies a URL that points to the transparent, 1 x 1 pixel, ** 
+  &quot;blank GIF&quot; that GChart uses in order to render your ** chart 
+  without adding spurious &quot;missing image&quot; icons to it. ** 
+  &lt;p&gt; ** ** When GWT compiles an application that imports the GChart 
+  ** library, it automatically adds an appropriate blank ** image, 
+  &lt;tt&gt;gchart.gif&lt;/tt&gt;, to the module base directory ** (this is
+  the directory into which GWT also copies your ** compiled Javascript, all
+  the files in your public ** directory, etc.).  &lt;p&gt; ** ** By 
+  default, GChart uses the following blank image URL: ** &lt;p&gt; ** ** 
+  &lt;pre&gt; **   pygwt.getModuleBaseURL() + &quot;gchart.gif&quot; ** 
+  &lt;/pre&gt; ** &lt;p&gt; ** ** &lt;small&gt; Earlier versions used 
+  &quot;gchart.gif&quot; as this default url. ** &lt;a 
+  href=&quot;http:#groups.google.com/group/Google-Web-Toolkit/msg/4be3f19dc14f958a&quot;&gt;
+  ** This GWT forum post by Dean S. Jones&lt;/a&gt; identified the ** need 
+  to add the &lt;tt&gt;pygwt.getModuleBaseURL()&lt;/tt&gt; prefix. ** 
+  &lt;/small&gt; ** &lt;p&gt; ** ** Note that this default adds a 
+  potentially very ** long URL to every &lt;tt&gt;img&lt;/tt&gt; element 
+  added by GChart to ** render your chart, which can (in theory) more than 
+  double ** the memory required to represent your chart in the ** browser, 
+  because the absolute URLs can be of undetermined ** length.  In practice,
+  browser memory usage increases of ** 10% have been observed with the 
+  on-line demo GChart and a ** typicial, 60-odd character absolute URL.  
+  &lt;p&gt; ** ** You have several alternatives to the above default that 
+  can ** often reduce the length of the URL and thus save browser ** 
+  memory: ** ** &lt;p&gt; ** ** &lt;ol&gt; &lt;li&gt;Simply copy 
+  &lt;tt&gt;gchart.gif&lt;/tt&gt; from the module **   base directory into 
+  your host page's base directory, and **   then use 
+  &lt;tt&gt;setBlankImageURL(&quot;gchart.gif&quot;)&lt;/tt&gt; to access 
+  **   this URL relatively. ** **   &lt;li&gt;If the relative path from the
+  host page base **       directory to the module base directory is **
+  reasonably short, pass that alternative **       relative URL to this 
+  method (note that all **       relative URLs are interpreted relative to 
+  the base **       directory of the host page containing your GChart). ** 
+  **   &lt;li&gt;Place a copy of &lt;tt&gt;gchart.gif&lt;/tt&gt; into **
+  a directory whose absolute URL is very short, **       and then pass that
+  short absolute URL to this method. ** ** &lt;/ol&gt; ** &lt;p&gt; ** ** 
+  &lt;small&gt; &lt;i&gt;Special note to anyone reading ** this who 
+  designed HTML's &lt;tt&gt;image&lt;/tt&gt; tag:&lt;/i&gt; If you ** had 
+  provided a &lt;tt&gt;src=none&lt;/tt&gt; option, this method ** would not
+  have to exist. ** &lt;/small&gt; ** &lt;p&gt; ** ** 
+  &lt;i&gt;Tip:&lt;/i&gt; If you already have an appropriate blank ** gif 
+  on your site that is accessible from the host ** page via a reasonably 
+  short URL there is no need to ** copy &lt;tt&gt;gchart.gif&lt;/tt&gt;. 
+  You can just pass that URL ** to this method. ** ** &lt;p&gt; ** ** 
+  &lt;i&gt;Note:&lt;/i&gt; Though GChart uses this blank image by default, 
+  ** you can use the &lt;tt&gt;setImageURL&lt;/tt&gt; method to specify a 
+  ** non-blank image for use in rendering a specific curve. ** &lt;p&gt; **
+  ** ** @param blankImageURL a URL that points to a 1 x 1 pixel ** 
+  transparent image that GChart needs to render your ** charts without 
+  adding a spurious &quot;missing image&quot; icon. ** ** @see 
+  #getBlankImageURL getBlankImageURL ** @see #DEFAULT_BLANK_IMAGE_URL 
+  DEFAULT_BLANK_IMAGE_URL ** @see Symbol#setImageURL setImageURL ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="blankImageURL"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">blankImageURL</h3>
+  <p>* * Defines this GChart's hover parameter interpreter. * &lt;p&gt; * *
+  Hovertext template strings can include &lt;tt&gt;${&lt;/tt&gt;... * 
+  &lt;tt&gt;}&lt;/tt&gt; bracketed * references to built-in parameters such
+  as &lt;tt&gt;${x}&lt;/tt&gt; * and &lt;tt&gt;${y}&lt;/tt&gt; that get get
+  replaced with appropriate * string representations of the x or y values 
+  of the * hovered-over point in displayed hovertext. You can add * new, 
+  custom, named parameters, and/or redefine the * meaning of built-in 
+  parameters, by passing a hover parameter * interpreter to this method. * 
+  &lt;p&gt; * * For sample code that shows you how to define a hover * 
+  parameter interpreter, see 
+  &lt;tt&gt;HoverParameterInterpreter&lt;/tt&gt;. * * @see 
+  HoverParameterInterpreter HoverParameterInterpreter * @see 
+  Symbol#setHovertextTemplate setHovertextTemplate * * @param hpi the hover
+  parameter interpreter to use with all * hovertext templates on this 
+  GChart (this interpreter is * responsible for replacing 
+  &lt;tt&gt;${&lt;/tt&gt;...&lt;tt&gt;}&lt;/tt&gt; * bracketed embedded 
+  parameter names in the hover text * template with appropriate HTML 
+  snippets representing the * value of that parameter at the hovered-over 
+  point). *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="hoverParameterInterpreter"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">hoverParameterInterpreter</h3>
+  <p>* * Specifies if merely hovering over a point is sufficient to select 
+  * it and display its hover annotation (&lt;tt&gt;True&lt;/tt&gt;), or if 
+  an * actual click is needed (&lt;tt&gt;False&lt;/tt&gt;).  &lt;p&gt; * * 
+  With the default of &lt;tt&gt;True&lt;/tt&gt;, points are auto-selected 
+  as * the user &quot;touches&quot; them with the mouse-attached 
+  &quot;brush&quot;--no * clicking is required.  &lt;p&gt; * * When hover 
+  touching is disabled, a GChart can be used in a manner * analogous to a 
+  single-selection (sorry there's no multi-selection * capability) listbox,
+  with its click-selectable points playing the * role of the selectable 
+  list items.  Specifically, disabling hover * touching lets you move the 
+  mouse freely without any danger of * changing the selected point--the 
+  point even remains selected if * the mouse moves entirely off the chart. 
+  This is helpful when your * application follows the common pattern of 
+  &quot;select the thing you * want to operate on, then issue a command 
+  that operates on that * thing&quot;. This option is also helpful if you 
+  use very * compute-intensive hover widgets, or if you simply prefer * 
+  explictly-clicked-open/closed pop-up annotations.&lt;p&gt; * * 
+  &lt;small&gt; &lt;i&gt;How to Stop Leaky Clicks:&lt;/i&gt; In IE7 and the
+  hosted * mode browser, clicking ahead on a &lt;tt&gt;Button&lt;/tt&gt; 
+  widget &quot;leaks&quot; * clicks upwards to the enclosing parent, even 
+  if you call * &lt;tt&gt;event.cancelBubble(True)&lt;/tt&gt;. Such 
+  &quot;leaky clicks&quot; can * inappropriately change the selected point,
+  when you really just * wanted to operate on it. This does not happen in 
+  Firefox 2, 3, or * Chrome, whose buttons properly &quot;eat&quot; the 
+  clicks--even when they * come in fast. To workaround the problem, you can
+  place the * buttons into a hover widget (as shown in * 
+  &lt;tt&gt;GChartExample21.java&lt;/tt&gt; in the chart gallery). This 
+  works * because GChart applies checks that ignore any mouse events that *
+  occur within the rectangular region associated with the opened * hover 
+  widget.  &lt;/small&gt; &lt;p&gt; * * For an example that uses 
+  &lt;tt&gt;setHoverTouchingEnabled(False)&lt;/tt&gt; * to allow the user 
+  to change the y-value of the selected point, * see the Chart Gallery's 
+  &lt;a * href=&quot;package-summary.html#GChartExample21&quot;&gt; 
+  GChartExample21&lt;/a&gt;. * * * @param hoverTouchingEnabled 
+  &lt;tt&gt;True&lt;/tt&gt; (the default) if you *   want users to be able 
+  to select points simply by hovering over *   them with their mouse, 
+  &lt;tt&gt;False&lt;/tt&gt; if you want to *   require that they actually 
+  click on points to select them. * * @see #getHoverTouchingEnabled 
+  getHoverTouchingEnabled * @see Symbol#setBrushHeight setBrushHeight * 
+  @see #touch touch * @see #update update * @see HoverUpdateable 
+  HoverUpdateable *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="hoverTouchingEnabled"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">hoverTouchingEnabled</h3>
+  <p>* ** Specifies the color of the border around the chart as ** a whole.
+  ** ** &lt;p&gt; ** The default border color is 
+  &lt;tt&gt;USE_CSS&lt;/tt&gt;. ** ** &lt;p&gt; ** 
+  &lt;blockquote&gt;&lt;small&gt; ** &lt;i&gt;Tip:&lt;/i&gt; No border will
+  appear if either &lt;tt&gt;borderStyle&lt;/tt&gt; ** is 
+  &lt;tt&gt;none&lt;/tt&gt;, &lt;tt&gt;borderWidth&lt;/tt&gt; is 
+  &lt;tt&gt;0px&lt;/tt&gt; or ** &lt;tt&gt;borderColor&lt;/tt&gt; is 
+  &lt;tt&gt;transparent&lt;/tt&gt;. Since ** these will often be the 
+  &quot;CSS inherited&quot; values, ** generally, it's best to set all 
+  three properties ** whenever you set any one of them. ** 
+  &lt;/small&gt;&lt;/blockquote&gt; ** &lt;p&gt; ** ** ** For more 
+  information on standard CSS color ** specifications see the discussion in
+  ** {@link Symbol#setBackgroundColor Symbol.setBackgroundColor}. ** 
+  &lt;p&gt; ** ** @param cssColor the color of the chart's border, in a 
+  standard **   CSS color string format. ** ** @see #setBorderWidth(String)
+  setBorderWidth ** @see #setBorderStyle(String) setBorderStyle ** @see 
+  #getBorderColor getBorderColor ** @see #USE_CSS USE_CSS ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="borderColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">borderColor</h3>
+  <p>* ** Sets style of the border around the chart as a whole. ** ** 
+  &lt;p&gt; ** The default border style is &lt;tt&gt;USE_CSS&lt;/tt&gt;. **
+  &lt;p&gt; ** ** &lt;p&gt; ** &lt;blockquote&gt;&lt;small&gt; ** 
+  &lt;i&gt;Tip:&lt;/i&gt; No border will appear if either 
+  &lt;tt&gt;borderStyle&lt;/tt&gt; ** is &lt;tt&gt;none&lt;/tt&gt;, 
+  &lt;tt&gt;borderWidth&lt;/tt&gt; is &lt;tt&gt;0px&lt;/tt&gt; or ** 
+  &lt;tt&gt;borderColor&lt;/tt&gt; is &lt;tt&gt;transparent&lt;/tt&gt;. 
+  Since ** these will often be the &quot;CSS inherited&quot; values, ** 
+  generally, it's best to set all three properties ** whenever you set any 
+  one of them. ** &lt;/small&gt;&lt;/blockquote&gt; ** &lt;p&gt; ** ** ** 
+  @param borderStyle a CSS border style such as ** &quot;solid&quot;, 
+  &quot;dotted&quot;, &quot;dashed&quot;, etc. ** ** @see #getBorderStyle 
+  getBorderStyle ** @see #setBackgroundColor(String) setBackgroundColor ** 
+  @see #setBorderColor(String) setBorderColor ** @see 
+  #setBorderWidth(String) setBorderWidth ** @see #USE_CSS USE_CSS ** ** 
+  *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="borderStyle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">borderStyle</h3>
+  <p>* ** Specifies the width of the border around the chart as a whole. **
+  ** &lt;p&gt; ** The default border width is &lt;tt&gt;USE_CSS&lt;/tt&gt;.
+  ** ** &lt;p&gt; ** &lt;blockquote&gt;&lt;small&gt; ** 
+  &lt;i&gt;Tip:&lt;/i&gt; No border will appear if either 
+  &lt;tt&gt;borderStyle&lt;/tt&gt; ** is &lt;tt&gt;none&lt;/tt&gt;, 
+  &lt;tt&gt;borderWidth&lt;/tt&gt; is &lt;tt&gt;0px&lt;/tt&gt; or ** 
+  &lt;tt&gt;borderColor&lt;/tt&gt; is &lt;tt&gt;transparent&lt;/tt&gt;. 
+  Since ** these will often be the &quot;CSS inherited&quot; values, ** 
+  generally, it's best to set all three properties ** whenever you set any 
+  one of them. ** &lt;/small&gt;&lt;/blockquote&gt; ** ** @param cssWidth 
+  width of the border around the chart as a whole, **   expressed as a CSS 
+  border-width specification string, such **   as &quot;1px&quot;. ** ** 
+  @see #getBorderWidth getBorderWidth ** @see #setBorderStyle(String) 
+  setBorderStyle ** @see #setBorderColor(String) setBorderColor ** @see 
+  #USE_CSS USE_CSS *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="borderWidth"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">borderWidth</h3>
+  <p>* * Convenience method equivalent to * 
+  &lt;tt&gt;setChartFootnotes(HTML(html))&lt;/tt&gt;. * * @param html HTML 
+  text used to define the chart's title. * * @see 
+  #setChartFootnotes(Widget) setChartFootnotes(Widget)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="chartFootnotes"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">chartFootnotes</h3>
+  <p>* Defines if this chart's footnotes are left justified, *  or 
+  horizontally centered across the bottom edge of the *  chart. *  
+  &lt;p&gt; *  Note that a chart's footnotes are always vertically *  
+  centered within the band at the bottom of the chart *  reserved for chart
+  footnotes. Use the *  &lt;tt&gt;setChartFootnotesThickness&lt;/tt&gt; 
+  method to set the *  height of this band. * *  @param 
+  footnotesLeftJustified True to position chart footnotes *  flush against 
+  the left edge of the chart, False (the default) to *  center them 
+  horizontally across the chart's bottom edge. * *  @see 
+  #setChartFootnotes(String) setChartFootnotes(String) *  @see 
+  #getChartFootnotes getChartFootnotes *  @see 
+  #setChartFootnotesThickness</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="chartFootnotesLeftJustified"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">chartFootnotesLeftJustified</h3>
+  <p>* ** Sets the thickness (height) of the rectangular region at ** the 
+  bottom of the chart allocated for the footnotes. ** &lt;p&gt; ** ** The 
+  width of this region always equals the width of ** the entire GChart 
+  (including legend and axis labels). ** &lt;p&gt; ** ** Your footnotes 
+  widget is always vertically centered ** in this region. ** &lt;p&gt; ** 
+  ** ** Your footnotes widget will either be horizontally ** centered in 
+  this region, or left justified in it, ** depending on the property 
+  defined by the ** &lt;tt&gt;setChartFootnotesLeftJustified&lt;/tt&gt; 
+  method. ** &lt;p&gt; ** ** This setting has no impact on chart layout if 
+  the ** footnotes widget is &lt;tt&gt;None&lt;/tt&gt; (the default); the 
+  ** rectangular footnotes region is entirely eliminated, and ** in effect 
+  has a 0 thickness, in that case. ** &lt;p&gt; ** ** If you set the 
+  footnotes thickness to &lt;tt&gt;NAI&lt;/tt&gt; ** (the default) GChart 
+  will use a thickness based on ** the estimated number of 
+  (&lt;tt&gt;&amp;lt;br&amp;gt;&lt;/tt&gt; or ** 
+  &lt;tt&gt;&amp;lt;li&amp;gt;&lt;/tt&gt; ** delimited) lines. ** ** @param
+  thickness the thickness (height) of the rectangle ** that contains the 
+  footnotes, in pixels, or ** &lt;tt&gt;NAI&lt;/tt&gt; to use the default 
+  thickness. ** ** @see #getChartFootnotesThickness 
+  getChartFootnotesThickness ** @see #setChartFootnotesLeftJustified 
+  setChartFootnotesLeftJustified ** @see NAI NAI ** @see 
+  #DEFAULT_FOOTNOTES_THICKNESS ** DEFAULT_FOOTNOTES_THICKNESS ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="footnotesThickness"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">footnotesThickness</h3>
+  <p>* * Convenience method equivalent to * 
+  &lt;tt&gt;setXChartSize(xChartSize); 
+  setYChartSize(yChartSize)&lt;/tt&gt;. * * @param xChartSize number of 
+  x-pixels in the curve *   display area of the chart * @param yChartSize 
+  number of y-pixels in the curve *   display area of the chart * * @see 
+  #setXChartSize setXChartSize * @see #setYChartSize setYChartSize *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="chartTitle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">chartTitle</h3>
+  <p>* ** Sets the thickness (height) of the rectangular region at ** the 
+  top of the chart allocated for the title. ** &lt;p&gt; ** ** Your title 
+  widget is always centered vertically and ** horizontally within this 
+  rectangular region. &lt;p&gt; ** ** This setting has no impact on chart 
+  layout if the title ** widget is &lt;tt&gt;None&lt;/tt&gt;, since the 
+  title-holding ** region is entirely eliminated in that case. ** ** If you
+  set the title thickness to &lt;tt&gt;NAI&lt;/tt&gt; ** (the default) 
+  GChart will use a thickness that is ** based on the the number of 
+  &lt;tt&gt;&amp;lt;br&amp;gt;&lt;/tt&gt; or ** 
+  &lt;tt&gt;&amp;lt;li&amp;gt;&lt;/tt&gt; delimited HTML lines if the title
+  Widget ** implements &lt;tt&gt;HasHTML&lt;/tt&gt;. ** ** @param thickness
+  the thickness (height) of the rectangle ** that contains the title, in 
+  pixels, or ** &lt;tt&gt;NAI&lt;/tt&gt; to use the default thickness. ** 
+  ** @see #getChartTitleThickness getChartTitleThickness ** @see NAI NAI **
+  @see #DEFAULT_TITLE_THICKNESS ** DEFAULT_TITLE_THICKNESS ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="titleThickness"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">titleThickness</h3>
+  <p>* * Specifies if this chart will clip any rendered chart elements * 
+  (including hover selection feedback and popup annotations) * that extends
+  beyond the bounds of the decorated chart. * &lt;p&gt; * * The decorated 
+  chart includes not just the plot area, but * space allocated for titles, 
+  footnotes, legend key, axis * labels, tick marks, etc. The size of this 
+  decorated chart * can be obtained via the 
+  &lt;tt&gt;getXChartSizeDecorated&lt;/tt&gt; * and 
+  &lt;tt&gt;getYChartSizeDecorated&lt;/tt&gt; methods. * &lt;p&gt; * * 
+  &lt;small&gt; Note that, in non-IE browsers, drawing a curve via * 
+  &lt;tt&gt;GWTCanvas&lt;/tt&gt; that falls outside the bounds of the * 
+  decorated chart could occlude mouse events over elements * on the 
+  enclosing page &lt;i&gt;that fall within the smallest * bounding 
+  rectangle that contains the canvas-rendered * curve&lt;/i&gt;. HTML 
+  rendering (IE's element-based VML used by * 
+  &lt;tt&gt;GWTCanvas&lt;/tt&gt; is essentially HTML-like in this respect) 
+  only * creates such occlusions at the positions where the curve * is 
+  actually rendered.  &lt;/small&gt; * * @param clipToDecoratedChart use 
+  &lt;tt&gt;True&lt;/tt&gt; to clip * off-the-decorated-chart symbols, 
+  annotations, etc.  or * &lt;tt&gt;False&lt;/tt&gt; (the default) to allow
+  such chart elements to be * drawn outside of the rectangular region 
+  allocated for the * chart. * * @see #getClipToDecoratedChart 
+  getClipToDecoratedChart * @see #setClipToPlotArea setClipToPlotArea * 
+  @see #getXChartSizeDecorated getXChartSizeDecorated * @see 
+  #getYChartSizeDecorated getYChartSizeDecorated * @see #setCanvasFactory 
+  setCanvasFactory *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="clipToDecoratedChart"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">clipToDecoratedChart</h3>
+  <p>* Specifies if rendered graphics falling ** outside the plot area will
+  be clipped off. *  &lt;p&gt; * *  &lt;i&gt;Note:&lt;/i&gt; This clipping 
+  does not apply to the hover selection *  feedback. In particular, points 
+  that fall outside the plot area, *  though not visible, will still 
+  display their selection feedback *  and pop-up hover annotations when the
+  user mouses over them. * * @param clipToPlotArea 
+  &lt;tt&gt;False&lt;/tt&gt; (the default) to display *   off-the-plot-area
+  graphics, *   &lt;tt&gt;True&lt;/tt&gt; *   to clip them off. * * @see 
+  #getClipToPlotArea getClipToPlotArea * @see #setClipToDecoratedChart 
+  setClipToDecoratedChart *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="clipToPlotArea"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">clipToPlotArea</h3>
+  <p>* * Sets the symbol border colors that are used by default for * newly
+  created curves. The * array must contain one or more elements, each a 
+  standard * CSS or RGBA color specification string (see the * 
+  &lt;tt&gt;setBackgroundColor&lt;/tt&gt; link below for more * on CSS 
+  color specification strings) or the * special GChart keyword 
+  &lt;tt&gt;TRANSPARENT_BORDER_COLOR&lt;/tt&gt;. * &lt;p&gt; * * GChart 
+  uses the first color in this array as the default border * color of the 
+  first curve added (via &lt;tt&gt;addCurve&lt;/tt&gt;), the * second color
+  for the second curve added, and so on. If more * curves are added than 
+  the number of elements in the default * border colors array, the sequence
+  is repeated. * * &lt;p&gt; * &lt;small&gt; * Note that each 
+  curve/symbol's default color is &quot;locked in&quot; at the * point when
+  that curve/symbol is first added, based on the * total number of curves 
+  at that time. * &lt;/small&gt; * * &lt;p&gt; * * Because, by default, 
+  GChart uses a transparent symbol background * color, the default border 
+  color will usually, in effect, define * the default color of each curve. 
+  The default border color * also defines the * default color of 
+  point-to-point connecting lines in a line * chart.&lt;p&gt; * * If not 
+  explicitly specified via this method, GChart uses * 
+  &lt;tt&gt;GChart.DEFAULT_SYMBOL_BORDER_COLORS&lt;/tt&gt; by default. * 
+  However, most people find the * color sequence &lt;a href= * 
+  &quot;http:#ui.openoffice.org/VisualDesign/OOoChart_colors_drafts.html#02&quot;&gt;
+  * used by OpenOffice's Charts&lt;/a&gt; more aesthetically pleasing. * 
+  The &lt;a * 
+  href=&quot;package-summary.html#GChartExample22a&quot;&gt;World's 
+  Simplest * Line Chart Editor&lt;/a&gt; example chart contains a line of *
+  code that makes GChart use the OpenOffice defaults. * &lt;p&gt; * * 
+  &lt;small&gt;This feature was added in response to an email from * &lt;a 
+  href=&quot;http:#www.profilercorp.com&quot;&gt;Joe Cole&lt;/a&gt; * and 
+  &lt;a 
+  href=&quot;http:#gwt-ext.com/forum/viewtopic.php?f=13&amp;t=3465&amp;start=3&quot;&gt;
+  this post&lt;/a&gt; by Sanjiv Jivan. * They both pointed out the 
+  importance of changing GChart's * default colors.&lt;/small&gt; * * * 
+  @param defaultBorderColors array of CSS color strings * whose successive 
+  elements define the initial symbol border colors * for curves in the 
+  order that they are added. * * @see #DEFAULT_SYMBOL_BORDER_COLORS 
+  DEFAULT_SYMBOL_BORDER_COLORS * @see #TRANSPARENT_BORDER_COLOR 
+  TRANSPARENT_BORDER_COLOR * @see Symbol#setBackgroundColor 
+  setBackgroundColor * @see Symbol#setBorderColor setBorderColor * @see 
+  #addCurve addCurve *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="defaultSymbolBorderColors"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">defaultSymbolBorderColors</h3>
+  <p>* Sets the font-family used in tick labels, point annotations, ** 
+  legends, titles, footnotes, and ** axis labels. ** &lt;p&gt; ** If not 
+  specified, the default value is &lt;tt&gt;USE_CSS&lt;/tt&gt;. ** 
+  &lt;p&gt; ** ** Note that titles, footnotes and axis labels are ** 
+  defined via externally created Widgets, which are free ** to override the
+  font-family specified by this ** method. ** ** @param fontFamily a CSS 
+  font-family specification, such **   as &quot;Arial, sans-serif&quot; ** 
+  ** @see #getFontFamily getFontFamily ** @see #USE_CSS USE_CSS ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="fontFamily"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">fontFamily</h3>
+  <p>* ** Specifies the single color used for all gridlines, axes ** lines,
+  and tick marks. ** ** ** &lt;p&gt; ** For more information on standard 
+  CSS color ** specifications see the discussion in ** {@link 
+  Symbol#setBackgroundColor Symbol.setBackgroundColor}. ** &lt;p&gt; ** ** 
+  @param cssColor the color, in CSS standard color format, **    to be used
+  for all gridlines, axes, and tick marks. ** ** @see #getGridColor 
+  getGridColor ** @see #DEFAULT_GRID_COLOR DEFAULT_GRID_COLOR ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendBackgroundColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendBackgroundColor</h3>
+  <p>* ** Sets the border color of the chart's legend. ** ** ** &lt;p&gt; 
+  ** For more information on standard CSS color ** specifications see the 
+  discussion in ** {@link Symbol#setBackgroundColor 
+  Symbol.setBackgroundColor}. ** &lt;p&gt; ** ** @param cssColor the color 
+  of the legend's border, in a standard **   CSS color string format, of 
+  the special GChart keyword **   
+  &lt;tt&gt;TRANSPARENT_BORDER_COLOR&lt;/tt&gt; for a transparent border. 
+  ** ** ** @see #getLegendBorderColor getLegendBorderColor ** @see 
+  #DEFAULT_LEGEND_BORDER_COLOR DEFAULT_LEGEND_BORDER_COLOR ** @see 
+  #TRANSPARENT_BORDER_COLOR TRANSPARENT_BORDER_COLOR ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendBorderColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendBorderColor</h3>
+  <p>* ** Sets the width of the chart legend's border. ** ** @param width 
+  the width of the legend's border, in pixels ** ** @see 
+  #getLegendBorderWidth getLegendBorderWidth ** @see 
+  #DEFAULT_LEGEND_BORDER_WIDTH DEFAULT_LEGEND_BORDER_WIDTH *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendBorderWidth"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendBorderWidth</h3>
+  <p>* ** Sets style of the border around the chart's legend (key). ** ** 
+  &lt;p&gt; ** ** &lt;p&gt; ** @param borderStyle a CSS border style such 
+  as ** &quot;solid&quot;, &quot;dotted&quot;, &quot;dashed&quot;, etc. ** 
+  ** @see #getLegendBorderStyle getLegendBorderStyle ** @see 
+  #setLegendBackgroundColor setLegendBackgroundColor ** @see 
+  #setLegendBorderColor setLegendBorderColor ** @see 
+  #DEFAULT_LEGEND_BORDER_STYLE DEFAULT_LEGEND_BORDER_STYLE *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendBorderStyle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendBorderStyle</h3>
+  <p>* ** Specifies the color of the legend's font. Default is ** 
+  &lt;tt&gt;DEFAULT_FONT_COLOR&lt;/tt&gt;. ** ** ** &lt;p&gt; ** For more 
+  information on standard CSS color ** specifications see the discussion in
+  ** {@link Symbol#setBackgroundColor Symbol.setBackgroundColor}. ** 
+  &lt;p&gt; ** ** @param cssColor color of the font used to display the **
+  labels in the legend. ** ** @see #getLegendFontColor getLegendFontColor 
+  ** @see #DEFAULT_FONT_COLOR DEFAULT_FONT_COLOR ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendFontColor"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendFontColor</h3>
+  <p>* * Specifies the CSS font size, in pixels, of text displayed * in the
+  chart's legend (also know as a chart's key). * &lt;p&gt; * This size also
+  governs the size of the symbol icon * displayed in the legend. * 
+  &lt;p&gt; * Default is &lt;tt&gt;DEFAULT_LEGEND_FONTSIZE&lt;/tt&gt;. * * 
+  @param legendFontSize the font size of legend text * * @see 
+  #getLegendFontSize getLegendFontSize * @see #DEFAULT_LEGEND_FONTSIZE 
+  DEFAULT_LEGEND_FONTSIZE *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendFontSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendFontSize</h3>
+  <p>* ** Specifies the cssStyle of the font used to render the ** legend's
+  labels. Default is &lt;tt&gt;DEFAULT_FONT_STYLE&lt;/tt&gt;. ** ** @param 
+  cssStyle any valid CSS font-style, namely, **   normal, italic, oblique, 
+  or inherit. ** ** @see #getLegendFontStyle getLegendFontStyle ** @see 
+  #DEFAULT_FONT_STYLE DEFAULT_FONT_STYLE *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendFontStyle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendFontStyle</h3>
+  <p>* ** Specifies the weight of the font used in the labels of the ** 
+  legend. Default is &lt;tt&gt;DEFAULT_FONT_WEIGHT&lt;/tt&gt;. ** ** @param
+  cssWeight a CSS font-weight specification, such as **    bold, bolder, 
+  normal, light, 100, 200, ... or 900. ** ** @see #getLegendFontWeight 
+  getLegendFontWeight ** @see #DEFAULT_FONT_WEIGHT DEFAULT_FONT_WEIGHT 
+  *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendFontWeight"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendFontWeight</h3>
+  <p>* ** Sets the thickness (width) of the rectangular region at ** the 
+  right of the chart allocated for the legend key. ** &lt;p&gt; ** ** This 
+  setting has no impact on chart layout if the ** legend key is not 
+  visible, since the legend key's ** rectangular region is entirely 
+  eliminated in that ** case. ** ** &lt;p&gt; ** ** If the legend thickness
+  is set to &lt;tt&gt;NAI&lt;/tt&gt; ** (the default) GChart uses an 
+  heuristic to set the legend ** thickness based on the number of 
+  characters in each ** curve's legend label. ** ** ** @param 
+  legendThickness the thickness (width) of the rectangle ** that contains 
+  the legend key, in pixels, or ** &lt;tt&gt;NAI&lt;/tt&gt; to use a 
+  built-in heurstic ** to determine the legend width. ** ** @see 
+  #getLegendThickness getLegendThickness ** @see Curve#setLegendLabel 
+  setLegendLabel ** @see Y2Axis#setAxisLabelThickness 
+  Y2Axis.setAxisLabelThickness ** *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendThickness"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendThickness</h3>
+  <p>* * Specifies if the legend is to be visible on this chart. * Legends 
+  are visible by default. However, a legend is only * generated if at least
+  one curve's legend label has been * specified. * * @param isLegendVisible
+  True to display the legend, False to * hide it. * * @see #isLegendVisible
+  isLegendVisible * @see Curve#setLegendLabel setLegendLabel</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="legendVisible"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">legendVisible</h3>
+  <p>* * By default, this property is &lt;tt&gt;False&lt;/tt&gt;, which 
+  means * that GChart will retain no-longer-needed Image and Grid * widgets
+  (plus any user object references associated with * those widgets, such as
+  those created via the * &lt;tt&gt;setAnnotationText&lt;/tt&gt; and * 
+  &lt;tt&gt;setAnnotationWidget&lt;/tt&gt; methods) between * 
+  &lt;tt&gt;updates&lt;/tt&gt; in the expectation that they may be * needed
+  by future updates.  This strategy often makes * updates faster, because 
+  building Image and Grid * elements &quot;from scratch&quot; is very 
+  expensive.  However, * strictly speaking, GChart is holding onto memory 
+  it no * longer needs to render the chart &lt;i&gt;right 
+  now&lt;/i&gt;--which * would normally be considered a memory leak if it 
+  were not * being done deliberately.  &lt;p&gt; * * If 
+  &lt;tt&gt;optimizeForMemory&lt;/tt&gt; is set to 
+  &lt;tt&gt;True&lt;/tt&gt;, * GChart will (at the very next 
+  &lt;tt&gt;update()&lt;/tt&gt; call) free * up any Image or Grid elements 
+  that are no longer required * to render the current chart.  Should a 
+  chart's size grow back * to a former size, the subsequent update would be
+  slower, * though. * * &lt;p&gt; Charts that use exactly the same number 
+  of Image and * Grid elements for each update (for example a bar chart * 
+  where the number of bars is fixed) will see no impact on * either memory 
+  use or update speeds by setting this * parameter.  Charts that have a 
+  highly variable number of * Image or Grid elements (for example, a chart 
+  whose number * of points varies randomly between 5 and 500) may see a * 
+  very large impact on speed (False is faster) or memory * (True is more 
+  compact). * &lt;p&gt; * * The setting of this parameter never has any 
+  impact on the * speed or memory used on the &lt;i&gt;very first&lt;/i&gt;
+  chart * update. * &lt;p&gt; * * In one test using the future oil price 
+  simulation chart of * GChart's live demo (which has only small changes in
+  the * number of elements required to render the chart between * updates) 
+  setting this parameter to True made the updates, * on average, around 10%
+  slower, but also reduced the memory * footprint by around 2%. * * @param 
+  optimizeForMemory &lt;tt&gt;True&lt;/tt&gt; to optimize updates * to use 
+  less memory, &lt;tt&gt;False&lt;/tt&gt; (the default) to * optimize them 
+  to use less time. * * @see #update update *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="optimizeForMemory"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">optimizeForMemory</h3>
+  <p>* ** Specifies the amount of padding to add just inside of the ** 
+  chart's border, as a CSS padding specification string. ** &lt;p&gt; ** **
+  &lt;p&gt; ** The default padding is &lt;tt&gt;USE_CSS&lt;/tt&gt;. ** ** 
+  &lt;p&gt; ** ** @param cssPadding the width of the padding, as a CSS 
+  padding **   specification string **   (e.g. use &quot;1px&quot; to 
+  introduce a 1 pixel padding **   just between the chart' border and the 
+  chart itself) ** ** @see #getPadding getPadding ** @see #setBorderWidth 
+  setBorderWidth ** @see #setBorderStyle(String) setBorderStyle ** @see 
+  #setBorderColor(String) setBorderColor ** @see #USE_CSS USE_CSS *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="padding"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">padding</h3>
+  <p>* ** Specifies the background color of the area of the chart ** in 
+  which symbols representing curve data are displayed ** ** ** &lt;p&gt; **
+  For more information on standard CSS color ** specifications see the 
+  discussion in ** {@link Symbol#setBackgroundColor 
+  Symbol.setBackgroundColor}. ** &lt;p&gt; ** ** @param cssColor CSS color 
+  string defining the plot **    area's background color ** ** @see 
+  #getPlotAreaBackgroundColor getPlotAreaBackgroundColor *</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:08 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

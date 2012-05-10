@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.gears.Factory</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.gears-module.html">Package&nbsp;gears</a> ::
+        Module&nbsp;Factory
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.gears.Factory-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.gears.Factory-module.html">Module pyjamas.gears.Factory</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2008 Google Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the "License"); you may not</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">* use this file except in compliance with the License. You may obtain a copy of</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">* the License at</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">* http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">* License for the specific language governing permissions and limitations under</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">* the License.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package pyjamas.gears=pyjamas.gears-module.html"><a title="pyjamas.gears" class="py-name" href="#" onclick="return doclink('link-1', 'gears', 'link-1');">gears</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Package pyjamas.gears.database=pyjamas.gears.database-module.html"><a title="pyjamas.gears.database" class="py-name" href="#" onclick="return doclink('link-2', 'database', 'link-2');">database</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Module pyjamas.gears.database.Database=pyjamas.gears.database.Database-module.html"><a title="pyjamas.gears.database.Database" class="py-name" href="#" onclick="return doclink('link-3', 'Database', 'link-3');">Database</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Class pyjamas.gears.database.Database.GearsDatabase=pyjamas.gears.database.Database.GearsDatabase-class.html"><a title="pyjamas.gears.database.Database.GearsDatabase" class="py-name" href="#" onclick="return doclink('link-4', 'GearsDatabase', 'link-4');">GearsDatabase</a></tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment">#from pyjamas.gears.localserver import LocalServer</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment">#from pyjamas.gears.workerpool import WorkerPool</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__pyjamas__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">JS</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-string">// Copyright 2007 Google Inc. All Rights Reserved.</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-string">//</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-string">// Sets up google.gears.*, which is *the only* supported way to access Gears.</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-string">//</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-string">// Circumvent this file at your own risk!</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-string">//</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-string">// In the future, Gears may automatically define google.gears.* without this</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-string">// file. Gears may use these objects to transparently fix bugs and compatibility</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-string">// issues. Applications that use the code below will continue to work seamlessly</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-string">// when that happens.</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-string">@{{!init_gears}} = function() {</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-string">  // We are already defined. Hooray!</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-string">  if ($wnd.google &amp;&amp; $wnd.google.gears) {</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-string">    return;</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-string">  }</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-string">  var factory = null;</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-string">  // Firefox</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-string">  if (typeof @{{!GearsFactory}} != 'undefined') {</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-string">    factory = new @{{!GearsFactory}}();</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-string">  } else {</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-string">    // IE</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-string">    try {</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-string">      factory = new ActiveXObject('Gears.Factory');</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-string">    } catch (e) {</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-string">      // Safari</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-string">      if (navigator.mimeTypes["application/x-googlegears"]) {</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-string">        factory = $doc.createElement("object");</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-string">        factory.style.display = "none";</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-string">        factory.width = 0;</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-string">        factory.height = 0;</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-string">        factory.type = "application/x-googlegears";</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-string">        $doc.documentElement.appendChild(factory);</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-string">      }</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-string">    }</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-string">  }</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-string">  // *Do not* define any objects if Gears is not installed. This mimics the</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-string">  // behavior of Gears defining the objects in the future.</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-string">  if (!factory) {</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-string">    return;</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-string">  }</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-string">  // Now set up the objects, being careful not to overwrite anything.</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-string">  if (!$wnd.google) {</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-string">    $wnd.google = {};</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-string">  }</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-string">  if (!$wnd.google.gears) {</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-string">    $wnd.google.gears = {factory: factory};</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-string">  }</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-string">}</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-string">"""</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-string">* Returns the singleton instance of the Factory class or &lt;code&gt;None&lt;/code&gt;</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-string">* if Gears is not installed or accessible.</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-string">* @return singleton instance of the Factory class or &lt;code&gt;None&lt;/code&gt; if</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-string">*         Gears is not installed or accessible</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getInstance"></a><div id="getInstance-def"><a name="L88"></a><tt class="py-lineno"> 88</tt> <a class="py-toggle" href="#" id="getInstance-toggle" onclick="return toggle('getInstance');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.Factory-module.html#getInstance">getInstance</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getInstance-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getInstance-expanded"><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-string">    @{{!init_gears}}();</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-string">    return $wnd.google &amp;&amp; $wnd.google.gears &amp;&amp; $wnd.google.gears.factory;</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-string">    """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-string">* Creates a {@link Database} instance.</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-string">* @return a {@link Database} instance</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="createDatabase"></a><div id="createDatabase-def"><a name="L100"></a><tt class="py-lineno">100</tt> <a class="py-toggle" href="#" id="createDatabase-toggle" onclick="return toggle('createDatabase');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.Factory-module.html#createDatabase">createDatabase</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="createDatabase-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="createDatabase-expanded"><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-5" class="py-name"><a title="pyjamas.gears.database.Database.GearsDatabase" class="py-name" href="#" onclick="return doclink('link-5', 'GearsDatabase', 'link-4');">GearsDatabase</a></tt><tt class="py-op">(</tt><tt id="link-6" class="py-name" targets="Function pyjamas.gears.Factory.create()=pyjamas.gears.Factory-module.html#create,Method pyjamas.ui.RichTextToolbar.CustomStyleManager.create()=pyjamas.ui.RichTextToolbar.CustomStyleManager-class.html#create,Method pyjamas.ui.RichTextToolbar.FontFamilyManager.create()=pyjamas.ui.RichTextToolbar.FontFamilyManager-class.html#create,Method pyjamas.ui.RichTextToolbar.HeadingStyleManager.create()=pyjamas.ui.RichTextToolbar.HeadingStyleManager-class.html#create"><a title="pyjamas.gears.Factory.create
+pyjamas.ui.RichTextToolbar.CustomStyleManager.create
+pyjamas.ui.RichTextToolbar.FontFamilyManager.create
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.create" class="py-name" href="#" onclick="return doclink('link-6', 'create', 'link-6');">create</a></tt><tt class="py-op">(</tt><tt class="py-string">"beta.database"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-string">* Creates a {@link LocalServer} instance.</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-string">* @return a {@link LocalServer} instance</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="createLocalServer"></a><div id="createLocalServer-def"><a name="L109"></a><tt class="py-lineno">109</tt> <a class="py-toggle" href="#" id="createLocalServer-toggle" onclick="return toggle('createLocalServer');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.Factory-module.html#createLocalServer">createLocalServer</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="createLocalServer-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="createLocalServer-expanded"><a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">LocalServer</tt><tt class="py-op">(</tt><tt id="link-7" class="py-name"><a title="pyjamas.gears.Factory.create
+pyjamas.ui.RichTextToolbar.CustomStyleManager.create
+pyjamas.ui.RichTextToolbar.FontFamilyManager.create
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.create" class="py-name" href="#" onclick="return doclink('link-7', 'create', 'link-6');">create</a></tt><tt class="py-op">(</tt><tt class="py-string">"beta.localserver"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-string">* Creates a {@link WorkerPool} instance.</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-string">* @return a {@link WorkerPool} instance</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="createWorkerPool"></a><div id="createWorkerPool-def"><a name="L118"></a><tt class="py-lineno">118</tt> <a class="py-toggle" href="#" id="createWorkerPool-toggle" onclick="return toggle('createWorkerPool');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.Factory-module.html#createWorkerPool">createWorkerPool</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="createWorkerPool-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="createWorkerPool-expanded"><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">WorkerPool</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="pyjamas.gears.Factory.create
+pyjamas.ui.RichTextToolbar.CustomStyleManager.create
+pyjamas.ui.RichTextToolbar.FontFamilyManager.create
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.create" class="py-name" href="#" onclick="return doclink('link-8', 'create', 'link-6');">create</a></tt><tt class="py-op">(</tt><tt class="py-string">"beta.workerpool"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-string">* Returns a description of the build of Gears installed. This string is</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-string">* purely informational. Application developers should not rely on the format</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-string">* of data returned. The contents and layout may change over time.</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-string">* @return build description string</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getBuildInfo"></a><div id="getBuildInfo-def"><a name="L129"></a><tt class="py-lineno">129</tt> <a class="py-toggle" href="#" id="getBuildInfo-toggle" onclick="return toggle('getBuildInfo');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.Factory-module.html#getBuildInfo">getBuildInfo</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getBuildInfo-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getBuildInfo-expanded"><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-9" class="py-name" targets="Function pyjamas.gears.Factory.getInstance()=pyjamas.gears.Factory-module.html#getInstance,Method pyjamas.ui.Sink.SinkInfo.getInstance()=pyjamas.ui.Sink.SinkInfo-class.html#getInstance"><a title="pyjamas.gears.Factory.getInstance
+pyjamas.ui.Sink.SinkInfo.getInstance" class="py-name" href="#" onclick="return doclink('link-9', 'getInstance', 'link-9');">getInstance</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Function pyjamas.gears.Factory.getBuildInfo()=pyjamas.gears.Factory-module.html#getBuildInfo"><a title="pyjamas.gears.Factory.getBuildInfo" class="py-name" href="#" onclick="return doclink('link-10', 'getBuildInfo', 'link-10');">getBuildInfo</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-string">* Returns the version of Gears installed, as a string of the form</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-string">* Major.Minor.Build.Patch (e.g., '0.10.2.0').</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-string">* @return string of the form Major.Minor.Build.Patch</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getVersion"></a><div id="getVersion-def"><a name="L139"></a><tt class="py-lineno">139</tt> <a class="py-toggle" href="#" id="getVersion-toggle" onclick="return toggle('getVersion');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.Factory-module.html#getVersion">getVersion</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getVersion-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getVersion-expanded"><a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-11" class="py-name"><a title="pyjamas.gears.Factory.getInstance
+pyjamas.ui.Sink.SinkInfo.getInstance" class="py-name" href="#" onclick="return doclink('link-11', 'getInstance', 'link-9');">getInstance</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">version</tt> </tt>
+</div><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-string">* Creates an instance of the specified Gears object.</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-string">* @param &lt;T&gt; Gears object type to return</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-string">* @param className name of the object to create</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"><tt class="py-string">* @return an instance of the specified Gears object</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="create"></a><div id="create-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="create-toggle" onclick="return toggle('create');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.Factory-module.html#create">create</a><tt class="py-op">(</tt><tt class="py-param">className</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="create-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="create-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-12" class="py-name"><a title="pyjamas.gears.Factory.getInstance
+pyjamas.ui.Sink.SinkInfo.getInstance" class="py-name" href="#" onclick="return doclink('link-12', 'getInstance', 'link-9');">getInstance</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="pyjamas.gears.Factory.create
+pyjamas.ui.RichTextToolbar.CustomStyleManager.create
+pyjamas.ui.RichTextToolbar.FontFamilyManager.create
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.create" class="py-name" href="#" onclick="return doclink('link-13', 'create', 'link-6');">create</a></tt><tt class="py-op">(</tt><tt class="py-name">className</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:13 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

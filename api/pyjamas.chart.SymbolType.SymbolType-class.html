@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.chart.SymbolType.SymbolType</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.chart-module.html">Package&nbsp;chart</a> ::
+        <a href="pyjamas.chart.SymbolType-module.html">Module&nbsp;SymbolType</a> ::
+        Class&nbsp;SymbolType
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.chart.SymbolType.SymbolType-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SymbolType</h1><p class="nomargin-top"><span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType">source&nbsp;code</a></span></p>
+<p>* For efficiency during hit testing, points get separated * into bins 
+  associated with adjacent vertical * (or horizontal) bands that cover the 
+  plot area. * &lt;p&gt; * * Subclasses (such as those for producing 
+  horizontal bar * charts) whose rendered symbols do not have a fixed width
+  * across all the points on a single curve, MUST set this * field to True 
+  within their constructors, because * the hit testing approach assumes 
+  fixed &quot;thickness&quot; * symbols for simplicity/efficiency. * 
+  &lt;p&gt; * * Subclasses that have both a fixed width and height MAY * 
+  set this to True if they are typically used in a way * that tends to make
+  horizontal banding a better (= tends * to place same # of points in each 
+  band) binning strategy. * * &lt;p&gt; * * If &lt;tt&gt;None&lt;/tt&gt;, 
+  GChart uses a simple heuristic that assumes * that a brush that is wider 
+  than high implies developer is * trying to let user distinguish finer y 
+  differences, and thus * our bands should separate points more finely (and
+  hence allow * for faster band-indexed hit testing) if we use horizontal *
+  banding in this case (and vertical otherwise). * &lt;p&gt; * * See the 
+  &lt;tt&gt;bandSeparatePoints&lt;/tt&gt; method for more info. *</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isHorizontallyBanded"></a><span class="summary-sig-name">isHorizontallyBanded</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.isHorizontallyBanded">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBandThickness"></a><span class="summary-sig-name">getBandThickness</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">sym</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getBandThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBrushHeight"></a><span class="summary-sig-name">getBrushHeight</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sym</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getBrushHeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBrushLocation"></a><span class="summary-sig-name">getBrushLocation</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sym</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getBrushLocation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBrushWidth"></a><span class="summary-sig-name">getBrushWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sym</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getBrushWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">widthMultiplier</span>,
+        <span class="summary-sig-arg">heightMultiplier</span>,
+        <span class="summary-sig-arg">pixelPadLeft</span>,
+        <span class="summary-sig-arg">pixelPadRight</span>,
+        <span class="summary-sig-arg">pixelPadTop</span>,
+        <span class="summary-sig-arg">pixelPadBottom</span>,
+        <span class="summary-sig-arg">isHorizontallyBanded</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getAdjustedHeight"></a><span class="summary-sig-name">getAdjustedHeight</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">height</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">yPrev</span>,
+        <span class="summary-sig-arg">yNext</span>,
+        <span class="summary-sig-arg">yMin</span>,
+        <span class="summary-sig-arg">yMax</span>,
+        <span class="summary-sig-arg">yMid</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getAdjustedHeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getAdjustedWidth"></a><span class="summary-sig-name">getAdjustedWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">width</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">xPrev</span>,
+        <span class="summary-sig-arg">xNext</span>,
+        <span class="summary-sig-arg">xMin</span>,
+        <span class="summary-sig-arg">xMax</span>,
+        <span class="summary-sig-arg">xMid</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getAdjustedWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCenterX_2"></a><span class="summary-sig-name">getCenterX_2</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">prevX</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">nextX</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getCenterX_2">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCenterX"></a><span class="summary-sig-name">getCenterX</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">iPoint</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getCenterX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCenterY_2"></a><span class="summary-sig-name">getCenterY_2</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">prevY</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">nextY</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getCenterY_2">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCenterY"></a><span class="summary-sig-name">getCenterY</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">iPoint</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getCenterY">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getEdgeLeft"></a><span class="summary-sig-name">getEdgeLeft</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getEdgeLeft">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getEdgeRight"></a><span class="summary-sig-name">getEdgeRight</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getEdgeRight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getEdgeTop"></a><span class="summary-sig-name">getEdgeTop</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getEdgeTop">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getEdgeBottom"></a><span class="summary-sig-name">getEdgeBottom</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getEdgeBottom">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getEdgeOppositeHorizontally"></a><span class="summary-sig-name">getEdgeOppositeHorizontally</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getEdgeOppositeHorizontally">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getEdgeOppositeVertically"></a><span class="summary-sig-name">getEdgeOppositeVertically</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">onY2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getEdgeOppositeVertically">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isIntersecting13"></a><span class="summary-sig-name">isIntersecting13</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">prevX</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">nextX</span>,
+        <span class="summary-sig-arg">prevY</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">nextY</span>,
+        <span class="summary-sig-arg">onY2</span>,
+        <span class="summary-sig-arg">top</span>,
+        <span class="summary-sig-arg">right</span>,
+        <span class="summary-sig-arg">bottom</span>,
+        <span class="summary-sig-arg">left</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.isIntersecting13">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isIntersecting"></a><span class="summary-sig-name">isIntersecting</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">iPoint</span>,
+        <span class="summary-sig-arg">onY2</span>,
+        <span class="summary-sig-arg">xBrush</span>,
+        <span class="summary-sig-arg">yBrush</span>,
+        <span class="summary-sig-arg">brushWidth</span>,
+        <span class="summary-sig-arg">brushHeight</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.isIntersecting">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getIconBorderWidth"></a><span class="summary-sig-name">getIconBorderWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">legendFontSize</span>,
+        <span class="summary-sig-arg">symBorderFraction</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getIconBorderWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getIconHeight"></a><span class="summary-sig-name">getIconHeight</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">legendFontSize</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getIconHeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getIconWidth"></a><span class="summary-sig-name">getIconWidth</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">legendFontSize</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getIconWidth">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getUpperLeftX"></a><span class="summary-sig-name">getUpperLeftX</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">width</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">xPrev</span>,
+        <span class="summary-sig-arg">xNext</span>,
+        <span class="summary-sig-arg">xMin</span>,
+        <span class="summary-sig-arg">xMax</span>,
+        <span class="summary-sig-arg">xMid</span>,
+        <span class="summary-sig-arg">xMouse</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getUpperLeftX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getUpperLeftY"></a><span class="summary-sig-name">getUpperLeftY</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">height</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">yPrev</span>,
+        <span class="summary-sig-arg">yNext</span>,
+        <span class="summary-sig-arg">yMin</span>,
+        <span class="summary-sig-arg">yMax</span>,
+        <span class="summary-sig-arg">yMid</span>,
+        <span class="summary-sig-arg">yMouse</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.getUpperLeftY">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="defaultAnnotationLocation"></a><span class="summary-sig-name">defaultAnnotationLocation</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.defaultAnnotationLocation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="defaultFillSpacing"></a><span class="summary-sig-name">defaultFillSpacing</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.defaultFillSpacing">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="defaultFillThickness"></a><span class="summary-sig-name">defaultFillThickness</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.defaultFillThickness">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="defaultHovertextTemplate"></a><span class="summary-sig-name">defaultHovertextTemplate</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.defaultHovertextTemplate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="defaultHoverLocation"></a><span class="summary-sig-name">defaultHoverLocation</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.defaultHoverLocation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="createImage"></a><span class="summary-sig-name">createImage</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">width</span>,
+        <span class="summary-sig-arg">height</span>,
+        <span class="summary-sig-arg">borderWidth</span>,
+        <span class="summary-sig-arg">url</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.createImage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="createIconImage"></a><span class="summary-sig-name">createIconImage</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">legendFontSize</span>,
+        <span class="summary-sig-arg">symBorderFraction</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.createIconImage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="areDisjointRanges"></a><span class="summary-sig-name">areDisjointRanges</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x1</span>,
+        <span class="summary-sig-arg">x2</span>,
+        <span class="summary-sig-arg">y1</span>,
+        <span class="summary-sig-arg">y2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.areDisjointRanges">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="intersects"></a><span class="summary-sig-name">intersects</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">left1</span>,
+        <span class="summary-sig-arg">top1</span>,
+        <span class="summary-sig-arg">right1</span>,
+        <span class="summary-sig-arg">bottom1</span>,
+        <span class="summary-sig-arg">left2</span>,
+        <span class="summary-sig-arg">top2</span>,
+        <span class="summary-sig-arg">right2</span>,
+        <span class="summary-sig-arg">bottom2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.intersects">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="realizeOneImageOfSymbol"></a><span class="summary-sig-name">realizeOneImageOfSymbol</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">grp</span>,
+        <span class="summary-sig-arg">arp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">annotation</span>,
+        <span class="summary-sig-arg">onY2</span>,
+        <span class="summary-sig-arg">clipPlotArea</span>,
+        <span class="summary-sig-arg">clipDecoratedChart</span>,
+        <span class="summary-sig-arg">xPx</span>,
+        <span class="summary-sig-arg">yPx</span>,
+        <span class="summary-sig-arg">prevXPx</span>,
+        <span class="summary-sig-arg">prevYPx</span>,
+        <span class="summary-sig-arg">nextXPx</span>,
+        <span class="summary-sig-arg">nextYPx</span>,
+        <span class="summary-sig-arg">width</span>,
+        <span class="summary-sig-arg">height</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.realizeOneImageOfSymbol">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="distance"></a><span class="summary-sig-name">distance</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x1</span>,
+        <span class="summary-sig-arg">y1</span>,
+        <span class="summary-sig-arg">x2</span>,
+        <span class="summary-sig-arg">y2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.distance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="realizeSymbol"></a><span class="summary-sig-name">realizeSymbol</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pp</span>,
+        <span class="summary-sig-arg">grp</span>,
+        <span class="summary-sig-arg">arp</span>,
+        <span class="summary-sig-arg">symbol</span>,
+        <span class="summary-sig-arg">annotation</span>,
+        <span class="summary-sig-arg">onY2</span>,
+        <span class="summary-sig-arg">clipPlotArea</span>,
+        <span class="summary-sig-arg">clipDecoratedChart</span>,
+        <span class="summary-sig-arg">drawMainSymbol</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">prevX</span>,
+        <span class="summary-sig-arg">prevY</span>,
+        <span class="summary-sig-arg">nextX</span>,
+        <span class="summary-sig-arg">nextY</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyjamas.chart.SymbolType-pysrc.html#SymbolType.realizeSymbol">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:08 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

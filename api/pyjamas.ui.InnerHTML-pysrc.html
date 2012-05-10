@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.InnerHTML</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        Module&nbsp;InnerHTML
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.InnerHTML-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.ui.InnerHTML-module.html">Module pyjamas.ui.InnerHTML</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2006 James Tauber and contributors</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2009 Luke Kenneth Casson Leighton</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment"># Licensed under the Apache License, Version 2.0 (the "License");</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment"># you may not use this file except in compliance with the License.</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment"># You may obtain a copy of the License at</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#     http://www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># distributed under the License is distributed on an "AS IS" BASIS,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment"># See the License for the specific language governing permissions and</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment"># limitations under the License.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="InnerHTML"></a><div id="InnerHTML-def"><a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="InnerHTML-toggle" onclick="return toggle('InnerHTML');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.InnerHTML.InnerHTML-class.html">InnerHTML</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InnerHTML-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="InnerHTML-expanded"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">    <tt id="link-2" class="py-name" targets="Variable pyjamas.ui.Applier._props=pyjamas.ui.Applier-class.html#_props,Variable pyjamas.ui.CaptionPanel.CaptionPanel._props=pyjamas.ui.CaptionPanel.CaptionPanel-class.html#_props,Variable pyjamas.ui.CellPanel.CellPanel._props=pyjamas.ui.CellPanel.CellPanel-class.html#_props,Variable pyjamas.ui.CheckBox.CheckBox._props=pyjamas.ui.CheckBox.CheckBox-class.html#_props,Variable pyjamas.ui.DialogBox.DialogBox._props=pyjamas.ui.DialogBox.DialogBox-class.html#_props,Variable pyjamas.ui.DialogWindow.DialogWindow._props=pyjamas.ui.DialogWindow.DialogWindow-class.html#_props,Variable pyjamas.ui.FileUpload.FileUpload._props=pyjamas.ui.FileUpload.FileUpload-class.html#_props,Variable pyjamas.ui.Frame.Frame._props=pyjamas.ui.Frame.Frame-class.html#_props,Variable pyjamas.ui.HTML.HTML._props=pyjamas.ui.HTML.HTML-class.html#_props,Variable pyjamas.ui.HTMLTable.HTMLTable._props=pyjamas.ui.HTMLTable.HTMLTable-class.html#_props,Variable pyjamas.ui.Hidden.Hidden._props=pyjamas.ui.Hidden.Hidden-class.html#_props,Variable pyjamas.ui.Image.Image._props=pyjamas.ui.Image.Image-class.html#_props,Variable pyjamas.ui.InnerHTML.InnerHTML._props=pyjamas.ui.InnerHTML.InnerHTML-class.html#_props,Variable pyjamas.ui.InnerText.InnerText._props=pyjamas.ui.InnerText.InnerText-class.html#_props,Variable pyjamas.ui.Label.Label._props=pyjamas.ui.Label.Label-class.html#_props,Variable pyjamas.ui.ListBox.ListBox._props=pyjamas.ui.ListBox.ListBox-class.html#_props,Variable pyjamas.ui.MenuBar.MenuBar._props=pyjamas.ui.MenuBar.MenuBar-class.html#_props,Variable pyjamas.ui.NamedFrame.NamedFrame._props=pyjamas.ui.NamedFrame.NamedFrame-class.html#_props,Variable pyjamas.ui.PopupPanel.PopupPanel._props=pyjamas.ui.PopupPanel.PopupPanel-class.html#_props,Variable pyjamas.ui.RadioButton.RadioButton._props=pyjamas.ui.RadioButton.RadioButton-class.html#_props,Variable pyjamas.ui.ScrollPanel.ScrollPanel._props=pyjamas.ui.ScrollPanel.ScrollPanel-class.html#_props,Variable pyjamas.ui.TextArea.TextArea._props=pyjamas.ui.TextArea.TextArea-class.html#_props,Variable pyjamas.ui.TextBox.TextBox._props=pyjamas.ui.TextBox.TextBox-class.html#_props,Variable pyjamas.ui.TextBoxBase.TextBoxBase._props=pyjamas.ui.TextBoxBase.TextBoxBase-class.html#_props,Variable pyjamas.ui.UIObject.UIObject._props=pyjamas.ui.UIObject.UIObject-class.html#_props"><a title="pyjamas.ui.Applier._props
+pyjamas.ui.CaptionPanel.CaptionPanel._props
+pyjamas.ui.CellPanel.CellPanel._props
+pyjamas.ui.CheckBox.CheckBox._props
+pyjamas.ui.DialogBox.DialogBox._props
+pyjamas.ui.DialogWindow.DialogWindow._props
+pyjamas.ui.FileUpload.FileUpload._props
+pyjamas.ui.Frame.Frame._props
+pyjamas.ui.HTML.HTML._props
+pyjamas.ui.HTMLTable.HTMLTable._props
+pyjamas.ui.Hidden.Hidden._props
+pyjamas.ui.Image.Image._props
+pyjamas.ui.InnerHTML.InnerHTML._props
+pyjamas.ui.InnerText.InnerText._props
+pyjamas.ui.Label.Label._props
+pyjamas.ui.ListBox.ListBox._props
+pyjamas.ui.MenuBar.MenuBar._props
+pyjamas.ui.NamedFrame.NamedFrame._props
+pyjamas.ui.PopupPanel.PopupPanel._props
+pyjamas.ui.RadioButton.RadioButton._props
+pyjamas.ui.ScrollPanel.ScrollPanel._props
+pyjamas.ui.TextArea.TextArea._props
+pyjamas.ui.TextBox.TextBox._props
+pyjamas.ui.TextBoxBase.TextBoxBase._props
+pyjamas.ui.UIObject.UIObject._props" class="py-name" href="#" onclick="return doclink('link-2', '_props', 'link-2');">_props</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt class="py-op">(</tt><tt class="py-string">"text"</tt><tt class="py-op">,</tt> <tt class="py-string">"HTML text"</tt><tt class="py-op">,</tt> <tt class="py-string">"HTML"</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">            <tt class="py-op">]</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="InnerHTML.getHTML"></a><div id="InnerHTML.getHTML-def"><a name="L23"></a><tt class="py-lineno">23</tt> <a class="py-toggle" href="#" id="InnerHTML.getHTML-toggle" onclick="return toggle('InnerHTML.getHTML');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.InnerHTML.InnerHTML-class.html#getHTML">getHTML</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InnerHTML.getHTML-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="InnerHTML.getHTML-expanded"><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-3" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-3', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Function pyjamas.DOM.getInnerHTML()=pyjamas.DOM-module.html#getInnerHTML"><a title="pyjamas.DOM.getInnerHTML" class="py-name" href="#" onclick="return doclink('link-4', 'getInnerHTML', 'link-4');">getInnerHTML</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.getElement()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getElement,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#getElement,Method pyjamas.ui.CellFormatter.CellFormatter.getElement()=pyjamas.ui.CellFormatter.CellFormatter-class.html#getElement,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getElement,Method pyjamas.ui.RowFormatter.RowFormatter.getElement()=pyjamas.ui.RowFormatter.RowFormatter-class.html#getElement,Method pyjamas.ui.SplitPanel.SplitPanel.getElement()=pyjamas.ui.SplitPanel.SplitPanel-class.html#getElement,Method pyjamas.ui.UIObject.UIObject.getElement()=pyjamas.ui.UIObject.UIObject-class.html#getElement"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-5', 'getElement', 'link-5');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="InnerHTML.setHTML"></a><div id="InnerHTML.setHTML-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="InnerHTML.setHTML-toggle" onclick="return toggle('InnerHTML.setHTML');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.InnerHTML.InnerHTML-class.html#setHTML">setHTML</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">html</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InnerHTML.setHTML-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="InnerHTML.setHTML-expanded"><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt id="link-6" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-6', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Function pyjamas.DOM.setInnerHTML()=pyjamas.DOM-module.html#setInnerHTML"><a title="pyjamas.DOM.setInnerHTML" class="py-name" href="#" onclick="return doclink('link-7', 'setInnerHTML', 'link-7');">setInnerHTML</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-8', 'getElement', 'link-5');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">html</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">classmethod</tt> </tt>
+<a name="InnerHTML._getProps"></a><div id="InnerHTML._getProps-def"><a name="L30"></a><tt class="py-lineno">30</tt> <a class="py-toggle" href="#" id="InnerHTML._getProps-toggle" onclick="return toggle('InnerHTML._getProps');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.InnerHTML.InnerHTML-class.html#_getProps">_getProps</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InnerHTML._getProps-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="InnerHTML._getProps-expanded"><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="pyjamas.ui.Applier._props
+pyjamas.ui.CaptionPanel.CaptionPanel._props
+pyjamas.ui.CellPanel.CellPanel._props
+pyjamas.ui.CheckBox.CheckBox._props
+pyjamas.ui.DialogBox.DialogBox._props
+pyjamas.ui.DialogWindow.DialogWindow._props
+pyjamas.ui.FileUpload.FileUpload._props
+pyjamas.ui.Frame.Frame._props
+pyjamas.ui.HTML.HTML._props
+pyjamas.ui.HTMLTable.HTMLTable._props
+pyjamas.ui.Hidden.Hidden._props
+pyjamas.ui.Image.Image._props
+pyjamas.ui.InnerHTML.InnerHTML._props
+pyjamas.ui.InnerText.InnerText._props
+pyjamas.ui.Label.Label._props
+pyjamas.ui.ListBox.ListBox._props
+pyjamas.ui.MenuBar.MenuBar._props
+pyjamas.ui.NamedFrame.NamedFrame._props
+pyjamas.ui.PopupPanel.PopupPanel._props
+pyjamas.ui.RadioButton.RadioButton._props
+pyjamas.ui.ScrollPanel.ScrollPanel._props
+pyjamas.ui.TextArea.TextArea._props
+pyjamas.ui.TextBox.TextBox._props
+pyjamas.ui.TextBoxBase.TextBoxBase._props
+pyjamas.ui.UIObject.UIObject._props" class="py-name" href="#" onclick="return doclink('link-9', '_props', 'link-2');">_props</a></tt> </tt>
+</div></div><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:15 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

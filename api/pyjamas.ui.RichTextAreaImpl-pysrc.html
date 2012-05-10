@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.RichTextAreaImpl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        Module&nbsp;RichTextAreaImpl
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.RichTextAreaImpl-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.ui.RichTextAreaImpl-module.html">Module pyjamas.ui.RichTextAreaImpl</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2007 Google Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring"># Copyright (C) 2009 Luke Kenneth Casson Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the "License"); you may not</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">* use this file except in compliance with the License. You may obtain a copy of</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">* the License at</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-docstring">* http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">* License for the specific language governing permissions and limitations under</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">* the License.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-2', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package pyjamas.ui=pyjamas.ui-module.html"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-3', 'ui', 'link-3');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Module pyjamas.ui.Event=pyjamas.ui.Event-module.html"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-4', 'Event', 'link-4');">Event</a></tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-5', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-6', 'ui', 'link-3');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name" targets="Module pyjamas.ui.Focus=pyjamas.ui.Focus-module.html"><a title="pyjamas.ui.Focus" class="py-name" href="#" onclick="return doclink('link-7', 'Focus', 'link-7');">Focus</a></tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-string">* Base class for RichText platform implementations. The default version</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"><tt class="py-string">* simply creates a text area with no rich text support.</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-string">* This is not currently used by any user-agent, but will provide a</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-string">* &amp;lt;textarea&amp;gt; fallback in the event a future browser fails to implement</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-string">* rich text editing.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="RichTextAreaImpl"></a><div id="RichTextAreaImpl-def"><a name="L32"></a><tt class="py-lineno">32</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl-toggle" onclick="return toggle('RichTextAreaImpl');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html">RichTextAreaImpl</a><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="RichTextAreaImpl-expanded"><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.__init__"></a><div id="RichTextAreaImpl.__init__-def"><a name="L34"></a><tt class="py-lineno">34</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.__init__-toggle" onclick="return toggle('RichTextAreaImpl.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.__init__-expanded"><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">elem</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.createElement()=pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault-class.html#createElement,Method pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.createElement()=pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6-class.html#createElement,Function pyjamas.DOM.createElement()=pyjamas.DOM-module.html#createElement,Method pyjamas.ui.PopupPanel.PopupPanel.createElement()=pyjamas.ui.PopupPanel.PopupPanel-class.html#createElement,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.createElement()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#createElement,Method pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.createElement()=pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard-class.html#createElement"><a title="pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.createElement
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.createElement
+pyjamas.DOM.createElement
+pyjamas.ui.PopupPanel.PopupPanel.createElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.createElement
+pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.createElement" class="py-name" href="#" onclick="return doclink('link-8', 'createElement', 'link-8');">createElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">     </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.getElement"></a><div id="RichTextAreaImpl.getElement-def"><a name="L38"></a><tt class="py-lineno">38</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.getElement-toggle" onclick="return toggle('RichTextAreaImpl.getElement');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getElement">getElement</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.getElement-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.getElement-expanded"><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">elem</tt> </tt>
+</div><a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">     </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.getHTML"></a><div id="RichTextAreaImpl.getHTML-def"><a name="L42"></a><tt class="py-lineno">42</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.getHTML-toggle" onclick="return toggle('RichTextAreaImpl.getHTML');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getHTML">getHTML</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.getHTML-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.getHTML-expanded"><a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-9" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-9', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt class="py-name">getElementProperty</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">elem</tt><tt class="py-op">,</tt> <tt class="py-string">"value"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">     </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.getText"></a><div id="RichTextAreaImpl.getText-def"><a name="L46"></a><tt class="py-lineno">46</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.getText-toggle" onclick="return toggle('RichTextAreaImpl.getText');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getText">getText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.getText-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.getText-expanded"><a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-10" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-10', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt class="py-name">getElementProperty</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">elem</tt><tt class="py-op">,</tt> <tt class="py-string">"value"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">     </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.initElement"></a><div id="RichTextAreaImpl.initElement-def"><a name="L50"></a><tt class="py-lineno">50</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.initElement-toggle" onclick="return toggle('RichTextAreaImpl.initElement');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#initElement">initElement</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.initElement-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.initElement-expanded"><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.onElementInitialized()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#onElementInitialized,Method pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.onElementInitialized()=pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard-class.html#onElementInitialized"><a title="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.onElementInitialized
+pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.onElementInitialized" class="py-name" href="#" onclick="return doclink('link-11', 'onElementInitialized', 'link-11');">onElementInitialized</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">     </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.isBasicEditingSupported"></a><div id="RichTextAreaImpl.isBasicEditingSupported-def"><a name="L54"></a><tt class="py-lineno">54</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.isBasicEditingSupported-toggle" onclick="return toggle('RichTextAreaImpl.isBasicEditingSupported');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#isBasicEditingSupported">isBasicEditingSupported</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.isBasicEditingSupported-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.isBasicEditingSupported-expanded"><a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">     </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.isExtendedEditingSupported"></a><div id="RichTextAreaImpl.isExtendedEditingSupported-def"><a name="L58"></a><tt class="py-lineno">58</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.isExtendedEditingSupported-toggle" onclick="return toggle('RichTextAreaImpl.isExtendedEditingSupported');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#isExtendedEditingSupported">isExtendedEditingSupported</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.isExtendedEditingSupported-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.isExtendedEditingSupported-expanded"><a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">     </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.setHTML"></a><div id="RichTextAreaImpl.setHTML-def"><a name="L62"></a><tt class="py-lineno">62</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.setHTML-toggle" onclick="return toggle('RichTextAreaImpl.setHTML');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#setHTML">setHTML</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">html</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.setHTML-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.setHTML-expanded"><a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">        <tt id="link-12" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-12', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt class="py-name">setElementProperty</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">elem</tt><tt class="py-op">,</tt> <tt class="py-string">"value"</tt><tt class="py-op">,</tt> <tt class="py-name">html</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">     </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.setText"></a><div id="RichTextAreaImpl.setText-def"><a name="L66"></a><tt class="py-lineno">66</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.setText-toggle" onclick="return toggle('RichTextAreaImpl.setText');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#setText">setText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.setText-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.setText-expanded"><a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">        <tt id="link-13" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-13', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt class="py-name">setElementProperty</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">elem</tt><tt class="py-op">,</tt> <tt class="py-string">"value"</tt><tt class="py-op">,</tt> <tt class="py-name">text</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">     </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.uninitElement"></a><div id="RichTextAreaImpl.uninitElement-def"><a name="L70"></a><tt class="py-lineno">70</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.uninitElement-toggle" onclick="return toggle('RichTextAreaImpl.uninitElement');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#uninitElement">uninitElement</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.uninitElement-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.uninitElement-expanded"><a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">     </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.setFocus"></a><div id="RichTextAreaImpl.setFocus-def"><a name="L74"></a><tt class="py-lineno">74</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.setFocus-toggle" onclick="return toggle('RichTextAreaImpl.setFocus');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#setFocus">setFocus</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">focused</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.setFocus-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.setFocus-expanded"><a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-name">focused</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">            <tt id="link-14" class="py-name"><a title="pyjamas.ui.Focus" class="py-name" href="#" onclick="return doclink('link-14', 'Focus', 'link-7');">Focus</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Function pyjamas.ui.Focus.focus()=pyjamas.ui.Focus-module.html#focus"><a title="pyjamas.ui.Focus.focus" class="py-name" href="#" onclick="return doclink('link-15', 'focus', 'link-15');">focus</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.getElement()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getElement,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#getElement,Method pyjamas.ui.CellFormatter.CellFormatter.getElement()=pyjamas.ui.CellFormatter.CellFormatter-class.html#getElement,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getElement,Method pyjamas.ui.RowFormatter.RowFormatter.getElement()=pyjamas.ui.RowFormatter.RowFormatter-class.html#getElement,Method pyjamas.ui.SplitPanel.SplitPanel.getElement()=pyjamas.ui.SplitPanel.SplitPanel-class.html#getElement,Method pyjamas.ui.UIObject.UIObject.getElement()=pyjamas.ui.UIObject.UIObject-class.html#getElement"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-16', 'getElement', 'link-16');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">            <tt id="link-17" class="py-name"><a title="pyjamas.ui.Focus" class="py-name" href="#" onclick="return doclink('link-17', 'Focus', 'link-7');">Focus</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Function pyjamas.ui.Focus.blur()=pyjamas.ui.Focus-module.html#blur"><a title="pyjamas.ui.Focus.blur" class="py-name" href="#" onclick="return doclink('link-18', 'blur', 'link-18');">blur</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-19', 'getElement', 'link-16');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line"> </tt>
+<a name="RichTextAreaImpl.createElement"></a><div id="RichTextAreaImpl.createElement-def"><a name="L80"></a><tt class="py-lineno">80</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.createElement-toggle" onclick="return toggle('RichTextAreaImpl.createElement');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#createElement">createElement</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.createElement-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.createElement-expanded"><a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-20" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-20', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Function pyjamas.DOM.createTextArea()=pyjamas.DOM-module.html#createTextArea"><a title="pyjamas.DOM.createTextArea" class="py-name" href="#" onclick="return doclink('link-21', 'createTextArea', 'link-21');">createTextArea</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">     </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.hookEvents"></a><div id="RichTextAreaImpl.hookEvents-def"><a name="L84"></a><tt class="py-lineno">84</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.hookEvents-toggle" onclick="return toggle('RichTextAreaImpl.hookEvents');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#hookEvents">hookEvents</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.hookEvents-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.hookEvents-expanded"><a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-string">"hook events"</tt> </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line">        <tt id="link-22" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-22', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Function pyjamas.DOM.sinkEvents()=pyjamas.DOM-module.html#sinkEvents,Method pyjamas.ui.CheckBox.CheckBox.sinkEvents()=pyjamas.ui.CheckBox.CheckBox-class.html#sinkEvents,Method pyjamas.ui.UIObject.UIObject.sinkEvents()=pyjamas.ui.UIObject.UIObject-class.html#sinkEvents"><a title="pyjamas.DOM.sinkEvents
+pyjamas.ui.CheckBox.CheckBox.sinkEvents
+pyjamas.ui.UIObject.UIObject.sinkEvents" class="py-name" href="#" onclick="return doclink('link-23', 'sinkEvents', 'link-23');">sinkEvents</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">elem</tt><tt class="py-op">,</tt> <tt id="link-24" class="py-name"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-24', 'Event', 'link-4');">Event</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Variable pyjamas.ui.Event.MOUSEEVENTS=pyjamas.ui.Event-module.html#MOUSEEVENTS"><a title="pyjamas.ui.Event.MOUSEEVENTS" class="py-name" href="#" onclick="return doclink('link-25', 'MOUSEEVENTS', 'link-25');">MOUSEEVENTS</a></tt> <tt class="py-op">|</tt> <tt id="link-26" class="py-name"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-26', 'Event', 'link-4');">Event</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Variable pyjamas.ui.Event.KEYEVENTS=pyjamas.ui.Event-module.html#KEYEVENTS"><a title="pyjamas.ui.Event.KEYEVENTS" class="py-name" href="#" onclick="return doclink('link-27', 'KEYEVENTS', 'link-27');">KEYEVENTS</a></tt> <tt class="py-op">|</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line">                       <tt id="link-28" class="py-name"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-28', 'Event', 'link-4');">Event</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Variable pyjamas.ui.Event.ONCHANGE=pyjamas.ui.Event-module.html#ONCHANGE"><a title="pyjamas.ui.Event.ONCHANGE" class="py-name" href="#" onclick="return doclink('link-29', 'ONCHANGE', 'link-29');">ONCHANGE</a></tt> <tt class="py-op">|</tt> <tt id="link-30" class="py-name"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-30', 'Event', 'link-4');">Event</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Variable pyjamas.ui.Event.ONCLICK=pyjamas.ui.Event-module.html#ONCLICK"><a title="pyjamas.ui.Event.ONCLICK" class="py-name" href="#" onclick="return doclink('link-31', 'ONCLICK', 'link-31');">ONCLICK</a></tt> <tt class="py-op">|</tt> <tt id="link-32" class="py-name"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-32', 'Event', 'link-4');">Event</a></tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Variable pyjamas.ui.Event.FOCUSEVENTS=pyjamas.ui.Event-module.html#FOCUSEVENTS"><a title="pyjamas.ui.Event.FOCUSEVENTS" class="py-name" href="#" onclick="return doclink('link-33', 'FOCUSEVENTS', 'link-33');">FOCUSEVENTS</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line">     </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.onElementInitialized"></a><div id="RichTextAreaImpl.onElementInitialized-def"><a name="L90"></a><tt class="py-lineno">90</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.onElementInitialized-toggle" onclick="return toggle('RichTextAreaImpl.onElementInitialized');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#onElementInitialized">onElementInitialized</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.onElementInitialized-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.onElementInitialized-expanded"><a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"onElementInitialized"</tt> </tt>
+<a name="L92"></a><tt class="py-lineno">92</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Method pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.hookEvents()=pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#hookEvents,Method pyjamas.ui.FormPanel.FormPanel.hookEvents()=pyjamas.ui.FormPanel.FormPanel-class.html#hookEvents,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.hookEvents()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#hookEvents,Method pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.hookEvents()=pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard-class.html#hookEvents"><a title="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.hookEvents
+pyjamas.ui.FormPanel.FormPanel.hookEvents
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.hookEvents
+pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.hookEvents" class="py-name" href="#" onclick="return doclink('link-34', 'hookEvents', 'link-34');">hookEvents</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno">93</tt>  <tt class="py-line">     </tt>
+<a name="RichTextAreaImpl.setCssStyling"></a><div id="RichTextAreaImpl.setCssStyling-def"><a name="L94"></a><tt class="py-lineno">94</tt> <a class="py-toggle" href="#" id="RichTextAreaImpl.setCssStyling-toggle" onclick="return toggle('RichTextAreaImpl.setCssStyling');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#setCssStyling">setCssStyling</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RichTextAreaImpl.setCssStyling-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="RichTextAreaImpl.setCssStyling-expanded"><a name="L95"></a><tt class="py-lineno">95</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div></div><a name="L96"></a><tt class="py-lineno">96</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:18 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

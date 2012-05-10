@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.Canvas.ImageLoaderhulahop</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.Canvas-module.html">Package&nbsp;Canvas</a> ::
+        Module&nbsp;ImageLoaderhulahop
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.Canvas.ImageLoaderhulahop-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.Canvas.ImageLoaderhulahop-module.html">Module pyjamas.Canvas.ImageLoaderhulahop</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2008 Google Inc.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the "License"); you may not</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">* use this file except in compliance with the License. You may obtain a copy of</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">* the License at</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">* http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">* License for the specific language governing permissions and limitations under</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">* the License.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__pyjamas__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">JS</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-string">* Static internal collection of ImageLoader instances.</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-string">* ImageLoader is not instantiable externally.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable pyjamas.Canvas.ImageLoader.imageLoaders=pyjamas.Canvas.ImageLoader-module.html#imageLoaders,Variable pyjamas.Canvas.ImageLoaderhulahop.imageLoaders=pyjamas.Canvas.ImageLoaderhulahop-module.html#imageLoaders"><a title="pyjamas.Canvas.ImageLoader.imageLoaders
+pyjamas.Canvas.ImageLoaderhulahop.imageLoaders" class="py-name" href="#" onclick="return doclink('link-2', 'imageLoaders', 'link-2');">imageLoaders</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-string">* Provides a mechanism for deferred execution of a callback</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-string">* method once all specified Images are loaded.</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="ImageLoader"></a><div id="ImageLoader-def"><a name="L32"></a><tt class="py-lineno"> 32</tt> <a class="py-toggle" href="#" id="ImageLoader-toggle" onclick="return toggle('ImageLoader');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html">ImageLoader</a><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ImageLoader-expanded"><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">     </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">     </tt>
+<a name="ImageLoader.__init__"></a><div id="ImageLoader.__init__-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="ImageLoader.__init__-toggle" onclick="return toggle('ImageLoader.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.__init__-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">     </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">images</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">callBack</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">loadedImages</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">totalImages</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">     </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">     </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-string">"""*</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-string">    * Stores the ImageElement reference so that when all the images report</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-string">    * an onload, we can return the array of all the ImageElements.</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-string">    * @param img</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="ImageLoader.addHandle"></a><div id="ImageLoader.addHandle-def"><a name="L48"></a><tt class="py-lineno"> 48</tt> <a class="py-toggle" href="#" id="ImageLoader.addHandle-toggle" onclick="return toggle('ImageLoader.addHandle');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#addHandle">addHandle</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">img</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.addHandle-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.addHandle-expanded"><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">totalImages</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">images</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method pyjamas.Canvas.JSOStack.JSOStack.append()=pyjamas.Canvas.JSOStack.JSOStack-class.html#append,Method pyjamas.ui.Panel.PanelBase.append()=pyjamas.ui.Panel.PanelBase-class.html#append"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-3', 'append', 'link-3');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">img</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">     </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">     </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">    <tt class="py-string">"""*</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-string">    * Invokes the onImagesLoaded method in the CallBack if all the</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-string">    * images are loaded AND we have a CallBack specified.</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-string">    *</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-string">    * Called from the JSNI onload event handler.</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="ImageLoader.dispatchIfComplete"></a><div id="ImageLoader.dispatchIfComplete-def"><a name="L59"></a><tt class="py-lineno"> 59</tt> <a class="py-toggle" href="#" id="ImageLoader.dispatchIfComplete-toggle" onclick="return toggle('ImageLoader.dispatchIfComplete');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#dispatchIfComplete">dispatchIfComplete</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.dispatchIfComplete-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.dispatchIfComplete-expanded"><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">callBack</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt>  <tt class="py-keyword">and</tt>  <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method pyjamas.Canvas.ImageLoader.ImageLoader.isAllLoaded()=pyjamas.Canvas.ImageLoader.ImageLoader-class.html#isAllLoaded,Method pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.isAllLoaded()=pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#isAllLoaded"><a title="pyjamas.Canvas.ImageLoader.ImageLoader.isAllLoaded
+pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.isAllLoaded" class="py-name" href="#" onclick="return doclink('link-4', 'isAllLoaded', 'link-4');">isAllLoaded</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">callBack</tt><tt class="py-op">.</tt><tt class="py-name">onImagesLoaded</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">images</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">            <tt class="py-comment"># remove the image loader</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt id="link-5" class="py-name"><a title="pyjamas.Canvas.ImageLoader.imageLoaders
+pyjamas.Canvas.ImageLoaderhulahop.imageLoaders" class="py-name" href="#" onclick="return doclink('link-5', 'imageLoaders', 'link-2');">imageLoaders</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method pyjamas.DOM.IterChildrenClass.remove()=pyjamas.DOM.IterChildrenClass-class.html#remove,Method pyjamas.DOM.IterWalkChildren.remove()=pyjamas.DOM.IterWalkChildren-class.html#remove,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#remove,Method pyjamas.ui.Anchor._Attribute.remove()=pyjamas.ui.Anchor._Attribute-class.html#remove,Method pyjamas.ui.BuilderPanel.BuilderPanel.remove()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssFile.remove()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssText.remove()=pyjamas.ui.CSS.StyleSheetCssText-class.html#remove,Method pyjamas.ui.ComplexPanel.ComplexPanel.remove()=pyjamas.ui.ComplexPanel.ComplexPanel-class.html#remove,Method pyjamas.ui.DeckPanel.DeckPanel.remove()=pyjamas.ui.DeckPanel.DeckPanel-class.html#remove,Method pyjamas.ui.DialogBox.DialogBox.remove()=pyjamas.ui.DialogBox.DialogBox-class.html#remove,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.remove()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#remove,Method pyjamas.ui.DockPanel.DockPanel.remove()=pyjamas.ui.DockPanel.DockPanel-class.html#remove,Method pyjamas.ui.HTMLTable.HTMLTable.remove()=pyjamas.ui.HTMLTable.HTMLTable-class.html#remove,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.remove()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#remove,Method pyjamas.ui.SimplePanel.SimplePanel.remove()=pyjamas.ui.SimplePanel.SimplePanel-class.html#remove,Method pyjamas.ui.SplitPanel.SplitPanel.remove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#remove,Method pyjamas.ui.StackPanel.StackPanel.remove()=pyjamas.ui.StackPanel.StackPanel-class.html#remove,Method pyjamas.ui.TabPanel.TabPanel.remove()=pyjamas.ui.TabPanel.TabPanel-class.html#remove,Method pyjamas.ui.Tree.Tree.remove()=pyjamas.ui.Tree.Tree-class.html#remove,Method pyjamas.ui.TreeItem.TreeItem.remove()=pyjamas.ui.TreeItem.TreeItem-class.html#remove,Method pyjamas.ui.VerticalPanel.VerticalPanel.remove()=pyjamas.ui.VerticalPanel.VerticalPanel-class.html#remove"><a title="pyjamas.DOM.IterChildrenClass.remove
+pyjamas.DOM.IterWalkChildren.remove
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove
+pyjamas.ui.Anchor._Attribute.remove
+pyjamas.ui.BuilderPanel.BuilderPanel.remove
+pyjamas.ui.CSS.StyleSheetCssFile.remove
+pyjamas.ui.CSS.StyleSheetCssText.remove
+pyjamas.ui.ComplexPanel.ComplexPanel.remove
+pyjamas.ui.DeckPanel.DeckPanel.remove
+pyjamas.ui.DialogBox.DialogBox.remove
+pyjamas.ui.DisclosurePanel.DisclosurePanel.remove
+pyjamas.ui.DockPanel.DockPanel.remove
+pyjamas.ui.HTMLTable.HTMLTable.remove
+pyjamas.ui.HorizontalPanel.HorizontalPanel.remove
+pyjamas.ui.SimplePanel.SimplePanel.remove
+pyjamas.ui.SplitPanel.SplitPanel.remove
+pyjamas.ui.StackPanel.StackPanel.remove
+pyjamas.ui.TabPanel.TabPanel.remove
+pyjamas.ui.Tree.Tree.remove
+pyjamas.ui.TreeItem.TreeItem.remove
+pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick="return doclink('link-6', 'remove', 'link-6');">remove</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">         </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">     </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">     </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-string">"""*</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-string">    * Sets the callback object for the ImageLoader.</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-string">    * Once this is set, we may invoke the callback once all images that</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-string">    * need to be loaded report in from their onload event handlers.</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-string">    *</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-string">    * @param cb</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="ImageLoader.finalize"></a><div id="ImageLoader.finalize-def"><a name="L74"></a><tt class="py-lineno"> 74</tt> <a class="py-toggle" href="#" id="ImageLoader.finalize-toggle" onclick="return toggle('ImageLoader.finalize');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#finalize">finalize</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">cb</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.finalize-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.finalize-expanded"><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">callBack</tt> <tt class="py-op">=</tt> <tt class="py-name">cb</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">     </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">     </tt>
+<a name="ImageLoader.incrementLoadedImages"></a><div id="ImageLoader.incrementLoadedImages-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="ImageLoader.incrementLoadedImages-toggle" onclick="return toggle('ImageLoader.incrementLoadedImages');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#incrementLoadedImages">incrementLoadedImages</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.incrementLoadedImages-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.incrementLoadedImages-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">loadedImages</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">     </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">     </tt>
+<a name="ImageLoader.isAllLoaded"></a><div id="ImageLoader.isAllLoaded-def"><a name="L82"></a><tt class="py-lineno"> 82</tt> <a class="py-toggle" href="#" id="ImageLoader.isAllLoaded-toggle" onclick="return toggle('ImageLoader.isAllLoaded');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#isAllLoaded">isAllLoaded</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.isAllLoaded-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.isAllLoaded-expanded"><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">loadedImages</tt> <tt class="py-op">==</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">totalImages</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">     </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">     </tt>
+<a name="ImageLoader._onload"></a><div id="ImageLoader._onload-def"><a name="L86"></a><tt class="py-lineno"> 86</tt> <a class="py-toggle" href="#" id="ImageLoader._onload-toggle" onclick="return toggle('ImageLoader._onload');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#_onload">_onload</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">form</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">,</tt> <tt class="py-param">something</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader._onload-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader._onload-expanded"><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__formAction</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_listener</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method pyjamas.ui.FormPanel.FormPanel.onFrameLoad()=pyjamas.ui.FormPanel.FormPanel-class.html#onFrameLoad"><a title="pyjamas.ui.FormPanel.FormPanel.onFrameLoad" class="py-name" href="#" onclick="return doclink('link-7', 'onFrameLoad', 'link-7');">onFrameLoad</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="ImageLoader._onsubmit"></a><div id="ImageLoader._onsubmit-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="ImageLoader._onsubmit-toggle" onclick="return toggle('ImageLoader._onsubmit');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#_onsubmit">_onsubmit</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">form</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">,</tt> <tt class="py-param">something</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader._onsubmit-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader._onsubmit-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">form</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">,</tt> <tt class="py-name">something</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">            <tt class="py-name">event</tt> <tt class="py-op">=</tt> <tt class="py-name">get_main_frame</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">gobject_wrap</tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> <tt class="py-comment"># webkit HACK!</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">            <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt class="py-name">get_main_frame</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">gobject_wrap</tt><tt class="py-op">(</tt><tt class="py-name">form</tt><tt class="py-op">)</tt> <tt class="py-comment"># webkit HACK!</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">            <tt class="py-keyword">pass</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">iframe</tt><tt class="py-op">:</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__formAction</tt> <tt class="py-op">=</tt> <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">action</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_listener</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pyjamas.ui.FormPanel.FormPanel.onFormSubmit()=pyjamas.ui.FormPanel.FormPanel-class.html#onFormSubmit"><a title="pyjamas.ui.FormPanel.FormPanel.onFormSubmit" class="py-name" href="#" onclick="return doclink('link-8', 'onFormSubmit', 'link-8');">onFormSubmit</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-comment"># FormPanelImpl.hookEvents</tt> </tt>
+<a name="ImageLoader.hookEvents"></a><div id="ImageLoader.hookEvents-def"><a name="L104"></a><tt class="py-lineno">104</tt> <a class="py-toggle" href="#" id="ImageLoader.hookEvents-toggle" onclick="return toggle('ImageLoader.hookEvents');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#hookEvents">hookEvents</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">iframe</tt><tt class="py-op">,</tt> <tt class="py-param">form</tt><tt class="py-op">,</tt> <tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.hookEvents-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.hookEvents-expanded"><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-comment"># TODO: might have to fix this, use DOM.set_listener()</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_listener</tt> <tt class="py-op">=</tt> <tt class="py-name">listener</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">iframe</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">            <tt class="py-name">wf</tt> <tt class="py-op">=</tt> <tt class="py-name">mf</tt> <tt class="py-op">=</tt> <tt class="py-name">get_main_frame</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_onload_listener</tt> <tt class="py-op">=</tt> <tt class="py-name">mf</tt><tt class="py-op">.</tt><tt class="py-name">addEventListener</tt><tt class="py-op">(</tt><tt class="py-name">iframe</tt><tt class="py-op">,</tt> <tt class="py-string">"load"</tt><tt class="py-op">,</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                                                        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method pyjamas.Canvas.ImageLoaderhulahop.ImageLoader._onload()=pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#_onload,Method pyjamas.ui.FormPanel.FormPanel._onload()=pyjamas.ui.FormPanel.FormPanel-class.html#_onload"><a title="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader._onload
+pyjamas.ui.FormPanel.FormPanel._onload" class="py-name" href="#" onclick="return doclink('link-9', '_onload', 'link-9');">_onload</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_onsubmit_listener</tt> <tt class="py-op">=</tt> <tt class="py-name">mf</tt><tt class="py-op">.</tt><tt class="py-name">addEventListener</tt><tt class="py-op">(</tt><tt class="py-name">form</tt><tt class="py-op">,</tt> <tt class="py-string">"onsubmit"</tt><tt class="py-op">,</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                                                    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method pyjamas.Canvas.ImageLoaderhulahop.ImageLoader._onsubmit()=pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#_onsubmit,Method pyjamas.ui.FormPanel.FormPanel._onsubmit()=pyjamas.ui.FormPanel.FormPanel-class.html#_onsubmit"><a title="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader._onsubmit
+pyjamas.ui.FormPanel.FormPanel._onsubmit" class="py-name" href="#" onclick="return doclink('link-10', '_onsubmit', 'link-10');">_onsubmit</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">    <tt class="py-string">"""*</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-string">    * Returns a handle to an img object. Ties back to the ImageLoader instance</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="ImageLoader.prepareImage"></a><div id="ImageLoader.prepareImage-def"><a name="L118"></a><tt class="py-lineno">118</tt> <a class="py-toggle" href="#" id="ImageLoader.prepareImage-toggle" onclick="return toggle('ImageLoader.prepareImage');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#prepareImage">prepareImage</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">url</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImageLoader.prepareImage-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ImageLoader.prepareImage-expanded"><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-name">img</tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name" targets="Module pyjamas.ui.Image=pyjamas.ui.Image-module.html,Class pyjamas.ui.Image.Image=pyjamas.ui.Image.Image-class.html"><a title="pyjamas.ui.Image
+pyjamas.ui.Image.Image" class="py-name" href="#" onclick="return doclink('link-11', 'Image', 'link-11');">Image</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-string">        // if( callback specified )</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-string">        // do nothing</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-string">        </tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-string">        var __this = this;</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-string">        </tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-string">        @{{img}}.onload = function() {</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-string">            if(!@{{img}}.__isLoaded) {</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-string">                </tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-string">                // __isLoaded should be set for the first time here.</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-string">                // if for some reason img fires a second onload event</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-string">                // we do not want to execute the following again (hence the guard)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">                @{{img}}.__isLoaded = true;</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">                __this.incrementLoadedImages();</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-string">                @{{img}}.onload = null;</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-string">                </tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-string">                // we call this function each time onload fires</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-string">                // It will see if we are ready to invoke the callback</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-string">                __this.dispatchIfComplete();</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-string">            } else {</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-string">                // we invoke the callback since we are already loaded</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"><tt class="py-string">                __this.dispatchIfComplete();</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-string">            }</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-string">        }</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-string">        </tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-string">        return @{{img}};</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">     </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="init"></a><div id="init-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="init-toggle" onclick="return toggle('init');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.ImageLoaderhulahop-module.html#init">init</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="init-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="init-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt class="py-name">imageLoadArray</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-name">imageLoadArray</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+</div><a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:11 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

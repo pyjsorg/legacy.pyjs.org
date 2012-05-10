@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.History</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        Module&nbsp;History
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.History-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.History-module.html">Module pyjamas.History</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># This is the gtk-dependent History module.</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># For the pyjamas/javascript version, see platform/HistoryPyJS.py</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__pyjamas__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">JS</tt><tt class="py-op">,</tt> <tt class="py-name">doc</tt><tt class="py-op">,</tt> <tt class="py-name">wnd</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pyjd</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">pyjd</tt><tt class="py-op">.</tt><tt class="py-name">is_desktop</tt><tt class="py-op">:</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line">    <tt class="py-keyword">from</tt> <tt class="py-name">__pyjamas__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">get_main_frame</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">global</tt> <tt id="link-0" class="py-name" targets="Variable pyjamas.History.historyToken=pyjamas.History-module.html#historyToken"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-0', 'historyToken', 'link-0');">historyToken</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt id="link-1" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-1', 'historyToken', 'link-0');">historyToken</a></tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable pyjamas.History.historyListeners=pyjamas.History-module.html#historyListeners"><a title="pyjamas.History.historyListeners" class="py-name" href="#" onclick="return doclink('link-2', 'historyListeners', 'link-2');">historyListeners</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-string">    Simple History management class for back/forward button support.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-string">    This class allows your AJAX application to use a history.  Each time you</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-string">    call newItem(), a new item is added to the history and the history</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-string">    listeners are notified.  If the user clicks the browser's forward or back</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-string">    buttons, the appropriate item (a string passed to newItem) is fetched</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-string">    from the history and the history listeners are notified.</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-string">    The address bar of the browser contains the current token, using</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-string">    the "#" seperator (for implementation reasons, not because we love</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-string">    the # mark).</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-string">    You may want to check whether the hash already contains a history</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-string">    token when the page loads and use that to show appropriate content;</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-string">    this allows users of the site to store direct links in their</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-string">    bookmarks or send them in emails.</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-string">    To make this work properly in all browsers, you must add a specially</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-string">    named iframe to your html page, like this:</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-string">    &lt;iframe id='__pygwt_historyFrame' style='width:0;height:0;border:0' /&gt;</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="addHistoryListener"></a><div id="addHistoryListener-def"><a name="L40"></a><tt class="py-lineno"> 40</tt> <a class="py-toggle" href="#" id="addHistoryListener-toggle" onclick="return toggle('addHistoryListener');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#addHistoryListener">addHistoryListener</a><tt class="py-op">(</tt><tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="addHistoryListener-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="addHistoryListener-expanded"><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"add listener"</tt><tt class="py-op">,</tt> <tt class="py-name">listener</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt id="link-3" class="py-name"><a title="pyjamas.History.historyListeners" class="py-name" href="#" onclick="return doclink('link-3', 'historyListeners', 'link-2');">historyListeners</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method pyjamas.Canvas.JSOStack.JSOStack.append()=pyjamas.Canvas.JSOStack.JSOStack-class.html#append,Method pyjamas.ui.Panel.PanelBase.append()=pyjamas.ui.Panel.PanelBase-class.html#append"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-4', 'append', 'link-4');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="back"></a><div id="back-def"><a name="L45"></a><tt class="py-lineno"> 45</tt> <a class="py-toggle" href="#" id="back-toggle" onclick="return toggle('back');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#back">back</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="back-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="back-expanded"><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">    <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">history</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Function pyjamas.History.back()=pyjamas.History-module.html#back"><a title="pyjamas.History.back" class="py-name" href="#" onclick="return doclink('link-5', 'back', 'link-5');">back</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="forward"></a><div id="forward-def"><a name="L49"></a><tt class="py-lineno"> 49</tt> <a class="py-toggle" href="#" id="forward-toggle" onclick="return toggle('forward');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#forward">forward</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="forward-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="forward-expanded"><a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">    <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">history</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Function pyjamas.History.forward()=pyjamas.History-module.html#forward"><a title="pyjamas.History.forward" class="py-name" href="#" onclick="return doclink('link-6', 'forward', 'link-6');">forward</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="getToken"></a><div id="getToken-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="getToken-toggle" onclick="return toggle('getToken');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#getToken">getToken</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getToken-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getToken-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-7" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-7', 'historyToken', 'link-0');">historyToken</a></tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-8" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-8', 'historyToken', 'link-0');">historyToken</a></tt> </tt>
+</div><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"> </tt>
+<a name="newItem"></a><div id="newItem-def"><a name="L58"></a><tt class="py-lineno"> 58</tt> <a class="py-toggle" href="#" id="newItem-toggle" onclick="return toggle('newItem');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#newItem">newItem</a><tt class="py-op">(</tt><tt class="py-param">ht</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="newItem-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="newItem-expanded"><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-9" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-9', 'historyToken', 'link-0');">historyToken</a></tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-10" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-10', 'historyToken', 'link-0');">historyToken</a></tt> <tt class="py-op">==</tt> <tt class="py-name">ht</tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt id="link-11" class="py-name" targets="Function pyjamas.History.onHistoryChanged()=pyjamas.History-module.html#onHistoryChanged"><a title="pyjamas.History.onHistoryChanged" class="py-name" href="#" onclick="return doclink('link-11', 'onHistoryChanged', 'link-11');">onHistoryChanged</a></tt><tt class="py-op">(</tt><tt class="py-name">ht</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-string">    if(@{{historyToken}} == "" || @{{historyToken}} == null){</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-string">        @{{historyToken}} = "#";</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-string">    }</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-string">    $wnd.location.hash = encodeURI(@{{historyToken}}).replace('#','%23');</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-string">    """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-comment"># TODO - fireHistoryChangedAndCatch not implemented</tt> </tt>
+<a name="onHistoryChanged"></a><div id="onHistoryChanged-def"><a name="L74"></a><tt class="py-lineno"> 74</tt> <a class="py-toggle" href="#" id="onHistoryChanged-toggle" onclick="return toggle('onHistoryChanged');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#onHistoryChanged">onHistoryChanged</a><tt class="py-op">(</tt><tt class="py-param">ht</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="onHistoryChanged-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="onHistoryChanged-expanded"><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Function pyjamas.History.fireHistoryChangedImpl()=pyjamas.History-module.html#fireHistoryChangedImpl"><a title="pyjamas.History.fireHistoryChangedImpl" class="py-name" href="#" onclick="return doclink('link-12', 'fireHistoryChangedImpl', 'link-12');">fireHistoryChangedImpl</a></tt><tt class="py-op">(</tt><tt class="py-name">ht</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-comment"># TODO</tt> </tt>
+<a name="fireHistoryChangedAndCatch"></a><div id="fireHistoryChangedAndCatch-def"><a name="L79"></a><tt class="py-lineno"> 79</tt> <a class="py-toggle" href="#" id="fireHistoryChangedAndCatch-toggle" onclick="return toggle('fireHistoryChangedAndCatch');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#fireHistoryChangedAndCatch">fireHistoryChangedAndCatch</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireHistoryChangedAndCatch-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireHistoryChangedAndCatch-expanded"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="fireHistoryChangedImpl"></a><div id="fireHistoryChangedImpl-def"><a name="L83"></a><tt class="py-lineno"> 83</tt> <a class="py-toggle" href="#" id="fireHistoryChangedImpl-toggle" onclick="return toggle('fireHistoryChangedImpl');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#fireHistoryChangedImpl">fireHistoryChangedImpl</a><tt class="py-op">(</tt><tt class="py-param">ht</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireHistoryChangedImpl-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireHistoryChangedImpl-expanded"><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-13" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-13', 'historyToken', 'link-0');">historyToken</a></tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-14" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-14', 'historyToken', 'link-0');">historyToken</a></tt> <tt class="py-op">==</tt> <tt class="py-name">ht</tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt id="link-15" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-15', 'historyToken', 'link-0');">historyToken</a></tt> <tt class="py-op">=</tt> <tt class="py-name">ht</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-16" class="py-name"><a title="pyjamas.History.historyListeners" class="py-name" href="#" onclick="return doclink('link-16', 'historyListeners', 'link-2');">historyListeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="pyjamas.History.onHistoryChanged" class="py-name" href="#" onclick="return doclink('link-17', 'onHistoryChanged', 'link-11');">onHistoryChanged</a></tt><tt class="py-op">(</tt><tt class="py-name">ht</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="removeHistoryListener"></a><div id="removeHistoryListener-def"><a name="L92"></a><tt class="py-lineno"> 92</tt> <a class="py-toggle" href="#" id="removeHistoryListener-toggle" onclick="return toggle('removeHistoryListener');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#removeHistoryListener">removeHistoryListener</a><tt class="py-op">(</tt><tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="removeHistoryListener-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="removeHistoryListener-expanded"><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">    <tt id="link-18" class="py-name"><a title="pyjamas.History.historyListeners" class="py-name" href="#" onclick="return doclink('link-18', 'historyListeners', 'link-2');">historyListeners</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method pyjamas.DOM.IterChildrenClass.remove()=pyjamas.DOM.IterChildrenClass-class.html#remove,Method pyjamas.DOM.IterWalkChildren.remove()=pyjamas.DOM.IterWalkChildren-class.html#remove,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#remove,Method pyjamas.ui.Anchor._Attribute.remove()=pyjamas.ui.Anchor._Attribute-class.html#remove,Method pyjamas.ui.BuilderPanel.BuilderPanel.remove()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssFile.remove()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssText.remove()=pyjamas.ui.CSS.StyleSheetCssText-class.html#remove,Method pyjamas.ui.ComplexPanel.ComplexPanel.remove()=pyjamas.ui.ComplexPanel.ComplexPanel-class.html#remove,Method pyjamas.ui.DeckPanel.DeckPanel.remove()=pyjamas.ui.DeckPanel.DeckPanel-class.html#remove,Method pyjamas.ui.DialogBox.DialogBox.remove()=pyjamas.ui.DialogBox.DialogBox-class.html#remove,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.remove()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#remove,Method pyjamas.ui.DockPanel.DockPanel.remove()=pyjamas.ui.DockPanel.DockPanel-class.html#remove,Method pyjamas.ui.HTMLTable.HTMLTable.remove()=pyjamas.ui.HTMLTable.HTMLTable-class.html#remove,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.remove()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#remove,Method pyjamas.ui.SimplePanel.SimplePanel.remove()=pyjamas.ui.SimplePanel.SimplePanel-class.html#remove,Method pyjamas.ui.SplitPanel.SplitPanel.remove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#remove,Method pyjamas.ui.StackPanel.StackPanel.remove()=pyjamas.ui.StackPanel.StackPanel-class.html#remove,Method pyjamas.ui.TabPanel.TabPanel.remove()=pyjamas.ui.TabPanel.TabPanel-class.html#remove,Method pyjamas.ui.Tree.Tree.remove()=pyjamas.ui.Tree.Tree-class.html#remove,Method pyjamas.ui.TreeItem.TreeItem.remove()=pyjamas.ui.TreeItem.TreeItem-class.html#remove,Method pyjamas.ui.VerticalPanel.VerticalPanel.remove()=pyjamas.ui.VerticalPanel.VerticalPanel-class.html#remove"><a title="pyjamas.DOM.IterChildrenClass.remove
+pyjamas.DOM.IterWalkChildren.remove
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove
+pyjamas.ui.Anchor._Attribute.remove
+pyjamas.ui.BuilderPanel.BuilderPanel.remove
+pyjamas.ui.CSS.StyleSheetCssFile.remove
+pyjamas.ui.CSS.StyleSheetCssText.remove
+pyjamas.ui.ComplexPanel.ComplexPanel.remove
+pyjamas.ui.DeckPanel.DeckPanel.remove
+pyjamas.ui.DialogBox.DialogBox.remove
+pyjamas.ui.DisclosurePanel.DisclosurePanel.remove
+pyjamas.ui.DockPanel.DockPanel.remove
+pyjamas.ui.HTMLTable.HTMLTable.remove
+pyjamas.ui.HorizontalPanel.HorizontalPanel.remove
+pyjamas.ui.SimplePanel.SimplePanel.remove
+pyjamas.ui.SplitPanel.SplitPanel.remove
+pyjamas.ui.StackPanel.StackPanel.remove
+pyjamas.ui.TabPanel.TabPanel.remove
+pyjamas.ui.Tree.Tree.remove
+pyjamas.ui.TreeItem.TreeItem.remove
+pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick="return doclink('link-19', 'remove', 'link-19');">remove</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="_first_notify"></a><div id="_first_notify-def"><a name="L95"></a><tt class="py-lineno"> 95</tt> <a class="py-toggle" href="#" id="_first_notify-toggle" onclick="return toggle('_first_notify');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#_first_notify">_first_notify</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_first_notify-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="_first_notify-expanded"><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"first notify"</tt><tt class="py-op">,</tt> <tt id="link-20" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-20', 'historyToken', 'link-0');">historyToken</a></tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt id="link-21" class="py-name"><a title="pyjamas.History.onHistoryChanged" class="py-name" href="#" onclick="return doclink('link-21', 'onHistoryChanged', 'link-11');">onHistoryChanged</a></tt><tt class="py-op">(</tt><tt id="link-22" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-22', 'historyToken', 'link-0');">historyToken</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"> </tt>
+<a name="init"></a><div id="init-def"><a name="L99"></a><tt class="py-lineno"> 99</tt> <a class="py-toggle" href="#" id="init-toggle" onclick="return toggle('init');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.History-module.html#init">init</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="init-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="init-expanded"><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"init"</tt><tt class="py-op">,</tt> <tt class="py-name">get_main_frame</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">pyjd</tt><tt class="py-op">.</tt><tt class="py-name">is_desktop</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">get_main_frame</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">pyjd</tt><tt class="py-op">.</tt><tt class="py-name">is_desktop</tt><tt class="py-op">:</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">            <tt class="py-name">pyjd</tt><tt class="py-op">.</tt><tt class="py-name">add_setup_callback</tt><tt class="py-op">(</tt><tt id="link-23" class="py-name" targets="Function pyjamas.Canvas.ImageLoaderhulahop.init()=pyjamas.Canvas.ImageLoaderhulahop-module.html#init,Method pyjamas.Canvas2D.Canvas.init()=pyjamas.Canvas2D.Canvas-class.html#init,Function pyjamas.DOM.init()=pyjamas.DOM-module.html#init,Function pyjamas.History.init()=pyjamas.History-module.html#init,Function pyjamas.Window.init()=pyjamas.Window-module.html#init,Function pyjamas.ui.DragWidget.init()=pyjamas.ui.DragWidget-module.html#init,Function pyjamas.ui.DropWidget.init()=pyjamas.ui.DropWidget-module.html#init,Function pyjamas.ui.Event.init()=pyjamas.ui.Event-module.html#init"><a title="pyjamas.Canvas.ImageLoaderhulahop.init
+pyjamas.Canvas2D.Canvas.init
+pyjamas.DOM.init
+pyjamas.History.init
+pyjamas.Window.init
+pyjamas.ui.DragWidget.init
+pyjamas.ui.DropWidget.init
+pyjamas.ui.Event.init" class="py-name" href="#" onclick="return doclink('link-23', 'init', 'link-23');">init</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-comment">#            pyjd.add_pre_run_callback(_first_notify)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-24" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-24', 'historyToken', 'link-0');">historyToken</a></tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt id="link-25" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-25', 'historyToken', 'link-0');">historyToken</a></tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">    <tt class="py-name">hash</tt> <tt class="py-op">=</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Variable pyjamas.Window.location=pyjamas.Window-module.html#location"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-26', 'location', 'link-26');">location</a></tt><tt class="py-op">.</tt><tt class="py-name">hash</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">hash</tt> <tt class="py-keyword">and</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">hash</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt id="link-27" class="py-name"><a title="pyjamas.History.historyToken" class="py-name" href="#" onclick="return doclink('link-27', 'historyToken', 'link-0');">historyToken</a></tt> <tt class="py-op">=</tt> <tt class="py-name">hash</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt id="link-28" class="py-name"><a title="pyjamas.Canvas.ImageLoaderhulahop.init
+pyjamas.Canvas2D.Canvas.init
+pyjamas.DOM.init
+pyjamas.History.init
+pyjamas.Window.init
+pyjamas.ui.DragWidget.init
+pyjamas.ui.DropWidget.init
+pyjamas.ui.Event.init" class="py-name" href="#" onclick="return doclink('link-28', 'init', 'link-23');">init</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:13 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

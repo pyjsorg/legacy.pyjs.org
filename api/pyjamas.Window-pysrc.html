@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.Window</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        Module&nbsp;Window
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.Window-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.Window-module.html">Module pyjamas.Window</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># This is the pyjd Window module.</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># For the pyjamas/javascript version, see __browser__.pyjamas.Window</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">    Window provides access to the DOM model's global Window.</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable pyjamas.Window.closingListeners=pyjamas.Window-module.html#closingListeners"><a title="pyjamas.Window.closingListeners" class="py-name" href="#" onclick="return doclink('link-0', 'closingListeners', 'link-0');">closingListeners</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable pyjamas.Window.resizeListeners=pyjamas.Window-module.html#resizeListeners"><a title="pyjamas.Window.resizeListeners" class="py-name" href="#" onclick="return doclink('link-1', 'resizeListeners', 'link-1');">resizeListeners</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__pyjamas__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">JS</tt><tt class="py-op">,</tt> <tt class="py-name">doc</tt><tt class="py-op">,</tt> <tt class="py-name">wnd</tt><tt class="py-op">,</tt> <tt class="py-name">get_main_frame</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-2', 'pyjamas', 'link-2');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module pyjamas.Location=pyjamas.Location-module.html,Class pyjamas.Location.Location=pyjamas.Location.Location-class.html"><a title="pyjamas.Location
+pyjamas.Location.Location" class="py-name" href="#" onclick="return doclink('link-3', 'Location', 'link-3');">Location</a></tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="init_listeners"></a><div id="init_listeners-def"><a name="L14"></a><tt class="py-lineno"> 14</tt> <a class="py-toggle" href="#" id="init_listeners-toggle" onclick="return toggle('init_listeners');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#init_listeners">init_listeners</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="init_listeners-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="init_listeners-expanded"><a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="addWindowCloseListener"></a><div id="addWindowCloseListener-def"><a name="L17"></a><tt class="py-lineno"> 17</tt> <a class="py-toggle" href="#" id="addWindowCloseListener-toggle" onclick="return toggle('addWindowCloseListener');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#addWindowCloseListener">addWindowCloseListener</a><tt class="py-op">(</tt><tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="addWindowCloseListener-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="addWindowCloseListener-expanded"><a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">    <tt id="link-4" class="py-name"><a title="pyjamas.Window.closingListeners" class="py-name" href="#" onclick="return doclink('link-4', 'closingListeners', 'link-0');">closingListeners</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method pyjamas.Canvas.JSOStack.JSOStack.append()=pyjamas.Canvas.JSOStack.JSOStack-class.html#append,Method pyjamas.ui.Panel.PanelBase.append()=pyjamas.ui.Panel.PanelBase-class.html#append"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-5', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="addWindowResizeListener"></a><div id="addWindowResizeListener-def"><a name="L20"></a><tt class="py-lineno"> 20</tt> <a class="py-toggle" href="#" id="addWindowResizeListener-toggle" onclick="return toggle('addWindowResizeListener');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#addWindowResizeListener">addWindowResizeListener</a><tt class="py-op">(</tt><tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="addWindowResizeListener-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="addWindowResizeListener-expanded"><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">    <tt id="link-6" class="py-name"><a title="pyjamas.Window.resizeListeners" class="py-name" href="#" onclick="return doclink('link-6', 'resizeListeners', 'link-1');">resizeListeners</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-7', 'append', 'link-5');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="removeWindowCloseListener"></a><div id="removeWindowCloseListener-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="removeWindowCloseListener-toggle" onclick="return toggle('removeWindowCloseListener');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#removeWindowCloseListener">removeWindowCloseListener</a><tt class="py-op">(</tt><tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="removeWindowCloseListener-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="removeWindowCloseListener-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt id="link-8" class="py-name"><a title="pyjamas.Window.closingListeners" class="py-name" href="#" onclick="return doclink('link-8', 'closingListeners', 'link-0');">closingListeners</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method pyjamas.DOM.IterChildrenClass.remove()=pyjamas.DOM.IterChildrenClass-class.html#remove,Method pyjamas.DOM.IterWalkChildren.remove()=pyjamas.DOM.IterWalkChildren-class.html#remove,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#remove,Method pyjamas.ui.Anchor._Attribute.remove()=pyjamas.ui.Anchor._Attribute-class.html#remove,Method pyjamas.ui.BuilderPanel.BuilderPanel.remove()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssFile.remove()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssText.remove()=pyjamas.ui.CSS.StyleSheetCssText-class.html#remove,Method pyjamas.ui.ComplexPanel.ComplexPanel.remove()=pyjamas.ui.ComplexPanel.ComplexPanel-class.html#remove,Method pyjamas.ui.DeckPanel.DeckPanel.remove()=pyjamas.ui.DeckPanel.DeckPanel-class.html#remove,Method pyjamas.ui.DialogBox.DialogBox.remove()=pyjamas.ui.DialogBox.DialogBox-class.html#remove,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.remove()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#remove,Method pyjamas.ui.DockPanel.DockPanel.remove()=pyjamas.ui.DockPanel.DockPanel-class.html#remove,Method pyjamas.ui.HTMLTable.HTMLTable.remove()=pyjamas.ui.HTMLTable.HTMLTable-class.html#remove,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.remove()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#remove,Method pyjamas.ui.SimplePanel.SimplePanel.remove()=pyjamas.ui.SimplePanel.SimplePanel-class.html#remove,Method pyjamas.ui.SplitPanel.SplitPanel.remove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#remove,Method pyjamas.ui.StackPanel.StackPanel.remove()=pyjamas.ui.StackPanel.StackPanel-class.html#remove,Method pyjamas.ui.TabPanel.TabPanel.remove()=pyjamas.ui.TabPanel.TabPanel-class.html#remove,Method pyjamas.ui.Tree.Tree.remove()=pyjamas.ui.Tree.Tree-class.html#remove,Method pyjamas.ui.TreeItem.TreeItem.remove()=pyjamas.ui.TreeItem.TreeItem-class.html#remove,Method pyjamas.ui.VerticalPanel.VerticalPanel.remove()=pyjamas.ui.VerticalPanel.VerticalPanel-class.html#remove"><a title="pyjamas.DOM.IterChildrenClass.remove
+pyjamas.DOM.IterWalkChildren.remove
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove
+pyjamas.ui.Anchor._Attribute.remove
+pyjamas.ui.BuilderPanel.BuilderPanel.remove
+pyjamas.ui.CSS.StyleSheetCssFile.remove
+pyjamas.ui.CSS.StyleSheetCssText.remove
+pyjamas.ui.ComplexPanel.ComplexPanel.remove
+pyjamas.ui.DeckPanel.DeckPanel.remove
+pyjamas.ui.DialogBox.DialogBox.remove
+pyjamas.ui.DisclosurePanel.DisclosurePanel.remove
+pyjamas.ui.DockPanel.DockPanel.remove
+pyjamas.ui.HTMLTable.HTMLTable.remove
+pyjamas.ui.HorizontalPanel.HorizontalPanel.remove
+pyjamas.ui.SimplePanel.SimplePanel.remove
+pyjamas.ui.SplitPanel.SplitPanel.remove
+pyjamas.ui.StackPanel.StackPanel.remove
+pyjamas.ui.TabPanel.TabPanel.remove
+pyjamas.ui.Tree.Tree.remove
+pyjamas.ui.TreeItem.TreeItem.remove
+pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick="return doclink('link-9', 'remove', 'link-9');">remove</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="removeWindowResizeListener"></a><div id="removeWindowResizeListener-def"><a name="L26"></a><tt class="py-lineno"> 26</tt> <a class="py-toggle" href="#" id="removeWindowResizeListener-toggle" onclick="return toggle('removeWindowResizeListener');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#removeWindowResizeListener">removeWindowResizeListener</a><tt class="py-op">(</tt><tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="removeWindowResizeListener-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="removeWindowResizeListener-expanded"><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">    <tt id="link-10" class="py-name"><a title="pyjamas.Window.resizeListeners" class="py-name" href="#" onclick="return doclink('link-10', 'resizeListeners', 'link-1');">resizeListeners</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="pyjamas.DOM.IterChildrenClass.remove
+pyjamas.DOM.IterWalkChildren.remove
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove
+pyjamas.ui.Anchor._Attribute.remove
+pyjamas.ui.BuilderPanel.BuilderPanel.remove
+pyjamas.ui.CSS.StyleSheetCssFile.remove
+pyjamas.ui.CSS.StyleSheetCssText.remove
+pyjamas.ui.ComplexPanel.ComplexPanel.remove
+pyjamas.ui.DeckPanel.DeckPanel.remove
+pyjamas.ui.DialogBox.DialogBox.remove
+pyjamas.ui.DisclosurePanel.DisclosurePanel.remove
+pyjamas.ui.DockPanel.DockPanel.remove
+pyjamas.ui.HTMLTable.HTMLTable.remove
+pyjamas.ui.HorizontalPanel.HorizontalPanel.remove
+pyjamas.ui.SimplePanel.SimplePanel.remove
+pyjamas.ui.SplitPanel.SplitPanel.remove
+pyjamas.ui.StackPanel.StackPanel.remove
+pyjamas.ui.TabPanel.TabPanel.remove
+pyjamas.ui.Tree.Tree.remove
+pyjamas.ui.TreeItem.TreeItem.remove
+pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick="return doclink('link-11', 'remove', 'link-9');">remove</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="alert"></a><div id="alert-def"><a name="L29"></a><tt class="py-lineno"> 29</tt> <a class="py-toggle" href="#" id="alert-toggle" onclick="return toggle('alert');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#alert">alert</a><tt class="py-op">(</tt><tt class="py-param">txt</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="alert-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="alert-expanded"><a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">    <tt class="py-name">get_main_frame</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">_alert</tt><tt class="py-op">(</tt><tt class="py-name">txt</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="confirm"></a><div id="confirm-def"><a name="L32"></a><tt class="py-lineno"> 32</tt> <a class="py-toggle" href="#" id="confirm-toggle" onclick="return toggle('confirm');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#confirm">confirm</a><tt class="py-op">(</tt><tt class="py-param">msg</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="confirm-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="confirm-expanded"><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Function pyjamas.Window.confirm()=pyjamas.Window-module.html#confirm"><a title="pyjamas.Window.confirm" class="py-name" href="#" onclick="return doclink('link-12', 'confirm', 'link-12');">confirm</a></tt><tt class="py-op">(</tt><tt class="py-name">msg</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="prompt"></a><div id="prompt-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="prompt-toggle" onclick="return toggle('prompt');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#prompt">prompt</a><tt class="py-op">(</tt><tt class="py-param">msg</tt><tt class="py-op">,</tt> <tt class="py-param">defaultReply</tt><tt class="py-op">=</tt><tt class="py-string">""</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="prompt-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="prompt-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Function pyjamas.Window.prompt()=pyjamas.Window-module.html#prompt"><a title="pyjamas.Window.prompt" class="py-name" href="#" onclick="return doclink('link-13', 'prompt', 'link-13');">prompt</a></tt><tt class="py-op">(</tt><tt class="py-name">msg</tt><tt class="py-op">,</tt> <tt class="py-name">defaultReply</tt><tt class="py-op">,</tt> <tt class="py-string">""</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="enableScrolling"></a><div id="enableScrolling-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="enableScrolling-toggle" onclick="return toggle('enableScrolling');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#enableScrolling">enableScrolling</a><tt class="py-op">(</tt><tt class="py-param">enable</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="enableScrolling-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="enableScrolling-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">body</tt><tt class="py-op">.</tt><tt class="py-name">style</tt><tt class="py-op">.</tt><tt class="py-name">overflow</tt> <tt class="py-op">=</tt> <tt class="py-name">enable</tt> <tt class="py-keyword">and</tt> <tt class="py-string">'auto'</tt> <tt class="py-keyword">or</tt> <tt class="py-string">'hidden'</tt> </tt>
+</div><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="scrollBy"></a><div id="scrollBy-def"><a name="L41"></a><tt class="py-lineno"> 41</tt> <a class="py-toggle" href="#" id="scrollBy-toggle" onclick="return toggle('scrollBy');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#scrollBy">scrollBy</a><tt class="py-op">(</tt><tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="scrollBy-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="scrollBy-expanded"><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Function pyjamas.Window.scrollBy()=pyjamas.Window-module.html#scrollBy"><a title="pyjamas.Window.scrollBy" class="py-name" href="#" onclick="return doclink('link-14', 'scrollBy', 'link-14');">scrollBy</a></tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="scroll"></a><div id="scroll-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="scroll-toggle" onclick="return toggle('scroll');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#scroll">scroll</a><tt class="py-op">(</tt><tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="scroll-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="scroll-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Function pyjamas.Window.scroll()=pyjamas.Window-module.html#scroll"><a title="pyjamas.Window.scroll" class="py-name" href="#" onclick="return doclink('link-15', 'scroll', 'link-15');">scroll</a></tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
+<a name="getClientHeight"></a><div id="getClientHeight-def"><a name="L47"></a><tt class="py-lineno"> 47</tt> <a class="py-toggle" href="#" id="getClientHeight-toggle" onclick="return toggle('getClientHeight');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#getClientHeight">getClientHeight</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getClientHeight-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getClientHeight-expanded"><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">innerHeight</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">body</tt><tt class="py-op">.</tt><tt class="py-name">clientHeight</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="getClientWidth"></a><div id="getClientWidth-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="getClientWidth-toggle" onclick="return toggle('getClientWidth');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#getClientWidth">getClientWidth</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getClientWidth-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getClientWidth-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">innerWidth</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">body</tt><tt class="py-op">.</tt><tt class="py-name">clientWidth</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="getScrollLeft"></a><div id="getScrollLeft-def"><a name="L59"></a><tt class="py-lineno"> 59</tt> <a class="py-toggle" href="#" id="getScrollLeft-toggle" onclick="return toggle('getScrollLeft');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#getScrollLeft">getScrollLeft</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getScrollLeft-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getScrollLeft-expanded"><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">     <tt class="py-keyword">return</tt> <tt id="link-16" class="py-name" targets="Function pyjamas.Window.getDocumentRoot()=pyjamas.Window-module.html#getDocumentRoot"><a title="pyjamas.Window.getDocumentRoot" class="py-name" href="#" onclick="return doclink('link-16', 'getDocumentRoot', 'link-16');">getDocumentRoot</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">scrollLeft</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="getScrollTop"></a><div id="getScrollTop-def"><a name="L62"></a><tt class="py-lineno"> 62</tt> <a class="py-toggle" href="#" id="getScrollTop-toggle" onclick="return toggle('getScrollTop');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#getScrollTop">getScrollTop</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getScrollTop-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getScrollTop-expanded"><a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">     <tt class="py-keyword">return</tt> <tt id="link-17" class="py-name"><a title="pyjamas.Window.getDocumentRoot" class="py-name" href="#" onclick="return doclink('link-17', 'getDocumentRoot', 'link-16');">getDocumentRoot</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">scrollTop</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="getDocumentRoot"></a><div id="getDocumentRoot-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="getDocumentRoot-toggle" onclick="return toggle('getDocumentRoot');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#getDocumentRoot">getDocumentRoot</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getDocumentRoot-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getDocumentRoot-expanded"><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">compatMode</tt> <tt class="py-op">==</tt> <tt class="py-string">'CSS1Compat'</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">documentElement</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">body</tt> </tt>
+</div><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="setLocation"></a><div id="setLocation-def"><a name="L70"></a><tt class="py-lineno"> 70</tt> <a class="py-toggle" href="#" id="setLocation-toggle" onclick="return toggle('setLocation');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#setLocation">setLocation</a><tt class="py-op">(</tt><tt class="py-param">url</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="setLocation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="setLocation-expanded"><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">    <tt class="py-name">w</tt> <tt class="py-op">=</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">    <tt class="py-name">w</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Variable pyjamas.Window.location=pyjamas.Window-module.html#location"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-18', 'location', 'link-18');">location</a></tt> <tt class="py-op">=</tt> <tt class="py-name">url</tt> </tt>
+</div><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt id="link-19" class="py-name"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-19', 'location', 'link-18');">location</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="getLocation"></a><div id="getLocation-def"><a name="L76"></a><tt class="py-lineno"> 76</tt> <a class="py-toggle" href="#" id="getLocation-toggle" onclick="return toggle('getLocation');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#getLocation">getLocation</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getLocation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getLocation-expanded"><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-20" class="py-name"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-20', 'location', 'link-18');">location</a></tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt id="link-21" class="py-name"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-21', 'location', 'link-18');">location</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt id="link-22" class="py-name"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-22', 'location', 'link-18');">location</a></tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="pyjamas.Location
+pyjamas.Location.Location" class="py-name" href="#" onclick="return doclink('link-23', 'Location', 'link-3');">Location</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="pyjamas.Location
+pyjamas.Location.Location" class="py-name" href="#" onclick="return doclink('link-24', 'Location', 'link-3');">Location</a></tt><tt class="py-op">(</tt><tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-25', 'location', 'link-18');">location</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-26" class="py-name"><a title="pyjamas.Window.location" class="py-name" href="#" onclick="return doclink('link-26', 'location', 'link-18');">location</a></tt> </tt>
+</div><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">  </tt>
+<a name="getTitle"></a><div id="getTitle-def"><a name="L82"></a><tt class="py-lineno"> 82</tt> <a class="py-toggle" href="#" id="getTitle-toggle" onclick="return toggle('getTitle');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#getTitle">getTitle</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getTitle-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getTitle-expanded"><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">title</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="open"></a><div id="open-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="open-toggle" onclick="return toggle('open');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#open">open</a><tt class="py-op">(</tt><tt class="py-param">url</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">,</tt> <tt class="py-param">features</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="open-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="open-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Function pyjamas.Window.open()=pyjamas.Window-module.html#open,Method pyjamas.gears.database.Database.GearsDatabase.open()=pyjamas.gears.database.Database.GearsDatabase-class.html#open"><a title="pyjamas.Window.open
+pyjamas.gears.database.Database.GearsDatabase.open" class="py-name" href="#" onclick="return doclink('link-27', 'open', 'link-27');">open</a></tt><tt class="py-op">(</tt><tt class="py-name">url</tt><tt class="py-op">,</tt> <tt class="py-name">name</tt><tt class="py-op">,</tt> <tt class="py-name">features</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"> </tt>
+<a name="setMargin"></a><div id="setMargin-def"><a name="L88"></a><tt class="py-lineno"> 88</tt> <a class="py-toggle" href="#" id="setMargin-toggle" onclick="return toggle('setMargin');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#setMargin">setMargin</a><tt class="py-op">(</tt><tt class="py-param">size</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="setMargin-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="setMargin-expanded"><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">    <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">body</tt><tt class="py-op">.</tt><tt class="py-name">style</tt><tt class="py-op">.</tt><tt class="py-name">margin</tt> <tt class="py-op">=</tt> <tt class="py-name">size</tt> </tt>
+</div><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="setTitle"></a><div id="setTitle-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="setTitle-toggle" onclick="return toggle('setTitle');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#setTitle">setTitle</a><tt class="py-op">(</tt><tt class="py-param">title</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="setTitle-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="setTitle-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-name">d</tt> <tt class="py-op">=</tt> <tt class="py-name">doc</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">    <tt class="py-name">d</tt><tt class="py-op">.</tt><tt class="py-name">title</tt> <tt class="py-op">=</tt> <tt class="py-name">title</tt> </tt>
+</div><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="setOnError"></a><div id="setOnError-def"><a name="L95"></a><tt class="py-lineno"> 95</tt> <a class="py-toggle" href="#" id="setOnError-toggle" onclick="return toggle('setOnError');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#setOnError">setOnError</a><tt class="py-op">(</tt><tt class="py-param">onError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="setOnError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="setOnError-expanded"><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="onError"></a><div id="onError-def"><a name="L98"></a><tt class="py-lineno"> 98</tt> <a class="py-toggle" href="#" id="onError-toggle" onclick="return toggle('onError');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#onError">onError</a><tt class="py-op">(</tt><tt class="py-param">msg</tt><tt class="py-op">,</tt> <tt class="py-param">url</tt><tt class="py-op">,</tt> <tt class="py-param">linenumber</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="onError-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="onError-expanded"><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-comment"># TODO: call fireClosedAndCatch</tt> </tt>
+<a name="onClosed"></a><div id="onClosed-def"><a name="L102"></a><tt class="py-lineno">102</tt> <a class="py-toggle" href="#" id="onClosed-toggle" onclick="return toggle('onClosed');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#onClosed">onClosed</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="onClosed-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="onClosed-expanded"><a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt id="link-28" class="py-name" targets="Function pyjamas.Window.fireClosedImpl()=pyjamas.Window-module.html#fireClosedImpl"><a title="pyjamas.Window.fireClosedImpl" class="py-name" href="#" onclick="return doclink('link-28', 'fireClosedImpl', 'link-28');">fireClosedImpl</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-comment"># TODO: call fireClosingAndCatch</tt> </tt>
+<a name="onClosing"></a><div id="onClosing-def"><a name="L106"></a><tt class="py-lineno">106</tt> <a class="py-toggle" href="#" id="onClosing-toggle" onclick="return toggle('onClosing');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#onClosing">onClosing</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="onClosing-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="onClosing-expanded"><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt id="link-29" class="py-name" targets="Function pyjamas.Window.fireClosingImpl()=pyjamas.Window-module.html#fireClosingImpl"><a title="pyjamas.Window.fireClosingImpl" class="py-name" href="#" onclick="return doclink('link-29', 'fireClosingImpl', 'link-29');">fireClosingImpl</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-comment"># TODO: call fireResizedAndCatch</tt> </tt>
+<a name="onResize"></a><div id="onResize-def"><a name="L110"></a><tt class="py-lineno">110</tt> <a class="py-toggle" href="#" id="onResize-toggle" onclick="return toggle('onResize');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#onResize">onResize</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="onResize-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="onResize-expanded"><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt id="link-30" class="py-name" targets="Function pyjamas.Window.fireResizedImpl()=pyjamas.Window-module.html#fireResizedImpl"><a title="pyjamas.Window.fireResizedImpl" class="py-name" href="#" onclick="return doclink('link-30', 'fireResizedImpl', 'link-30');">fireResizedImpl</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="fireClosedAndCatch"></a><div id="fireClosedAndCatch-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="fireClosedAndCatch-toggle" onclick="return toggle('fireClosedAndCatch');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#fireClosedAndCatch">fireClosedAndCatch</a><tt class="py-op">(</tt><tt class="py-param">handler</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireClosedAndCatch-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireClosedAndCatch-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-comment"># FIXME - need implementation</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="fireClosedImpl"></a><div id="fireClosedImpl-def"><a name="L117"></a><tt class="py-lineno">117</tt> <a class="py-toggle" href="#" id="fireClosedImpl-toggle" onclick="return toggle('fireClosedImpl');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#fireClosedImpl">fireClosedImpl</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireClosedImpl-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireClosedImpl-expanded"><a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-31" class="py-name"><a title="pyjamas.Window.closingListeners" class="py-name" href="#" onclick="return doclink('link-31', 'closingListeners', 'link-0');">closingListeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method pyjamas.Timer.Timer.__WindowCloseListener.onWindowClosed()=pyjamas.Timer.Timer.__WindowCloseListener-class.html#onWindowClosed,Method pyjamas.ui.RootPanel.RootPanelManager.onWindowClosed()=pyjamas.ui.RootPanel.RootPanelManager-class.html#onWindowClosed"><a title="pyjamas.Timer.Timer.__WindowCloseListener.onWindowClosed
+pyjamas.ui.RootPanel.RootPanelManager.onWindowClosed" class="py-name" href="#" onclick="return doclink('link-32', 'onWindowClosed', 'link-32');">onWindowClosed</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="fireClosingAndCatch"></a><div id="fireClosingAndCatch-def"><a name="L121"></a><tt class="py-lineno">121</tt> <a class="py-toggle" href="#" id="fireClosingAndCatch-toggle" onclick="return toggle('fireClosingAndCatch');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#fireClosingAndCatch">fireClosingAndCatch</a><tt class="py-op">(</tt><tt class="py-param">handler</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireClosingAndCatch-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireClosingAndCatch-expanded"><a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-comment"># FIXME - need implementation</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="resize"></a><div id="resize-def"><a name="L125"></a><tt class="py-lineno">125</tt> <a class="py-toggle" href="#" id="resize-toggle" onclick="return toggle('resize');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#resize">resize</a><tt class="py-op">(</tt><tt class="py-param">width</tt><tt class="py-op">,</tt> <tt class="py-param">height</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="resize-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="resize-expanded"><a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">    <tt class="py-docstring">""" changes size to specified width and height</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">    <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">resizeTo</tt><tt class="py-op">(</tt><tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="resizeBy"></a><div id="resizeBy-def"><a name="L130"></a><tt class="py-lineno">130</tt> <a class="py-toggle" href="#" id="resizeBy-toggle" onclick="return toggle('resizeBy');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#resizeBy">resizeBy</a><tt class="py-op">(</tt><tt class="py-param">width</tt><tt class="py-op">,</tt> <tt class="py-param">height</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="resizeBy-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="resizeBy-expanded"><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">    <tt class="py-docstring">""" changes size by specified width and height</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">    <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Function pyjamas.Window.resizeBy()=pyjamas.Window-module.html#resizeBy"><a title="pyjamas.Window.resizeBy" class="py-name" href="#" onclick="return doclink('link-33', 'resizeBy', 'link-33');">resizeBy</a></tt><tt class="py-op">(</tt><tt class="py-name">width</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"> </tt>
+<a name="fireClosingImpl"></a><div id="fireClosingImpl-def"><a name="L135"></a><tt class="py-lineno">135</tt> <a class="py-toggle" href="#" id="fireClosingImpl-toggle" onclick="return toggle('fireClosingImpl');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#fireClosingImpl">fireClosingImpl</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireClosingImpl-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireClosingImpl-expanded"><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">    <tt class="py-name">ret</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-34" class="py-name"><a title="pyjamas.Window.closingListeners" class="py-name" href="#" onclick="return doclink('link-34', 'closingListeners', 'link-0');">closingListeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt class="py-name">msg</tt> <tt class="py-op">=</tt> <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Method pyjamas.Timer.Timer.__WindowCloseListener.onWindowClosing()=pyjamas.Timer.Timer.__WindowCloseListener-class.html#onWindowClosing,Method pyjamas.ui.RootPanel.RootPanelManager.onWindowClosing()=pyjamas.ui.RootPanel.RootPanelManager-class.html#onWindowClosing"><a title="pyjamas.Timer.Timer.__WindowCloseListener.onWindowClosing
+pyjamas.ui.RootPanel.RootPanelManager.onWindowClosing" class="py-name" href="#" onclick="return doclink('link-35', 'onWindowClosing', 'link-35');">onWindowClosing</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">ret</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">            <tt class="py-name">ret</tt> <tt class="py-op">=</tt> <tt class="py-name">msg</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">ret</tt> </tt>
+</div><a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"> </tt>
+<a name="fireResizedAndCatch"></a><div id="fireResizedAndCatch-def"><a name="L143"></a><tt class="py-lineno">143</tt> <a class="py-toggle" href="#" id="fireResizedAndCatch-toggle" onclick="return toggle('fireResizedAndCatch');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#fireResizedAndCatch">fireResizedAndCatch</a><tt class="py-op">(</tt><tt class="py-param">handler</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireResizedAndCatch-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireResizedAndCatch-expanded"><a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-comment"># FIXME - need implementation</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="fireResizedImpl"></a><div id="fireResizedImpl-def"><a name="L147"></a><tt class="py-lineno">147</tt> <a class="py-toggle" href="#" id="fireResizedImpl-toggle" onclick="return toggle('fireResizedImpl');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#fireResizedImpl">fireResizedImpl</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireResizedImpl-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireResizedImpl-expanded"><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-36" class="py-name"><a title="pyjamas.Window.resizeListeners" class="py-name" href="#" onclick="return doclink('link-36', 'resizeListeners', 'link-1');">resizeListeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method pyjamas.ui.DialogBox.DialogBox.onWindowResized()=pyjamas.ui.DialogBox.DialogBox-class.html#onWindowResized,Method pyjamas.ui.GlassWidget.GlassWidget.onWindowResized()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onWindowResized,Method pyjamas.ui.PopupPanel.PopupPanel.onWindowResized()=pyjamas.ui.PopupPanel.PopupPanel-class.html#onWindowResized"><a title="pyjamas.ui.DialogBox.DialogBox.onWindowResized
+pyjamas.ui.GlassWidget.GlassWidget.onWindowResized
+pyjamas.ui.PopupPanel.PopupPanel.onWindowResized" class="py-name" href="#" onclick="return doclink('link-37', 'onWindowResized', 'link-37');">onWindowResized</a></tt><tt class="py-op">(</tt><tt id="link-38" class="py-name" targets="Function pyjamas.Window.getClientWidth()=pyjamas.Window-module.html#getClientWidth"><a title="pyjamas.Window.getClientWidth" class="py-name" href="#" onclick="return doclink('link-38', 'getClientWidth', 'link-38');">getClientWidth</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-39" class="py-name" targets="Function pyjamas.Window.getClientHeight()=pyjamas.Window-module.html#getClientHeight"><a title="pyjamas.Window.getClientHeight" class="py-name" href="#" onclick="return doclink('link-39', 'getClientHeight', 'link-39');">getClientHeight</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"> </tt>
+<a name="init"></a><div id="init-def"><a name="L151"></a><tt class="py-lineno">151</tt> <a class="py-toggle" href="#" id="init-toggle" onclick="return toggle('init');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Window-module.html#init">init</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="init-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="init-expanded"><a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Function pyjamas.Canvas.ImageLoaderhulahop.init()=pyjamas.Canvas.ImageLoaderhulahop-module.html#init,Method pyjamas.Canvas2D.Canvas.init()=pyjamas.Canvas2D.Canvas-class.html#init,Function pyjamas.DOM.init()=pyjamas.DOM-module.html#init,Function pyjamas.History.init()=pyjamas.History-module.html#init,Function pyjamas.Window.init()=pyjamas.Window-module.html#init,Function pyjamas.ui.DragWidget.init()=pyjamas.ui.DragWidget-module.html#init,Function pyjamas.ui.DropWidget.init()=pyjamas.ui.DropWidget-module.html#init,Function pyjamas.ui.Event.init()=pyjamas.ui.Event-module.html#init"><a title="pyjamas.Canvas.ImageLoaderhulahop.init
+pyjamas.Canvas2D.Canvas.init
+pyjamas.DOM.init
+pyjamas.History.init
+pyjamas.Window.init
+pyjamas.ui.DragWidget.init
+pyjamas.ui.DropWidget.init
+pyjamas.ui.Event.init" class="py-name" href="#" onclick="return doclink('link-40', 'init', 'link-40');">init</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:15 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

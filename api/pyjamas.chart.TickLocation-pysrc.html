@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.chart.TickLocation</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.chart-module.html">Package&nbsp;chart</a> ::
+        Module&nbsp;TickLocation
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.chart.TickLocation-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.chart.TickLocation-module.html">Module pyjamas.chart.TickLocation</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2007,2008,2009 John C. Gunther</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright (C) 2009 Luke Kenneth Casson Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">* "License"); you may not use this file except in compliance</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">* with the License. You may obtain a copy of the License at:</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">*  http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">* software distributed under the License is distributed on an</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">* either express or implied. See the License for the specific</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">* language governing permissions and limitations under the</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">* License.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-2', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module pyjamas.Window=pyjamas.Window-module.html"><a title="pyjamas.Window" class="py-name" href="#" onclick="return doclink('link-3', 'Window', 'link-3');">Window</a></tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-4', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Package pyjamas.ui=pyjamas.ui-module.html"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-5', 'ui', 'link-5');">ui</a></tt>  <tt class="py-keyword">import</tt> <tt id="link-6" class="py-name" targets="Module pyjamas.ui.Event=pyjamas.ui.Event-module.html"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-6', 'Event', 'link-6');">Event</a></tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-7" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-7', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-8', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Module pyjamas.ui.AbsolutePanel=pyjamas.ui.AbsolutePanel-module.html,Class pyjamas.ui.AbsolutePanel.AbsolutePanel=pyjamas.ui.AbsolutePanel.AbsolutePanel-class.html"><a title="pyjamas.ui.AbsolutePanel
+pyjamas.ui.AbsolutePanel.AbsolutePanel" class="py-name" href="#" onclick="return doclink('link-9', 'AbsolutePanel', 'link-9');">AbsolutePanel</a></tt> <tt class="py-keyword">import</tt> <tt id="link-10" class="py-name"><a title="pyjamas.ui.AbsolutePanel
+pyjamas.ui.AbsolutePanel.AbsolutePanel" class="py-name" href="#" onclick="return doclink('link-10', 'AbsolutePanel', 'link-9');">AbsolutePanel</a></tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-11" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-11', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-12', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Module pyjamas.ui.Composite=pyjamas.ui.Composite-module.html,Class pyjamas.ui.Composite.Composite=pyjamas.ui.Composite.Composite-class.html"><a title="pyjamas.ui.Composite
+pyjamas.ui.Composite.Composite" class="py-name" href="#" onclick="return doclink('link-13', 'Composite', 'link-13');">Composite</a></tt> <tt class="py-keyword">import</tt> <tt id="link-14" class="py-name"><a title="pyjamas.ui.Composite
+pyjamas.ui.Composite.Composite" class="py-name" href="#" onclick="return doclink('link-14', 'Composite', 'link-13');">Composite</a></tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-15" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-15', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-16', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Module pyjamas.ui.Grid=pyjamas.ui.Grid-module.html,Class pyjamas.ui.Grid.Grid=pyjamas.ui.Grid.Grid-class.html"><a title="pyjamas.ui.Grid
+pyjamas.ui.Grid.Grid" class="py-name" href="#" onclick="return doclink('link-17', 'Grid', 'link-17');">Grid</a></tt> <tt class="py-keyword">import</tt> <tt id="link-18" class="py-name"><a title="pyjamas.ui.Grid
+pyjamas.ui.Grid.Grid" class="py-name" href="#" onclick="return doclink('link-18', 'Grid', 'link-17');">Grid</a></tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-19" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-19', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-20', 'ui', 'link-5');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-21" class="py-name" targets="Class pyjamas.ui.HasHorizontalAlignment=pyjamas.ui.HasHorizontalAlignment-class.html"><a title="pyjamas.ui.HasHorizontalAlignment" class="py-name" href="#" onclick="return doclink('link-21', 'HasHorizontalAlignment', 'link-21');">HasHorizontalAlignment</a></tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-22" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-22', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-23', 'ui', 'link-5');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-24" class="py-name" targets="Class pyjamas.ui.HasVerticalAlignment=pyjamas.ui.HasVerticalAlignment-class.html"><a title="pyjamas.ui.HasVerticalAlignment" class="py-name" href="#" onclick="return doclink('link-24', 'HasVerticalAlignment', 'link-24');">HasVerticalAlignment</a></tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-25" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-25', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-26', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Module pyjamas.ui.HTML=pyjamas.ui.HTML-module.html,Class pyjamas.ui.HTML.HTML=pyjamas.ui.HTML.HTML-class.html"><a title="pyjamas.ui.HTML
+pyjamas.ui.HTML.HTML" class="py-name" href="#" onclick="return doclink('link-27', 'HTML', 'link-27');">HTML</a></tt> <tt class="py-keyword">import</tt> <tt id="link-28" class="py-name"><a title="pyjamas.ui.HTML
+pyjamas.ui.HTML.HTML" class="py-name" href="#" onclick="return doclink('link-28', 'HTML', 'link-27');">HTML</a></tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-29" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-29', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-30', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Module pyjamas.ui.Image=pyjamas.ui.Image-module.html,Class pyjamas.ui.Image.Image=pyjamas.ui.Image.Image-class.html"><a title="pyjamas.ui.Image
+pyjamas.ui.Image.Image" class="py-name" href="#" onclick="return doclink('link-31', 'Image', 'link-31');">Image</a></tt> <tt class="py-keyword">import</tt> <tt id="link-32" class="py-name"><a title="pyjamas.ui.Image
+pyjamas.ui.Image.Image" class="py-name" href="#" onclick="return doclink('link-32', 'Image', 'link-31');">Image</a></tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-33" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-33', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-34', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Module pyjamas.ui.SimplePanel=pyjamas.ui.SimplePanel-module.html,Class pyjamas.ui.SimplePanel.SimplePanel=pyjamas.ui.SimplePanel.SimplePanel-class.html"><a title="pyjamas.ui.SimplePanel
+pyjamas.ui.SimplePanel.SimplePanel" class="py-name" href="#" onclick="return doclink('link-35', 'SimplePanel', 'link-35');">SimplePanel</a></tt> <tt class="py-keyword">import</tt> <tt id="link-36" class="py-name"><a title="pyjamas.ui.SimplePanel
+pyjamas.ui.SimplePanel.SimplePanel" class="py-name" href="#" onclick="return doclink('link-36', 'SimplePanel', 'link-35');">SimplePanel</a></tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-37" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-37', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-38', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Module pyjamas.ui.UIObject=pyjamas.ui.UIObject-module.html,Class pyjamas.ui.UIObject.UIObject=pyjamas.ui.UIObject.UIObject-class.html"><a title="pyjamas.ui.UIObject
+pyjamas.ui.UIObject.UIObject" class="py-name" href="#" onclick="return doclink('link-39', 'UIObject', 'link-39');">UIObject</a></tt> <tt class="py-keyword">import</tt> <tt id="link-40" class="py-name"><a title="pyjamas.ui.UIObject
+pyjamas.ui.UIObject.UIObject" class="py-name" href="#" onclick="return doclink('link-40', 'UIObject', 'link-39');">UIObject</a></tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-41" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-41', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-42', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-43" class="py-name" targets="Module pyjamas.ui.Widget=pyjamas.ui.Widget-module.html,Class pyjamas.ui.Widget.Widget=pyjamas.ui.Widget.Widget-class.html"><a title="pyjamas.ui.Widget
+pyjamas.ui.Widget.Widget" class="py-name" href="#" onclick="return doclink('link-43', 'Widget', 'link-43');">Widget</a></tt> <tt class="py-keyword">import</tt> <tt id="link-44" class="py-name"><a title="pyjamas.ui.Widget
+pyjamas.ui.Widget.Widget" class="py-name" href="#" onclick="return doclink('link-44', 'Widget', 'link-43');">Widget</a></tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-45" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-45', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-46" class="py-name" targets="Package pyjamas.chart=pyjamas.chart-module.html"><a title="pyjamas.chart" class="py-name" href="#" onclick="return doclink('link-46', 'chart', 'link-46');">chart</a></tt> <tt class="py-keyword">import</tt> <tt id="link-47" class="py-name" targets="Module pyjamas.chart.SymbolType=pyjamas.chart.SymbolType-module.html,Class pyjamas.chart.SymbolType.SymbolType=pyjamas.chart.SymbolType.SymbolType-class.html"><a title="pyjamas.chart.SymbolType
+pyjamas.chart.SymbolType.SymbolType" class="py-name" href="#" onclick="return doclink('link-47', 'SymbolType', 'link-47');">SymbolType</a></tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-string">** Defines keywords &lt;tt&gt;INSIDE&lt;/tt&gt;, &lt;tt&gt;OUTSIDE&lt;/tt&gt;, and</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-string">** &lt;tt&gt;CENTERED&lt;/tt&gt; that specify the location of ticks</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-string">** relative to their axis.</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-string">** &lt;p&gt;</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-string">** @see Axis#setTickLocation setTickLocation</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="TickLocation"></a><div id="TickLocation-def"><a name="L77"></a><tt class="py-lineno"> 77</tt> <a class="py-toggle" href="#" id="TickLocation-toggle" onclick="return toggle('TickLocation');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.chart.TickLocation.TickLocation-class.html">TickLocation</a><tt class="py-op">:</tt> </tt>
+</div><div id="TickLocation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="TickLocation-expanded"><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-docstring">    * An integer form of the tick location (-1 - OUTSIDE,</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">    * 0 - CENTERED, +1 - INSIDE) that facilitates</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring">    * generating appropriate symbol types for rendering ticks</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">    *</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="TickLocation.__init__"></a><div id="TickLocation.__init__-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="TickLocation.__init__-toggle" onclick="return toggle('TickLocation.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.TickLocation.TickLocation-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">locationIndex</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TickLocation.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="TickLocation.__init__-expanded"><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">locationIndex</tt> <tt class="py-op">=</tt> <tt class="py-name">locationIndex</tt> </tt>
+</div><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">     </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-comment"># symbol type representing ticks on x axes at given position</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-comment"># axisPosition of  -1 is x-axis, +1 is x2-axis.</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">    <tt class="py-comment">#</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">    <tt class="py-comment"># (symbols representing ticks depend on the axis they are on)</tt> </tt>
+<a name="TickLocation.getXAxisSymbolType"></a><div id="TickLocation.getXAxisSymbolType-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="TickLocation.getXAxisSymbolType-toggle" onclick="return toggle('TickLocation.getXAxisSymbolType');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.TickLocation.TickLocation-class.html#getXAxisSymbolType">getXAxisSymbolType</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">axisPosition</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TickLocation.getXAxisSymbolType-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="TickLocation.getXAxisSymbolType-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-name">symbolMap</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-48" class="py-name"><a title="pyjamas.chart.SymbolType
+pyjamas.chart.SymbolType.SymbolType" class="py-name" href="#" onclick="return doclink('link-48', 'SymbolType', 'link-47');">SymbolType</a></tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Variable pyjamas.chart.SymbolType.BOX_NORTH=pyjamas.chart.SymbolType-module.html#BOX_NORTH"><a title="pyjamas.chart.SymbolType.BOX_NORTH" class="py-name" href="#" onclick="return doclink('link-49', 'BOX_NORTH', 'link-49');">BOX_NORTH</a></tt><tt class="py-op">,</tt> <tt id="link-50" class="py-name"><a title="pyjamas.chart.SymbolType
+pyjamas.chart.SymbolType.SymbolType" class="py-name" href="#" onclick="return doclink('link-50', 'SymbolType', 'link-47');">SymbolType</a></tt><tt class="py-op">.</tt><tt id="link-51" class="py-name" targets="Variable pyjamas.chart.SymbolType.BOX_CENTER=pyjamas.chart.SymbolType-module.html#BOX_CENTER"><a title="pyjamas.chart.SymbolType.BOX_CENTER" class="py-name" href="#" onclick="return doclink('link-51', 'BOX_CENTER', 'link-51');">BOX_CENTER</a></tt><tt class="py-op">,</tt> <tt id="link-52" class="py-name"><a title="pyjamas.chart.SymbolType
+pyjamas.chart.SymbolType.SymbolType" class="py-name" href="#" onclick="return doclink('link-52', 'SymbolType', 'link-47');">SymbolType</a></tt><tt class="py-op">.</tt><tt id="link-53" class="py-name" targets="Variable pyjamas.chart.SymbolType.BOX_SOUTH=pyjamas.chart.SymbolType-module.html#BOX_SOUTH"><a title="pyjamas.chart.SymbolType.BOX_SOUTH" class="py-name" href="#" onclick="return doclink('link-53', 'BOX_SOUTH', 'link-53');">BOX_SOUTH</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">symbolMap</tt><tt class="py-op">[</tt><tt class="py-name">axisPosition</tt><tt class="py-op">*</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">locationIndex</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">     </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-comment"># symbol type representing ticks on y axes at given position</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-comment"># axisPosition of  -1 is y-axis, +1 is y2-axis</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">    <tt class="py-comment">#</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">    <tt class="py-comment"># (symbols representing ticks depend on the axis they are on)</tt> </tt>
+<a name="TickLocation.getYAxisSymbolType"></a><div id="TickLocation.getYAxisSymbolType-def"><a name="L100"></a><tt class="py-lineno">100</tt> <a class="py-toggle" href="#" id="TickLocation.getYAxisSymbolType-toggle" onclick="return toggle('TickLocation.getYAxisSymbolType');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.TickLocation.TickLocation-class.html#getYAxisSymbolType">getYAxisSymbolType</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">axisPosition</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="TickLocation.getYAxisSymbolType-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="TickLocation.getYAxisSymbolType-expanded"><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-name">symbolMap</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-54" class="py-name"><a title="pyjamas.chart.SymbolType
+pyjamas.chart.SymbolType.SymbolType" class="py-name" href="#" onclick="return doclink('link-54', 'SymbolType', 'link-47');">SymbolType</a></tt><tt class="py-op">.</tt><tt id="link-55" class="py-name" targets="Variable pyjamas.chart.SymbolType.BOX_EAST=pyjamas.chart.SymbolType-module.html#BOX_EAST"><a title="pyjamas.chart.SymbolType.BOX_EAST" class="py-name" href="#" onclick="return doclink('link-55', 'BOX_EAST', 'link-55');">BOX_EAST</a></tt><tt class="py-op">,</tt> <tt id="link-56" class="py-name"><a title="pyjamas.chart.SymbolType
+pyjamas.chart.SymbolType.SymbolType" class="py-name" href="#" onclick="return doclink('link-56', 'SymbolType', 'link-47');">SymbolType</a></tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="pyjamas.chart.SymbolType.BOX_CENTER" class="py-name" href="#" onclick="return doclink('link-57', 'BOX_CENTER', 'link-51');">BOX_CENTER</a></tt><tt class="py-op">,</tt> <tt id="link-58" class="py-name"><a title="pyjamas.chart.SymbolType
+pyjamas.chart.SymbolType.SymbolType" class="py-name" href="#" onclick="return doclink('link-58', 'SymbolType', 'link-47');">SymbolType</a></tt><tt class="py-op">.</tt><tt id="link-59" class="py-name" targets="Variable pyjamas.chart.SymbolType.BOX_WEST=pyjamas.chart.SymbolType-module.html#BOX_WEST"><a title="pyjamas.chart.SymbolType.BOX_WEST" class="py-name" href="#" onclick="return doclink('link-59', 'BOX_WEST', 'link-59');">BOX_WEST</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">symbolMap</tt><tt class="py-op">[</tt><tt class="py-name">axisPosition</tt><tt class="py-op">*</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">locationIndex</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div></div><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">     </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">     </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> <tt class="py-comment"># class TickLocation</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-string">** Indicates that ticks are located outside of the axis.</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-string">** @see Axis#setTickLocation setTickLocation</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt id="link-60" class="py-name" targets="Variable pyjamas.chart.TickLocation.OUTSIDE=pyjamas.chart.TickLocation-module.html#OUTSIDE"><a title="pyjamas.chart.TickLocation.OUTSIDE" class="py-name" href="#" onclick="return doclink('link-60', 'OUTSIDE', 'link-60');">OUTSIDE</a></tt> <tt class="py-op">=</tt> <tt id="link-61" class="py-name" targets="Module pyjamas.chart.TickLocation=pyjamas.chart.TickLocation-module.html,Class pyjamas.chart.TickLocation.TickLocation=pyjamas.chart.TickLocation.TickLocation-class.html"><a title="pyjamas.chart.TickLocation
+pyjamas.chart.TickLocation.TickLocation" class="py-name" href="#" onclick="return doclink('link-61', 'TickLocation', 'link-61');">TickLocation</a></tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-string">** Indicates that ticks are centered on the axis.</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-string">** @see Axis#setTickLocation setTickLocation</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt id="link-62" class="py-name" targets="Variable pyjamas.chart.TickLocation.CENTERED=pyjamas.chart.TickLocation-module.html#CENTERED"><a title="pyjamas.chart.TickLocation.CENTERED" class="py-name" href="#" onclick="return doclink('link-62', 'CENTERED', 'link-62');">CENTERED</a></tt> <tt class="py-op">=</tt> <tt id="link-63" class="py-name"><a title="pyjamas.chart.TickLocation
+pyjamas.chart.TickLocation.TickLocation" class="py-name" href="#" onclick="return doclink('link-63', 'TickLocation', 'link-61');">TickLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-string">** Indicates that ticks are located inside of the axis.</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-string">**</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-string">** @see Axis#setTickLocation setTickLocation</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-string">*"""</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt id="link-64" class="py-name" targets="Variable pyjamas.chart.TickLocation.INSIDE=pyjamas.chart.TickLocation-module.html#INSIDE"><a title="pyjamas.chart.TickLocation.INSIDE" class="py-name" href="#" onclick="return doclink('link-64', 'INSIDE', 'link-64');">INSIDE</a></tt> <tt class="py-op">=</tt> <tt id="link-65" class="py-name"><a title="pyjamas.chart.TickLocation
+pyjamas.chart.TickLocation.TickLocation" class="py-name" href="#" onclick="return doclink('link-65', 'TickLocation', 'link-61');">TickLocation</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-string">* The default tick location.</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-string">* @see Axis#setTickLocation setTickLocation</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt id="link-66" class="py-name" targets="Variable pyjamas.chart.TickLocation.DEFAULT_TICK_LOCATION=pyjamas.chart.TickLocation-module.html#DEFAULT_TICK_LOCATION"><a title="pyjamas.chart.TickLocation.DEFAULT_TICK_LOCATION" class="py-name" href="#" onclick="return doclink('link-66', 'DEFAULT_TICK_LOCATION', 'link-66');">DEFAULT_TICK_LOCATION</a></tt> <tt class="py-op">=</tt> <tt id="link-67" class="py-name"><a title="pyjamas.chart.TickLocation.OUTSIDE" class="py-name" href="#" onclick="return doclink('link-67', 'OUTSIDE', 'link-60');">OUTSIDE</a></tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:12 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

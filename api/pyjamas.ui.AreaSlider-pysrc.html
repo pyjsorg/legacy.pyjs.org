@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.AreaSlider</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        Module&nbsp;AreaSlider
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.AreaSlider-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.ui.AreaSlider-module.html">Module pyjamas.ui.AreaSlider</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">""" Control Widgets.  Presently comprises a Vertical Slider and derivatives.</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">    HorizontalSlider and HorizontalSlider2 added by Bill Winder </tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">    AreaSlider and AreaSlider2 added by Bill Winder </tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">    Copyright (C) 2008, 2009, 2010 Luke Kenneth Casson Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">    Copyright (C) 2010 - Cedric Gestes &lt;gestes@aldebaran-robotics.com&gt;</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">    Copyright (C) 2009, 2010 - Bill Winder &lt;wgwinder@gmail.com&gt; </tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">    To do: All controls with draggable=True do not fire the OnFocus methon on single click.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    the control does not activate the OnFocus method. Clicking the handle does fire OnFocus, however.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.Factory=pyjamas.Factory-module.html,Module pyjamas.gears.Factory=pyjamas.gears.Factory-module.html"><a title="pyjamas.Factory
+pyjamas.gears.Factory" class="py-name" href="#" onclick="return doclink('link-1', 'Factory', 'link-1');">Factory</a></tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-2', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-3', 'DOM', 'link-3');">DOM</a></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-4', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Package pyjamas.ui=pyjamas.ui-module.html"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-5', 'ui', 'link-5');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-6" class="py-name" targets="Module pyjamas.ui.Focus=pyjamas.ui.Focus-module.html"><a title="pyjamas.ui.Focus" class="py-name" href="#" onclick="return doclink('link-6', 'Focus', 'link-6');">Focus</a></tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-7" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-7', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-8', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Module pyjamas.ui.DoubleControl=pyjamas.ui.DoubleControl-module.html,Class pyjamas.ui.DoubleControl.DoubleControl=pyjamas.ui.DoubleControl.DoubleControl-class.html"><a title="pyjamas.ui.DoubleControl
+pyjamas.ui.DoubleControl.DoubleControl" class="py-name" href="#" onclick="return doclink('link-9', 'DoubleControl', 'link-9');">DoubleControl</a></tt> <tt class="py-keyword">import</tt> <tt id="link-10" class="py-name"><a title="pyjamas.ui.DoubleControl
+pyjamas.ui.DoubleControl.DoubleControl" class="py-name" href="#" onclick="return doclink('link-10', 'DoubleControl', 'link-9');">DoubleControl</a></tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider"></a><div id="AreaSlider-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="AreaSlider-toggle" onclick="return toggle('AreaSlider');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html">AreaSlider</a><tt class="py-op">(</tt><tt class="py-base-class">DoubleControl</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="AreaSlider-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider.__init__"></a><div id="AreaSlider.__init__-def"><a name="L24"></a><tt class="py-lineno"> 24</tt> <a class="py-toggle" href="#" id="AreaSlider.__init__-toggle" onclick="return toggle('AreaSlider.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">min_value</tt><tt class="py-op">,</tt> <tt class="py-param">max_value</tt><tt class="py-op">,</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">                 <tt class="py-param">start_value</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">step</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">                 <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AreaSlider.__init__-expanded"><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">kwargs</tt><tt class="py-op">.</tt><tt class="py-name">has_key</tt><tt class="py-op">(</tt><tt class="py-string">"StyleName"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">            <tt class="py-name">kwargs</tt><tt class="py-op">[</tt><tt class="py-string">'StyleName'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">"gwt-VerticalSlider"</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">kwargs</tt><tt class="py-op">.</tt><tt class="py-name">has_key</tt><tt class="py-op">(</tt><tt class="py-string">'Element'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">            <tt class="py-comment"># XXX FIXME: Focus.createFocusable is here for a reason...</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">            <tt class="py-name">element</tt> <tt class="py-op">=</tt> <tt class="py-name">kwargs</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method pyjamas.Canvas.JSOStack.JSOStack.pop()=pyjamas.Canvas.JSOStack.JSOStack-class.html#pop"><a title="pyjamas.Canvas.JSOStack.JSOStack.pop" class="py-name" href="#" onclick="return doclink('link-11', 'pop', 'link-11');">pop</a></tt><tt class="py-op">(</tt><tt class="py-string">'Element'</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">            <tt class="py-name">element</tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="pyjamas.ui.Focus" class="py-name" href="#" onclick="return doclink('link-12', 'Focus', 'link-6');">Focus</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Function pyjamas.ui.Focus.createFocusable()=pyjamas.ui.Focus-module.html#createFocusable"><a title="pyjamas.ui.Focus.createFocusable" class="py-name" href="#" onclick="return doclink('link-13', 'createFocusable', 'link-13');">createFocusable</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt id="link-14" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-14', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Function pyjamas.DOM.setStyleAttribute()=pyjamas.DOM-module.html#setStyleAttribute,Method pyjamas.ui.UIObject.UIObject.setStyleAttribute()=pyjamas.ui.UIObject.UIObject-class.html#setStyleAttribute"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-15', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">"position"</tt><tt class="py-op">,</tt> <tt class="py-string">"relative"</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt id="link-16" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-16', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-17', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-string">"overflow"</tt><tt class="py-op">,</tt> <tt class="py-string">"hidden"</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-18', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Function pyjamas.DOM.createDiv()=pyjamas.DOM-module.html#createDiv"><a title="pyjamas.DOM.createDiv" class="py-name" href="#" onclick="return doclink('link-19', 'createDiv', 'link-19');">createDiv</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt id="link-20" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-20', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Function pyjamas.DOM.appendChild()=pyjamas.DOM-module.html#appendChild"><a title="pyjamas.DOM.appendChild" class="py-name" href="#" onclick="return doclink('link-21', 'appendChild', 'link-21');">appendChild</a></tt><tt class="py-op">(</tt><tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method pyjamas.ui.AreaSlider.AreaSlider.setHandleStyle()=pyjamas.ui.AreaSlider.AreaSlider-class.html#setHandleStyle,Method pyjamas.ui.VerticalSlider.VerticalSlider.setHandleStyle()=pyjamas.ui.VerticalSlider.VerticalSlider-class.html#setHandleStyle"><a title="pyjamas.ui.AreaSlider.AreaSlider.setHandleStyle
+pyjamas.ui.VerticalSlider.VerticalSlider.setHandleStyle" class="py-name" href="#" onclick="return doclink('link-22', 'setHandleStyle', 'link-22');">setHandleStyle</a></tt><tt class="py-op">(</tt><tt class="py-string">"1px"</tt><tt class="py-op">,</tt> <tt class="py-string">"100%"</tt><tt class="py-op">,</tt> <tt class="py-string">"10px"</tt><tt class="py-op">,</tt> <tt class="py-string">"#808080"</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-comment"># must use DoubleControl; otherwise, this init is = Vertical init,</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-comment"># plus a change in the handle style</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-comment"># this should be refactored, so that the AreaSlider</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-comment"># can be built on VerticalSlider</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt id="link-23" class="py-name"><a title="pyjamas.ui.DoubleControl
+pyjamas.ui.DoubleControl.DoubleControl" class="py-name" href="#" onclick="return doclink('link-23', 'DoubleControl', 'link-9');">DoubleControl</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault.__init__()=pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault-class.html#__init__,Method pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6.__init__()=pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6-class.html#__init__,Method pyjamas.Canvas.Color.Color.__init__()=pyjamas.Canvas.Color.Color-class.html#__init__,Method pyjamas.Canvas.ColorStop.ColorStop.__init__()=pyjamas.Canvas.ColorStop.ColorStop-class.html#__init__,Method pyjamas.Canvas.GWTCanvas.GWTCanvas.__init__()=pyjamas.Canvas.GWTCanvas.GWTCanvas-class.html#__init__,Method pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.__init__()=pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault-class.html#__init__,Method pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.__init__()=pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6-class.html#__init__,Method pyjamas.Canvas.ImageData.ImageData.__init__()=pyjamas.Canvas.ImageData.ImageData-class.html#__init__,Method pyjamas.Canvas.ImageLoader.ImageLoader.__init__()=pyjamas.Canvas.ImageLoader.ImageLoader-class.html#__init__,Method pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.__init__()=pyjamas.Canvas.ImageLoaderhulahop.ImageLoader-class.html#__init__,Method pyjamas.Canvas.JSOStack.JSOStack.__init__()=pyjamas.Canvas.JSOStack.JSOStack-class.html#__init__,Method pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault.__init__()=pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault-class.html#__init__,Method pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6.__init__()=pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6-class.html#__init__,Method pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault.__init__()=pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault-class.html#__init__,Method pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6.__init__()=pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvas.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvas-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvasGradient.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvasGradient-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient-class.html#__init__,Method pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient.__init__()=pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient-class.html#__init__,Method pyjamas.Canvas.VMLContext.VMLContext.__init__()=pyjamas.Canvas.VMLContext.VMLContext-class.html#__init__,Method pyjamas.Canvas.VMLContext.VMLStyle.__init__()=pyjamas.Canvas.VMLContext.VMLStyle-class.html#__init__,Method pyjamas.Canvas2D.Canvas.__init__()=pyjamas.Canvas2D.Canvas-class.html#__init__,Method pyjamas.Canvas2D.CanvasImage.__init__()=pyjamas.Canvas2D.CanvasImage-class.html#__init__,Method pyjamas.Canvas2D.ImageLoadListener.__init__()=pyjamas.Canvas2D.ImageLoadListener-class.html#__init__,Method pyjamas.DOM.IterChildrenClass.__init__()=pyjamas.DOM.IterChildrenClass-class.html#__init__,Method pyjamas.DOM.IterWalkChildren.__init__()=pyjamas.DOM.IterWalkChildren-class.html#__init__,Method pyjamas.EventController.EventListener.__init__()=pyjamas.EventController.EventListener-class.html#__init__,Method pyjamas.EventController.Handler.__init__()=pyjamas.EventController.Handler-class.html#__init__,Method pyjamas.HTTPRequest.XULrunnerHackCallback.__init__()=pyjamas.HTTPRequest.XULrunnerHackCallback-class.html#__init__,Method pyjamas.JSONService.JSONProxy.__init__()=pyjamas.JSONService.JSONProxy-class.html#__init__,Method pyjamas.JSONService.JSONRequestInfo.__init__()=pyjamas.JSONService.JSONRequestInfo-class.html#__init__,Method pyjamas.JSONService.JSONResponseTextHandler.__init__()=pyjamas.JSONService.JSONResponseTextHandler-class.html#__init__,Method pyjamas.JSONService.JSONService.__init__()=pyjamas.JSONService.JSONService-class.html#__init__,Method pyjamas.JSONService.ServiceProxy.__init__()=pyjamas.JSONService.ServiceProxy-class.html#__init__,Method pyjamas.Location.Location.__init__()=pyjamas.Location.Location-class.html#__init__,Method pyjamas.PyExternalMod.PyjamasExternalModule.__init__()=pyjamas.PyExternalMod.PyjamasExternalModule-class.html#__init__,Method pyjamas.PyExternalMod.PyjamasExternalProxy.__init__()=pyjamas.PyExternalMod.PyjamasExternalProxy-class.html#__init__,Method pyjamas.Timer.Timer.__init__()=pyjamas.Timer.Timer-class.html#__init__,Method pyjamas.builder.Builder.Builder.__init__()=pyjamas.builder.Builder.Builder-class.html#__init__,Method pyjamas.builder.Builder.BuilderState.__init__()=pyjamas.builder.Builder.BuilderState-class.html#__init__,Method pyjamas.builder.Builder.HTTPUILoader.__init__()=pyjamas.builder.Builder.HTTPUILoader-class.html#__init__,Method pyjamas.builder.XMLFile.XMLFile.__init__()=pyjamas.builder.XMLFile.XMLFile-class.html#__init__,Method pyjamas.chart.Annotation.Annotation.__init__()=pyjamas.chart.Annotation.Annotation-class.html#__init__,Method pyjamas.chart.AnnotationLocation.AnnotationLocation.__init__()=pyjamas.chart.AnnotationLocation.AnnotationLocation-class.html#__init__,Method pyjamas.chart.Axis.Axis.__init__()=pyjamas.chart.Axis.Axis-class.html#__init__,Method pyjamas.chart.Axis.AxisLimits.__init__()=pyjamas.chart.Axis.AxisLimits-class.html#__init__,Method pyjamas.chart.Axis.XAxis.__init__()=pyjamas.chart.Axis.XAxis-class.html#__init__,Method pyjamas.chart.Axis.Y2Axis.__init__()=pyjamas.chart.Axis.Y2Axis-class.html#__init__,Method pyjamas.chart.Axis.YAxis.__init__()=pyjamas.chart.Axis.YAxis-class.html#__init__,Method pyjamas.chart.Curve.Curve.__init__()=pyjamas.chart.Curve.Curve-class.html#__init__,Method pyjamas.chart.DateTimeFormat.DF.__init__()=pyjamas.chart.DateTimeFormat.DF-class.html#__init__,Method pyjamas.chart.GChart.GChart.__init__()=pyjamas.chart.GChart.GChart-class.html#__init__,Method pyjamas.chart.GChartWidgets.AlignedLabel.__init__()=pyjamas.chart.GChartWidgets.AlignedLabel-class.html#__init__,Method pyjamas.chart.GChartWidgets.AnnotationRenderingPanel.__init__()=pyjamas.chart.GChartWidgets.AnnotationRenderingPanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.GraphicsRenderingPanel.__init__()=pyjamas.chart.GChartWidgets.GraphicsRenderingPanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel.__init__()=pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel-class.html#__init__,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.__init__()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.PlotPanel.__init__()=pyjamas.chart.GChartWidgets.PlotPanel-class.html#__init__,Method pyjamas.chart.GChartWidgets.ReusableImage.__init__()=pyjamas.chart.GChartWidgets.ReusableImage-class.html#__init__,Method pyjamas.chart.HovertextChunk.HovertextChunk.__init__()=pyjamas.chart.HovertextChunk.HovertextChunk-class.html#__init__,Method pyjamas.chart.NumberFormat.NF.__init__()=pyjamas.chart.NumberFormat.NF-class.html#__init__,Method pyjamas.chart.Point.Point.__init__()=pyjamas.chart.Point.Point-class.html#__init__,Method pyjamas.chart.Symbol.Symbol.__init__()=pyjamas.chart.Symbol.Symbol-class.html#__init__,Method pyjamas.chart.SymbolType.AnnotationAnchor.__init__()=pyjamas.chart.SymbolType.AnnotationAnchor-class.html#__init__,Method pyjamas.chart.SymbolType.HBarBaseline.__init__()=pyjamas.chart.SymbolType.HBarBaseline-class.html#__init__,Method pyjamas.chart.SymbolType.HBarLeft.__init__()=pyjamas.chart.SymbolType.HBarLeft-class.html#__init__,Method pyjamas.chart.SymbolType.HBarRight.__init__()=pyjamas.chart.SymbolType.HBarRight-class.html#__init__,Method pyjamas.chart.SymbolType.LineSymbolType.__init__()=pyjamas.chart.SymbolType.LineSymbolType-class.html#__init__,Method pyjamas.chart.SymbolType.PieSliceSymbolType.__init__()=pyjamas.chart.SymbolType.PieSliceSymbolType-class.html#__init__,Method pyjamas.chart.SymbolType.SymbolType.__init__()=pyjamas.chart.SymbolType.SymbolType-class.html#__init__,Method pyjamas.chart.SymbolType.VBarBaseline.__init__()=pyjamas.chart.SymbolType.VBarBaseline-class.html#__init__,Method pyjamas.chart.SymbolType.VBarBottom.__init__()=pyjamas.chart.SymbolType.VBarBottom-class.html#__init__,Method pyjamas.chart.SymbolType.VBarTop.__init__()=pyjamas.chart.SymbolType.VBarTop-class.html#__init__,Method pyjamas.chart.TickLocation.TickLocation.__init__()=pyjamas.chart.TickLocation.TickLocation-class.html#__init__,Method pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption.__init__()=pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption-class.html#__init__,Method pyjamas.django.Form.CharField.__init__()=pyjamas.django.Form.CharField-class.html#__init__,Method pyjamas.django.Form.FloatField.__init__()=pyjamas.django.Form.FloatField-class.html#__init__,Method pyjamas.django.Form.Form.__init__()=pyjamas.django.Form.Form-class.html#__init__,Method pyjamas.django.Form.FormDescribeGrid.__init__()=pyjamas.django.Form.FormDescribeGrid-class.html#__init__,Method pyjamas.django.Form.FormGetGrid.__init__()=pyjamas.django.Form.FormGetGrid-class.html#__init__,Method pyjamas.django.Form.FormSaveGrid.__init__()=pyjamas.django.Form.FormSaveGrid-class.html#__init__,Method pyjamas.django.Form.IntegerField.__init__()=pyjamas.django.Form.IntegerField-class.html#__init__,Method pyjamas.dnd.DNDHelper.DNDHelper.__init__()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#__init__,Method pyjamas.dnd.DataTransfer.DataTransfer.__init__()=pyjamas.dnd.DataTransfer.DataTransfer-class.html#__init__,Method pyjamas.dnd.DataTransfer.DataTransferItem.__init__()=pyjamas.dnd.DataTransfer.DataTransferItem-class.html#__init__,Method pyjamas.dnd.DataTransfer.DragDataStore.__init__()=pyjamas.dnd.DataTransfer.DragDataStore-class.html#__init__,Method pyjamas.dnd.DragEvent.DragEvent.__init__()=pyjamas.dnd.DragEvent.DragEvent-class.html#__init__,Method pyjamas.dnd.utils.DOMStringList.__init__()=pyjamas.dnd.utils.DOMStringList-class.html#__init__,Method pyjamas.dnd.utils.DraggingWidget.__init__()=pyjamas.dnd.utils.DraggingWidget-class.html#__init__,Method pyjamas.dnd.utils.Uri_list.__init__()=pyjamas.dnd.utils.Uri_list-class.html#__init__,Method pyjamas.feed.Feed.Feed.__init__()=pyjamas.feed.Feed.Feed-class.html#__init__,Method pyjamas.gears.GearsException.GearsException.__init__()=pyjamas.gears.GearsException.GearsException-class.html#__init__,Method pyjamas.gears.database.Database.GearsDatabase.__init__()=pyjamas.gears.database.Database.GearsDatabase-class.html#__init__,Method pyjamas.gears.database.DatabaseException.DatabaseException.__init__()=pyjamas.gears.database.DatabaseException.DatabaseException-class.html#__init__,Method pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer.__init__()=pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer-class.html#__init__,Method pyjamas.gmaps.DirectionsService.DirectionsService.__init__()=pyjamas.gmaps.DirectionsService.DirectionsService-class.html#__init__,Method pyjamas.gmaps.Geocoder.Geocoder.__init__()=pyjamas.gmaps.Geocoder.Geocoder-class.html#__init__,Method pyjamas.logging.handlers.AlertHandler.__init__()=pyjamas.logging.handlers.AlertHandler-class.html#__init__,Method pyjamas.logging.handlers.AppendHandler.__init__()=pyjamas.logging.handlers.AppendHandler-class.html#__init__,Method pyjamas.logging.handlers.ConsoleHandler.__init__()=pyjamas.logging.handlers.ConsoleHandler-class.html#__init__,Method pyjamas.logging.handlers.NullHandler.__init__()=pyjamas.logging.handlers.NullHandler-class.html#__init__,Method pyjamas.media.Audio.Audio.__init__()=pyjamas.media.Audio.Audio-class.html#__init__,Method pyjamas.media.Media.Media.__init__()=pyjamas.media.Media.Media-class.html#__init__,Method pyjamas.media.Video.Video.__init__()=pyjamas.media.Video.Video-class.html#__init__,Method pyjamas.selection.Range.Range.__init__()=pyjamas.selection.Range.Range-class.html#__init__,Method pyjamas.selection.RangeEndPoint.FindLocRes.__init__()=pyjamas.selection.RangeEndPoint.FindLocRes-class.html#__init__,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.__init__()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#__init__,Method pyjamas.ui.AbsolutePanel.AbsolutePanel.__init__()=pyjamas.ui.AbsolutePanel.AbsolutePanel-class.html#__init__,Method pyjamas.ui.Anchor.Anchor.__init__()=pyjamas.ui.Anchor.Anchor-class.html#__init__,Method pyjamas.ui.Anchor._Attribute.__init__()=pyjamas.ui.Anchor._Attribute-class.html#__init__,Method pyjamas.ui.Anchor._Attributes.__init__()=pyjamas.ui.Anchor._Attributes-class.html#__init__,Method pyjamas.ui.Applier.__init__()=pyjamas.ui.Applier-class.html#__init__,Method pyjamas.ui.AreaSlider.AreaSlider.__init__()=pyjamas.ui.AreaSlider.AreaSlider-class.html#__init__,Method pyjamas.ui.AutoComplete.AutoCompleteTextBox.__init__()=pyjamas.ui.AutoComplete.AutoCompleteTextBox-class.html#__init__,Method pyjamas.ui.AutoComplete.SimpleAutoCompletionItems.__init__()=pyjamas.ui.AutoComplete.SimpleAutoCompletionItems-class.html#__init__,Method pyjamas.ui.BuilderPanel.BuilderPanel.__init__()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#__init__,Method pyjamas.ui.BuilderWidget.BuilderWidget.__init__()=pyjamas.ui.BuilderWidget.BuilderWidget-class.html#__init__,Method pyjamas.ui.Button.Button.__init__()=pyjamas.ui.Button.Button-class.html#__init__,Method pyjamas.ui.ButtonBase.ButtonBase.__init__()=pyjamas.ui.ButtonBase.ButtonBase-class.html#__init__,Method pyjamas.ui.CSS.StyleSheetCssFile.__init__()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#__init__,Method pyjamas.ui.CSS.StyleSheetCssText.__init__()=pyjamas.ui.CSS.StyleSheetCssText-class.html#__init__,Method pyjamas.ui.Calendar.Calendar.__init__()=pyjamas.ui.Calendar.Calendar-class.html#__init__,Method pyjamas.ui.Calendar.CalendarPopup.__init__()=pyjamas.ui.Calendar.CalendarPopup-class.html#__init__,Method pyjamas.ui.Calendar.DateField.__init__()=pyjamas.ui.Calendar.DateField-class.html#__init__,Method pyjamas.ui.CaptionPanel.CaptionPanel.__init__()=pyjamas.ui.CaptionPanel.CaptionPanel-class.html#__init__,Method pyjamas.ui.CellFormatter.CellFormatter.__init__()=pyjamas.ui.CellFormatter.CellFormatter-class.html#__init__,Method pyjamas.ui.CellPanel.CellPanel.__init__()=pyjamas.ui.CellPanel.CellPanel-class.html#__init__,Method pyjamas.ui.ChangeListener.ChangeHandler.__init__()=pyjamas.ui.ChangeListener.ChangeHandler-class.html#__init__,Method pyjamas.ui.CheckBox.CheckBox.__init__()=pyjamas.ui.CheckBox.CheckBox-class.html#__init__,Method pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel.__init__()=pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel-class.html#__init__,Method pyjamas.ui.ClickListener.ClickHandler.__init__()=pyjamas.ui.ClickListener.ClickHandler-class.html#__init__,Method pyjamas.ui.Composite.Composite.__init__()=pyjamas.ui.Composite.Composite-class.html#__init__,Method pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel.__init__()=pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel-class.html#__init__,Method pyjamas.ui.Control.Control.__init__()=pyjamas.ui.Control.Control-class.html#__init__,Method pyjamas.ui.Controls.AreaDemoSlider2.__init__()=pyjamas.ui.Controls.AreaDemoSlider2-class.html#__init__,Method pyjamas.ui.Controls.HorizontalDemoSlider2.__init__()=pyjamas.ui.Controls.HorizontalDemoSlider2-class.html#__init__,Method pyjamas.ui.Controls.VerticalDemoSlider2.__init__()=pyjamas.ui.Controls.VerticalDemoSlider2-class.html#__init__,Method pyjamas.ui.CustomButton.CustomButton.__init__()=pyjamas.ui.CustomButton.CustomButton-class.html#__init__,Method pyjamas.ui.CustomButton.Face.__init__()=pyjamas.ui.CustomButton.Face-class.html#__init__,Method pyjamas.ui.DeckPanel.DeckPanel.__init__()=pyjamas.ui.DeckPanel.DeckPanel-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratedTabBar.__init__()=pyjamas.ui.DecoratorPanel.DecoratedTabBar-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratedTabPanel.__init__()=pyjamas.ui.DecoratorPanel.DecoratedTabPanel-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratorPanel.__init__()=pyjamas.ui.DecoratorPanel.DecoratorPanel-class.html#__init__,Method pyjamas.ui.DecoratorPanel.DecoratorTitledPanel.__init__()=pyjamas.ui.DecoratorPanel.DecoratorTitledPanel-class.html#__init__,Method pyjamas.ui.DialogBox.DialogBox.__init__()=pyjamas.ui.DialogBox.DialogBox-class.html#__init__,Method pyjamas.ui.DialogWindow.DialogWindow.__init__()=pyjamas.ui.DialogWindow.DialogWindow-class.html#__init__,Method pyjamas.ui.DisclosurePanel.ClickableHeader.__init__()=pyjamas.ui.DisclosurePanel.ClickableHeader-class.html#__init__,Method pyjamas.ui.DisclosurePanel.DefaultHeader.__init__()=pyjamas.ui.DisclosurePanel.DefaultHeader-class.html#__init__,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.__init__()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#__init__,Method pyjamas.ui.DockPanel.DockPanel.__init__()=pyjamas.ui.DockPanel.DockPanel-class.html#__init__,Method pyjamas.ui.DockPanel.LayoutData.__init__()=pyjamas.ui.DockPanel.LayoutData-class.html#__init__,Method pyjamas.ui.DoubleControl.DoubleControl.__init__()=pyjamas.ui.DoubleControl.DoubleControl-class.html#__init__,Method pyjamas.ui.DragHandler.DragHandler.__init__()=pyjamas.ui.DragHandler.DragHandler-class.html#__init__,Method pyjamas.ui.DragWidget.Html5DragContainer.__init__()=pyjamas.ui.DragWidget.Html5DragContainer-class.html#__init__,Method pyjamas.ui.DragWidget.Html5DragWidget.__init__()=pyjamas.ui.DragWidget.Html5DragWidget-class.html#__init__,Method pyjamas.ui.DragWidget.MouseDragContainer.__init__()=pyjamas.ui.DragWidget.MouseDragContainer-class.html#__init__,Method pyjamas.ui.DragWidget.MouseDragWidget.__init__()=pyjamas.ui.DragWidget.MouseDragWidget-class.html#__init__,Method pyjamas.ui.DropHandler.DropHandler.__init__()=pyjamas.ui.DropHandler.DropHandler-class.html#__init__,Method pyjamas.ui.DropWidget.EmulatedDropWidget.__init__()=pyjamas.ui.DropWidget.EmulatedDropWidget-class.html#__init__,Method pyjamas.ui.DropWidget.Html5DropWidget.__init__()=pyjamas.ui.DropWidget.Html5DropWidget-class.html#__init__,Method pyjamas.ui.EventObject.EventObject.__init__()=pyjamas.ui.EventObject.EventObject-class.html#__init__,Method pyjamas.ui.FileUpload.FileUpload.__init__()=pyjamas.ui.FileUpload.FileUpload-class.html#__init__,Method pyjamas.ui.FlashPanel.FlashPanel.__init__()=pyjamas.ui.FlashPanel.FlashPanel-class.html#__init__,Method pyjamas.ui.FlexCellFormatter.FlexCellFormatter.__init__()=pyjamas.ui.FlexCellFormatter.FlexCellFormatter-class.html#__init__,Method pyjamas.ui.FlexTable.FlexTable.__init__()=pyjamas.ui.FlexTable.FlexTable-class.html#__init__,Method pyjamas.ui.FlowPanel.FlowPanel.__init__()=pyjamas.ui.FlowPanel.FlowPanel-class.html#__init__,Method pyjamas.ui.FlowTabBar.FlowTabBar.__init__()=pyjamas.ui.FlowTabBar.FlowTabBar-class.html#__init__,Method pyjamas.ui.FocusListener.FocusHandler.__init__()=pyjamas.ui.FocusListener.FocusHandler-class.html#__init__,Method pyjamas.ui.FocusPanel.FocusPanel.__init__()=pyjamas.ui.FocusPanel.FocusPanel-class.html#__init__,Method pyjamas.ui.FocusWidget.FocusWidget.__init__()=pyjamas.ui.FocusWidget.FocusWidget-class.html#__init__,Method pyjamas.ui.FormPanel.FormPanel.__init__()=pyjamas.ui.FormPanel.FormPanel-class.html#__init__,Method pyjamas.ui.FormPanel.FormSubmitCompleteEvent.__init__()=pyjamas.ui.FormPanel.FormSubmitCompleteEvent-class.html#__init__,Method pyjamas.ui.FormPanel.FormSubmitEvent.__init__()=pyjamas.ui.FormPanel.FormSubmitEvent-class.html#__init__,Method pyjamas.ui.Frame.Frame.__init__()=pyjamas.ui.Frame.Frame-class.html#__init__,Method pyjamas.ui.GlassWidget.GlassWidget.__init__()=pyjamas.ui.GlassWidget.GlassWidget-class.html#__init__,Method pyjamas.ui.Grid.Grid.__init__()=pyjamas.ui.Grid.Grid-class.html#__init__,Method pyjamas.ui.HTML.HTML.__init__()=pyjamas.ui.HTML.HTML-class.html#__init__,Method pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel.__init__()=pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel-class.html#__init__,Method pyjamas.ui.HTMLPanel.HTMLPanel.__init__()=pyjamas.ui.HTMLPanel.HTMLPanel-class.html#__init__,Method pyjamas.ui.HTMLTable.HTMLTable.__init__()=pyjamas.ui.HTMLTable.HTMLTable-class.html#__init__,Method pyjamas.ui.Hidden.Hidden.__init__()=pyjamas.ui.Hidden.Hidden-class.html#__init__,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.__init__()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#__init__,Method pyjamas.ui.HorizontalSlider.HorizontalSlider.__init__()=pyjamas.ui.HorizontalSlider.HorizontalSlider-class.html#__init__,Method pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel.__init__()=pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel-class.html#__init__,Method pyjamas.ui.Hyperlink.Hyperlink.__init__()=pyjamas.ui.Hyperlink.Hyperlink-class.html#__init__,Method pyjamas.ui.HyperlinkImage.HyperlinkImage.__init__()=pyjamas.ui.HyperlinkImage.HyperlinkImage-class.html#__init__,Method pyjamas.ui.Image.Image.__init__()=pyjamas.ui.Image.Image-class.html#__init__,Method pyjamas.ui.InlineHTML.InlineHTML.__init__()=pyjamas.ui.InlineHTML.InlineHTML-class.html#__init__,Method pyjamas.ui.InlineLabel.InlineLabel.__init__()=pyjamas.ui.InlineLabel.InlineLabel-class.html#__init__,Method pyjamas.ui.InputControl.InputControl.__init__()=pyjamas.ui.InputControl.InputControl-class.html#__init__,Method pyjamas.ui.InputListener.InputHandler.__init__()=pyjamas.ui.InputListener.InputHandler-class.html#__init__,Method pyjamas.ui.KeyboardListener.KeyboardHandler.__init__()=pyjamas.ui.KeyboardListener.KeyboardHandler-class.html#__init__,Method pyjamas.ui.Label.Label.__init__()=pyjamas.ui.Label.Label-class.html#__init__,Method pyjamas.ui.ListBox.ListBox.__init__()=pyjamas.ui.ListBox.ListBox-class.html#__init__,Method pyjamas.ui.Map.ImageMap.__init__()=pyjamas.ui.Map.ImageMap-class.html#__init__,Method pyjamas.ui.Map.MapArea.__init__()=pyjamas.ui.Map.MapArea-class.html#__init__,Method pyjamas.ui.MenuBar.MenuBar.__init__()=pyjamas.ui.MenuBar.MenuBar-class.html#__init__,Method pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel.__init__()=pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel-class.html#__init__,Method pyjamas.ui.MenuItem.MenuItem.__init__()=pyjamas.ui.MenuItem.MenuItem-class.html#__init__,Method pyjamas.ui.MonthField.MonthField.__init__()=pyjamas.ui.MonthField.MonthField-class.html#__init__,Method pyjamas.ui.MouseInputControl.MouseInputControl.__init__()=pyjamas.ui.MouseInputControl.MouseInputControl-class.html#__init__,Method pyjamas.ui.MouseListener.MouseHandler.__init__()=pyjamas.ui.MouseListener.MouseHandler-class.html#__init__,Method pyjamas.ui.MouseListener.MouseWheelHandler.__init__()=pyjamas.ui.MouseListener.MouseWheelHandler-class.html#__init__,Method pyjamas.ui.MultiListener.MultiListener.__init__()=pyjamas.ui.MultiListener.MultiListener-class.html#__init__,Method pyjamas.ui.NamedFrame.NamedFrame.__init__()=pyjamas.ui.NamedFrame.NamedFrame-class.html#__init__,Method pyjamas.ui.Panel.Panel.__init__()=pyjamas.ui.Panel.Panel-class.html#__init__,Method pyjamas.ui.PasswordTextBox.PasswordTextBox.__init__()=pyjamas.ui.PasswordTextBox.PasswordTextBox-class.html#__init__,Method pyjamas.ui.PopupPanel.PopupPanel.__init__()=pyjamas.ui.PopupPanel.PopupPanel-class.html#__init__,Method pyjamas.ui.PushButton.PushButton.__init__()=pyjamas.ui.PushButton.PushButton-class.html#__init__,Method pyjamas.ui.RadioButton.RadioButton.__init__()=pyjamas.ui.RadioButton.RadioButton-class.html#__init__,Method pyjamas.ui.RichTextArea.RichTextArea.__init__()=pyjamas.ui.RichTextArea.RichTextArea-class.html#__init__,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.__init__()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#__init__,Method pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.__init__()=pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard-class.html#__init__,Method pyjamas.ui.RichTextToolbar.CustomStyleManager.__init__()=pyjamas.ui.RichTextToolbar.CustomStyleManager-class.html#__init__,Method pyjamas.ui.RichTextToolbar.EventLinkPopup.__init__()=pyjamas.ui.RichTextToolbar.EventLinkPopup-class.html#__init__,Method pyjamas.ui.RichTextToolbar.FontFamilyManager.__init__()=pyjamas.ui.RichTextToolbar.FontFamilyManager-class.html#__init__,Method pyjamas.ui.RichTextToolbar.HeadingStyleManager.__init__()=pyjamas.ui.RichTextToolbar.HeadingStyleManager-class.html#__init__,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.__init__()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#__init__,Method pyjamas.ui.RootPanel.RootPanelCls.__init__()=pyjamas.ui.RootPanel.RootPanelCls-class.html#__init__,Method pyjamas.ui.RowFormatter.RowFormatter.__init__()=pyjamas.ui.RowFormatter.RowFormatter-class.html#__init__,Method pyjamas.ui.ScrollPanel.ScrollPanel.__init__()=pyjamas.ui.ScrollPanel.ScrollPanel-class.html#__init__,Method pyjamas.ui.SimplePanel.SimplePanel.__init__()=pyjamas.ui.SimplePanel.SimplePanel-class.html#__init__,Method pyjamas.ui.Sink.Sink.__init__()=pyjamas.ui.Sink.Sink-class.html#__init__,Method pyjamas.ui.Sink.SinkInfo.__init__()=pyjamas.ui.Sink.SinkInfo-class.html#__init__,Method pyjamas.ui.Sink.SinkList.__init__()=pyjamas.ui.Sink.SinkList-class.html#__init__,Method pyjamas.ui.SplitPanel.SplitPanel.__init__()=pyjamas.ui.SplitPanel.SplitPanel-class.html#__init__,Method pyjamas.ui.SplitPanel.SplitPanelSplitter.__init__()=pyjamas.ui.SplitPanel.SplitPanelSplitter-class.html#__init__,Method pyjamas.ui.StackPanel.StackPanel.__init__()=pyjamas.ui.StackPanel.StackPanel-class.html#__init__,Method pyjamas.ui.TabBar.TabBar.__init__()=pyjamas.ui.TabBar.TabBar-class.html#__init__,Method pyjamas.ui.TabPanel.TabPanel.__init__()=pyjamas.ui.TabPanel.TabPanel-class.html#__init__,Method pyjamas.ui.TextArea.TextArea.__init__()=pyjamas.ui.TextArea.TextArea-class.html#__init__,Method pyjamas.ui.TextBox.TextBox.__init__()=pyjamas.ui.TextBox.TextBox-class.html#__init__,Method pyjamas.ui.TextBoxBase.TextBoxBase.__init__()=pyjamas.ui.TextBoxBase.TextBoxBase-class.html#__init__,Method pyjamas.ui.ToggleButton.ToggleButton.__init__()=pyjamas.ui.ToggleButton.ToggleButton-class.html#__init__,Method pyjamas.ui.Tooltip.Tooltip.__init__()=pyjamas.ui.Tooltip.Tooltip-class.html#__init__,Method pyjamas.ui.Tooltip.TooltipListener.__init__()=pyjamas.ui.Tooltip.TooltipListener-class.html#__init__,Method pyjamas.ui.Tree.Tree.__init__()=pyjamas.ui.Tree.Tree-class.html#__init__,Method pyjamas.ui.TreeContentPanel.TreeContentPanel.__init__()=pyjamas.ui.TreeContentPanel.TreeContentPanel-class.html#__init__,Method pyjamas.ui.TreeItem.TreeItem.__init__()=pyjamas.ui.TreeItem.TreeItem-class.html#__init__,Method pyjamas.ui.UIObject.UIObject.__init__()=pyjamas.ui.UIObject.UIObject-class.html#__init__,Method pyjamas.ui.VerticalSlider.VerticalSlider.__init__()=pyjamas.ui.VerticalSlider.VerticalSlider-class.html#__init__,Method pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel.__init__()=pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel-class.html#__init__,Method pyjamas.ui.Widget.Widget.__init__()=pyjamas.ui.Widget.Widget-class.html#__init__"><a title="pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault.__init__
+pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6.__init__
+pyjamas.Canvas.Color.Color.__init__
+pyjamas.Canvas.ColorStop.ColorStop.__init__
+pyjamas.Canvas.GWTCanvas.GWTCanvas.__init__
+pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.__init__
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.__init__
+pyjamas.Canvas.ImageData.ImageData.__init__
+pyjamas.Canvas.ImageLoader.ImageLoader.__init__
+pyjamas.Canvas.ImageLoaderhulahop.ImageLoader.__init__
+pyjamas.Canvas.JSOStack.JSOStack.__init__
+pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault.__init__
+pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6.__init__
+pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault.__init__
+pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvas.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasLinearGradient.__init__
+pyjamas.Canvas.SVGCanvas.SVGCanvasRadialGradient.__init__
+pyjamas.Canvas.VMLContext.VMLContext.__init__
+pyjamas.Canvas.VMLContext.VMLStyle.__init__
+pyjamas.Canvas2D.Canvas.__init__
+pyjamas.Canvas2D.CanvasImage.__init__
+pyjamas.Canvas2D.ImageLoadListener.__init__
+pyjamas.DOM.IterChildrenClass.__init__
+pyjamas.DOM.IterWalkChildren.__init__
+pyjamas.EventController.EventListener.__init__
+pyjamas.EventController.Handler.__init__
+pyjamas.HTTPRequest.XULrunnerHackCallback.__init__
+pyjamas.JSONService.JSONProxy.__init__
+pyjamas.JSONService.JSONRequestInfo.__init__
+pyjamas.JSONService.JSONResponseTextHandler.__init__
+pyjamas.JSONService.JSONService.__init__
+pyjamas.JSONService.ServiceProxy.__init__
+pyjamas.Location.Location.__init__
+pyjamas.PyExternalMod.PyjamasExternalModule.__init__
+pyjamas.PyExternalMod.PyjamasExternalProxy.__init__
+pyjamas.Timer.Timer.__init__
+pyjamas.builder.Builder.Builder.__init__
+pyjamas.builder.Builder.BuilderState.__init__
+pyjamas.builder.Builder.HTTPUILoader.__init__
+pyjamas.builder.XMLFile.XMLFile.__init__
+pyjamas.chart.Annotation.Annotation.__init__
+pyjamas.chart.AnnotationLocation.AnnotationLocation.__init__
+pyjamas.chart.Axis.Axis.__init__
+pyjamas.chart.Axis.AxisLimits.__init__
+pyjamas.chart.Axis.XAxis.__init__
+pyjamas.chart.Axis.Y2Axis.__init__
+pyjamas.chart.Axis.YAxis.__init__
+pyjamas.chart.Curve.Curve.__init__
+pyjamas.chart.DateTimeFormat.DF.__init__
+pyjamas.chart.GChart.GChart.__init__
+pyjamas.chart.GChartWidgets.AlignedLabel.__init__
+pyjamas.chart.GChartWidgets.AnnotationRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.GraphicsRenderingPanel.__init__
+pyjamas.chart.GChartWidgets.NonoccludingReusuableAlignedLabel.__init__
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.__init__
+pyjamas.chart.GChartWidgets.PlotPanel.__init__
+pyjamas.chart.GChartWidgets.ReusableImage.__init__
+pyjamas.chart.HovertextChunk.HovertextChunk.__init__
+pyjamas.chart.NumberFormat.NF.__init__
+pyjamas.chart.Point.Point.__init__
+pyjamas.chart.Symbol.Symbol.__init__
+pyjamas.chart.SymbolType.AnnotationAnchor.__init__
+pyjamas.chart.SymbolType.HBarBaseline.__init__
+pyjamas.chart.SymbolType.HBarLeft.__init__
+pyjamas.chart.SymbolType.HBarRight.__init__
+pyjamas.chart.SymbolType.LineSymbolType.__init__
+pyjamas.chart.SymbolType.PieSliceSymbolType.__init__
+pyjamas.chart.SymbolType.SymbolType.__init__
+pyjamas.chart.SymbolType.VBarBaseline.__init__
+pyjamas.chart.SymbolType.VBarBottom.__init__
+pyjamas.chart.SymbolType.VBarTop.__init__
+pyjamas.chart.TickLocation.TickLocation.__init__
+pyjamas.chart.TouchedPointUpdateOption.TouchedPointUpdateOption.__init__
+pyjamas.django.Form.CharField.__init__
+pyjamas.django.Form.FloatField.__init__
+pyjamas.django.Form.Form.__init__
+pyjamas.django.Form.FormDescribeGrid.__init__
+pyjamas.django.Form.FormGetGrid.__init__
+pyjamas.django.Form.FormSaveGrid.__init__
+pyjamas.django.Form.IntegerField.__init__
+pyjamas.dnd.DNDHelper.DNDHelper.__init__
+pyjamas.dnd.DataTransfer.DataTransfer.__init__
+pyjamas.dnd.DataTransfer.DataTransferItem.__init__
+pyjamas.dnd.DataTransfer.DragDataStore.__init__
+pyjamas.dnd.DragEvent.DragEvent.__init__
+pyjamas.dnd.utils.DOMStringList.__init__
+pyjamas.dnd.utils.DraggingWidget.__init__
+pyjamas.dnd.utils.Uri_list.__init__
+pyjamas.feed.Feed.Feed.__init__
+pyjamas.gears.GearsException.GearsException.__init__
+pyjamas.gears.database.Database.GearsDatabase.__init__
+pyjamas.gears.database.DatabaseException.DatabaseException.__init__
+pyjamas.gmaps.DirectionsRenderer.DirectionsRenderer.__init__
+pyjamas.gmaps.DirectionsService.DirectionsService.__init__
+pyjamas.gmaps.Geocoder.Geocoder.__init__
+pyjamas.logging.handlers.AlertHandler.__init__
+pyjamas.logging.handlers.AppendHandler.__init__
+pyjamas.logging.handlers.ConsoleHandler.__init__
+pyjamas.logging.handlers.NullHandler.__init__
+pyjamas.media.Audio.Audio.__init__
+pyjamas.media.Media.Media.__init__
+pyjamas.media.Video.Video.__init__
+pyjamas.selection.Range.Range.__init__
+pyjamas.selection.RangeEndPoint.FindLocRes.__init__
+pyjamas.selection.RangeEndPoint.RangeEndPoint.__init__
+pyjamas.ui.AbsolutePanel.AbsolutePanel.__init__
+pyjamas.ui.Anchor.Anchor.__init__
+pyjamas.ui.Anchor._Attribute.__init__
+pyjamas.ui.Anchor._Attributes.__init__
+pyjamas.ui.Applier.__init__
+pyjamas.ui.AreaSlider.AreaSlider.__init__
+pyjamas.ui.AutoComplete.AutoCompleteTextBox.__init__
+pyjamas.ui.AutoComplete.SimpleAutoCompletionItems.__init__
+pyjamas.ui.BuilderPanel.BuilderPanel.__init__
+pyjamas.ui.BuilderWidget.BuilderWidget.__init__
+pyjamas.ui.Button.Button.__init__
+pyjamas.ui.ButtonBase.ButtonBase.__init__
+pyjamas.ui.CSS.StyleSheetCssFile.__init__
+pyjamas.ui.CSS.StyleSheetCssText.__init__
+pyjamas.ui.Calendar.Calendar.__init__
+pyjamas.ui.Calendar.CalendarPopup.__init__
+pyjamas.ui.Calendar.DateField.__init__
+pyjamas.ui.CaptionPanel.CaptionPanel.__init__
+pyjamas.ui.CellFormatter.CellFormatter.__init__
+pyjamas.ui.CellPanel.CellPanel.__init__
+pyjamas.ui.ChangeListener.ChangeHandler.__init__
+pyjamas.ui.CheckBox.CheckBox.__init__
+pyjamas.ui.ClickDelegatePanel.ClickDelegatePanel.__init__
+pyjamas.ui.ClickListener.ClickHandler.__init__
+pyjamas.ui.Composite.Composite.__init__
+pyjamas.ui.ContextMenuPopupPanel.ContextMenuPopupPanel.__init__
+pyjamas.ui.Control.Control.__init__
+pyjamas.ui.Controls.AreaDemoSlider2.__init__
+pyjamas.ui.Controls.HorizontalDemoSlider2.__init__
+pyjamas.ui.Controls.VerticalDemoSlider2.__init__
+pyjamas.ui.CustomButton.CustomButton.__init__
+pyjamas.ui.CustomButton.Face.__init__
+pyjamas.ui.DeckPanel.DeckPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabBar.__init__
+pyjamas.ui.DecoratorPanel.DecoratedTabPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorPanel.__init__
+pyjamas.ui.DecoratorPanel.DecoratorTitledPanel.__init__
+pyjamas.ui.DialogBox.DialogBox.__init__
+pyjamas.ui.DialogWindow.DialogWindow.__init__
+pyjamas.ui.DisclosurePanel.ClickableHeader.__init__
+pyjamas.ui.DisclosurePanel.DefaultHeader.__init__
+pyjamas.ui.DisclosurePanel.DisclosurePanel.__init__
+pyjamas.ui.DockPanel.DockPanel.__init__
+pyjamas.ui.DockPanel.LayoutData.__init__
+pyjamas.ui.DoubleControl.DoubleControl.__init__
+pyjamas.ui.DragHandler.DragHandler.__init__
+pyjamas.ui.DragWidget.Html5DragContainer.__init__
+pyjamas.ui.DragWidget.Html5DragWidget.__init__
+pyjamas.ui.DragWidget.MouseDragContainer.__init__
+pyjamas.ui.DragWidget.MouseDragWidget.__init__
+pyjamas.ui.DropHandler.DropHandler.__init__
+pyjamas.ui.DropWidget.EmulatedDropWidget.__init__
+pyjamas.ui.DropWidget.Html5DropWidget.__init__
+pyjamas.ui.EventObject.EventObject.__init__
+pyjamas.ui.FileUpload.FileUpload.__init__
+pyjamas.ui.FlashPanel.FlashPanel.__init__
+pyjamas.ui.FlexCellFormatter.FlexCellFormatter.__init__
+pyjamas.ui.FlexTable.FlexTable.__init__
+pyjamas.ui.FlowPanel.FlowPanel.__init__
+pyjamas.ui.FlowTabBar.FlowTabBar.__init__
+pyjamas.ui.FocusListener.FocusHandler.__init__
+pyjamas.ui.FocusPanel.FocusPanel.__init__
+pyjamas.ui.FocusWidget.FocusWidget.__init__
+pyjamas.ui.FormPanel.FormPanel.__init__
+pyjamas.ui.FormPanel.FormSubmitCompleteEvent.__init__
+pyjamas.ui.FormPanel.FormSubmitEvent.__init__
+pyjamas.ui.Frame.Frame.__init__
+pyjamas.ui.GlassWidget.GlassWidget.__init__
+pyjamas.ui.Grid.Grid.__init__
+pyjamas.ui.HTML.HTML.__init__
+pyjamas.ui.HTMLLinkPanel.HTMLLinkPanel.__init__
+pyjamas.ui.HTMLPanel.HTMLPanel.__init__
+pyjamas.ui.HTMLTable.HTMLTable.__init__
+pyjamas.ui.Hidden.Hidden.__init__
+pyjamas.ui.HorizontalPanel.HorizontalPanel.__init__
+pyjamas.ui.HorizontalSlider.HorizontalSlider.__init__
+pyjamas.ui.HorizontalSplitPanel.HorizontalSplitPanel.__init__
+pyjamas.ui.Hyperlink.Hyperlink.__init__
+pyjamas.ui.HyperlinkImage.HyperlinkImage.__init__
+pyjamas.ui.Image.Image.__init__
+pyjamas.ui.InlineHTML.InlineHTML.__init__
+pyjamas.ui.InlineLabel.InlineLabel.__init__
+pyjamas.ui.InputControl.InputControl.__init__
+pyjamas.ui.InputListener.InputHandler.__init__
+pyjamas.ui.KeyboardListener.KeyboardHandler.__init__
+pyjamas.ui.Label.Label.__init__
+pyjamas.ui.ListBox.ListBox.__init__
+pyjamas.ui.Map.ImageMap.__init__
+pyjamas.ui.Map.MapArea.__init__
+pyjamas.ui.MenuBar.MenuBar.__init__
+pyjamas.ui.MenuBarPopupPanel.MenuBarPopupPanel.__init__
+pyjamas.ui.MenuItem.MenuItem.__init__
+pyjamas.ui.MonthField.MonthField.__init__
+pyjamas.ui.MouseInputControl.MouseInputControl.__init__
+pyjamas.ui.MouseListener.MouseHandler.__init__
+pyjamas.ui.MouseListener.MouseWheelHandler.__init__
+pyjamas.ui.MultiListener.MultiListener.__init__
+pyjamas.ui.NamedFrame.NamedFrame.__init__
+pyjamas.ui.Panel.Panel.__init__
+pyjamas.ui.PasswordTextBox.PasswordTextBox.__init__
+pyjamas.ui.PopupPanel.PopupPanel.__init__
+pyjamas.ui.PushButton.PushButton.__init__
+pyjamas.ui.RadioButton.RadioButton.__init__
+pyjamas.ui.RichTextArea.RichTextArea.__init__
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.__init__
+pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.__init__
+pyjamas.ui.RichTextToolbar.CustomStyleManager.__init__
+pyjamas.ui.RichTextToolbar.EventLinkPopup.__init__
+pyjamas.ui.RichTextToolbar.FontFamilyManager.__init__
+pyjamas.ui.RichTextToolbar.HeadingStyleManager.__init__
+pyjamas.ui.RichTextToolbar.RichTextToolbar.__init__
+pyjamas.ui.RootPanel.RootPanelCls.__init__
+pyjamas.ui.RowFormatter.RowFormatter.__init__
+pyjamas.ui.ScrollPanel.ScrollPanel.__init__
+pyjamas.ui.SimplePanel.SimplePanel.__init__
+pyjamas.ui.Sink.Sink.__init__
+pyjamas.ui.Sink.SinkInfo.__init__
+pyjamas.ui.Sink.SinkList.__init__
+pyjamas.ui.SplitPanel.SplitPanel.__init__
+pyjamas.ui.SplitPanel.SplitPanelSplitter.__init__
+pyjamas.ui.StackPanel.StackPanel.__init__
+pyjamas.ui.TabBar.TabBar.__init__
+pyjamas.ui.TabPanel.TabPanel.__init__
+pyjamas.ui.TextArea.TextArea.__init__
+pyjamas.ui.TextBox.TextBox.__init__
+pyjamas.ui.TextBoxBase.TextBoxBase.__init__
+pyjamas.ui.ToggleButton.ToggleButton.__init__
+pyjamas.ui.Tooltip.Tooltip.__init__
+pyjamas.ui.Tooltip.TooltipListener.__init__
+pyjamas.ui.Tree.Tree.__init__
+pyjamas.ui.TreeContentPanel.TreeContentPanel.__init__
+pyjamas.ui.TreeItem.TreeItem.__init__
+pyjamas.ui.UIObject.UIObject.__init__
+pyjamas.ui.VerticalSlider.VerticalSlider.__init__
+pyjamas.ui.VerticalSplitPanel.VerticalSplitPanel.__init__
+pyjamas.ui.Widget.Widget.__init__" class="py-name" href="#" onclick="return doclink('link-24', '__init__', 'link-24');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">element</tt><tt class="py-op">,</tt> <tt class="py-name">min_value</tt><tt class="py-op">,</tt> <tt class="py-name">max_value</tt><tt class="py-op">,</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                               <tt class="py-name">start_value</tt><tt class="py-op">,</tt> <tt class="py-name">step</tt><tt class="py-op">,</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                               <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method pyjamas.ui.ClickListener.ClickHandler.addClickListener()=pyjamas.ui.ClickListener.ClickHandler-class.html#addClickListener"><a title="pyjamas.ui.ClickListener.ClickHandler.addClickListener" class="py-name" href="#" onclick="return doclink('link-25', 'addClickListener', 'link-25');">addClickListener</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method pyjamas.ui.FocusListener.FocusHandler.addFocusListener()=pyjamas.ui.FocusListener.FocusHandler-class.html#addFocusListener,Method pyjamas.ui.Tree.Tree.addFocusListener()=pyjamas.ui.Tree.Tree-class.html#addFocusListener"><a title="pyjamas.ui.FocusListener.FocusHandler.addFocusListener
+pyjamas.ui.Tree.Tree.addFocusListener" class="py-name" href="#" onclick="return doclink('link-26', 'addFocusListener', 'link-26');">addFocusListener</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method pyjamas.ui.HyperlinkImage.HyperlinkImage.addMouseListener()=pyjamas.ui.HyperlinkImage.HyperlinkImage-class.html#addMouseListener,Method pyjamas.ui.MouseListener.MouseHandler.addMouseListener()=pyjamas.ui.MouseListener.MouseHandler-class.html#addMouseListener,Method pyjamas.ui.Tree.Tree.addMouseListener()=pyjamas.ui.Tree.Tree-class.html#addMouseListener"><a title="pyjamas.ui.HyperlinkImage.HyperlinkImage.addMouseListener
+pyjamas.ui.MouseListener.MouseHandler.addMouseListener
+pyjamas.ui.Tree.Tree.addMouseListener" class="py-name" href="#" onclick="return doclink('link-27', 'addMouseListener', 'link-27');">addMouseListener</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-comment">#Redefine VDS's styles for handle</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="pyjamas.ui.AreaSlider.AreaSlider.setHandleStyle
+pyjamas.ui.VerticalSlider.VerticalSlider.setHandleStyle" class="py-name" href="#" onclick="return doclink('link-28', 'setHandleStyle', 'link-22');">setHandleStyle</a></tt><tt class="py-op">(</tt><tt class="py-string">"1px"</tt><tt class="py-op">,</tt> <tt class="py-string">"10px"</tt><tt class="py-op">,</tt> <tt class="py-string">"10px"</tt><tt class="py-op">,</tt> <tt class="py-string">"#808080"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider.setHandleStyle"></a><div id="AreaSlider.setHandleStyle-def"><a name="L59"></a><tt class="py-lineno"> 59</tt> <a class="py-toggle" href="#" id="AreaSlider.setHandleStyle-toggle" onclick="return toggle('AreaSlider.setHandleStyle');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html#setHandleStyle">setHandleStyle</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">border</tt><tt class="py-op">,</tt> <tt class="py-param">width</tt><tt class="py-op">,</tt> <tt class="py-param">height</tt><tt class="py-op">,</tt> <tt class="py-param">backgroundColor</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider.setHandleStyle-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AreaSlider.setHandleStyle-expanded"><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">border</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">            <tt id="link-29" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-29', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-30', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"border"</tt><tt class="py-op">,</tt> <tt class="py-name">border</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">width</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt id="link-31" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-31', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-32', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"width"</tt><tt class="py-op">,</tt> <tt class="py-name">width</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">height</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt id="link-33" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-33', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-34', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"height"</tt><tt class="py-op">,</tt> <tt class="py-name">height</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">backgroundColor</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">            <tt id="link-35" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-35', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-36', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"backgroundColor"</tt><tt class="py-op">,</tt> <tt class="py-name">backgroundColor</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider.setValue"></a><div id="AreaSlider.setValue-def"><a name="L69"></a><tt class="py-lineno"> 69</tt> <a class="py-toggle" href="#" id="AreaSlider.setValue-toggle" onclick="return toggle('AreaSlider.setValue');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html#setValue">setValue</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">new_value</tt><tt class="py-op">,</tt> <tt class="py-param">notify</tt><tt class="py-op">=</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider.setValue-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AreaSlider.setValue-expanded"><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">old_value</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value_x</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value_y</tt><tt class="py-op">]</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value_x</tt> <tt class="py-op">=</tt> <tt class="py-name">new_value</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">value_y</tt> <tt class="py-op">=</tt> <tt class="py-name">new_value</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">notify</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">valuechange_listeners</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">            <tt class="py-comment"># how to handle this? ???</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">            <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method pyjamas.ui.DoubleControl.DoubleControl.onControlValueChanged()=pyjamas.ui.DoubleControl.DoubleControl-class.html#onControlValueChanged"><a title="pyjamas.ui.DoubleControl.DoubleControl.onControlValueChanged" class="py-name" href="#" onclick="return doclink('link-37', 'onControlValueChanged', 'link-37');">onControlValueChanged</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">old_value</tt><tt class="py-op">,</tt> <tt class="py-name">new_value</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider.onFocus"></a><div id="AreaSlider.onFocus-def"><a name="L82"></a><tt class="py-lineno"> 82</tt> <a class="py-toggle" href="#" id="AreaSlider.onFocus-toggle" onclick="return toggle('AreaSlider.onFocus');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html#onFocus">onFocus</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider.onFocus-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AreaSlider.onFocus-expanded"><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Method pyjamas.ui.CellFormatter.CellFormatter.addStyleName()=pyjamas.ui.CellFormatter.CellFormatter-class.html#addStyleName,Method pyjamas.ui.RowFormatter.RowFormatter.addStyleName()=pyjamas.ui.RowFormatter.RowFormatter-class.html#addStyleName,Method pyjamas.ui.UIObject.UIObject.addStyleName()=pyjamas.ui.UIObject.UIObject-class.html#addStyleName"><a title="pyjamas.ui.CellFormatter.CellFormatter.addStyleName
+pyjamas.ui.RowFormatter.RowFormatter.addStyleName
+pyjamas.ui.UIObject.UIObject.addStyleName" class="py-name" href="#" onclick="return doclink('link-38', 'addStyleName', 'link-38');">addStyleName</a></tt><tt class="py-op">(</tt><tt class="py-string">"gwt-VerticalSlider-focussed"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider.onLostFocus"></a><div id="AreaSlider.onLostFocus-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="AreaSlider.onLostFocus-toggle" onclick="return toggle('AreaSlider.onLostFocus');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html#onLostFocus">onLostFocus</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider.onLostFocus-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AreaSlider.onLostFocus-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Method pyjamas.ui.CellFormatter.CellFormatter.removeStyleName()=pyjamas.ui.CellFormatter.CellFormatter-class.html#removeStyleName,Method pyjamas.ui.RowFormatter.RowFormatter.removeStyleName()=pyjamas.ui.RowFormatter.RowFormatter-class.html#removeStyleName,Method pyjamas.ui.UIObject.UIObject.removeStyleName()=pyjamas.ui.UIObject.UIObject-class.html#removeStyleName"><a title="pyjamas.ui.CellFormatter.CellFormatter.removeStyleName
+pyjamas.ui.RowFormatter.RowFormatter.removeStyleName
+pyjamas.ui.UIObject.UIObject.removeStyleName" class="py-name" href="#" onclick="return doclink('link-39', 'removeStyleName', 'link-39');">removeStyleName</a></tt><tt class="py-op">(</tt><tt class="py-string">"gwt-VerticalSlider-focussed"</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">dragging</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt id="link-40" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-40', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-41" class="py-name" targets="Function pyjamas.DOM.releaseCapture()=pyjamas.DOM-module.html#releaseCapture"><a title="pyjamas.DOM.releaseCapture" class="py-name" href="#" onclick="return doclink('link-41', 'releaseCapture', 'link-41');">releaseCapture</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.getElement()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getElement,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#getElement,Method pyjamas.ui.CellFormatter.CellFormatter.getElement()=pyjamas.ui.CellFormatter.CellFormatter-class.html#getElement,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getElement,Method pyjamas.ui.RowFormatter.RowFormatter.getElement()=pyjamas.ui.RowFormatter.RowFormatter-class.html#getElement,Method pyjamas.ui.SplitPanel.SplitPanel.getElement()=pyjamas.ui.SplitPanel.SplitPanel-class.html#getElement,Method pyjamas.ui.UIObject.UIObject.getElement()=pyjamas.ui.UIObject.UIObject-class.html#getElement"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-42', 'getElement', 'link-42');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider.moveControl"></a><div id="AreaSlider.moveControl-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="AreaSlider.moveControl-toggle" onclick="return toggle('AreaSlider.moveControl');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html#moveControl">moveControl</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">mouse_x</tt><tt class="py-op">,</tt> <tt class="py-param">mouse_y</tt><tt class="py-op">,</tt> <tt class="py-param">first_move</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider.moveControl-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AreaSlider.moveControl-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-name">handle_height</tt> <tt class="py-op">=</tt> <tt id="link-43" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-43', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Function pyjamas.DOM.getIntAttribute()=pyjamas.DOM-module.html#getIntAttribute"><a title="pyjamas.DOM.getIntAttribute" class="py-name" href="#" onclick="return doclink('link-44', 'getIntAttribute', 'link-44');">getIntAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"offsetHeight"</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-name">widget_height</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name" targets="Function pyjamas.DOM.getOffsetHeight()=pyjamas.DOM-module.html#getOffsetHeight,Method pyjamas.ui.UIObject.UIObject.getOffsetHeight()=pyjamas.ui.UIObject.UIObject-class.html#getOffsetHeight"><a title="pyjamas.DOM.getOffsetHeight
+pyjamas.ui.UIObject.UIObject.getOffsetHeight" class="py-name" href="#" onclick="return doclink('link-45', 'getOffsetHeight', 'link-45');">getOffsetHeight</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-name">height_range</tt> <tt class="py-op">=</tt> <tt class="py-name">widget_height</tt> <tt class="py-op">-</tt> <tt class="py-number">10</tt> <tt class="py-comment"># handle height is hard-coded</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-name">mouse_y</tt> <tt class="py-op">-</tt> <tt class="py-op">(</tt><tt class="py-name">handle_height</tt> <tt class="py-op">/</tt> <tt class="py-number">2</tt><tt class="py-op">)</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_y</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">            <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_y</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">height_range</tt><tt class="py-op">:</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">            <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-name">height_range</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-comment"># turn round (bottom to top) for x</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-name">height_range</tt> <tt class="py-op">-</tt> <tt class="py-name">relative_y</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">handle_width</tt> <tt class="py-op">=</tt> <tt id="link-46" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-46', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="pyjamas.DOM.getIntAttribute" class="py-name" href="#" onclick="return doclink('link-47', 'getIntAttribute', 'link-44');">getIntAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"offsetWidth"</tt><tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">widget_width</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name" targets="Function pyjamas.DOM.getOffsetWidth()=pyjamas.DOM-module.html#getOffsetWidth,Method pyjamas.ui.UIObject.UIObject.getOffsetWidth()=pyjamas.ui.UIObject.UIObject-class.html#getOffsetWidth"><a title="pyjamas.DOM.getOffsetWidth
+pyjamas.ui.UIObject.UIObject.getOffsetWidth" class="py-name" href="#" onclick="return doclink('link-48', 'getOffsetWidth', 'link-48');">getOffsetWidth</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-name">length_range</tt> <tt class="py-op">=</tt> <tt class="py-name">widget_width</tt> <tt class="py-op">-</tt> <tt class="py-number">10</tt> <tt class="py-comment"># handle width is hard-coded</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-name">relative_x</tt> <tt class="py-op">=</tt> <tt class="py-name">mouse_x</tt> <tt class="py-op">-</tt> <tt class="py-op">(</tt><tt class="py-name">handle_width</tt> <tt class="py-op">/</tt> <tt class="py-number">2</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_x</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">            <tt class="py-name">relative_x</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_x</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">length_range</tt><tt class="py-op">:</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">            <tt class="py-name">relative_x</tt> <tt class="py-op">=</tt> <tt class="py-name">length_range</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-name">val_diff_x</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">max_value_x</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_x</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-name">new_value_x</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">val_diff_x</tt> <tt class="py-op">*</tt> <tt class="py-name">relative_x</tt><tt class="py-op">)</tt> <tt class="py-op">/</tt> <tt class="py-name">length_range</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> \ </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">                      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_x</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-name">val_diff_y</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">max_value_y</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_y</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">new_value_y</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">val_diff_y</tt> <tt class="py-op">*</tt> <tt class="py-name">relative_y</tt><tt class="py-op">)</tt> <tt class="py-op">/</tt> <tt class="py-name">height_range</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> \ </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_y</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-name">new_value</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-name">new_value_x</tt><tt class="py-op">,</tt> <tt class="py-name">new_value_y</tt><tt class="py-op">]</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-name">new_value</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Method pyjamas.ui.Control.Control.processValue()=pyjamas.ui.Control.Control-class.html#processValue,Method pyjamas.ui.DoubleControl.DoubleControl.processValue()=pyjamas.ui.DoubleControl.DoubleControl-class.html#processValue"><a title="pyjamas.ui.Control.Control.processValue
+pyjamas.ui.DoubleControl.DoubleControl.processValue" class="py-name" href="#" onclick="return doclink('link-49', 'processValue', 'link-49');">processValue</a></tt><tt class="py-op">(</tt><tt class="py-name">new_value</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name" targets="Method pyjamas.ui.AreaSlider.AreaSlider.setControlPos()=pyjamas.ui.AreaSlider.AreaSlider-class.html#setControlPos,Method pyjamas.ui.HorizontalSlider.HorizontalSlider.setControlPos()=pyjamas.ui.HorizontalSlider.HorizontalSlider-class.html#setControlPos,Method pyjamas.ui.InputControl.InputControl.setControlPos()=pyjamas.ui.InputControl.InputControl-class.html#setControlPos,Method pyjamas.ui.VerticalSlider.VerticalSlider.setControlPos()=pyjamas.ui.VerticalSlider.VerticalSlider-class.html#setControlPos"><a title="pyjamas.ui.AreaSlider.AreaSlider.setControlPos
+pyjamas.ui.HorizontalSlider.HorizontalSlider.setControlPos
+pyjamas.ui.InputControl.InputControl.setControlPos
+pyjamas.ui.VerticalSlider.VerticalSlider.setControlPos" class="py-name" href="#" onclick="return doclink('link-50', 'setControlPos', 'link-50');">setControlPos</a></tt><tt class="py-op">(</tt><tt class="py-name">new_value</tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name" targets="Method pyjamas.django.Form.CharField.setValue()=pyjamas.django.Form.CharField-class.html#setValue,Method pyjamas.django.Form.FloatField.setValue()=pyjamas.django.Form.FloatField-class.html#setValue,Method pyjamas.django.Form.IntegerField.setValue()=pyjamas.django.Form.IntegerField-class.html#setValue,Method pyjamas.ui.AreaSlider.AreaSlider.setValue()=pyjamas.ui.AreaSlider.AreaSlider-class.html#setValue,Method pyjamas.ui.Control.Control.setValue()=pyjamas.ui.Control.Control-class.html#setValue,Method pyjamas.ui.DoubleControl.DoubleControl.setValue()=pyjamas.ui.DoubleControl.DoubleControl-class.html#setValue,Method pyjamas.ui.Hidden.Hidden.setValue()=pyjamas.ui.Hidden.Hidden-class.html#setValue,Method pyjamas.ui.ListBox.ListBox.setValue()=pyjamas.ui.ListBox.ListBox-class.html#setValue"><a title="pyjamas.django.Form.CharField.setValue
+pyjamas.django.Form.FloatField.setValue
+pyjamas.django.Form.IntegerField.setValue
+pyjamas.ui.AreaSlider.AreaSlider.setValue
+pyjamas.ui.Control.Control.setValue
+pyjamas.ui.DoubleControl.DoubleControl.setValue
+pyjamas.ui.Hidden.Hidden.setValue
+pyjamas.ui.ListBox.ListBox.setValue" class="py-name" href="#" onclick="return doclink('link-51', 'setValue', 'link-51');">setValue</a></tt><tt class="py-op">(</tt><tt class="py-name">new_value</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="AreaSlider.setControlPos"></a><div id="AreaSlider.setControlPos-def"><a name="L125"></a><tt class="py-lineno">125</tt> <a class="py-toggle" href="#" id="AreaSlider.setControlPos-toggle" onclick="return toggle('AreaSlider.setControlPos');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.AreaSlider.AreaSlider-class.html#setControlPos">setControlPos</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AreaSlider.setControlPos-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="AreaSlider.setControlPos-expanded"><a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-name">value_x</tt> <tt class="py-op">=</tt> <tt class="py-name">value</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-name">value_y</tt> <tt class="py-op">=</tt> <tt class="py-name">value</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-name">widget_width</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="pyjamas.DOM.getOffsetWidth
+pyjamas.ui.UIObject.UIObject.getOffsetWidth" class="py-name" href="#" onclick="return doclink('link-52', 'getOffsetWidth', 'link-48');">getOffsetWidth</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-name">length_range</tt> <tt class="py-op">=</tt> <tt class="py-name">widget_width</tt> <tt class="py-op">-</tt> <tt class="py-number">10</tt> <tt class="py-comment"># handle width is hard-coded</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt class="py-name">val_diff_x</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">max_value_x</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_x</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-name">relative_x</tt> <tt class="py-op">=</tt> <tt class="py-name">length_range</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">value_x</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_x</tt><tt class="py-op">)</tt> <tt class="py-op">/</tt> <tt class="py-name">val_diff_x</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-comment"># limit the position to be in the widget!</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_x</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">            <tt class="py-name">relative_x</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_x</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">length_range</tt><tt class="py-op">:</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">            <tt class="py-name">relative_x</tt> <tt class="py-op">=</tt> <tt class="py-name">length_range</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt class="py-name">widget_height</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="pyjamas.DOM.getOffsetHeight
+pyjamas.ui.UIObject.UIObject.getOffsetHeight" class="py-name" href="#" onclick="return doclink('link-53', 'getOffsetHeight', 'link-45');">getOffsetHeight</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-name">height_range</tt> <tt class="py-op">=</tt> <tt class="py-name">widget_height</tt> <tt class="py-op">-</tt> <tt class="py-number">10</tt> <tt class="py-comment"># handle height is hard-coded</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt class="py-name">val_diff_y</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">max_value_y</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_y</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">        <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-name">height_range</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">value_y</tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">min_value_y</tt><tt class="py-op">)</tt> <tt class="py-op">/</tt> <tt class="py-name">val_diff_y</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-comment"># limit the position to be in the widget!</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_y</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">            <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">relative_y</tt> <tt class="py-op">&gt;=</tt> <tt class="py-name">height_range</tt><tt class="py-op">:</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">            <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-name">height_range</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt class="py-name">relative_y</tt> <tt class="py-op">=</tt> <tt class="py-name">height_range</tt> <tt class="py-op">-</tt> <tt class="py-name">relative_y</tt> <tt class="py-comment"># turn round (bottom to top)</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-comment"># move the handle</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">        <tt id="link-54" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-54', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-55" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-55', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"top"</tt><tt class="py-op">,</tt> <tt class="py-string">"%dpx"</tt> <tt class="py-op">%</tt> <tt class="py-name">relative_y</tt><tt class="py-op">)</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt id="link-56" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-56', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-57', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"left"</tt><tt class="py-op">,</tt> <tt class="py-string">"%dpx"</tt> <tt class="py-op">%</tt> <tt class="py-name">relative_x</tt><tt class="py-op">)</tt>  </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">        <tt id="link-58" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-58', 'DOM', 'link-3');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-59" class="py-name"><a title="pyjamas.DOM.setStyleAttribute
+pyjamas.ui.UIObject.UIObject.setStyleAttribute" class="py-name" href="#" onclick="return doclink('link-59', 'setStyleAttribute', 'link-15');">setStyleAttribute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">handle</tt><tt class="py-op">,</tt> <tt class="py-string">"position"</tt><tt class="py-op">,</tt> <tt class="py-string">"absolute"</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt id="link-60" class="py-name"><a title="pyjamas.Factory
+pyjamas.gears.Factory" class="py-name" href="#" onclick="return doclink('link-60', 'Factory', 'link-1');">Factory</a></tt><tt class="py-op">.</tt><tt id="link-61" class="py-name" targets="Function pyjamas.Factory.registerClass()=pyjamas.Factory-module.html#registerClass"><a title="pyjamas.Factory.registerClass" class="py-name" href="#" onclick="return doclink('link-61', 'registerClass', 'link-61');">registerClass</a></tt><tt class="py-op">(</tt><tt class="py-string">'pyjamas.ui.AreaSlider'</tt><tt class="py-op">,</tt> <tt class="py-string">'AreaSlider'</tt><tt class="py-op">,</tt> <tt id="link-62" class="py-name" targets="Module pyjamas.ui.AreaSlider=pyjamas.ui.AreaSlider-module.html,Class pyjamas.ui.AreaSlider.AreaSlider=pyjamas.ui.AreaSlider.AreaSlider-class.html"><a title="pyjamas.ui.AreaSlider
+pyjamas.ui.AreaSlider.AreaSlider" class="py-name" href="#" onclick="return doclink('link-62', 'AreaSlider', 'link-62');">AreaSlider</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:14 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

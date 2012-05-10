@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.selection.Selection</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.selection-module.html">Package&nbsp;selection</a> ::
+        Module&nbsp;Selection
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.selection.Selection-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.selection.Selection-module.html">Module pyjamas.selection.Selection</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2010 John Kozura</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the "License"); you may not</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">* use this file except in compliance with the License. You may obtain a copy of</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">* the License at</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">* http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">* License for the specific language governing permissions and limitations under</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">* the License.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__pyjamas__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">wnd</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module pyjamas.selection.SelectionImpl=pyjamas.selection.SelectionImpl-module.html"><a title="pyjamas.selection.SelectionImpl" class="py-name" href="#" onclick="return doclink('link-0', 'SelectionImpl', 'link-0');">SelectionImpl</a></tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.selection.Range=pyjamas.selection.Range-module.html,Class pyjamas.selection.Range.Range=pyjamas.selection.Range.Range-class.html"><a title="pyjamas.selection.Range
+pyjamas.selection.Range.Range" class="py-name" href="#" onclick="return doclink('link-1', 'Range', 'link-1');">Range</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name"><a title="pyjamas.selection.Range
+pyjamas.selection.Range.Range" class="py-name" href="#" onclick="return doclink('link-2', 'Range', 'link-1');">Range</a></tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable pyjamas.selection.Selection.START_NODE=pyjamas.selection.Selection-module.html#START_NODE"><a title="pyjamas.selection.Selection.START_NODE" class="py-name" href="#" onclick="return doclink('link-3', 'START_NODE', 'link-3');">START_NODE</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">"startContainer"</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable pyjamas.selection.Selection.START_OFFSET=pyjamas.selection.Selection-module.html#START_OFFSET"><a title="pyjamas.selection.Selection.START_OFFSET" class="py-name" href="#" onclick="return doclink('link-4', 'START_OFFSET', 'link-4');">START_OFFSET</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">"startOffset"</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable pyjamas.selection.Selection.END_NODE=pyjamas.selection.Selection-module.html#END_NODE"><a title="pyjamas.selection.Selection.END_NODE" class="py-name" href="#" onclick="return doclink('link-5', 'END_NODE', 'link-5');">END_NODE</a></tt>                <tt class="py-op">=</tt> <tt class="py-string">"endContainer"</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable pyjamas.selection.Selection.END_OFFSET=pyjamas.selection.Selection-module.html#END_OFFSET"><a title="pyjamas.selection.Selection.END_OFFSET" class="py-name" href="#" onclick="return doclink('link-6', 'END_OFFSET', 'link-6');">END_OFFSET</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">"endOffset"</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable pyjamas.selection.Selection.IS_COLLAPSED=pyjamas.selection.Selection-module.html#IS_COLLAPSED"><a title="pyjamas.selection.Selection.IS_COLLAPSED" class="py-name" href="#" onclick="return doclink('link-7', 'IS_COLLAPSED', 'link-7');">IS_COLLAPSED</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">"isCollapsed"</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-string">* A selection within a particular document.  Holds the singleton for a</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-string">* particlar document/window for getting and setting the selection.</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-string">* @author John Kozura</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable pyjamas.selection.Selection.m_selection=pyjamas.selection.Selection-module.html#m_selection"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-8', 'm_selection', 'link-8');">m_selection</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable pyjamas.selection.Selection.m_document=pyjamas.selection.Selection-module.html#m_document"><a title="pyjamas.selection.Selection.m_document" class="py-name" href="#" onclick="return doclink('link-9', 'm_document', 'link-9');">m_document</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-string">* Clears or removes any current text selection.</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="clearAnySelectedText"></a><div id="clearAnySelectedText-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="clearAnySelectedText-toggle" onclick="return toggle('clearAnySelectedText');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#clearAnySelectedText">clearAnySelectedText</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="clearAnySelectedText-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="clearAnySelectedText-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt id="link-10" class="py-name" targets="Function pyjamas.selection.Selection.getSelection()=pyjamas.selection.Selection-module.html#getSelection,Function pyjamas.selection.SelectionImpl.getSelection()=pyjamas.selection.SelectionImpl-module.html#getSelection,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.getSelection()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#getSelection"><a title="pyjamas.selection.Selection.getSelection
+pyjamas.selection.SelectionImpl.getSelection
+pyjamas.ui.RichTextToolbar.RichTextToolbar.getSelection" class="py-name" href="#" onclick="return doclink('link-10', 'getSelection', 'link-10');">getSelection</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">    <tt id="link-11" class="py-name" targets="Method pyjamas.Canvas.GWTCanvas.GWTCanvas.clear()=pyjamas.Canvas.GWTCanvas.GWTCanvas-class.html#clear,Method pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.clear()=pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault-class.html#clear,Method pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.clear()=pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6-class.html#clear,Method pyjamas.Canvas.JSOStack.JSOStack.clear()=pyjamas.Canvas.JSOStack.JSOStack-class.html#clear,Method pyjamas.Canvas.SVGCanvas.SVGCanvas.clear()=pyjamas.Canvas.SVGCanvas.SVGCanvas-class.html#clear,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.clear()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#clear,Method pyjamas.dnd.DataTransfer.DataTransferItems.clear()=pyjamas.dnd.DataTransfer.DataTransferItems-class.html#clear,Function pyjamas.selection.Selection.clear()=pyjamas.selection.Selection-module.html#clear,Function pyjamas.selection.SelectionImpl.clear()=pyjamas.selection.SelectionImpl-module.html#clear,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.clear()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#clear,Method pyjamas.ui.HTMLTable.HTMLTable.clear()=pyjamas.ui.HTMLTable.HTMLTable-class.html#clear,Method pyjamas.ui.ListBox.ListBox.clear()=pyjamas.ui.ListBox.ListBox-class.html#clear,Method pyjamas.ui.Panel.PanelBase.clear()=pyjamas.ui.Panel.PanelBase-class.html#clear,Method pyjamas.ui.Tree.Tree.clear()=pyjamas.ui.Tree.Tree-class.html#clear"><a title="pyjamas.Canvas.GWTCanvas.GWTCanvas.clear
+pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.clear
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.clear
+pyjamas.Canvas.JSOStack.JSOStack.clear
+pyjamas.Canvas.SVGCanvas.SVGCanvas.clear
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.clear
+pyjamas.dnd.DataTransfer.DataTransferItems.clear
+pyjamas.selection.Selection.clear
+pyjamas.selection.SelectionImpl.clear
+pyjamas.ui.DisclosurePanel.DisclosurePanel.clear
+pyjamas.ui.HTMLTable.HTMLTable.clear
+pyjamas.ui.ListBox.ListBox.clear
+pyjamas.ui.Panel.PanelBase.clear
+pyjamas.ui.Tree.Tree.clear" class="py-name" href="#" onclick="return doclink('link-11', 'clear', 'link-11');">clear</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-string">* Convenience for getting the range for the current browser selection</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-string">* @return A range object representing the browser window's selection</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getBrowserRange"></a><div id="getBrowserRange-def"><a name="L51"></a><tt class="py-lineno"> 51</tt> <a class="py-toggle" href="#" id="getBrowserRange-toggle" onclick="return toggle('getBrowserRange');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#getBrowserRange">getBrowserRange</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getBrowserRange-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getBrowserRange-expanded"><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">    <tt id="link-12" class="py-name"><a title="pyjamas.selection.Selection.getSelection
+pyjamas.selection.SelectionImpl.getSelection
+pyjamas.ui.RichTextToolbar.RichTextToolbar.getSelection" class="py-name" href="#" onclick="return doclink('link-12', 'getSelection', 'link-10');">getSelection</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-13" class="py-name" targets="Function pyjamas.selection.Selection.getRange()=pyjamas.selection.Selection-module.html#getRange,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.getRange()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#getRange"><a title="pyjamas.selection.Selection.getRange
+pyjamas.ui.RichTextToolbar.RichTextToolbar.getRange" class="py-name" href="#" onclick="return doclink('link-13', 'getRange', 'link-13');">getRange</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-string">* Returns the selection for a given window, for instance an iframe</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-string">* @return The singleton instance</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getSelection"></a><div id="getSelection-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="getSelection-toggle" onclick="return toggle('getSelection');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#getSelection">getSelection</a><tt class="py-op">(</tt><tt class="py-param">window</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getSelection-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getSelection-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-14" class="py-name"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-14', 'm_selection', 'link-8');">m_selection</a></tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-15" class="py-name"><a title="pyjamas.selection.Selection.m_document" class="py-name" href="#" onclick="return doclink('link-15', 'm_document', 'link-9');">m_document</a></tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">window</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">window</tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name" targets="Function pyjamas.selection.Selection.getWindow()=pyjamas.selection.Selection-module.html#getWindow,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.getWindow()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#getWindow"><a title="pyjamas.selection.Selection.getWindow
+pyjamas.ui.RichTextToolbar.RichTextToolbar.getWindow" class="py-name" href="#" onclick="return doclink('link-16', 'getWindow', 'link-16');">getWindow</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">    <tt id="link-17" class="py-name"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-17', 'm_selection', 'link-8');">m_selection</a></tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="pyjamas.selection.SelectionImpl" class="py-name" href="#" onclick="return doclink('link-18', 'SelectionImpl', 'link-0');">SelectionImpl</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pyjamas.selection.Selection.getSelection
+pyjamas.selection.SelectionImpl.getSelection
+pyjamas.ui.RichTextToolbar.RichTextToolbar.getSelection" class="py-name" href="#" onclick="return doclink('link-19', 'getSelection', 'link-10');">getSelection</a></tt><tt class="py-op">(</tt><tt class="py-name">window</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt id="link-20" class="py-name"><a title="pyjamas.selection.Selection.m_document" class="py-name" href="#" onclick="return doclink('link-20', 'm_document', 'link-9');">m_document</a></tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name" targets="Method pyjamas.selection.Range.Range.getDocument()=pyjamas.selection.Range.Range-class.html#getDocument,Function pyjamas.selection.Selection.getDocument()=pyjamas.selection.Selection-module.html#getDocument,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.getDocument()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#getDocument"><a title="pyjamas.selection.Range.Range.getDocument
+pyjamas.selection.Selection.getDocument
+pyjamas.ui.RichTextToolbar.RichTextToolbar.getDocument" class="py-name" href="#" onclick="return doclink('link-21', 'getDocument', 'link-21');">getDocument</a></tt><tt class="py-op">(</tt><tt class="py-name">window</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="getWindow"></a><div id="getWindow-def"><a name="L70"></a><tt class="py-lineno"> 70</tt> <a class="py-toggle" href="#" id="getWindow-toggle" onclick="return toggle('getWindow');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#getWindow">getWindow</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getWindow-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getWindow-expanded"><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">wnd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-string">* Clears any current selection.</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="clear"></a><div id="clear-def"><a name="L77"></a><tt class="py-lineno"> 77</tt> <a class="py-toggle" href="#" id="clear-toggle" onclick="return toggle('clear');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#clear">clear</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="clear-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="clear-expanded"><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">    <tt id="link-22" class="py-name"><a title="pyjamas.selection.SelectionImpl" class="py-name" href="#" onclick="return doclink('link-22', 'SelectionImpl', 'link-0');">SelectionImpl</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="pyjamas.Canvas.GWTCanvas.GWTCanvas.clear
+pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.clear
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.clear
+pyjamas.Canvas.JSOStack.JSOStack.clear
+pyjamas.Canvas.SVGCanvas.SVGCanvas.clear
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.clear
+pyjamas.dnd.DataTransfer.DataTransferItems.clear
+pyjamas.selection.Selection.clear
+pyjamas.selection.SelectionImpl.clear
+pyjamas.ui.DisclosurePanel.DisclosurePanel.clear
+pyjamas.ui.HTMLTable.HTMLTable.clear
+pyjamas.ui.ListBox.ListBox.clear
+pyjamas.ui.Panel.PanelBase.clear
+pyjamas.ui.Tree.Tree.clear" class="py-name" href="#" onclick="return doclink('link-23', 'clear', 'link-11');">clear</a></tt><tt class="py-op">(</tt><tt id="link-24" class="py-name"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-24', 'm_selection', 'link-8');">m_selection</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-string">* Gets the parent document associated with this selection.  Could be</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-string">* different from the browser document if, for example this is the selection</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-string">* within an iframe.</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-string">* @return parent document of this selection</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getDocument"></a><div id="getDocument-def"><a name="L87"></a><tt class="py-lineno"> 87</tt> <a class="py-toggle" href="#" id="getDocument-toggle" onclick="return toggle('getDocument');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#getDocument">getDocument</a><tt class="py-op">(</tt><tt class="py-param">window</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getDocument-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getDocument-expanded"><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">window</tt><tt class="py-op">:</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-comment">#print "getDocument", window, window.document</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">window</tt><tt class="py-op">.</tt><tt class="py-name">document</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-comment">#print "getDocument", m_document</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-25" class="py-name"><a title="pyjamas.selection.Selection.m_document" class="py-name" href="#" onclick="return doclink('link-25', 'm_document', 'link-9');">m_document</a></tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-string">* Get the javascript object representing the selection.  Since this is</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-string">* browser dependent object, should probably not use self.</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-string">* @return a JavaScriptObject representing this selection</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getJSSelection"></a><div id="getJSSelection-def"><a name="L100"></a><tt class="py-lineno">100</tt> <a class="py-toggle" href="#" id="getJSSelection-toggle" onclick="return toggle('getJSSelection');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#getJSSelection">getJSSelection</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getJSSelection-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getJSSelection-expanded"><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-26" class="py-name"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-26', 'm_selection', 'link-8');">m_selection</a></tt> </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-string">* Gets the range associated with the given selection.  The endpoints are</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-string">* captured immediately, so any changes to the selection will not affect</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-string">* the returned range.  In some browsers (IE) this can return NULL if</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-string">* nothing is selected in the document.</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-string">* @return A range object capturing the current selection</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="getRange"></a><div id="getRange-def"><a name="L111"></a><tt class="py-lineno">111</tt> <a class="py-toggle" href="#" id="getRange-toggle" onclick="return toggle('getRange');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#getRange">getRange</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getRange-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getRange-expanded"><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-name">jsRange</tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name"><a title="pyjamas.selection.SelectionImpl" class="py-name" href="#" onclick="return doclink('link-27', 'SelectionImpl', 'link-0');">SelectionImpl</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method pyjamas.selection.Range.Range.getJSRange()=pyjamas.selection.Range.Range-class.html#getJSRange,Function pyjamas.selection.SelectionImpl.getJSRange()=pyjamas.selection.SelectionImpl-module.html#getJSRange"><a title="pyjamas.selection.Range.Range.getJSRange
+pyjamas.selection.SelectionImpl.getJSRange" class="py-name" href="#" onclick="return doclink('link-28', 'getJSRange', 'link-28');">getJSRange</a></tt><tt class="py-op">(</tt><tt id="link-29" class="py-name"><a title="pyjamas.selection.Selection.m_document" class="py-name" href="#" onclick="return doclink('link-29', 'm_document', 'link-9');">m_document</a></tt><tt class="py-op">,</tt> <tt id="link-30" class="py-name"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-30', 'm_selection', 'link-8');">m_selection</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">jsRange</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">    <tt class="py-name">res</tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name"><a title="pyjamas.selection.Range
+pyjamas.selection.Range.Range" class="py-name" href="#" onclick="return doclink('link-31', 'Range', 'link-1');">Range</a></tt><tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="pyjamas.selection.Selection.m_document" class="py-name" href="#" onclick="return doclink('link-32', 'm_document', 'link-9');">m_document</a></tt><tt class="py-op">,</tt> <tt class="py-name">jsRange</tt><tt class="py-op">)</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">    <tt class="py-name">res</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Method pyjamas.selection.Range.Range.ensureEndPoints()=pyjamas.selection.Range.Range-class.html#ensureEndPoints"><a title="pyjamas.selection.Range.Range.ensureEndPoints" class="py-name" href="#" onclick="return doclink('link-33', 'ensureEndPoints', 'link-33');">ensureEndPoints</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">res</tt> </tt>
+</div><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-string">* Tests if anything is currently being selected</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-string">* @return True if empty False otherwise</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="isEmpty"></a><div id="isEmpty-def"><a name="L126"></a><tt class="py-lineno">126</tt> <a class="py-toggle" href="#" id="isEmpty-toggle" onclick="return toggle('isEmpty');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#isEmpty">isEmpty</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="isEmpty-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="isEmpty-expanded"><a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-34" class="py-name" targets="Module pyjamas.selection.Selection=pyjamas.selection.Selection-module.html"><a title="pyjamas.selection.Selection" class="py-name" href="#" onclick="return doclink('link-34', 'Selection', 'link-34');">Selection</a></tt><tt class="py-op">.</tt><tt class="py-name">getImpl</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Function pyjamas.selection.Selection.isEmpty()=pyjamas.selection.Selection-module.html#isEmpty,Function pyjamas.selection.SelectionImpl.isEmpty()=pyjamas.selection.SelectionImpl-module.html#isEmpty"><a title="pyjamas.selection.Selection.isEmpty
+pyjamas.selection.SelectionImpl.isEmpty" class="py-name" href="#" onclick="return doclink('link-35', 'isEmpty', 'link-35');">isEmpty</a></tt><tt class="py-op">(</tt><tt id="link-36" class="py-name"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-36', 'm_selection', 'link-8');">m_selection</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-string">* Takes a range object and pushes it to be the selection.  The range</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">* must be parented by the same window/document as the selection.  The range</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">* remains separate from the selection after this operation; any changes to</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-string">* the range are not reflected in the selection, and vice versa.</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-string">* @param newSelection What the selection should be</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="setRange"></a><div id="setRange-def"><a name="L138"></a><tt class="py-lineno">138</tt> <a class="py-toggle" href="#" id="setRange-toggle" onclick="return toggle('setRange');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.selection.Selection-module.html#setRange">setRange</a><tt class="py-op">(</tt><tt class="py-param">newSelection</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="setRange-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="setRange-expanded"><a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">newSelection</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="pyjamas.selection.Range.Range.getDocument
+pyjamas.selection.Selection.getDocument
+pyjamas.ui.RichTextToolbar.RichTextToolbar.getDocument" class="py-name" href="#" onclick="return doclink('link-37', 'getDocument', 'link-21');">getDocument</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt id="link-38" class="py-name"><a title="pyjamas.selection.Selection.m_document" class="py-name" href="#" onclick="return doclink('link-38', 'm_document', 'link-9');">m_document</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt id="link-39" class="py-name"><a title="pyjamas.selection.SelectionImpl" class="py-name" href="#" onclick="return doclink('link-39', 'SelectionImpl', 'link-0');">SelectionImpl</a></tt><tt class="py-op">.</tt><tt id="link-40" class="py-name" targets="Function pyjamas.selection.SelectionImpl.setJSRange()=pyjamas.selection.SelectionImpl-module.html#setJSRange"><a title="pyjamas.selection.SelectionImpl.setJSRange" class="py-name" href="#" onclick="return doclink('link-40', 'setJSRange', 'link-40');">setJSRange</a></tt><tt class="py-op">(</tt><tt id="link-41" class="py-name"><a title="pyjamas.selection.Selection.m_selection" class="py-name" href="#" onclick="return doclink('link-41', 'm_selection', 'link-8');">m_selection</a></tt><tt class="py-op">,</tt> <tt class="py-name">newSelection</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="pyjamas.selection.Range.Range.getJSRange
+pyjamas.selection.SelectionImpl.getJSRange" class="py-name" href="#" onclick="return doclink('link-42', 'getJSRange', 'link-28');">getJSRange</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:13 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

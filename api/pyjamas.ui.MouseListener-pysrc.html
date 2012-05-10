@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.MouseListener</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        Module&nbsp;MouseListener
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.MouseListener-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.ui.MouseListener-module.html">Module pyjamas.ui.MouseListener</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2006 James Tauber and contributors</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2009 Luke Kenneth Casson Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment"># Licensed under the Apache License, Version 2.0 (the "License");</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"># you may not use this file except in compliance with the License.</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"># You may obtain a copy of the License at</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment">#     http://www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"># Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># distributed under the License is distributed on an "AS IS" BASIS,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># See the License for the specific language governing permissions and</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># limitations under the License.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-2', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Package pyjamas.ui=pyjamas.ui-module.html"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-3', 'ui', 'link-3');">ui</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Module pyjamas.ui.Event=pyjamas.ui.Event-module.html"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-4', 'Event', 'link-4');">Event</a></tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-5', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Module pyjamas.EventController=pyjamas.EventController-module.html"><a title="pyjamas.EventController" class="py-name" href="#" onclick="return doclink('link-6', 'EventController', 'link-6');">EventController</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name" targets="Class pyjamas.EventController.Handler=pyjamas.EventController.Handler-class.html"><a title="pyjamas.EventController.Handler" class="py-name" href="#" onclick="return doclink('link-7', 'Handler', 'link-7');">Handler</a></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="fireMouseEvent"></a><div id="fireMouseEvent-def"><a name="L19"></a><tt class="py-lineno"> 19</tt> <a class="py-toggle" href="#" id="fireMouseEvent-toggle" onclick="return toggle('fireMouseEvent');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener-module.html#fireMouseEvent">fireMouseEvent</a><tt class="py-op">(</tt><tt class="py-param">listeners</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fireMouseEvent-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fireMouseEvent-expanded"><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">    <tt class="py-name">x</tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-8', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Function pyjamas.DOM.eventGetClientX()=pyjamas.DOM-module.html#eventGetClientX"><a title="pyjamas.DOM.eventGetClientX" class="py-name" href="#" onclick="return doclink('link-9', 'eventGetClientX', 'link-9');">eventGetClientX</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt id="link-10" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-10', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Function pyjamas.DOM.getAbsoluteLeft()=pyjamas.DOM-module.html#getAbsoluteLeft,Method pyjamas.dnd.DNDHelper.DNDHelper.getAbsoluteLeft()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getAbsoluteLeft,Method pyjamas.ui.UIObject.UIObject.getAbsoluteLeft()=pyjamas.ui.UIObject.UIObject-class.html#getAbsoluteLeft"><a title="pyjamas.DOM.getAbsoluteLeft
+pyjamas.dnd.DNDHelper.DNDHelper.getAbsoluteLeft
+pyjamas.ui.UIObject.UIObject.getAbsoluteLeft" class="py-name" href="#" onclick="return doclink('link-11', 'getAbsoluteLeft', 'link-11');">getAbsoluteLeft</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.getElement()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getElement,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#getElement,Method pyjamas.ui.CellFormatter.CellFormatter.getElement()=pyjamas.ui.CellFormatter.CellFormatter-class.html#getElement,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getElement,Method pyjamas.ui.RowFormatter.RowFormatter.getElement()=pyjamas.ui.RowFormatter.RowFormatter-class.html#getElement,Method pyjamas.ui.SplitPanel.SplitPanel.getElement()=pyjamas.ui.SplitPanel.SplitPanel-class.html#getElement,Method pyjamas.ui.UIObject.UIObject.getElement()=pyjamas.ui.UIObject.UIObject-class.html#getElement"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-12', 'getElement', 'link-12');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">    <tt class="py-name">y</tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-13', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Function pyjamas.DOM.eventGetClientY()=pyjamas.DOM-module.html#eventGetClientY"><a title="pyjamas.DOM.eventGetClientY" class="py-name" href="#" onclick="return doclink('link-14', 'eventGetClientY', 'link-14');">eventGetClientY</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt id="link-15" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-15', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Function pyjamas.DOM.getAbsoluteTop()=pyjamas.DOM-module.html#getAbsoluteTop,Method pyjamas.dnd.DNDHelper.DNDHelper.getAbsoluteTop()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getAbsoluteTop,Method pyjamas.ui.UIObject.UIObject.getAbsoluteTop()=pyjamas.ui.UIObject.UIObject-class.html#getAbsoluteTop"><a title="pyjamas.DOM.getAbsoluteTop
+pyjamas.dnd.DNDHelper.DNDHelper.getAbsoluteTop
+pyjamas.ui.UIObject.UIObject.getAbsoluteTop" class="py-name" href="#" onclick="return doclink('link-16', 'getAbsoluteTop', 'link-16');">getAbsoluteTop</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-17', 'getElement', 'link-12');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">    <tt class="py-name">etype</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-18', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Function pyjamas.DOM.eventGetType()=pyjamas.DOM-module.html#eventGetType"><a title="pyjamas.DOM.eventGetType" class="py-name" href="#" onclick="return doclink('link-19', 'eventGetType', 'link-19');">eventGetType</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">etype</tt> <tt class="py-op">==</tt> <tt class="py-string">"mousedown"</tt><tt class="py-op">:</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-20" class="py-name" targets="Variable pyjamas.DOM.listeners=pyjamas.DOM-module.html#listeners"><a title="pyjamas.DOM.listeners" class="py-name" href="#" onclick="return doclink('link-20', 'listeners', 'link-20');">listeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">            <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseDown()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseDown,Method pyjamas.ui.Control.Control.onMouseDown()=pyjamas.ui.Control.Control-class.html#onMouseDown,Method pyjamas.ui.DialogBox.DialogBox.onMouseDown()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseDown,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseDown()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseDown,Method pyjamas.ui.MouseListener.MouseHandler.onMouseDown()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseDown,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseDown()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseDown,Method pyjamas.ui.SplitPanel.SplitPanelSplitter.onMouseDown()=pyjamas.ui.SplitPanel.SplitPanelSplitter-class.html#onMouseDown,Method pyjamas.ui.Tooltip.TooltipListener.onMouseDown()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseDown"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseDown
+pyjamas.ui.Control.Control.onMouseDown
+pyjamas.ui.DialogBox.DialogBox.onMouseDown
+pyjamas.ui.GlassWidget.GlassWidget.onMouseDown
+pyjamas.ui.MouseListener.MouseHandler.onMouseDown
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseDown
+pyjamas.ui.SplitPanel.SplitPanelSplitter.onMouseDown
+pyjamas.ui.Tooltip.TooltipListener.onMouseDown" class="py-name" href="#" onclick="return doclink('link-21', 'onMouseDown', 'link-21');">onMouseDown</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">etype</tt> <tt class="py-op">==</tt> <tt class="py-string">"mouseup"</tt><tt class="py-op">:</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-22" class="py-name"><a title="pyjamas.DOM.listeners" class="py-name" href="#" onclick="return doclink('link-22', 'listeners', 'link-20');">listeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">            <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseUp()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseUp,Method pyjamas.ui.Control.Control.onMouseUp()=pyjamas.ui.Control.Control-class.html#onMouseUp,Method pyjamas.ui.DialogBox.DialogBox.onMouseUp()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseUp,Method pyjamas.ui.DialogWindow.DialogWindow.onMouseUp()=pyjamas.ui.DialogWindow.DialogWindow-class.html#onMouseUp,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseUp()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseUp,Method pyjamas.ui.MouseListener.MouseHandler.onMouseUp()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseUp,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseUp()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseUp,Method pyjamas.ui.SplitPanel.SplitPanel.onMouseUp()=pyjamas.ui.SplitPanel.SplitPanel-class.html#onMouseUp,Method pyjamas.ui.Tooltip.TooltipListener.onMouseUp()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseUp"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseUp
+pyjamas.ui.Control.Control.onMouseUp
+pyjamas.ui.DialogBox.DialogBox.onMouseUp
+pyjamas.ui.DialogWindow.DialogWindow.onMouseUp
+pyjamas.ui.GlassWidget.GlassWidget.onMouseUp
+pyjamas.ui.MouseListener.MouseHandler.onMouseUp
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseUp
+pyjamas.ui.SplitPanel.SplitPanel.onMouseUp
+pyjamas.ui.Tooltip.TooltipListener.onMouseUp" class="py-name" href="#" onclick="return doclink('link-23', 'onMouseUp', 'link-23');">onMouseUp</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">etype</tt> <tt class="py-op">==</tt> <tt class="py-string">"mousemove"</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-24" class="py-name"><a title="pyjamas.DOM.listeners" class="py-name" href="#" onclick="return doclink('link-24', 'listeners', 'link-20');">listeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">            <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseMove()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseMove,Method pyjamas.ui.Control.Control.onMouseMove()=pyjamas.ui.Control.Control-class.html#onMouseMove,Method pyjamas.ui.DialogBox.DialogBox.onMouseMove()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseMove,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseMove()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseMove,Method pyjamas.ui.MouseListener.MouseHandler.onMouseMove()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseMove,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseMove()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseMove,Method pyjamas.ui.SplitPanel.SplitPanel.onMouseMove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#onMouseMove,Method pyjamas.ui.Tooltip.TooltipListener.onMouseMove()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseMove"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseMove
+pyjamas.ui.Control.Control.onMouseMove
+pyjamas.ui.DialogBox.DialogBox.onMouseMove
+pyjamas.ui.GlassWidget.GlassWidget.onMouseMove
+pyjamas.ui.MouseListener.MouseHandler.onMouseMove
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseMove
+pyjamas.ui.SplitPanel.SplitPanel.onMouseMove
+pyjamas.ui.Tooltip.TooltipListener.onMouseMove" class="py-name" href="#" onclick="return doclink('link-25', 'onMouseMove', 'link-25');">onMouseMove</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">etype</tt> <tt class="py-op">==</tt> <tt class="py-string">"mouseover"</tt><tt class="py-op">:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">to_element</tt> <tt class="py-op">=</tt> <tt id="link-26" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-26', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Function pyjamas.DOM.eventGetToElement()=pyjamas.DOM-module.html#eventGetToElement"><a title="pyjamas.DOM.eventGetToElement" class="py-name" href="#" onclick="return doclink('link-27', 'eventGetToElement', 'link-27');">eventGetToElement</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">to_element</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt id="link-28" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-28', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Function pyjamas.DOM.isOrHasChild()=pyjamas.DOM-module.html#isOrHasChild"><a title="pyjamas.DOM.isOrHasChild" class="py-name" href="#" onclick="return doclink('link-29', 'isOrHasChild', 'link-29');">isOrHasChild</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-30', 'getElement', 'link-12');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">to_element</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-31" class="py-name"><a title="pyjamas.DOM.listeners" class="py-name" href="#" onclick="return doclink('link-31', 'listeners', 'link-20');">listeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseEnter()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseEnter,Method pyjamas.ui.Control.Control.onMouseEnter()=pyjamas.ui.Control.Control-class.html#onMouseEnter,Method pyjamas.ui.DialogBox.DialogBox.onMouseEnter()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseEnter,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseEnter()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseEnter,Method pyjamas.ui.MouseListener.MouseHandler.onMouseEnter()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseEnter,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseEnter()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseEnter,Method pyjamas.ui.Tooltip.TooltipListener.onMouseEnter()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseEnter"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseEnter
+pyjamas.ui.Control.Control.onMouseEnter
+pyjamas.ui.DialogBox.DialogBox.onMouseEnter
+pyjamas.ui.GlassWidget.GlassWidget.onMouseEnter
+pyjamas.ui.MouseListener.MouseHandler.onMouseEnter
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseEnter
+pyjamas.ui.Tooltip.TooltipListener.onMouseEnter" class="py-name" href="#" onclick="return doclink('link-32', 'onMouseEnter', 'link-32');">onMouseEnter</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">etype</tt> <tt class="py-op">==</tt> <tt class="py-string">"mouseout"</tt><tt class="py-op">:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-name">to_element</tt> <tt class="py-op">=</tt> <tt id="link-33" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-33', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="pyjamas.DOM.eventGetToElement" class="py-name" href="#" onclick="return doclink('link-34', 'eventGetToElement', 'link-27');">eventGetToElement</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">to_element</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt id="link-35" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-35', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="pyjamas.DOM.isOrHasChild" class="py-name" href="#" onclick="return doclink('link-36', 'isOrHasChild', 'link-29');">isOrHasChild</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-37', 'getElement', 'link-12');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">to_element</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt id="link-38" class="py-name"><a title="pyjamas.DOM.listeners" class="py-name" href="#" onclick="return doclink('link-38', 'listeners', 'link-20');">listeners</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.onMouseLeave()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#onMouseLeave,Method pyjamas.ui.Control.Control.onMouseLeave()=pyjamas.ui.Control.Control-class.html#onMouseLeave,Method pyjamas.ui.DialogBox.DialogBox.onMouseLeave()=pyjamas.ui.DialogBox.DialogBox-class.html#onMouseLeave,Method pyjamas.ui.GlassWidget.GlassWidget.onMouseLeave()=pyjamas.ui.GlassWidget.GlassWidget-class.html#onMouseLeave,Method pyjamas.ui.MouseListener.MouseHandler.onMouseLeave()=pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseLeave,Method pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseLeave()=pyjamas.ui.RichTextToolbar.RichTextToolbar-class.html#onMouseLeave,Method pyjamas.ui.Tooltip.TooltipListener.onMouseLeave()=pyjamas.ui.Tooltip.TooltipListener-class.html#onMouseLeave"><a title="pyjamas.dnd.DNDHelper.DNDHelper.onMouseLeave
+pyjamas.ui.Control.Control.onMouseLeave
+pyjamas.ui.DialogBox.DialogBox.onMouseLeave
+pyjamas.ui.GlassWidget.GlassWidget.onMouseLeave
+pyjamas.ui.MouseListener.MouseHandler.onMouseLeave
+pyjamas.ui.RichTextToolbar.RichTextToolbar.onMouseLeave
+pyjamas.ui.Tooltip.TooltipListener.onMouseLeave" class="py-name" href="#" onclick="return doclink('link-39', 'onMouseLeave', 'link-39');">onMouseLeave</a></tt><tt class="py-op">(</tt><tt class="py-name">sender</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable pyjamas.ui.MouseListener.MOUSE_EVENTS=pyjamas.ui.MouseListener-module.html#MOUSE_EVENTS"><a title="pyjamas.ui.MouseListener.MOUSE_EVENTS" class="py-name" href="#" onclick="return doclink('link-40', 'MOUSE_EVENTS', 'link-40');">MOUSE_EVENTS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt class="py-string">"mousedown"</tt><tt class="py-op">,</tt> <tt class="py-string">"mouseup"</tt><tt class="py-op">,</tt> <tt class="py-string">"mousemove"</tt><tt class="py-op">,</tt> <tt class="py-string">"mouseover"</tt><tt class="py-op">,</tt> <tt class="py-string">"mouseout"</tt><tt class="py-op">]</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler"></a><div id="MouseHandler-def"><a name="L52"></a><tt class="py-lineno"> 52</tt> <a class="py-toggle" href="#" id="MouseHandler-toggle" onclick="return toggle('MouseHandler');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html">MouseHandler</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="MouseHandler-expanded"><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.__init__"></a><div id="MouseHandler.__init__-def"><a name="L54"></a><tt class="py-lineno"> 54</tt> <a class="py-toggle" href="#" id="MouseHandler.__init__-toggle" onclick="return toggle('MouseHandler.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">preventDefault</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.__init__-expanded"><a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseListeners</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mousePreventDefault</tt> <tt class="py-op">=</tt> <tt id="link-41" class="py-name" targets="Method pyjamas.dnd.DragEvent.DragEvent.preventDefault()=pyjamas.dnd.DragEvent.DragEvent-class.html#preventDefault"><a title="pyjamas.dnd.DragEvent.DragEvent.preventDefault" class="py-name" href="#" onclick="return doclink('link-41', 'preventDefault', 'link-41');">preventDefault</a></tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name" targets="Function pyjamas.DOM.sinkEvents()=pyjamas.DOM-module.html#sinkEvents,Method pyjamas.ui.CheckBox.CheckBox.sinkEvents()=pyjamas.ui.CheckBox.CheckBox-class.html#sinkEvents,Method pyjamas.ui.UIObject.UIObject.sinkEvents()=pyjamas.ui.UIObject.UIObject-class.html#sinkEvents"><a title="pyjamas.DOM.sinkEvents
+pyjamas.ui.CheckBox.CheckBox.sinkEvents
+pyjamas.ui.UIObject.UIObject.sinkEvents" class="py-name" href="#" onclick="return doclink('link-42', 'sinkEvents', 'link-42');">sinkEvents</a></tt><tt class="py-op">(</tt> <tt id="link-43" class="py-name"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-43', 'Event', 'link-4');">Event</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Variable pyjamas.ui.Event.MOUSEEVENTS=pyjamas.ui.Event-module.html#MOUSEEVENTS"><a title="pyjamas.ui.Event.MOUSEEVENTS" class="py-name" href="#" onclick="return doclink('link-44', 'MOUSEEVENTS', 'link-44');">MOUSEEVENTS</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.onBrowserEvent"></a><div id="MouseHandler.onBrowserEvent-def"><a name="L60"></a><tt class="py-lineno"> 60</tt> <a class="py-toggle" href="#" id="MouseHandler.onBrowserEvent-toggle" onclick="return toggle('MouseHandler.onBrowserEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onBrowserEvent">onBrowserEvent</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onBrowserEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onBrowserEvent-expanded"><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">etype</tt> <tt class="py-op">=</tt> <tt id="link-45" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-45', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="pyjamas.DOM.eventGetType" class="py-name" href="#" onclick="return doclink('link-46', 'eventGetType', 'link-19');">eventGetType</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">etype</tt> <tt class="py-keyword">in</tt> <tt id="link-47" class="py-name"><a title="pyjamas.ui.MouseListener.MOUSE_EVENTS" class="py-name" href="#" onclick="return doclink('link-47', 'MOUSE_EVENTS', 'link-40');">MOUSE_EVENTS</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mousePreventDefault</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                <tt id="link-48" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-48', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Function pyjamas.DOM.eventPreventDefault()=pyjamas.DOM-module.html#eventPreventDefault"><a title="pyjamas.DOM.eventPreventDefault" class="py-name" href="#" onclick="return doclink('link-49', 'eventPreventDefault', 'link-49');">eventPreventDefault</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-50" class="py-name" targets="Function pyjamas.ui.MouseListener.fireMouseEvent()=pyjamas.ui.MouseListener-module.html#fireMouseEvent"><a title="pyjamas.ui.MouseListener.fireMouseEvent" class="py-name" href="#" onclick="return doclink('link-50', 'fireMouseEvent', 'link-50');">fireMouseEvent</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseListeners</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.addMouseListener"></a><div id="MouseHandler.addMouseListener-def"><a name="L68"></a><tt class="py-lineno"> 68</tt> <a class="py-toggle" href="#" id="MouseHandler.addMouseListener-toggle" onclick="return toggle('MouseHandler.addMouseListener');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#addMouseListener">addMouseListener</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.addMouseListener-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.addMouseListener-expanded"><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseListeners</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name" targets="Method pyjamas.Canvas.JSOStack.JSOStack.append()=pyjamas.Canvas.JSOStack.JSOStack-class.html#append,Method pyjamas.ui.Panel.PanelBase.append()=pyjamas.ui.Panel.PanelBase-class.html#append"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-51', 'append', 'link-51');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.removeMouseListener"></a><div id="MouseHandler.removeMouseListener-def"><a name="L71"></a><tt class="py-lineno"> 71</tt> <a class="py-toggle" href="#" id="MouseHandler.removeMouseListener-toggle" onclick="return toggle('MouseHandler.removeMouseListener');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#removeMouseListener">removeMouseListener</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.removeMouseListener-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.removeMouseListener-expanded"><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseListeners</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name" targets="Method pyjamas.DOM.IterChildrenClass.remove()=pyjamas.DOM.IterChildrenClass-class.html#remove,Method pyjamas.DOM.IterWalkChildren.remove()=pyjamas.DOM.IterWalkChildren-class.html#remove,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#remove,Method pyjamas.ui.Anchor._Attribute.remove()=pyjamas.ui.Anchor._Attribute-class.html#remove,Method pyjamas.ui.BuilderPanel.BuilderPanel.remove()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssFile.remove()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssText.remove()=pyjamas.ui.CSS.StyleSheetCssText-class.html#remove,Method pyjamas.ui.ComplexPanel.ComplexPanel.remove()=pyjamas.ui.ComplexPanel.ComplexPanel-class.html#remove,Method pyjamas.ui.DeckPanel.DeckPanel.remove()=pyjamas.ui.DeckPanel.DeckPanel-class.html#remove,Method pyjamas.ui.DialogBox.DialogBox.remove()=pyjamas.ui.DialogBox.DialogBox-class.html#remove,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.remove()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#remove,Method pyjamas.ui.DockPanel.DockPanel.remove()=pyjamas.ui.DockPanel.DockPanel-class.html#remove,Method pyjamas.ui.HTMLTable.HTMLTable.remove()=pyjamas.ui.HTMLTable.HTMLTable-class.html#remove,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.remove()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#remove,Method pyjamas.ui.SimplePanel.SimplePanel.remove()=pyjamas.ui.SimplePanel.SimplePanel-class.html#remove,Method pyjamas.ui.SplitPanel.SplitPanel.remove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#remove,Method pyjamas.ui.StackPanel.StackPanel.remove()=pyjamas.ui.StackPanel.StackPanel-class.html#remove,Method pyjamas.ui.TabPanel.TabPanel.remove()=pyjamas.ui.TabPanel.TabPanel-class.html#remove,Method pyjamas.ui.Tree.Tree.remove()=pyjamas.ui.Tree.Tree-class.html#remove,Method pyjamas.ui.TreeItem.TreeItem.remove()=pyjamas.ui.TreeItem.TreeItem-class.html#remove,Method pyjamas.ui.VerticalPanel.VerticalPanel.remove()=pyjamas.ui.VerticalPanel.VerticalPanel-class.html#remove"><a title="pyjamas.DOM.IterChildrenClass.remove
+pyjamas.DOM.IterWalkChildren.remove
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove
+pyjamas.ui.Anchor._Attribute.remove
+pyjamas.ui.BuilderPanel.BuilderPanel.remove
+pyjamas.ui.CSS.StyleSheetCssFile.remove
+pyjamas.ui.CSS.StyleSheetCssText.remove
+pyjamas.ui.ComplexPanel.ComplexPanel.remove
+pyjamas.ui.DeckPanel.DeckPanel.remove
+pyjamas.ui.DialogBox.DialogBox.remove
+pyjamas.ui.DisclosurePanel.DisclosurePanel.remove
+pyjamas.ui.DockPanel.DockPanel.remove
+pyjamas.ui.HTMLTable.HTMLTable.remove
+pyjamas.ui.HorizontalPanel.HorizontalPanel.remove
+pyjamas.ui.SimplePanel.SimplePanel.remove
+pyjamas.ui.SplitPanel.SplitPanel.remove
+pyjamas.ui.StackPanel.StackPanel.remove
+pyjamas.ui.TabPanel.TabPanel.remove
+pyjamas.ui.Tree.Tree.remove
+pyjamas.ui.TreeItem.TreeItem.remove
+pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick="return doclink('link-52', 'remove', 'link-52');">remove</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.onMouseMove"></a><div id="MouseHandler.onMouseMove-def"><a name="L74"></a><tt class="py-lineno"> 74</tt> <a class="py-toggle" href="#" id="MouseHandler.onMouseMove-toggle" onclick="return toggle('MouseHandler.onMouseMove');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseMove">onMouseMove</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">,</tt> <tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onMouseMove-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onMouseMove-expanded"><a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">         </tt>
+<a name="MouseHandler.onMouseDown"></a><div id="MouseHandler.onMouseDown-def"><a name="L77"></a><tt class="py-lineno"> 77</tt> <a class="py-toggle" href="#" id="MouseHandler.onMouseDown-toggle" onclick="return toggle('MouseHandler.onMouseDown');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseDown">onMouseDown</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">,</tt> <tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onMouseDown-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onMouseDown-expanded"><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.onMouseUp"></a><div id="MouseHandler.onMouseUp-def"><a name="L80"></a><tt class="py-lineno"> 80</tt> <a class="py-toggle" href="#" id="MouseHandler.onMouseUp-toggle" onclick="return toggle('MouseHandler.onMouseUp');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseUp">onMouseUp</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">,</tt> <tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onMouseUp-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onMouseUp-expanded"><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.onMouseEnter"></a><div id="MouseHandler.onMouseEnter-def"><a name="L83"></a><tt class="py-lineno"> 83</tt> <a class="py-toggle" href="#" id="MouseHandler.onMouseEnter-toggle" onclick="return toggle('MouseHandler.onMouseEnter');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseEnter">onMouseEnter</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onMouseEnter-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onMouseEnter-expanded"><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.onMouseLeave"></a><div id="MouseHandler.onMouseLeave-def"><a name="L86"></a><tt class="py-lineno"> 86</tt> <a class="py-toggle" href="#" id="MouseHandler.onMouseLeave-toggle" onclick="return toggle('MouseHandler.onMouseLeave');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseLeave">onMouseLeave</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onMouseLeave-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onMouseLeave-expanded"><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.onMouseGlassEnter"></a><div id="MouseHandler.onMouseGlassEnter-def"><a name="L89"></a><tt class="py-lineno"> 89</tt> <a class="py-toggle" href="#" id="MouseHandler.onMouseGlassEnter-toggle" onclick="return toggle('MouseHandler.onMouseGlassEnter');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseGlassEnter">onMouseGlassEnter</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onMouseGlassEnter-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onMouseGlassEnter-expanded"><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="MouseHandler.onMouseGlassLeave"></a><div id="MouseHandler.onMouseGlassLeave-def"><a name="L92"></a><tt class="py-lineno"> 92</tt> <a class="py-toggle" href="#" id="MouseHandler.onMouseGlassLeave-toggle" onclick="return toggle('MouseHandler.onMouseGlassLeave');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseHandler-class.html#onMouseGlassLeave">onMouseGlassLeave</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseHandler.onMouseGlassLeave-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseHandler.onMouseGlassLeave-expanded"><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div></div><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="MouseWheelHandler"></a><div id="MouseWheelHandler-def"><a name="L95"></a><tt class="py-lineno"> 95</tt> <a class="py-toggle" href="#" id="MouseWheelHandler-toggle" onclick="return toggle('MouseWheelHandler');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseWheelHandler-class.html">MouseWheelHandler</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseWheelHandler-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="MouseWheelHandler-expanded"><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="MouseWheelHandler.__init__"></a><div id="MouseWheelHandler.__init__-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="MouseWheelHandler.__init__-toggle" onclick="return toggle('MouseWheelHandler.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseWheelHandler-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">preventDefault</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseWheelHandler.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseWheelHandler.__init__-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseWheelListeners</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseWheelPreventDefault</tt> <tt class="py-op">=</tt> <tt id="link-53" class="py-name"><a title="pyjamas.dnd.DragEvent.DragEvent.preventDefault" class="py-name" href="#" onclick="return doclink('link-53', 'preventDefault', 'link-41');">preventDefault</a></tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="pyjamas.DOM.sinkEvents
+pyjamas.ui.CheckBox.CheckBox.sinkEvents
+pyjamas.ui.UIObject.UIObject.sinkEvents" class="py-name" href="#" onclick="return doclink('link-54', 'sinkEvents', 'link-42');">sinkEvents</a></tt><tt class="py-op">(</tt> <tt id="link-55" class="py-name"><a title="pyjamas.ui.Event" class="py-name" href="#" onclick="return doclink('link-55', 'Event', 'link-4');">Event</a></tt><tt class="py-op">.</tt><tt id="link-56" class="py-name" targets="Variable pyjamas.ui.Event.ONMOUSEWHEEL=pyjamas.ui.Event-module.html#ONMOUSEWHEEL"><a title="pyjamas.ui.Event.ONMOUSEWHEEL" class="py-name" href="#" onclick="return doclink('link-56', 'ONMOUSEWHEEL', 'link-56');">ONMOUSEWHEEL</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="MouseWheelHandler.onBrowserEvent"></a><div id="MouseWheelHandler.onBrowserEvent-def"><a name="L103"></a><tt class="py-lineno">103</tt> <a class="py-toggle" href="#" id="MouseWheelHandler.onBrowserEvent-toggle" onclick="return toggle('MouseWheelHandler.onBrowserEvent');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseWheelHandler-class.html#onBrowserEvent">onBrowserEvent</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseWheelHandler.onBrowserEvent-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseWheelHandler.onBrowserEvent-expanded"><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">etype</tt> <tt class="py-op">=</tt> <tt id="link-57" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-57', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-58" class="py-name"><a title="pyjamas.DOM.eventGetType" class="py-name" href="#" onclick="return doclink('link-58', 'eventGetType', 'link-19');">eventGetType</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">etype</tt> <tt class="py-op">==</tt> <tt class="py-string">"mousewheel"</tt><tt class="py-op">:</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseWheelPreventDefault</tt><tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                <tt id="link-59" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-59', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-60" class="py-name"><a title="pyjamas.DOM.eventPreventDefault" class="py-name" href="#" onclick="return doclink('link-60', 'eventPreventDefault', 'link-49');">eventPreventDefault</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">            <tt class="py-name">velocity</tt> <tt class="py-op">=</tt> <tt id="link-61" class="py-name"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-61', 'DOM', 'link-1');">DOM</a></tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Function pyjamas.DOM.eventGetMouseWheelVelocityY()=pyjamas.DOM-module.html#eventGetMouseWheelVelocityY"><a title="pyjamas.DOM.eventGetMouseWheelVelocityY" class="py-name" href="#" onclick="return doclink('link-62', 'eventGetMouseWheelVelocityY', 'link-62');">eventGetMouseWheelVelocityY</a></tt><tt class="py-op">(</tt><tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">listener</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseWheelListeners</tt><tt class="py-op">:</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                <tt class="py-name">listener</tt><tt class="py-op">.</tt><tt id="link-63" class="py-name" targets="Method pyjamas.ui.Control.Control.onMouseWheel()=pyjamas.ui.Control.Control-class.html#onMouseWheel,Method pyjamas.ui.MouseListener.MouseWheelHandler.onMouseWheel()=pyjamas.ui.MouseListener.MouseWheelHandler-class.html#onMouseWheel"><a title="pyjamas.ui.Control.Control.onMouseWheel
+pyjamas.ui.MouseListener.MouseWheelHandler.onMouseWheel" class="py-name" href="#" onclick="return doclink('link-63', 'onMouseWheel', 'link-63');">onMouseWheel</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">velocity</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="MouseWheelHandler.addMouseWheelListener"></a><div id="MouseWheelHandler.addMouseWheelListener-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="MouseWheelHandler.addMouseWheelListener-toggle" onclick="return toggle('MouseWheelHandler.addMouseWheelListener');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseWheelHandler-class.html#addMouseWheelListener">addMouseWheelListener</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseWheelHandler.addMouseWheelListener-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseWheelHandler.addMouseWheelListener-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseWheelListeners</tt><tt class="py-op">.</tt><tt id="link-64" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-64', 'append', 'link-51');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt>
+<a name="MouseWheelHandler.removeMouseWheelListener"></a><div id="MouseWheelHandler.removeMouseWheelListener-def"><a name="L116"></a><tt class="py-lineno">116</tt> <a class="py-toggle" href="#" id="MouseWheelHandler.removeMouseWheelListener-toggle" onclick="return toggle('MouseWheelHandler.removeMouseWheelListener');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseWheelHandler-class.html#removeMouseWheelListener">removeMouseWheelListener</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listener</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseWheelHandler.removeMouseWheelListener-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseWheelHandler.removeMouseWheelListener-expanded"><a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_mouseWheelListeners</tt><tt class="py-op">.</tt><tt id="link-65" class="py-name"><a title="pyjamas.DOM.IterChildrenClass.remove
+pyjamas.DOM.IterWalkChildren.remove
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove
+pyjamas.ui.Anchor._Attribute.remove
+pyjamas.ui.BuilderPanel.BuilderPanel.remove
+pyjamas.ui.CSS.StyleSheetCssFile.remove
+pyjamas.ui.CSS.StyleSheetCssText.remove
+pyjamas.ui.ComplexPanel.ComplexPanel.remove
+pyjamas.ui.DeckPanel.DeckPanel.remove
+pyjamas.ui.DialogBox.DialogBox.remove
+pyjamas.ui.DisclosurePanel.DisclosurePanel.remove
+pyjamas.ui.DockPanel.DockPanel.remove
+pyjamas.ui.HTMLTable.HTMLTable.remove
+pyjamas.ui.HorizontalPanel.HorizontalPanel.remove
+pyjamas.ui.SimplePanel.SimplePanel.remove
+pyjamas.ui.SplitPanel.SplitPanel.remove
+pyjamas.ui.StackPanel.StackPanel.remove
+pyjamas.ui.TabPanel.TabPanel.remove
+pyjamas.ui.Tree.Tree.remove
+pyjamas.ui.TreeItem.TreeItem.remove
+pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick="return doclink('link-65', 'remove', 'link-52');">remove</a></tt><tt class="py-op">(</tt><tt class="py-name">listener</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"> </tt>
+<a name="MouseWheelHandler.onMouseWheel"></a><div id="MouseWheelHandler.onMouseWheel-def"><a name="L119"></a><tt class="py-lineno">119</tt> <a class="py-toggle" href="#" id="MouseWheelHandler.onMouseWheel-toggle" onclick="return toggle('MouseWheelHandler.onMouseWheel');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.MouseListener.MouseWheelHandler-class.html#onMouseWheel">onMouseWheel</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sender</tt><tt class="py-op">,</tt> <tt class="py-param">velocity</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MouseWheelHandler.onMouseWheel-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="MouseWheelHandler.onMouseWheel-expanded"><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div></div><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:13 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.Canvas.HTML5Canvas</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.Canvas-module.html">Package&nbsp;Canvas</a> ::
+        Module&nbsp;HTML5Canvas
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.Canvas.HTML5Canvas-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.Canvas.HTML5Canvas-module.html">Module pyjamas.Canvas.HTML5Canvas</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">Created on Sun Nov 28 19:22:15 2010</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">@author: Alexander Tsepkov</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package pyjamas.Canvas=pyjamas.Canvas-module.html,Class pyjamas.Canvas2D.Canvas=pyjamas.Canvas2D.Canvas-class.html"><a title="pyjamas.Canvas
+pyjamas.Canvas2D.Canvas" class="py-name" href="#" onclick="return doclink('link-1', 'Canvas', 'link-1');">Canvas</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module pyjamas.Canvas.GWTCanvas=pyjamas.Canvas.GWTCanvas-module.html,Class pyjamas.Canvas.GWTCanvas.GWTCanvas=pyjamas.Canvas.GWTCanvas.GWTCanvas-class.html"><a title="pyjamas.Canvas.GWTCanvas
+pyjamas.Canvas.GWTCanvas.GWTCanvas" class="py-name" href="#" onclick="return doclink('link-2', 'GWTCanvas', 'link-2');">GWTCanvas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name"><a title="pyjamas.Canvas.GWTCanvas
+pyjamas.Canvas.GWTCanvas.GWTCanvas" class="py-name" href="#" onclick="return doclink('link-3', 'GWTCanvas', 'link-2');">GWTCanvas</a></tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-4', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="pyjamas.Canvas
+pyjamas.Canvas2D.Canvas" class="py-name" href="#" onclick="return doclink('link-5', 'Canvas', 'link-1');">Canvas</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Module pyjamas.Canvas.HTML5CanvasImplDefault=pyjamas.Canvas.HTML5CanvasImplDefault-module.html,Class pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html"><a title="pyjamas.Canvas.HTML5CanvasImplDefault
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault" class="py-name" href="#" onclick="return doclink('link-6', 'HTML5CanvasImplDefault', 'link-6');">HTML5CanvasImplDefault</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name"><a title="pyjamas.Canvas.HTML5CanvasImplDefault
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault" class="py-name" href="#" onclick="return doclink('link-7', 'HTML5CanvasImplDefault', 'link-6');">HTML5CanvasImplDefault</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-8" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-8', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="pyjamas.Canvas
+pyjamas.Canvas2D.Canvas" class="py-name" href="#" onclick="return doclink('link-9', 'Canvas', 'link-1');">Canvas</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Module pyjamas.Canvas.Color=pyjamas.Canvas.Color-module.html,Class pyjamas.Canvas.Color.Color=pyjamas.Canvas.Color.Color-class.html"><a title="pyjamas.Canvas.Color
+pyjamas.Canvas.Color.Color" class="py-name" href="#" onclick="return doclink('link-10', 'Color', 'link-10');">Color</a></tt> <tt class="py-keyword">import</tt> <tt id="link-11" class="py-name"><a title="pyjamas.Canvas.Color
+pyjamas.Canvas.Color.Color" class="py-name" href="#" onclick="return doclink('link-11', 'Color', 'link-10');">Color</a></tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-12" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-12', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="pyjamas.Canvas
+pyjamas.Canvas2D.Canvas" class="py-name" href="#" onclick="return doclink('link-13', 'Canvas', 'link-1');">Canvas</a></tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Module pyjamas.Canvas.ImageData=pyjamas.Canvas.ImageData-module.html,Class pyjamas.Canvas.ImageData.ImageData=pyjamas.Canvas.ImageData.ImageData-class.html"><a title="pyjamas.Canvas.ImageData
+pyjamas.Canvas.ImageData.ImageData" class="py-name" href="#" onclick="return doclink('link-14', 'ImageData', 'link-14');">ImageData</a></tt> <tt class="py-keyword">import</tt> <tt id="link-15" class="py-name"><a title="pyjamas.Canvas.ImageData
+pyjamas.Canvas.ImageData.ImageData" class="py-name" href="#" onclick="return doclink('link-15', 'ImageData', 'link-14');">ImageData</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-string">This module further expands GWTCanvas to cover newer HTML5 canvas functionality.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-string">Note that this API is incompatible with Internet Explorer older than version 9.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="HTML5Canvas"></a><div id="HTML5Canvas-def"><a name="L19"></a><tt class="py-lineno"> 19</tt> <a class="py-toggle" href="#" id="HTML5Canvas-toggle" onclick="return toggle('HTML5Canvas');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html">HTML5Canvas</a><tt class="py-op">(</tt><tt class="py-base-class">GWTCanvas</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="HTML5Canvas-expanded"><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">     </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">     </tt>
+<a name="HTML5Canvas.getCanvasImpl"></a><div id="HTML5Canvas.getCanvasImpl-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getCanvasImpl-toggle" onclick="return toggle('HTML5Canvas.getCanvasImpl');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getCanvasImpl">getCanvasImpl</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getCanvasImpl-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getCanvasImpl-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-16" class="py-name"><a title="pyjamas.Canvas.HTML5CanvasImplDefault
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault" class="py-name" href="#" onclick="return doclink('link-16', 'HTML5CanvasImplDefault', 'link-6');">HTML5CanvasImplDefault</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">     </tt>
+<a name="HTML5Canvas.clearRect"></a><div id="HTML5Canvas.clearRect-def"><a name="L25"></a><tt class="py-lineno"> 25</tt> <a class="py-toggle" href="#" id="HTML5Canvas.clearRect-toggle" onclick="return toggle('HTML5Canvas.clearRect');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#clearRect">clearRect</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">,</tt> <tt class="py-param">w</tt><tt class="py-op">,</tt> <tt class="py-param">h</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.clearRect-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.clearRect-expanded"><a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.clearRect()=pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault-class.html#clearRect,Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.clearRect()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#clearRect,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.clearRect()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#clearRect,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.clearRect()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#clearRect"><a title="pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.clearRect
+pyjamas.Canvas.HTML5Canvas.HTML5Canvas.clearRect
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.clearRect
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.clearRect" class="py-name" href="#" onclick="return doclink('link-17', 'clearRect', 'link-17');">clearRect</a></tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">,</tt> <tt class="py-name">w</tt><tt class="py-op">,</tt> <tt class="py-name">h</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">     </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-string">    clips the current path</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.clip"></a><div id="HTML5Canvas.clip-def"><a name="L31"></a><tt class="py-lineno"> 31</tt> <a class="py-toggle" href="#" id="HTML5Canvas.clip-toggle" onclick="return toggle('HTML5Canvas.clip');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#clip">clip</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.clip-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.clip-expanded"><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.clip()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#clip,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.clip()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#clip,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.clip()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#clip"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.clip
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.clip
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.clip" class="py-name" href="#" onclick="return doclink('link-18', 'clip', 'link-18');">clip</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">     </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-string">    Returns an ImageData object with the given dimensions in CSS pixels (which </tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-string">    might map to a different number of actual device pixels exposed by the </tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-string">    object itself). All the pixels in the returned object are transparent black.</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.createImageData"></a><div id="HTML5Canvas.createImageData-def"><a name="L39"></a><tt class="py-lineno"> 39</tt> <a class="py-toggle" href="#" id="HTML5Canvas.createImageData-toggle" onclick="return toggle('HTML5Canvas.createImageData');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#createImageData">createImageData</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sw</tt><tt class="py-op">,</tt> <tt class="py-param">sh</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.createImageData-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.createImageData-expanded"><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-19" class="py-name"><a title="pyjamas.Canvas.ImageData
+pyjamas.Canvas.ImageData.ImageData" class="py-name" href="#" onclick="return doclink('link-19', 'ImageData', 'link-14');">ImageData</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.createImageData()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#createImageData,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.createImageData()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#createImageData,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.createImageData()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#createImageData"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.createImageData
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.createImageData
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.createImageData" class="py-name" href="#" onclick="return doclink('link-20', 'createImageData', 'link-20');">createImageData</a></tt><tt class="py-op">(</tt><tt class="py-name">sw</tt><tt class="py-op">,</tt> <tt class="py-name">sh</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">     </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-string">    Returns an ImageData object containing the image data for the given </tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-string">    rectangle of the canvas.</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.getImageData"></a><div id="HTML5Canvas.getImageData-def"><a name="L46"></a><tt class="py-lineno"> 46</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getImageData-toggle" onclick="return toggle('HTML5Canvas.getImageData');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getImageData">getImageData</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sx</tt><tt class="py-op">,</tt> <tt class="py-param">sy</tt><tt class="py-op">,</tt> <tt class="py-param">sw</tt><tt class="py-op">,</tt> <tt class="py-param">sh</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getImageData-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getImageData-expanded"><a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-21" class="py-name"><a title="pyjamas.Canvas.ImageData
+pyjamas.Canvas.ImageData.ImageData" class="py-name" href="#" onclick="return doclink('link-21', 'ImageData', 'link-14');">ImageData</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getImageData()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getImageData,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getImageData()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#getImageData,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getImageData()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#getImageData"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getImageData
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getImageData
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getImageData" class="py-name" href="#" onclick="return doclink('link-22', 'getImageData', 'link-22');">getImageData</a></tt><tt class="py-op">(</tt><tt class="py-name">sx</tt><tt class="py-op">,</tt> <tt class="py-name">sy</tt><tt class="py-op">,</tt> <tt class="py-name">sw</tt><tt class="py-op">,</tt> <tt class="py-name">sh</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">     </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-string">    Paints the data from the given ImageData object onto the canvas. If a dirty </tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-string">    rectangle is provided, only the pixels from that rectangle are painted.</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.putImageData"></a><div id="HTML5Canvas.putImageData-def"><a name="L53"></a><tt class="py-lineno"> 53</tt> <a class="py-toggle" href="#" id="HTML5Canvas.putImageData-toggle" onclick="return toggle('HTML5Canvas.putImageData');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#putImageData">putImageData</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">imagedata</tt><tt class="py-op">,</tt> <tt class="py-param">dx</tt><tt class="py-op">,</tt> <tt class="py-param">dy</tt><tt class="py-op">,</tt> <tt class="py-param">dirtyX</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-param">dirtyY</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-param">dirtyWidth</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">dirtyHeight</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.putImageData-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.putImageData-expanded"><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">dirtyWidth</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">            <tt class="py-name">dirtyWidth</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">coordWidth</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">dirtyHeight</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">            <tt class="py-name">dirtyHeight</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">coordHeight</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.putImageData()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#putImageData,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.putImageData()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#putImageData,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.putImageData()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#putImageData"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.putImageData
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.putImageData
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.putImageData" class="py-name" href="#" onclick="return doclink('link-23', 'putImageData', 'link-23');">putImageData</a></tt><tt class="py-op">(</tt><tt class="py-name">imagedata</tt><tt class="py-op">,</tt> <tt class="py-name">dx</tt><tt class="py-op">,</tt> <tt class="py-name">dy</tt><tt class="py-op">,</tt> <tt class="py-name">dirtyX</tt><tt class="py-op">,</tt> <tt class="py-name">dirtyY</tt><tt class="py-op">,</tt> <tt class="py-name">dirtyWidth</tt><tt class="py-op">,</tt> <tt class="py-name">dirtyHeight</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">     </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-string">    returns the canvas data as a base64 encoded PNG file, also supports </tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-string">    image/jpg in Firefox</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.toDataURL"></a><div id="HTML5Canvas.toDataURL-def"><a name="L64"></a><tt class="py-lineno"> 64</tt> <a class="py-toggle" href="#" id="HTML5Canvas.toDataURL-toggle" onclick="return toggle('HTML5Canvas.toDataURL');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#toDataURL">toDataURL</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">type</tt><tt class="py-op">=</tt><tt class="py-string">"image/png"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.toDataURL-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.toDataURL-expanded"><a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.toDataURL()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#toDataURL,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.toDataURL()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#toDataURL,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.toDataURL()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#toDataURL"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.toDataURL
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.toDataURL
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.toDataURL" class="py-name" href="#" onclick="return doclink('link-24', 'toDataURL', 'link-24');">toDataURL</a></tt><tt class="py-op">(</tt><tt id="link-25" class="py-name" targets="Method pyjamas.dnd.DataTransfer.DataTransferItem.type()=pyjamas.dnd.DataTransfer.DataTransferItem-class.html#type"><a title="pyjamas.dnd.DataTransfer.DataTransferItem.type" class="py-name" href="#" onclick="return doclink('link-25', 'type', 'link-25');">type</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">     </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-string">    Returns a string corresponding to current font size and type, for example:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-string">    "10px monospace"</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.getFont"></a><div id="HTML5Canvas.getFont-def"><a name="L71"></a><tt class="py-lineno"> 71</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getFont-toggle" onclick="return toggle('HTML5Canvas.getFont');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getFont">getFont</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getFont-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getFont-expanded"><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getFont()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getFont,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getFont()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#getFont,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getFont()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#getFont"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getFont
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getFont
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getFont" class="py-name" href="#" onclick="return doclink('link-26', 'getFont', 'link-26');">getFont</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">     </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-string">    returns the width in pixels the passed in string would take up when drawn </tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-string">    with currently set font size and type</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.measureText"></a><div id="HTML5Canvas.measureText-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="HTML5Canvas.measureText-toggle" onclick="return toggle('HTML5Canvas.measureText');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#measureText">measureText</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.measureText-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.measureText-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.measureText()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#measureText,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.measureText()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#measureText,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.measureText()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#measureText"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.measureText
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.measureText
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.measureText" class="py-name" href="#" onclick="return doclink('link-27', 'measureText', 'link-27');">measureText</a></tt><tt class="py-op">(</tt><tt class="py-name">text</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">     </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-string">    Sets current font to passed in size and type, if the string is in invalid </tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-string">    format, the font will not be updated</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.setFont"></a><div id="HTML5Canvas.setFont-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="HTML5Canvas.setFont-toggle" onclick="return toggle('HTML5Canvas.setFont');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setFont">setFont</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.setFont-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.setFont-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method pyjamas.Canvas.GWTCanvas.GWTCanvas.setFont()=pyjamas.Canvas.GWTCanvas.GWTCanvas-class.html#setFont,Method pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.setFont()=pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault-class.html#setFont,Method pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.setFont()=pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6-class.html#setFont,Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setFont()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setFont,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setFont()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#setFont,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setFont()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#setFont,Method pyjamas.Canvas.SVGCanvas.SVGCanvas.setFont()=pyjamas.Canvas.SVGCanvas.SVGCanvas-class.html#setFont"><a title="pyjamas.Canvas.GWTCanvas.GWTCanvas.setFont
+pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault.setFont
+pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.setFont
+pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setFont
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setFont
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setFont
+pyjamas.Canvas.SVGCanvas.SVGCanvas.setFont" class="py-name" href="#" onclick="return doclink('link-28', 'setFont', 'link-28');">setFont</a></tt><tt class="py-op">(</tt><tt class="py-name">value</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">     </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-string">    returns the current level of blur applied to shadows</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.getShadowBlur"></a><div id="HTML5Canvas.getShadowBlur-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getShadowBlur-toggle" onclick="return toggle('HTML5Canvas.getShadowBlur');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowBlur">getShadowBlur</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getShadowBlur-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getShadowBlur-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowBlur()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowBlur,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowBlur()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#getShadowBlur,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowBlur()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#getShadowBlur"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowBlur
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowBlur
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowBlur" class="py-name" href="#" onclick="return doclink('link-29', 'getShadowBlur', 'link-29');">getShadowBlur</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">     </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-string">    returns the current shadow color</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.getShadowColor"></a><div id="HTML5Canvas.getShadowColor-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getShadowColor-toggle" onclick="return toggle('HTML5Canvas.getShadowColor');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowColor">getShadowColor</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getShadowColor-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getShadowColor-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-30" class="py-name"><a title="pyjamas.Canvas.Color
+pyjamas.Canvas.Color.Color" class="py-name" href="#" onclick="return doclink('link-30', 'Color', 'link-10');">Color</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowColor()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowColor,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowColor()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#getShadowColor,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowColor()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#getShadowColor"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowColor
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowColor
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowColor" class="py-name" href="#" onclick="return doclink('link-31', 'getShadowColor', 'link-31');">getShadowColor</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">     </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-string">    returns the current horizontal shadow offset</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.getShadowOffsetX"></a><div id="HTML5Canvas.getShadowOffsetX-def"><a name="L103"></a><tt class="py-lineno">103</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getShadowOffsetX-toggle" onclick="return toggle('HTML5Canvas.getShadowOffsetX');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowOffsetX">getShadowOffsetX</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getShadowOffsetX-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getShadowOffsetX-expanded"><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowOffsetX()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowOffsetX,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowOffsetX()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#getShadowOffsetX,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowOffsetX()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#getShadowOffsetX"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowOffsetX
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowOffsetX
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowOffsetX" class="py-name" href="#" onclick="return doclink('link-32', 'getShadowOffsetX', 'link-32');">getShadowOffsetX</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">     </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-string">    Returns the current text alignment settings</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.getTextAlign"></a><div id="HTML5Canvas.getTextAlign-def"><a name="L109"></a><tt class="py-lineno">109</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getTextAlign-toggle" onclick="return toggle('HTML5Canvas.getTextAlign');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getTextAlign">getTextAlign</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getTextAlign-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getTextAlign-expanded"><a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getTextAlign()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getTextAlign,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getTextAlign()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#getTextAlign,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getTextAlign()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#getTextAlign"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getTextAlign
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getTextAlign
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getTextAlign" class="py-name" href="#" onclick="return doclink('link-33', 'getTextAlign', 'link-33');">getTextAlign</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">     </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-string">    returns the current vertical shadow offset</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.getShadowOffsetY"></a><div id="HTML5Canvas.getShadowOffsetY-def"><a name="L115"></a><tt class="py-lineno">115</tt> <a class="py-toggle" href="#" id="HTML5Canvas.getShadowOffsetY-toggle" onclick="return toggle('HTML5Canvas.getShadowOffsetY');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowOffsetY">getShadowOffsetY</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.getShadowOffsetY-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.getShadowOffsetY-expanded"><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowOffsetY()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#getShadowOffsetY,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowOffsetY()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#getShadowOffsetY,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowOffsetY()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#getShadowOffsetY"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.getShadowOffsetY
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.getShadowOffsetY
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.getShadowOffsetY" class="py-name" href="#" onclick="return doclink('link-34', 'getShadowOffsetY', 'link-34');">getShadowOffsetY</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">     </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-string">    sets blur level of shadows, values that are not finite numbers greater </tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-string">    than or equal to zero are ignored</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.setShadowBlur"></a><div id="HTML5Canvas.setShadowBlur-def"><a name="L122"></a><tt class="py-lineno">122</tt> <a class="py-toggle" href="#" id="HTML5Canvas.setShadowBlur-toggle" onclick="return toggle('HTML5Canvas.setShadowBlur');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setShadowBlur">setShadowBlur</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">blur</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.setShadowBlur-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.setShadowBlur-expanded"><a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setShadowBlur()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setShadowBlur,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setShadowBlur()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#setShadowBlur,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setShadowBlur()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#setShadowBlur"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setShadowBlur
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setShadowBlur
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setShadowBlur" class="py-name" href="#" onclick="return doclink('link-35', 'setShadowBlur', 'link-35');">setShadowBlur</a></tt><tt class="py-op">(</tt><tt id="link-36" class="py-name" targets="Function pyjamas.ui.Focus.blur()=pyjamas.ui.Focus-module.html#blur"><a title="pyjamas.ui.Focus.blur" class="py-name" href="#" onclick="return doclink('link-36', 'blur', 'link-36');">blur</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">     </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-string">    sets the current shadow color</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.setShadowColor"></a><div id="HTML5Canvas.setShadowColor-def"><a name="L128"></a><tt class="py-lineno">128</tt> <a class="py-toggle" href="#" id="HTML5Canvas.setShadowColor-toggle" onclick="return toggle('HTML5Canvas.setShadowColor');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setShadowColor">setShadowColor</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">color</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.setShadowColor-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.setShadowColor-expanded"><a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setShadowColor()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setShadowColor,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setShadowColor()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#setShadowColor,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setShadowColor()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#setShadowColor"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setShadowColor
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setShadowColor
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setShadowColor" class="py-name" href="#" onclick="return doclink('link-37', 'setShadowColor', 'link-37');">setShadowColor</a></tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">color</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">     </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">    sets the current shadow offset</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.setShadowOffset"></a><div id="HTML5Canvas.setShadowOffset-def"><a name="L134"></a><tt class="py-lineno">134</tt> <a class="py-toggle" href="#" id="HTML5Canvas.setShadowOffset-toggle" onclick="return toggle('HTML5Canvas.setShadowOffset');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setShadowOffset">setShadowOffset</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">y</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.setShadowOffset-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.setShadowOffset-expanded"><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setShadowOffset()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setShadowOffset,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setShadowOffset()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#setShadowOffset,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setShadowOffset()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#setShadowOffset"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setShadowOffset
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setShadowOffset
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setShadowOffset" class="py-name" href="#" onclick="return doclink('link-38', 'setShadowOffset', 'link-38');">setShadowOffset</a></tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">     </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-string">"""</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-string">    Sets the current text alignment settings. The possible values are start, </tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-string">    end, left, right, and center</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
+<a name="HTML5Canvas.setTextAlign"></a><div id="HTML5Canvas.setTextAlign-def"><a name="L141"></a><tt class="py-lineno">141</tt> <a class="py-toggle" href="#" id="HTML5Canvas.setTextAlign-toggle" onclick="return toggle('HTML5Canvas.setTextAlign');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setTextAlign">setTextAlign</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">loc</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HTML5Canvas.setTextAlign-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HTML5Canvas.setTextAlign-expanded"><a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">impl</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Method pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setTextAlign()=pyjamas.Canvas.HTML5Canvas.HTML5Canvas-class.html#setTextAlign,Method pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setTextAlign()=pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault-class.html#setTextAlign,Method pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setTextAlign()=pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6-class.html#setTextAlign"><a title="pyjamas.Canvas.HTML5Canvas.HTML5Canvas.setTextAlign
+pyjamas.Canvas.HTML5CanvasImplDefault.HTML5CanvasImplDefault.setTextAlign
+pyjamas.Canvas.HTML5CanvasImplIE6.HTML5CanvasImplIE6.setTextAlign" class="py-name" href="#" onclick="return doclink('link-39', 'setTextAlign', 'link-39');">setTextAlign</a></tt><tt class="py-op">(</tt><tt class="py-name">loc</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:16 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

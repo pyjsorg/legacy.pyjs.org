@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.ui.ComplexPanel</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.ui-module.html">Package&nbsp;ui</a> ::
+        Module&nbsp;ComplexPanel
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.ui.ComplexPanel-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.ui.ComplexPanel-module.html">Module pyjamas.ui.ComplexPanel</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright 2006 James Tauber and contributors</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2009 Luke Kenneth Casson Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment"># Licensed under the Apache License, Version 2.0 (the "License");</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment"># you may not use this file except in compliance with the License.</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment"># You may obtain a copy of the License at</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment">#     http://www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># distributed under the License is distributed on an "AS IS" BASIS,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment"># See the License for the specific language governing permissions and</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment"># limitations under the License.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package pyjamas=pyjamas-module.html"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-0', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Module pyjamas.DOM=pyjamas.DOM-module.html"><a title="pyjamas.DOM" class="py-name" href="#" onclick="return doclink('link-1', 'DOM', 'link-1');">DOM</a></tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-2', 'pyjamas', 'link-0');">pyjamas</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module pyjamas.Factory=pyjamas.Factory-module.html,Module pyjamas.gears.Factory=pyjamas.gears.Factory-module.html"><a title="pyjamas.Factory
+pyjamas.gears.Factory" class="py-name" href="#" onclick="return doclink('link-3', 'Factory', 'link-3');">Factory</a></tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="pyjamas" class="py-name" href="#" onclick="return doclink('link-4', 'pyjamas', 'link-0');">pyjamas</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Package pyjamas.ui=pyjamas.ui-module.html"><a title="pyjamas.ui" class="py-name" href="#" onclick="return doclink('link-5', 'ui', 'link-5');">ui</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Module pyjamas.ui.Panel=pyjamas.ui.Panel-module.html,Class pyjamas.ui.Panel.Panel=pyjamas.ui.Panel.Panel-class.html"><a title="pyjamas.ui.Panel
+pyjamas.ui.Panel.Panel" class="py-name" href="#" onclick="return doclink('link-6', 'Panel', 'link-6');">Panel</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name"><a title="pyjamas.ui.Panel
+pyjamas.ui.Panel.Panel" class="py-name" href="#" onclick="return doclink('link-7', 'Panel', 'link-6');">Panel</a></tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="ComplexPanel"></a><div id="ComplexPanel-def"><a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="ComplexPanel-toggle" onclick="return toggle('ComplexPanel');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.ui.ComplexPanel.ComplexPanel-class.html">ComplexPanel</a><tt class="py-op">(</tt><tt class="py-base-class">Panel</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComplexPanel-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ComplexPanel-expanded"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-docstring">        Superclass for widgets with multiple children.</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="ComplexPanel.add"></a><div id="ComplexPanel.add-def"><a name="L24"></a><tt class="py-lineno">24</tt> <a class="py-toggle" href="#" id="ComplexPanel.add-toggle" onclick="return toggle('ComplexPanel.add');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.ComplexPanel.ComplexPanel-class.html#add">add</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">widget</tt><tt class="py-op">,</tt> <tt class="py-param">container</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComplexPanel.add-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ComplexPanel.add-expanded"><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">container</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.insert()=pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6-class.html#insert,Method pyjamas.ui.BuilderPanel.BuilderPanel.insert()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#insert,Method pyjamas.ui.ComplexPanel.ComplexPanel.insert()=pyjamas.ui.ComplexPanel.ComplexPanel-class.html#insert,Method pyjamas.ui.DeckPanel.DeckPanel.insert()=pyjamas.ui.DeckPanel.DeckPanel-class.html#insert,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.insert()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#insert,Method pyjamas.ui.Map.ImageMap.insert()=pyjamas.ui.Map.ImageMap-class.html#insert,Method pyjamas.ui.TabPanel.TabPanel.insert()=pyjamas.ui.TabPanel.TabPanel-class.html#insert,Method pyjamas.ui.VerticalPanel.VerticalPanel.insert()=pyjamas.ui.VerticalPanel.VerticalPanel-class.html#insert"><a title="pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.insert
+pyjamas.ui.BuilderPanel.BuilderPanel.insert
+pyjamas.ui.ComplexPanel.ComplexPanel.insert
+pyjamas.ui.DeckPanel.DeckPanel.insert
+pyjamas.ui.HorizontalPanel.HorizontalPanel.insert
+pyjamas.ui.Map.ImageMap.insert
+pyjamas.ui.TabPanel.TabPanel.insert
+pyjamas.ui.VerticalPanel.VerticalPanel.insert" class="py-name" href="#" onclick="return doclink('link-8', 'insert', 'link-8');">insert</a></tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">,</tt> <tt class="py-name">container</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.getWidgetCount()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#getWidgetCount,Method pyjamas.ui.BuilderPanel.BuilderPanel.getWidgetCount()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#getWidgetCount,Method pyjamas.ui.Panel.PanelBase.getWidgetCount()=pyjamas.ui.Panel.PanelBase-class.html#getWidgetCount"><a title="pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.getWidgetCount
+pyjamas.ui.BuilderPanel.BuilderPanel.getWidgetCount
+pyjamas.ui.Panel.PanelBase.getWidgetCount" class="py-name" href="#" onclick="return doclink('link-9', 'getWidgetCount', 'link-9');">getWidgetCount</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.insert
+pyjamas.ui.BuilderPanel.BuilderPanel.insert
+pyjamas.ui.ComplexPanel.ComplexPanel.insert
+pyjamas.ui.DeckPanel.DeckPanel.insert
+pyjamas.ui.HorizontalPanel.HorizontalPanel.insert
+pyjamas.ui.Map.ImageMap.insert
+pyjamas.ui.TabPanel.TabPanel.insert
+pyjamas.ui.VerticalPanel.VerticalPanel.insert" class="py-name" href="#" onclick="return doclink('link-10', 'insert', 'link-8');">insert</a></tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.getWidgetCount
+pyjamas.ui.BuilderPanel.BuilderPanel.getWidgetCount
+pyjamas.ui.Panel.PanelBase.getWidgetCount" class="py-name" href="#" onclick="return doclink('link-11', 'getWidgetCount', 'link-9');">getWidgetCount</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="ComplexPanel.insert"></a><div id="ComplexPanel.insert-def"><a name="L30"></a><tt class="py-lineno">30</tt> <a class="py-toggle" href="#" id="ComplexPanel.insert-toggle" onclick="return toggle('ComplexPanel.insert');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.ComplexPanel.ComplexPanel-class.html#insert">insert</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">widget</tt><tt class="py-op">,</tt> <tt class="py-param">container</tt><tt class="py-op">,</tt> <tt class="py-param">beforeIndex</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComplexPanel.insert-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ComplexPanel.insert-expanded"><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-docstring">""" has two modes of operation:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">            widget, beforeIndex</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-docstring">            widget, container, beforeIndex.</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-docstring">            if beforeIndex argument is not given, the 1st mode is assumed.</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-docstring">            this technique is less costly than using *args.</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">widget</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Function pyjamas.DOM.getParent()=pyjamas.DOM-module.html#getParent,Method pyjamas.chart.Curve.Curve.getParent()=pyjamas.chart.Curve.Curve-class.html#getParent,Method pyjamas.chart.Point.Point.getParent()=pyjamas.chart.Point.Point-class.html#getParent,Method pyjamas.chart.Symbol.Symbol.getParent()=pyjamas.chart.Symbol.Symbol-class.html#getParent,Method pyjamas.ui.Widget.Widget.getParent()=pyjamas.ui.Widget.Widget-class.html#getParent"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-12', 'getParent', 'link-12');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-name">self</tt><tt class="py-op">:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">beforeIndex</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">            <tt class="py-name">beforeIndex</tt> <tt class="py-op">=</tt> <tt class="py-name">container</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">            <tt class="py-name">container</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method pyjamas.dnd.DNDHelper.DNDHelper.getElement()=pyjamas.dnd.DNDHelper.DNDHelper-class.html#getElement,Method pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement()=pyjamas.selection.RangeEndPoint.RangeEndPoint-class.html#getElement,Method pyjamas.ui.CellFormatter.CellFormatter.getElement()=pyjamas.ui.CellFormatter.CellFormatter-class.html#getElement,Method pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement()=pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#getElement,Method pyjamas.ui.RowFormatter.RowFormatter.getElement()=pyjamas.ui.RowFormatter.RowFormatter-class.html#getElement,Method pyjamas.ui.SplitPanel.SplitPanel.getElement()=pyjamas.ui.SplitPanel.SplitPanel-class.html#getElement,Method pyjamas.ui.UIObject.UIObject.getElement()=pyjamas.ui.UIObject.UIObject-class.html#getElement"><a title="pyjamas.dnd.DNDHelper.DNDHelper.getElement
+pyjamas.selection.RangeEndPoint.RangeEndPoint.getElement
+pyjamas.ui.CellFormatter.CellFormatter.getElement
+pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.getElement
+pyjamas.ui.RowFormatter.RowFormatter.getElement
+pyjamas.ui.SplitPanel.SplitPanel.getElement
+pyjamas.ui.UIObject.UIObject.getElement" class="py-name" href="#" onclick="return doclink('link-13', 'getElement', 'link-13');">getElement</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method pyjamas.ui.Panel.Panel.adopt()=pyjamas.ui.Panel.Panel-class.html#adopt,Method pyjamas.ui.Tree.Tree.adopt()=pyjamas.ui.Tree.Tree-class.html#adopt"><a title="pyjamas.ui.Panel.Panel.adopt
+pyjamas.ui.Tree.Tree.adopt" class="py-name" href="#" onclick="return doclink('link-14', 'adopt', 'link-14');">adopt</a></tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">,</tt> <tt class="py-name">container</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">children</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6.insert
+pyjamas.ui.BuilderPanel.BuilderPanel.insert
+pyjamas.ui.ComplexPanel.ComplexPanel.insert
+pyjamas.ui.DeckPanel.DeckPanel.insert
+pyjamas.ui.HorizontalPanel.HorizontalPanel.insert
+pyjamas.ui.Map.ImageMap.insert
+pyjamas.ui.TabPanel.TabPanel.insert
+pyjamas.ui.VerticalPanel.VerticalPanel.insert" class="py-name" href="#" onclick="return doclink('link-15', 'insert', 'link-8');">insert</a></tt><tt class="py-op">(</tt><tt class="py-name">beforeIndex</tt><tt class="py-op">,</tt> <tt class="py-name">widget</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"> </tt>
+<a name="ComplexPanel.remove"></a><div id="ComplexPanel.remove-def"><a name="L47"></a><tt class="py-lineno">47</tt> <a class="py-toggle" href="#" id="ComplexPanel.remove-toggle" onclick="return toggle('ComplexPanel.remove');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.ui.ComplexPanel.ComplexPanel-class.html#remove">remove</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">widget</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComplexPanel.remove-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ComplexPanel.remove-expanded"><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">            <tt class="py-name">widget</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method pyjamas.chart.Annotation.Annotation.getWidget()=pyjamas.chart.Annotation.Annotation-class.html#getWidget,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.getWidget()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#getWidget,Method pyjamas.ui.BuilderPanel.BuilderPanel.getWidget()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#getWidget,Method pyjamas.ui.HTMLTable.HTMLTable.getWidget()=pyjamas.ui.HTMLTable.HTMLTable-class.html#getWidget,Method pyjamas.ui.Panel.PanelBase.getWidget()=pyjamas.ui.Panel.PanelBase-class.html#getWidget,Method pyjamas.ui.SimplePanel.SimplePanel.getWidget()=pyjamas.ui.SimplePanel.SimplePanel-class.html#getWidget,Method pyjamas.ui.SplitPanel.SplitPanel.getWidget()=pyjamas.ui.SplitPanel.SplitPanel-class.html#getWidget,Method pyjamas.ui.TreeItem.TreeItem.getWidget()=pyjamas.ui.TreeItem.TreeItem-class.html#getWidget"><a title="pyjamas.chart.Annotation.Annotation.getWidget
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.getWidget
+pyjamas.ui.BuilderPanel.BuilderPanel.getWidget
+pyjamas.ui.HTMLTable.HTMLTable.getWidget
+pyjamas.ui.Panel.PanelBase.getWidget
+pyjamas.ui.SimplePanel.SimplePanel.getWidget
+pyjamas.ui.SplitPanel.SplitPanel.getWidget
+pyjamas.ui.TreeItem.TreeItem.getWidget" class="py-name" href="#" onclick="return doclink('link-16', 'getWidget', 'link-16');">getWidget</a></tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">widget</tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method pyjamas.ui.BuilderPanel.BuilderPanel.getChildren()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#getChildren,Method pyjamas.ui.Panel.PanelBase.getChildren()=pyjamas.ui.Panel.PanelBase-class.html#getChildren,Method pyjamas.ui.TreeItem.TreeItem.getChildren()=pyjamas.ui.TreeItem.TreeItem-class.html#getChildren"><a title="pyjamas.ui.BuilderPanel.BuilderPanel.getChildren
+pyjamas.ui.Panel.PanelBase.getChildren
+pyjamas.ui.TreeItem.TreeItem.getChildren" class="py-name" href="#" onclick="return doclink('link-17', 'getChildren', 'link-17');">getChildren</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method pyjamas.ui.Panel.Panel.disown()=pyjamas.ui.Panel.Panel-class.html#disown,Method pyjamas.ui.Tree.Tree.disown()=pyjamas.ui.Tree.Tree-class.html#disown"><a title="pyjamas.ui.Panel.Panel.disown
+pyjamas.ui.Tree.Tree.disown" class="py-name" href="#" onclick="return doclink('link-18', 'disown', 'link-18');">disown</a></tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="pyjamas.ui.BuilderPanel.BuilderPanel.getChildren
+pyjamas.ui.Panel.PanelBase.getChildren
+pyjamas.ui.TreeItem.TreeItem.getChildren" class="py-name" href="#" onclick="return doclink('link-19', 'getChildren', 'link-17');">getChildren</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method pyjamas.DOM.IterChildrenClass.remove()=pyjamas.DOM.IterChildrenClass-class.html#remove,Method pyjamas.DOM.IterWalkChildren.remove()=pyjamas.DOM.IterWalkChildren-class.html#remove,Method pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove()=pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel-class.html#remove,Method pyjamas.ui.Anchor._Attribute.remove()=pyjamas.ui.Anchor._Attribute-class.html#remove,Method pyjamas.ui.BuilderPanel.BuilderPanel.remove()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssFile.remove()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssText.remove()=pyjamas.ui.CSS.StyleSheetCssText-class.html#remove,Method pyjamas.ui.ComplexPanel.ComplexPanel.remove()=pyjamas.ui.ComplexPanel.ComplexPanel-class.html#remove,Method pyjamas.ui.DeckPanel.DeckPanel.remove()=pyjamas.ui.DeckPanel.DeckPanel-class.html#remove,Method pyjamas.ui.DialogBox.DialogBox.remove()=pyjamas.ui.DialogBox.DialogBox-class.html#remove,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.remove()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#remove,Method pyjamas.ui.DockPanel.DockPanel.remove()=pyjamas.ui.DockPanel.DockPanel-class.html#remove,Method pyjamas.ui.HTMLTable.HTMLTable.remove()=pyjamas.ui.HTMLTable.HTMLTable-class.html#remove,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.remove()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#remove,Method pyjamas.ui.SimplePanel.SimplePanel.remove()=pyjamas.ui.SimplePanel.SimplePanel-class.html#remove,Method pyjamas.ui.SplitPanel.SplitPanel.remove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#remove,Method pyjamas.ui.StackPanel.StackPanel.remove()=pyjamas.ui.StackPanel.StackPanel-class.html#remove,Method pyjamas.ui.TabPanel.TabPanel.remove()=pyjamas.ui.TabPanel.TabPanel-class.html#remove,Method pyjamas.ui.Tree.Tree.remove()=pyjamas.ui.Tree.Tree-class.html#remove,Method pyjamas.ui.TreeItem.TreeItem.remove()=pyjamas.ui.TreeItem.TreeItem-class.html#remove,Method pyjamas.ui.VerticalPanel.VerticalPanel.remove()=pyjamas.ui.VerticalPanel.VerticalPanel-class.html#remove"><a title="pyjamas.DOM.IterChildrenClass.remove
+pyjamas.DOM.IterWalkChildren.remove
+pyjamas.chart.GChartWidgets.PartitionedAbsolutePanel.remove
+pyjamas.ui.Anchor._Attribute.remove
+pyjamas.ui.BuilderPanel.BuilderPanel.remove
+pyjamas.ui.CSS.StyleSheetCssFile.remove
+pyjamas.ui.CSS.StyleSheetCssText.remove
+pyjamas.ui.ComplexPanel.ComplexPanel.remove
+pyjamas.ui.DeckPanel.DeckPanel.remove
+pyjamas.ui.DialogBox.DialogBox.remove
+pyjamas.ui.DisclosurePanel.DisclosurePanel.remove
+pyjamas.ui.DockPanel.DockPanel.remove
+pyjamas.ui.HTMLTable.HTMLTable.remove
+pyjamas.ui.HorizontalPanel.HorizontalPanel.remove
+pyjamas.ui.SimplePanel.SimplePanel.remove
+pyjamas.ui.SplitPanel.SplitPanel.remove
+pyjamas.ui.StackPanel.StackPanel.remove
+pyjamas.ui.TabPanel.TabPanel.remove
+pyjamas.ui.Tree.Tree.remove
+pyjamas.ui.TreeItem.TreeItem.remove
+pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick="return doclink('link-20', 'remove', 'link-20');">remove</a></tt><tt class="py-op">(</tt><tt class="py-name">widget</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div></div><a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"><tt id="link-21" class="py-name"><a title="pyjamas.Factory
+pyjamas.gears.Factory" class="py-name" href="#" onclick="return doclink('link-21', 'Factory', 'link-3');">Factory</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Function pyjamas.Factory.registerClass()=pyjamas.Factory-module.html#registerClass"><a title="pyjamas.Factory.registerClass" class="py-name" href="#" onclick="return doclink('link-22', 'registerClass', 'link-22');">registerClass</a></tt><tt class="py-op">(</tt><tt class="py-string">'pyjamas.ui.ComplexPanel'</tt><tt class="py-op">,</tt> <tt class="py-string">'ComplexPanel'</tt><tt class="py-op">,</tt> <tt id="link-23" class="py-name" targets="Module pyjamas.ui.ComplexPanel=pyjamas.ui.ComplexPanel-module.html,Class pyjamas.ui.ComplexPanel.ComplexPanel=pyjamas.ui.ComplexPanel.ComplexPanel-class.html"><a title="pyjamas.ui.ComplexPanel
+pyjamas.ui.ComplexPanel.ComplexPanel" class="py-name" href="#" onclick="return doclink('link-23', 'ComplexPanel', 'link-23');">ComplexPanel</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:14 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

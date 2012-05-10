@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyjamas.chart.HovertextChunk</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="pyjamas.chart-module.html">Package&nbsp;chart</a> ::
+        Module&nbsp;HovertextChunk
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyjamas.chart.HovertextChunk-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="pyjamas.chart.HovertextChunk-module.html">Module pyjamas.chart.HovertextChunk</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2007,2008,2009 John C. Gunther</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright (C) 2009 Luke Kenneth Casson Leighton &lt;lkcl@lkcl.net&gt;</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">* "License"); you may not use this file except in compliance</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">* with the License. You may obtain a copy of the License at:</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">*  http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing,</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">* software distributed under the License is distributed on an</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">* either express or implied. See the License for the specific</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">* language governing permissions and limitations under the</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">* License.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable pyjamas.chart.HovertextChunk.userpattern=pyjamas.chart.HovertextChunk-module.html#userpattern"><a title="pyjamas.chart.HovertextChunk.userpattern" class="py-name" href="#" onclick="return doclink('link-0', 'userpattern', 'link-0');">userpattern</a></tt> <tt class="py-op">=</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">compile</tt><tt class="py-op">(</tt><tt class="py-string">"[a-zA-Z][a-zA-Z0-9_]*}.*"</tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_NONE=pyjamas.chart.HovertextChunk-module.html#HOVERTEXT_PARAM_NONE"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_NONE" class="py-name" href="#" onclick="return doclink('link-1', 'HOVERTEXT_PARAM_NONE', 'link-1');">HOVERTEXT_PARAM_NONE</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt><tt class="py-op">;</tt> <tt class="py-comment"># plain old text</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_X=pyjamas.chart.HovertextChunk-module.html#HOVERTEXT_PARAM_X"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_X" class="py-name" href="#" onclick="return doclink('link-2', 'HOVERTEXT_PARAM_X', 'link-2');">HOVERTEXT_PARAM_X</a></tt> <tt class="py-op">=</tt> <tt class="py-number">1</tt><tt class="py-op">;</tt>  <tt class="py-comment"># ${x}</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_Y=pyjamas.chart.HovertextChunk-module.html#HOVERTEXT_PARAM_Y"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_Y" class="py-name" href="#" onclick="return doclink('link-3', 'HOVERTEXT_PARAM_Y', 'link-3');">HOVERTEXT_PARAM_Y</a></tt> <tt class="py-op">=</tt> <tt class="py-number">2</tt><tt class="py-op">;</tt>  <tt class="py-comment"># ${y}</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_PIESLICESIZE=pyjamas.chart.HovertextChunk-module.html#HOVERTEXT_PARAM_PIESLICESIZE"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_PIESLICESIZE" class="py-name" href="#" onclick="return doclink('link-4', 'HOVERTEXT_PARAM_PIESLICESIZE', 'link-4');">HOVERTEXT_PARAM_PIESLICESIZE</a></tt> <tt class="py-op">=</tt> <tt class="py-number">3</tt><tt class="py-op">;</tt> <tt class="py-comment"># ${pieSlicePercent}</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_USERDEFINED=pyjamas.chart.HovertextChunk-module.html#HOVERTEXT_PARAM_USERDEFINED"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_USERDEFINED" class="py-name" href="#" onclick="return doclink('link-5', 'HOVERTEXT_PARAM_USERDEFINED', 'link-5');">HOVERTEXT_PARAM_USERDEFINED</a></tt> <tt class="py-op">=</tt> <tt class="py-number">4</tt><tt class="py-op">;</tt> <tt class="py-comment"># ${mySpecialParameter}</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-comment"># Allows hovertext templates to be parsed into "chunks"</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-comment"># so that they can be expanded into hovertext faster.</tt> </tt>
+<a name="HovertextChunk"></a><div id="HovertextChunk-def"><a name="L32"></a><tt class="py-lineno"> 32</tt> <a class="py-toggle" href="#" id="HovertextChunk-toggle" onclick="return toggle('HovertextChunk');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="pyjamas.chart.HovertextChunk.HovertextChunk-class.html">HovertextChunk</a><tt class="py-op">:</tt> </tt>
+</div><div id="HovertextChunk-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="HovertextChunk-expanded"><a name="HovertextChunk.__init__"></a><div id="HovertextChunk.__init__-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="HovertextChunk.__init__-toggle" onclick="return toggle('HovertextChunk.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.HovertextChunk.HovertextChunk-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">pid</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">,</tt> <tt class="py-param">text</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="HovertextChunk.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="HovertextChunk.__init__-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">paramId</tt> <tt class="py-op">=</tt> <tt class="py-name">pid</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">paramName</tt> <tt class="py-op">=</tt> <tt class="py-name">name</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">chunkText</tt> <tt class="py-op">=</tt> <tt class="py-name">text</tt> </tt>
+</div></div><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-comment"># returns array of "chunks" corresponding to the given</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-comment"># hovertext template</tt> </tt>
+<a name="parseHovertextTemplate"></a><div id="parseHovertextTemplate-def"><a name="L40"></a><tt class="py-lineno"> 40</tt> <a class="py-toggle" href="#" id="parseHovertextTemplate-toggle" onclick="return toggle('parseHovertextTemplate');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.HovertextChunk-module.html#parseHovertextTemplate">parseHovertextTemplate</a><tt class="py-op">(</tt><tt class="py-param">htTemplate</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="parseHovertextTemplate-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="parseHovertextTemplate-expanded"><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">htTemplate</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">    <tt class="py-comment"># takes "x=${x}; y=${y}" into {"x=", "x}; y=", "y}"}</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-comment"># Thus, except for the first, chunks contain a</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">    <tt class="py-comment"># keyword like part, followed by a string literal.</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-name">sChunk</tt> <tt class="py-op">=</tt> <tt class="py-name">htTemplate</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"${"</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-comment">#HovertextChunk[] result = HovertextChunk[len(sChunk)]</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">    <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">sChunk</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">sC</tt> <tt class="py-op">=</tt> <tt class="py-name">sChunk</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-number">0</tt> <tt class="py-op">==</tt> <tt class="py-name">i</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">            <tt class="py-comment"># leading (non-parametric) plain text chunk</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method pyjamas.Canvas.JSOStack.JSOStack.append()=pyjamas.Canvas.JSOStack.JSOStack-class.html#append,Method pyjamas.ui.Panel.PanelBase.append()=pyjamas.ui.Panel.PanelBase-class.html#append"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-6', 'append', 'link-6');">append</a></tt><tt class="py-op">(</tt><tt id="link-7" class="py-name" targets="Module pyjamas.chart.HovertextChunk=pyjamas.chart.HovertextChunk-module.html,Class pyjamas.chart.HovertextChunk.HovertextChunk=pyjamas.chart.HovertextChunk.HovertextChunk-class.html"><a title="pyjamas.chart.HovertextChunk
+pyjamas.chart.HovertextChunk.HovertextChunk" class="py-name" href="#" onclick="return doclink('link-7', 'HovertextChunk', 'link-7');">HovertextChunk</a></tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_NONE" class="py-name" href="#" onclick="return doclink('link-8', 'HOVERTEXT_PARAM_NONE', 'link-1');">HOVERTEXT_PARAM_NONE</a></tt><tt class="py-op">,</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">sC</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">sC</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">"x}"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-9', 'append', 'link-6');">append</a></tt><tt class="py-op">(</tt><tt id="link-10" class="py-name"><a title="pyjamas.chart.HovertextChunk
+pyjamas.chart.HovertextChunk.HovertextChunk" class="py-name" href="#" onclick="return doclink('link-10', 'HovertextChunk', 'link-7');">HovertextChunk</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                            <tt id="link-11" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_X" class="py-name" href="#" onclick="return doclink('link-11', 'HOVERTEXT_PARAM_X', 'link-2');">HOVERTEXT_PARAM_X</a></tt><tt class="py-op">,</tt> <tt class="py-string">"x"</tt><tt class="py-op">,</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                            <tt class="py-name">sC</tt><tt class="py-op">[</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-string">"x}"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">sC</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">"y}"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-12', 'append', 'link-6');">append</a></tt><tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="pyjamas.chart.HovertextChunk
+pyjamas.chart.HovertextChunk.HovertextChunk" class="py-name" href="#" onclick="return doclink('link-13', 'HovertextChunk', 'link-7');">HovertextChunk</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                            <tt id="link-14" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_Y" class="py-name" href="#" onclick="return doclink('link-14', 'HOVERTEXT_PARAM_Y', 'link-3');">HOVERTEXT_PARAM_Y</a></tt><tt class="py-op">,</tt> <tt class="py-string">"y"</tt><tt class="py-op">,</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                            <tt class="py-name">sC</tt><tt class="py-op">[</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-string">"y}"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">sC</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">"pieSliceSize}"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-15', 'append', 'link-6');">append</a></tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="pyjamas.chart.HovertextChunk
+pyjamas.chart.HovertextChunk.HovertextChunk" class="py-name" href="#" onclick="return doclink('link-16', 'HovertextChunk', 'link-7');">HovertextChunk</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                            <tt id="link-17" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_PIESLICESIZE" class="py-name" href="#" onclick="return doclink('link-17', 'HOVERTEXT_PARAM_PIESLICESIZE', 'link-4');">HOVERTEXT_PARAM_PIESLICESIZE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                            <tt class="py-string">"pieSliceSize"</tt><tt class="py-op">,</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                            <tt class="py-name">sC</tt><tt class="py-op">[</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-string">"pieSliceSize}"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt id="link-18" class="py-name"><a title="pyjamas.chart.HovertextChunk.userpattern" class="py-name" href="#" onclick="return doclink('link-18', 'userpattern', 'link-0');">userpattern</a></tt><tt class="py-op">.</tt><tt class="py-name">match</tt><tt class="py-op">(</tt><tt class="py-name">sC</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">            <tt class="py-comment"># fits pattern for a user defined parameter</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">            <tt class="py-name">closeCurlyIndex</tt> <tt class="py-op">=</tt> <tt class="py-name">sC</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method pyjamas.ui.Sink.SinkList.find()=pyjamas.ui.Sink.SinkList-class.html#find"><a title="pyjamas.ui.Sink.SinkList.find" class="py-name" href="#" onclick="return doclink('link-19', 'find', 'link-19');">find</a></tt><tt class="py-op">(</tt><tt class="py-string">"}"</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-20', 'append', 'link-6');">append</a></tt><tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="pyjamas.chart.HovertextChunk
+pyjamas.chart.HovertextChunk.HovertextChunk" class="py-name" href="#" onclick="return doclink('link-21', 'HovertextChunk', 'link-7');">HovertextChunk</a></tt><tt class="py-op">(</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                            <tt id="link-22" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_USERDEFINED" class="py-name" href="#" onclick="return doclink('link-22', 'HOVERTEXT_PARAM_USERDEFINED', 'link-5');">HOVERTEXT_PARAM_USERDEFINED</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                            <tt class="py-name">sC</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">:</tt><tt class="py-name">closeCurlyIndex</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                            <tt class="py-name">sC</tt><tt class="py-op">[</tt><tt class="py-name">closeCurlyIndex</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">            <tt class="py-comment"># leading "${" without "paramName}". Likely a</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">            <tt class="py-comment"># typo, but output verbatim to give them a clue:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="pyjamas.Canvas.JSOStack.JSOStack.append
+pyjamas.ui.Panel.PanelBase.append" class="py-name" href="#" onclick="return doclink('link-23', 'append', 'link-6');">append</a></tt><tt class="py-op">(</tt><tt id="link-24" class="py-name"><a title="pyjamas.chart.HovertextChunk
+pyjamas.chart.HovertextChunk.HovertextChunk" class="py-name" href="#" onclick="return doclink('link-24', 'HovertextChunk', 'link-7');">HovertextChunk</a></tt><tt class="py-op">(</tt><tt id="link-25" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_NONE" class="py-name" href="#" onclick="return doclink('link-25', 'HOVERTEXT_PARAM_NONE', 'link-1');">HOVERTEXT_PARAM_NONE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                                        <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-string">"${"</tt> <tt class="py-op">+</tt> <tt class="py-name">sC</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-string">""" hovertext associated with parsed "chunks" for a given point """</tt> </tt>
+<a name="getHovertext"></a><div id="getHovertext-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="getHovertext-toggle" onclick="return toggle('getHovertext');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.HovertextChunk-module.html#getHovertext">getHovertext</a><tt class="py-op">(</tt><tt class="py-param">htc</tt><tt class="py-op">,</tt> <tt class="py-param">p</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getHovertext-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="getHovertext-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-name">xS</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">    <tt class="py-name">yS</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    <tt class="py-name">pieSlicePercentS</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">    <tt class="py-comment">#HoverParameterInterpreter hpi =</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-name">hpi</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Function pyjamas.DOM.getParent()=pyjamas.DOM-module.html#getParent,Method pyjamas.chart.Curve.Curve.getParent()=pyjamas.chart.Curve.Curve-class.html#getParent,Method pyjamas.chart.Point.Point.getParent()=pyjamas.chart.Point.Point-class.html#getParent,Method pyjamas.chart.Symbol.Symbol.getParent()=pyjamas.chart.Symbol.Symbol-class.html#getParent,Method pyjamas.ui.Widget.Widget.getParent()=pyjamas.ui.Widget.Widget-class.html#getParent"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-26', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-27', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Method pyjamas.chart.GChart.GChart.getHoverParameterInterpreter()=pyjamas.chart.GChart.GChart-class.html#getHoverParameterInterpreter"><a title="pyjamas.chart.GChart.GChart.getHoverParameterInterpreter" class="py-name" href="#" onclick="return doclink('link-28', 'getHoverParameterInterpreter', 'link-28');">getHoverParameterInterpreter</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">htc</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-name">pid</tt> <tt class="py-op">=</tt> <tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">paramId</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">pid</tt> <tt class="py-op">==</tt> <tt id="link-29" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_NONE" class="py-name" href="#" onclick="return doclink('link-29', 'HOVERTEXT_PARAM_NONE', 'link-1');">HOVERTEXT_PARAM_NONE</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">            <tt class="py-keyword">pass</tt> <tt class="py-comment"># do nothing extra</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt>  <tt class="py-name">pid</tt> <tt class="py-op">==</tt> <tt id="link-30" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_X" class="py-name" href="#" onclick="return doclink('link-30', 'HOVERTEXT_PARAM_X', 'link-2');">HOVERTEXT_PARAM_X</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">==</tt> <tt class="py-name">xS</tt><tt class="py-op">:</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                <tt class="py-name">hoverParam</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">!=</tt> <tt class="py-name">hpi</tt><tt class="py-op">:</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">                    <tt class="py-name">hoverParam</tt> <tt class="py-op">=</tt> <tt class="py-name">hpi</tt><tt class="py-op">.</tt><tt class="py-name">getHoverParameter</tt><tt class="py-op">(</tt><tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">paramName</tt><tt class="py-op">,</tt> <tt class="py-name">p</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">hoverParam</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                    <tt class="py-name">xS</tt> <tt class="py-op">=</tt> <tt class="py-name">hoverParam</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                    <tt class="py-name">axis</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-31', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-32', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Method pyjamas.chart.GChart.GChart.getXAxis()=pyjamas.chart.GChart.GChart-class.html#getXAxis"><a title="pyjamas.chart.GChart.GChart.getXAxis" class="py-name" href="#" onclick="return doclink('link-33', 'getXAxis', 'link-33');">getXAxis</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                    <tt class="py-name">xS</tt> <tt class="py-op">=</tt> <tt class="py-name">axis</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Method pyjamas.chart.Axis.Axis.formatAsTickLabel()=pyjamas.chart.Axis.Axis-class.html#formatAsTickLabel"><a title="pyjamas.chart.Axis.Axis.formatAsTickLabel" class="py-name" href="#" onclick="return doclink('link-34', 'formatAsTickLabel', 'link-34');">formatAsTickLabel</a></tt><tt class="py-op">(</tt><tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Method pyjamas.chart.Point.Point.getX()=pyjamas.chart.Point.Point-class.html#getX"><a title="pyjamas.chart.Point.Point.getX" class="py-name" href="#" onclick="return doclink('link-35', 'getX', 'link-35');">getX</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">!=</tt> <tt class="py-name">xS</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">                <tt class="py-name">result</tt> <tt class="py-op">+=</tt> <tt class="py-name">xS</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt>  <tt class="py-name">pid</tt> <tt class="py-op">==</tt> <tt id="link-36" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_Y" class="py-name" href="#" onclick="return doclink('link-36', 'HOVERTEXT_PARAM_Y', 'link-3');">HOVERTEXT_PARAM_Y</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">==</tt> <tt class="py-name">yS</tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                <tt class="py-name">hoverParam</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">!=</tt> <tt class="py-name">hpi</tt><tt class="py-op">:</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">                    <tt class="py-name">hoverParam</tt> <tt class="py-op">=</tt> <tt class="py-name">hpi</tt><tt class="py-op">.</tt><tt class="py-name">getHoverParameter</tt><tt class="py-op">(</tt><tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">paramName</tt><tt class="py-op">,</tt> <tt class="py-name">p</tt><tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">hoverParam</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                    <tt class="py-name">yS</tt> <tt class="py-op">=</tt> <tt class="py-name">hoverParam</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-37', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Method pyjamas.chart.Curve.Curve.onY2()=pyjamas.chart.Curve.Curve-class.html#onY2"><a title="pyjamas.chart.Curve.Curve.onY2" class="py-name" href="#" onclick="return doclink('link-38', 'onY2', 'link-38');">onY2</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">                        <tt class="py-name">axis</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-39', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-40', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name" targets="Method pyjamas.chart.GChart.GChart.getY2Axis()=pyjamas.chart.GChart.GChart-class.html#getY2Axis"><a title="pyjamas.chart.GChart.GChart.getY2Axis" class="py-name" href="#" onclick="return doclink('link-41', 'getY2Axis', 'link-41');">getY2Axis</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">                    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">                        <tt class="py-name">axis</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-42', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-43', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Method pyjamas.chart.Curve.Curve.getYAxis()=pyjamas.chart.Curve.Curve-class.html#getYAxis,Method pyjamas.chart.GChart.GChart.getYAxis()=pyjamas.chart.GChart.GChart-class.html#getYAxis"><a title="pyjamas.chart.Curve.Curve.getYAxis
+pyjamas.chart.GChart.GChart.getYAxis" class="py-name" href="#" onclick="return doclink('link-44', 'getYAxis', 'link-44');">getYAxis</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">                    <tt class="py-name">yS</tt> <tt class="py-op">=</tt> <tt class="py-name">axis</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="pyjamas.chart.Axis.Axis.formatAsTickLabel" class="py-name" href="#" onclick="return doclink('link-45', 'formatAsTickLabel', 'link-34');">formatAsTickLabel</a></tt><tt class="py-op">(</tt><tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name" targets="Method pyjamas.chart.Point.Point.getY()=pyjamas.chart.Point.Point-class.html#getY"><a title="pyjamas.chart.Point.Point.getY" class="py-name" href="#" onclick="return doclink('link-46', 'getY', 'link-46');">getY</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">!=</tt> <tt class="py-name">yS</tt><tt class="py-op">:</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">                <tt class="py-name">result</tt><tt class="py-op">+=</tt><tt class="py-name">yS</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt>  <tt class="py-name">pid</tt> <tt class="py-op">==</tt> <tt id="link-47" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_PIESLICESIZE" class="py-name" href="#" onclick="return doclink('link-47', 'HOVERTEXT_PARAM_PIESLICESIZE', 'link-4');">HOVERTEXT_PARAM_PIESLICESIZE</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">==</tt> <tt class="py-name">pieSlicePercentS</tt><tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">!=</tt> <tt class="py-name">hpi</tt><tt class="py-op">:</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                    <tt class="py-name">pieSlicePercentS</tt> <tt class="py-op">=</tt> <tt class="py-name">hpi</tt><tt class="py-op">.</tt><tt class="py-name">getHoverParameter</tt><tt class="py-op">(</tt><tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">paramName</tt><tt class="py-op">,</tt> <tt class="py-name">p</tt><tt class="py-op">)</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">                    <tt class="py-name">pieSliceSize</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-48', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Method pyjamas.chart.Curve.Curve.getSymbol()=pyjamas.chart.Curve.Curve-class.html#getSymbol"><a title="pyjamas.chart.Curve.Curve.getSymbol" class="py-name" href="#" onclick="return doclink('link-49', 'getSymbol', 'link-49');">getSymbol</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name" targets="Method pyjamas.chart.Symbol.Symbol.getPieSliceSize()=pyjamas.chart.Symbol.Symbol-class.html#getPieSliceSize"><a title="pyjamas.chart.Symbol.Symbol.getPieSliceSize" class="py-name" href="#" onclick="return doclink('link-50', 'getPieSliceSize', 'link-50');">getPieSliceSize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-51', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="pyjamas.chart.Curve.Curve.onY2" class="py-name" href="#" onclick="return doclink('link-52', 'onY2', 'link-38');">onY2</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                        <tt class="py-name">axis</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-53', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-54', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-55" class="py-name"><a title="pyjamas.chart.GChart.GChart.getY2Axis" class="py-name" href="#" onclick="return doclink('link-55', 'getY2Axis', 'link-41');">getY2Axis</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">                    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                        <tt class="py-name">axis</tt> <tt class="py-op">=</tt> <tt class="py-name">p</tt><tt class="py-op">.</tt><tt id="link-56" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-56', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="pyjamas.DOM.getParent
+pyjamas.chart.Curve.Curve.getParent
+pyjamas.chart.Point.Point.getParent
+pyjamas.chart.Symbol.Symbol.getParent
+pyjamas.ui.Widget.Widget.getParent" class="py-name" href="#" onclick="return doclink('link-57', 'getParent', 'link-26');">getParent</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-58" class="py-name"><a title="pyjamas.chart.Curve.Curve.getYAxis
+pyjamas.chart.GChart.GChart.getYAxis" class="py-name" href="#" onclick="return doclink('link-58', 'getYAxis', 'link-44');">getYAxis</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                    <tt class="py-name">pieSlicePercentS</tt> <tt class="py-op">=</tt> <tt class="py-name">axis</tt><tt class="py-op">.</tt><tt id="link-59" class="py-name"><a title="pyjamas.chart.Axis.Axis.formatAsTickLabel" class="py-name" href="#" onclick="return doclink('link-59', 'formatAsTickLabel', 'link-34');">formatAsTickLabel</a></tt><tt class="py-op">(</tt><tt class="py-number">100</tt><tt class="py-op">*</tt><tt class="py-name">pieSliceSize</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">"%"</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">+=</tt><tt class="py-name">pieSlicePercentS</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt>  <tt class="py-name">pid</tt> <tt class="py-op">==</tt> <tt id="link-60" class="py-name"><a title="pyjamas.chart.HovertextChunk.HOVERTEXT_PARAM_USERDEFINED" class="py-name" href="#" onclick="return doclink('link-60', 'HOVERTEXT_PARAM_USERDEFINED', 'link-5');">HOVERTEXT_PARAM_USERDEFINED</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">None</tt> <tt class="py-op">==</tt> <tt class="py-name">hpi</tt><tt class="py-op">:</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">                <tt class="py-comment"># None means "unrecognized parameter" - so</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                <tt class="py-comment"># regenerate the original, unparsed, param spec</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                <tt class="py-comment"># to clue them in that it was not processed.</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                <tt class="py-name">result</tt> <tt class="py-op">+=</tt> <tt class="py-string">"${"</tt> <tt class="py-op">+</tt> <tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">paramName</tt> <tt class="py-op">+</tt> <tt class="py-string">"}"</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">                <tt class="py-name">result</tt> <tt class="py-op">+=</tt> <tt class="py-name">hpi</tt><tt class="py-op">.</tt><tt class="py-name">getHoverParameter</tt><tt class="py-op">(</tt><tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">paramName</tt><tt class="py-op">,</tt> <tt class="py-name">p</tt><tt class="py-op">)</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">IllegalStateException</tt><tt class="py-op">(</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">                <tt class="py-string">"An illegal HOVERTEXT_PARAM_* id: "</tt> <tt class="py-op">+</tt> <tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">paramId</tt> <tt class="py-op">+</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">                <tt class="py-string">" was encountered. A GChart bug is likely to blame."</tt><tt class="py-op">)</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">        <tt class="py-name">result</tt><tt class="py-op">+=</tt><tt class="py-name">htc</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">chunkText</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-string">"""*</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-string">* Convenience method that, given a plain text label, returns an</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-string">* HTML snippet appropriate for use as an argument to the</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-string">* &lt;tt&gt;setHovertextTemplate&lt;/tt&gt; or &lt;tt&gt;setAnnotationText&lt;/tt&gt;</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"><tt class="py-string">* methods, that will display the plain text label with</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line"><tt class="py-string">* formatting appropriate for use with hovertext.</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"><tt class="py-string">* @see Symbol#setHovertextTemplate setHovertextTemplate</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-string">* @see Curve.Point#setAnnotationText setAnnotationText</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"><tt class="py-string">* @see Symbol#setHoverAnnotationSymbolType setHoverAnnotationSymbolType</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-string">* @param plainTextLabel the plain text label that is to be</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-string">*  HTML-wrapped to make it look like &lt;tt&gt;setTitle&lt;/tt&gt;-based</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"><tt class="py-string">*  hovertext.</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"><tt class="py-string">*</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line"> </tt>
+<a name="formatAsHovertext"></a><div id="formatAsHovertext-def"><a name="L188"></a><tt class="py-lineno">188</tt> <a class="py-toggle" href="#" id="formatAsHovertext-toggle" onclick="return toggle('formatAsHovertext');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.chart.HovertextChunk-module.html#formatAsHovertext">formatAsHovertext</a><tt class="py-op">(</tt><tt class="py-param">plainTextLabel</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="formatAsHovertext-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="formatAsHovertext-expanded"><a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">    <tt class="py-name">result</tt> <tt class="py-op">=</tt> \ </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">    <tt class="py-string">"&lt;html&gt;&lt;div style='background-color:#FFFFF0; border-color:black; border-style:solid; border-width:1px 1px 1px 1px; padding:2px; text-align:left'&gt;"</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">plainTextLabel</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">"&lt;/div&gt;"</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed May  9 22:05:11 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
