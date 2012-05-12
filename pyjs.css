@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial,Helvetica,sans-serif;
-  text-shadow: #ccc -1px -1px;
 }
 
 a {
@@ -678,7 +677,6 @@ dl.concise dt::after {
 #mastfooter {
     background: #E3E3E3;
     color: #222;
-    text-shadow: #808080 -1px -1px;
     font-size: smaller;
     font-weight: bold;
     border-top: 0.2em solid #111;
